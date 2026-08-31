@@ -1,0 +1,1 @@
+A framer video showing responsiveness , the website on lcd break into peaces then fits into phone screen , Then expands into tablet
