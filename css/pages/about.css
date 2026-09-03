@@ -1,0 +1,130 @@
+/* About Page Styles */
+
+/* Hero Section */
+.about-hero {
+    min-height: 60vh;
+    padding-top: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-hero .hero-text {
+    max-width: 800px;
+    margin-top: 2rem;
+    color: var(--text-secondary);
+}
+
+/* Philosophy Section */
+.philosophy-section {
+    padding-top: 2rem;
+}
+
+.philosophy-list {
+    margin-top: 4rem;
+}
+
+.philosophy-item {
+    padding: 3rem 0;
+}
+
+.philosophy-quote {
+    color: var(--text-primary);
+    font-style: italic;
+    max-width: 900px;
+    line-height: 1.2;
+}
+
+.philosophy-quote::before {
+    content: "“";
+    color: var(--accent);
+    margin-right: 0.5rem;
+}
+
+.philosophy-quote::after {
+    content: "”";
+    color: var(--accent);
+    margin-left: 0.5rem;
+}
+
+/* How We Work Section */
+.how-we-work-section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.editorial-text {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Standards Section */
+.standards-section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.standards-section .grid-2 {
+    row-gap: 4rem;
+}
+
+.standards-section .t-h3 {
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+.standards-section .t-body {
+    color: var(--text-secondary);
+}
+
+/* What We're Looking For Section */
+.looking-for-section {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.looking-for-content {
+    max-width: 900px;
+    margin-top: 3rem;
+}
+
+/* CTA Section */
+.cta-section {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    text-align: center;
+}
+
+.cta-section .t-h2 {
+    margin-bottom: 2.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-actions {
+    margin-top: 3rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about-hero {
+        padding-top: 120px;
+        min-height: auto;
+        padding-bottom: 4rem;
+    }
+
+    .philosophy-quote {
+        font-size: 2rem;
+    }
+
+    .philosophy-item {
+        padding: 2rem 0;
+    }
+
+    .looking-for-section,
+    .cta-section {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+}

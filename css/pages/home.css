@@ -1,0 +1,357 @@
+/* ============================================================================
+   HOMEPAGE STYLES
+   ============================================================================ */
+
+/* ============================================================================
+   HERO
+   ============================================================================ */
+.hero {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: var(--space-9);
+  padding-top: 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-video-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-video-wrap video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.35;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(12, 10, 9, 0.3) 0%,
+    rgba(12, 10, 9, 0.6) 50%,
+    rgba(12, 10, 9, 0.95) 100%
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-label {
+  display: block;
+  margin-bottom: var(--space-5);
+}
+
+.hero-title {
+  margin-bottom: var(--space-6);
+}
+
+/* Line reveal containers */
+.hero-title .line {
+  display: block;
+  overflow: hidden;
+}
+
+.hero-title .line-inner {
+  display: block;
+}
+
+.hero-subtitle {
+  max-width: 520px;
+  margin-bottom: var(--space-7);
+}
+
+/* Scroll indicator */
+.scroll-hint {
+  position: absolute;
+  bottom: var(--space-6);
+  left: var(--container-padding);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  z-index: 2;
+}
+
+.scroll-hint-text {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+.scroll-hint-line {
+  width: 1px;
+  height: 48px;
+  background: var(--border-visible);
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-hint-line::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--accent);
+  animation: scroll-line 2s var(--ease-in-out) infinite;
+}
+
+@keyframes scroll-line {
+  0% { top: -100%; }
+  50% { top: 0; }
+  100% { top: 100%; }
+}
+
+/* ============================================================================
+   STATEMENT (Pinned editorial text)
+   ============================================================================ */
+.statement {
+  padding: var(--space-10) 0;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.statement-text {
+  font-family: var(--font-headline);
+  font-size: clamp(1.5rem, 3.5vw + 0.5rem, 3rem);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--text-primary);
+  max-width: 900px;
+}
+
+.statement-text .accent {
+  color: var(--accent);
+}
+
+/* ============================================================================
+   CAPABILITIES / SERVICES
+   ============================================================================ */
+.section-capabilities {
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* ============================================================================
+   SELECTED WORK
+   ============================================================================ */
+.projects-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-9);
+}
+
+@media (min-width: 640px) {
+  .projects-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+  }
+}
+
+/* Offset alternate cards on desktop */
+@media (min-width: 640px) {
+  .projects-list .project-card:nth-child(even) {
+    margin-top: var(--space-9);
+  }
+}
+
+/* Image clip-path reveal (initial hidden state for GSAP) */
+.project-card-image.clip-reveal {
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+}
+
+.project-card-image.clip-reveal.revealed {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* ============================================================================
+   WHY ZERB (Differentiators)
+   ============================================================================ */
+.diff-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+@media (min-width: 1024px) {
+  .diff-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-9) var(--space-8);
+  }
+}
+
+.diff-item {
+  padding-bottom: var(--space-7);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.diff-number {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: var(--space-4);
+}
+
+.diff-title {
+  font-family: var(--font-headline);
+  font-size: clamp(1.375rem, 2vw, 1.75rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-3);
+}
+
+.diff-desc {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 460px;
+}
+
+/* ============================================================================
+   PROCESS (Horizontal scroll)
+   ============================================================================ */
+.section-process {
+  overflow: hidden;
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.process-track {
+  display: flex;
+  gap: var(--space-4);
+  padding: 0 var(--container-padding);
+}
+
+/* Mobile: native horizontal scroll with snap */
+@media (max-width: 1023px) {
+  .process-track {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: var(--space-4);
+  }
+  .process-track::-webkit-scrollbar {
+    display: none;
+  }
+  .process-step {
+    scroll-snap-align: start;
+  }
+}
+
+/* Desktop: GSAP horizontal scroll */
+@media (min-width: 1024px) {
+  .process-wrapper {
+    width: max-content;
+  }
+  .process-track {
+    padding: 0;
+  }
+}
+
+.process-connector {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  color: var(--border-visible);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-2);
+}
+
+/* ============================================================================
+   TECHNOLOGY
+   ============================================================================ */
+.tech-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+@media (min-width: 640px) {
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 var(--space-8);
+  }
+}
+
+@media (min-width: 1024px) {
+  .tech-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ============================================================================
+   TESTIMONIALS
+   ============================================================================ */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--grid-gap);
+}
+
+@media (min-width: 640px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ============================================================================
+   CTA (Final section)
+   ============================================================================ */
+.section-cta {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.section-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    var(--accent-subtle) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-heading {
+  margin-bottom: var(--space-5);
+}
+
+.cta-sub {
+  max-width: 480px;
+  margin: 0 auto var(--space-7);
+}
