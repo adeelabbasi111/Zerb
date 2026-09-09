@@ -102,13 +102,9 @@
       }
     });
 
-    // STEP 1: Introduce first phrase
-    tl.fromTo(step1, 
-      { opacity: 0, scale: 0.9, autoAlpha: 0, filter: 'blur(10px)' }, 
-      { opacity: 1, scale: 1, autoAlpha: 1, filter: 'blur(0px)', duration: 1 }
-    )
-    // Hold it for a moment
-    .to(step1, { duration: 0.5 })
+    // STEP 1 is already visible via CSS so they can read it as they approach the section.
+    // We just hold it for a moment once pinned.
+    tl.to(step1, { duration: 0.5 })
     // Fade out and blur step 1, while bringing video opacity up slightly
     .to(step1, { opacity: 0, scale: 1.1, autoAlpha: 0, filter: 'blur(10px)', duration: 1 }, "transition1")
     .to(bgVideo, { opacity: 0.3, duration: 1 }, "transition1")
@@ -119,7 +115,7 @@
       { opacity: 1, scale: 1, autoAlpha: 1, filter: 'blur(0px)', duration: 1 },
       "transition1+=0.5" // Slight overlap
     )
-    .to(step2, { duration: 0.5 })
+    .to(step2, { duration: 0.8 })
     .to(step2, { opacity: 0, scale: 1.1, autoAlpha: 0, filter: 'blur(10px)', duration: 1 }, "transition2")
 
     // STEP 3: The final resolution text
@@ -133,3 +129,4 @@
     // Hold the final phrase briefly before letting them unpin
     .to(step3, { duration: 1 });
   }
+
