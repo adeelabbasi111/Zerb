@@ -94,14 +94,14 @@
 
     if (!step1 || !step2 || !step3) return;
 
-    let isIntroLoop = true;
+    let isIntroPhase = true;
 
     // Advanced Video Playback Controller
     if (bgVideo) {
       bgVideo.addEventListener('timeupdate', function() {
-        // Loop the first 3 seconds while they read step-1
-        if (isIntroLoop && this.currentTime >= 3.0) {
-          this.currentTime = 0;
+        // Pause exactly at 3 seconds while they read step-1 (No looping)
+        if (isIntroPhase && this.currentTime >= 3.0) {
+          this.pause();
         }
       });
 
@@ -109,6 +109,8 @@
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
+            // If it's paused at the end of the intro phase, keep it paused until they scroll
+            if (isIntroPhase && bgVideo.currentTime >= 3.0) return;
             bgVideo.play().catch(() => {});
           } else {
             bgVideo.pause();
@@ -123,22 +125,21 @@
       scrollTrigger: {
         trigger: scene,
         start: 'top top',
-        end: '+=3000', // Made slightly longer to give time for the video sequence
+        end: '+=3000',
         scrub: 1,
         pin: true,
         anticipatePin: 1,
         onUpdate: (self) => {
-          // The transition from step 1 to step 2 happens around progress 0.15
-          // At this point, we break the loop and trigger the fast whip pan!
           if (bgVideo) {
-            if (self.progress > 0.12 && isIntroLoop) {
-              isIntroLoop = false;
+            if (self.progress > 0.12 && isIntroPhase) {
+              isIntroPhase = false;
               // Ensure we start precisely at the whip pan trigger point
               if (bgVideo.currentTime < 3.0) bgVideo.currentTime = 3.0;
               bgVideo.play().catch(()=>{});
-            } else if (self.progress <= 0.12 && !isIntroLoop) {
-              isIntroLoop = true;
-              bgVideo.currentTime = 0;
+            } else if (self.progress <= 0.12 && !isIntroPhase) {
+              isIntroPhase = true;
+              bgVideo.currentTime = 3.0;
+              bgVideo.pause();
             }
           }
         }
@@ -149,26 +150,27 @@
     tl.to(step1, { duration: 0.5 })
       .to(step1, { opacity: 0, scale: 1.1, autoAlpha: 0, filter: 'blur(10px)', duration: 1 }, 'beat1')
 
-    // STEP 2: The accent punch line fades in from blur (timed with the whip pan resolving)
+    // STEP 2: The accent punch line fades in from blur
       .fromTo(step2,
         { opacity: 0, scale: 0.9, autoAlpha: 0, filter: 'blur(10px)' },
         { opacity: 1, scale: 1, autoAlpha: 1, filter: 'blur(0px)', duration: 1 },
         'beat1+=0.5'
       )
-      // Brighten the video slightly during step 2 to show off the glowing circuits!
-      .to(bgVideo, { opacity: 0.8, duration: 1 }, 'beat1+=0.5')
+      // Darken and blur the video so the copper text pops!
+      .to(bgVideo, { opacity: 0.2, filter: 'blur(15px)', duration: 1 }, 'beat1+=0.5')
+      
       .to(step2, { duration: 1.0 })
       .to(step2, { opacity: 0, scale: 1.1, autoAlpha: 0, filter: 'blur(10px)', duration: 1 }, 'beat2')
 
-    // STEP 3: The closing line rises in as the video dims back down
+    // STEP 3: The closing line rises in (video stays dark and blurred)
       .fromTo(step3,
         { opacity: 0, y: 30, autoAlpha: 0 },
         { opacity: 1, y: 0, autoAlpha: 1, duration: 1 },
         'beat2+=0.5'
       )
-      .to(bgVideo, { opacity: 0.2, duration: 1 }, 'beat2')
       .to(step3, { duration: 1 });
   }
 
 })();
+
 
