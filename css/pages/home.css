@@ -60,8 +60,12 @@
     flex: 0 0 440px; /* Restores the animation to a powerful, fixed large size */
     width: 440px;
     max-width: 440px;
-    margin: 0 0 0 -140px; /* Pulls the video firmly under the text */
+    margin: 0 0 0 -90px; /* Pushed 50px to the right (-140 + 50) */
     transform: translateY(-20px);
+    
+    /* Feathering the left side of the video so it melts into the background */
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,1) 25%);
+    mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,1) 25%);
   }
 }
 
@@ -75,13 +79,14 @@
 .hero-media-overlay {
   position: absolute;
   inset: 0;
-  /* Dark gradient fading from left to right to help text contrast where they overlap */
+  /* Deep vignette on the left side to help it blend properly with the dark theme */
   background: linear-gradient(
     90deg,
-    rgba(12, 10, 9, 0.8) 0%,
-    rgba(12, 10, 9, 0.3) 30%,
-    rgba(12, 10, 9, 0) 100%
+    var(--bg-primary) 0%,
+    rgba(12, 10, 9, 0.6) 15%,
+    transparent 40%
   );
+  box-shadow: inset 40px 0 60px -20px var(--bg-primary);
   pointer-events: none;
 }
 
@@ -394,6 +399,7 @@
   max-width: 480px;
   margin: 0 auto var(--space-7);
 }
+
 
 
 
