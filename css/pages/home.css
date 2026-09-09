@@ -1,4 +1,4 @@
-﻿/* ============================================================================
+/* ============================================================================
    HOMEPAGE STYLES
    ============================================================================ */
 
@@ -27,6 +27,7 @@
   .hero-grid {
     grid-template-columns: 1.1fr 0.9fr;
     gap: var(--space-5);
+    margin-top: -40px;
   }
 }
 
@@ -58,8 +59,8 @@
   .hero-media {
     max-width: 100%;
     margin: 0;
-    /* Move slightly to the right to balance the overlap */
-    transform: translateX(5%);
+    /* Move slightly to the right to balance the overlap, and up to center it better */
+    transform: translate(5%, -20px);
   }
 }
 
