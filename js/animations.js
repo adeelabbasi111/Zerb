@@ -1,4 +1,4 @@
-﻿/* ============================================================================
+/* ============================================================================
    ZERB — ANIMATIONS.JS
    GSAP ScrollTrigger sequences for homepage
    ============================================================================ */
@@ -15,12 +15,15 @@
     initStatementScrollytelling();
   });
 
+  // ========================================================================
+  // HERO ENTRANCE ANIMATION
+  // ========================================================================
   function initHeroAnimations() {
     const heroLabel = document.querySelector('.hero-label');
     const heroLines = document.querySelectorAll('.hero-title .line-inner');
     const heroSubtitle = document.querySelector('.hero-subtitle');
     const heroCTA = document.querySelector('.hero-content .btn');
-    
+    const heroMedia = document.querySelector('.hero-media');
 
     if (!heroLines.length) return;
 
@@ -28,16 +31,23 @@
 
     gsap.set(heroLines, { yPercent: 110 });
     gsap.set([heroLabel, heroSubtitle, heroCTA], { opacity: 0, y: 20 });
+    if (heroMedia) gsap.set(heroMedia, { opacity: 0, scale: 0.95, x: 20 });
 
     tl.to(heroLabel, { opacity: 1, y: 0, duration: 0.6 }, 0.3)
       .to(heroLines[0], { yPercent: 0, duration: 0.9 }, 0.5)
       .to(heroLines[1], { yPercent: 0, duration: 0.9 }, 0.65)
       .to(heroLines[2], { yPercent: 0, duration: 0.9 }, 0.8)
       .to(heroSubtitle, { opacity: 1, y: 0, duration: 0.7 }, 1.2)
-      .to(heroCTA, { opacity: 1, y: 0, duration: 0.6 }, 1.4)
-      .to(scrollHint, { opacity: 1, y: 0, duration: 0.5 }, 1.6);
+      .to(heroCTA, { opacity: 1, y: 0, duration: 0.6 }, 1.4);
+
+    if (heroMedia) {
+      tl.to(heroMedia, { opacity: 1, scale: 1, x: 0, duration: 1.2, ease: 'power3.out' }, 0.8);
+    }
   }
 
+  // ========================================================================
+  // PROJECT IMAGE REVEALS
+  // ========================================================================
   function initProjectReveals() {
     const projectImages = document.querySelectorAll('.project-card-image.clip-reveal');
 
@@ -69,10 +79,6 @@
       }
     });
   }
-})();
-
-
-
 
   // ========================================================================
   // CINEMATIC SCROLLYTELLING STATEMENT
@@ -86,47 +92,44 @@
     const step3 = scene.querySelector('.step-3');
     const bgVideo = scene.querySelector('.statement-bg video');
 
-    // Make sure elements exist before animating
     if (!step1 || !step2 || !step3) return;
 
-    // Create a master ScrollTrigger timeline that pins the scene
-    // The "end" dictates how long they scroll for. 3000px is a good cinematic length.
+    // Pin the section and scrub through the cinematic timeline
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: scene,
         start: 'top top',
-        end: '+=2500', 
-        scrub: 1, // Smooth scrubbing
+        end: '+=2500',
+        scrub: 1,
         pin: true,
         anticipatePin: 1
       }
     });
 
-    // STEP 1 is already visible via CSS so they can read it as they approach the section.
-    // We just hold it for a moment once pinned.
+    // STEP 1: Already visible via CSS. Hold it, then fade out with blur.
     tl.to(step1, { duration: 0.5 })
-    // Fade out and blur step 1, while bringing video opacity up slightly
-    .to(step1, { opacity: 0, scale: 1.1, autoAlpha: 0, filter: 'blur(10px)', duration: 1 }, "transition1")
-    .to(bgVideo, { opacity: 0.3, duration: 1 }, "transition1")
+      .to(step1, { opacity: 0, scale: 1.1, autoAlpha: 0, filter: 'blur(10px)', duration: 1 }, 'beat1')
+      .to(bgVideo, { opacity: 0.3, duration: 1 }, 'beat1')
 
-    // STEP 2: Introduce the glowing impact phrase
-    .fromTo(step2, 
-      { opacity: 0, scale: 0.9, autoAlpha: 0, filter: 'blur(10px)' }, 
-      { opacity: 1, scale: 1, autoAlpha: 1, filter: 'blur(0px)', duration: 1 },
-      "transition1+=0.5" // Slight overlap
-    )
-    .to(step2, { duration: 0.8 })
-    .to(step2, { opacity: 0, scale: 1.1, autoAlpha: 0, filter: 'blur(10px)', duration: 1 }, "transition2")
+    // STEP 2: The accent punch line fades in from blur
+      .fromTo(step2,
+        { opacity: 0, scale: 0.9, autoAlpha: 0, filter: 'blur(10px)' },
+        { opacity: 1, scale: 1, autoAlpha: 1, filter: 'blur(0px)', duration: 1 },
+        'beat1+=0.5'
+      )
+      .to(step2, { duration: 0.8 })
+      .to(step2, { opacity: 0, scale: 1.1, autoAlpha: 0, filter: 'blur(10px)', duration: 1 }, 'beat2')
 
-    // STEP 3: The final resolution text
-    .fromTo(step3, 
-      { opacity: 0, y: 30, autoAlpha: 0 }, 
-      { opacity: 1, y: 0, autoAlpha: 1, duration: 1 },
-      "transition2+=0.5"
-    )
-    .to(bgVideo, { opacity: 0.1, duration: 1 }, "transition2")
-    
-    // Hold the final phrase briefly before letting them unpin
-    .to(step3, { duration: 1 });
+    // STEP 3: The closing line rises in
+      .fromTo(step3,
+        { opacity: 0, y: 30, autoAlpha: 0 },
+        { opacity: 1, y: 0, autoAlpha: 1, duration: 1 },
+        'beat2+=0.5'
+      )
+      .to(bgVideo, { opacity: 0.1, duration: 1 }, 'beat2')
+
+    // Hold the final phrase before unpinning
+      .to(step3, { duration: 1 });
   }
 
+})();

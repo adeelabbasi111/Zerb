@@ -1,4 +1,4 @@
-﻿/* ============================================================================
+/* ============================================================================
    HOMEPAGE STYLES
    ============================================================================ */
 
@@ -114,49 +114,7 @@
   margin-bottom: var(--space-7);
 }
 
-/* Scroll indicator */
-.scroll-hint {
-  position: absolute;
-  bottom: var(--space-6);
-  left: var(--container-padding);
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  z-index: 2;
-}
 
-.scroll-hint-text {
-  font-family: var(--font-mono);
-  font-size: 0.625rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--text-tertiary);
-}
-
-.scroll-hint-line {
-  width: 1px;
-  height: 48px;
-  background: var(--border-visible);
-  position: relative;
-  overflow: hidden;
-}
-
-.scroll-hint-line::after {
-  content: '';
-  position: absolute;
-  top: -100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--accent);
-  animation: scroll-line 2s var(--ease-in-out) infinite;
-}
-
-@keyframes scroll-line {
-  0% { top: -100%; }
-  50% { top: 0; }
-  100% { top: 100%; }
-}
 
 /* ============================================================================
    CINEMATIC SCROLLYTELLING STATEMENT
@@ -218,13 +176,16 @@
 }
 
 .statement-step .statement-text {
+  font-family: var(--font-headline);
   line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
 .statement-step .statement-subtext {
   max-width: 600px;
   margin: 0 auto;
   color: var(--text-secondary);
+  font-family: var(--font-body);
 }
 
 /* ============================================================================
