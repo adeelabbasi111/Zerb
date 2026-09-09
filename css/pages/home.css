@@ -6,11 +6,11 @@
    HERO
    ============================================================================ */
 .hero {
-  min-height: 100dvh;
+  min-height: 85dvh;
   display: flex;
   align-items: center;
   padding-top: 80px;
-  padding-bottom: var(--space-9);
+  padding-bottom: var(--space-6);
   position: relative;
   overflow: hidden;
 }
@@ -399,6 +399,7 @@
   max-width: 480px;
   margin: 0 auto var(--space-7);
 }
+
 
 
 

@@ -19,14 +19,14 @@
     const heroLines = document.querySelectorAll('.hero-title .line-inner');
     const heroSubtitle = document.querySelector('.hero-subtitle');
     const heroCTA = document.querySelector('.hero-content .btn');
-    const scrollHint = document.querySelector('.scroll-hint');
+    
 
     if (!heroLines.length) return;
 
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
     gsap.set(heroLines, { yPercent: 110 });
-    gsap.set([heroLabel, heroSubtitle, heroCTA, scrollHint], { opacity: 0, y: 20 });
+    gsap.set([heroLabel, heroSubtitle, heroCTA], { opacity: 0, y: 20 });
 
     tl.to(heroLabel, { opacity: 1, y: 0, duration: 0.6 }, 0.3)
       .to(heroLines[0], { yPercent: 0, duration: 0.9 }, 0.5)
@@ -69,5 +69,6 @@
     });
   }
 })();
+
 
 
