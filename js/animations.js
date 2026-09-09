@@ -90,9 +90,30 @@
     const step1 = scene.querySelector('.step-1');
     const step2 = scene.querySelector('.step-2');
     const step3 = scene.querySelector('.step-3');
-    const bgVideo = scene.querySelector('.statement-bg video');
+    const bgVideo = document.getElementById('statement-video');
 
     if (!step1 || !step2 || !step3) return;
+
+    // Loop only the first 2 seconds of the video
+    if (bgVideo) {
+      bgVideo.addEventListener('timeupdate', function() {
+        if (this.currentTime >= 2) {
+          this.currentTime = 0;
+        }
+      });
+
+      // Play the video only when the section is visible
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            bgVideo.play().catch(() => {});
+          } else {
+            bgVideo.pause();
+          }
+        });
+      }, { threshold: 0.1 });
+      observer.observe(scene);
+    }
 
     // Pin the section and scrub through the cinematic timeline
     const tl = gsap.timeline({
