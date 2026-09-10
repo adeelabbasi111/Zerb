@@ -57,15 +57,11 @@
 
 @media (min-width: 1024px) {
   .hero-media {
-    flex: 0 0 440px; /* Restores the animation to a powerful, fixed large size */
+    flex: 0 0 440px;
     width: 440px;
     max-width: 440px;
-    margin: 0 0 0 -60px; /* Pushed another 30px right */
+    margin: 0 0 0 -90px; /* Moved 30px to the left */
     transform: translateY(-20px);
-    
-    /* Feathering the left side of the video so it melts into the background */
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,1) 25%);
-    mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,1) 25%);
   }
 }
 
@@ -77,17 +73,7 @@
 }
 
 .hero-media-overlay {
-  position: absolute;
-  inset: 0;
-  /* Deep vignette on the left side to help it blend properly with the dark theme */
-  background: linear-gradient(
-    90deg,
-    var(--bg-primary) 0%,
-    rgba(12, 10, 9, 0.6) 15%,
-    transparent 40%
-  );
-  box-shadow: inset 40px 0 60px -20px var(--bg-primary);
-  pointer-events: none;
+  display: none;
 }
 
 .hero-label {
