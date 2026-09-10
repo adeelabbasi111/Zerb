@@ -157,7 +157,7 @@
         'beat1+=0.5'
       )
       // Darken and blur the video so the copper text pops!
-      .to(bgVideo, { opacity: 0.3, filter: 'blur(4px)', duration: 1 }, 'beat1+=0.5')
+      .to(bgVideo, { opacity: 0.45, duration: 1 }, 'beat1+=0.5')
       
       .to(step2, { duration: 1.0 })
       .to(step2, { opacity: 0, scale: 1.1, autoAlpha: 0, filter: 'blur(10px)', duration: 1 }, 'beat2')
@@ -172,6 +172,7 @@
   }
 
 })();
+
 
 
 
