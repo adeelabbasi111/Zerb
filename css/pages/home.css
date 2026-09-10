@@ -60,7 +60,7 @@
     flex: 0 0 440px;
     width: 440px;
     max-width: 440px;
-    margin: 0 0 0 -90px; /* Moved 30px to the left */
+    margin: 0 0 0 -10px; /* Moved 30px to the left */
     transform: translateY(-20px);
   }
 }
