@@ -61,7 +61,7 @@
     width: 440px;
     max-width: 440px;
     margin: 0 0 0 -10px; /* Moved 30px to the left */
-    transform: translateY(-20px);
+    transform: translateY(-10px);
   }
 }
 
