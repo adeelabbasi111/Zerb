@@ -1,4 +1,4 @@
-﻿/* ============================================================================
+/* ============================================================================
    ZERB â€” ANIMATIONS.JS
    GSAP ScrollTrigger sequences for homepage
    ============================================================================ */
@@ -13,6 +13,7 @@
     initHeroAnimations();
     initProjectReveals();
     initStatementScrollytelling();
+    initCapabilitiesReveal();
   });
 
   // ========================================================================
@@ -169,6 +170,45 @@
         'beat2+=0.5'
       )
       .to(step3, { duration: 1 });
+  }
+
+  // ========================================================================
+  // CAPABILITIES — Staggered Card Reveal
+  // ========================================================================
+  function initCapabilitiesReveal() {
+    const cards = document.querySelectorAll('.cap-card');
+    if (!cards.length) return;
+
+    // Stagger reveal: each card slides up and fades in with a slight delay
+    gsap.to(cards, {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      ease: 'power3.out',
+      stagger: 0.15,
+      scrollTrigger: {
+        trigger: '.capabilities-grid',
+        start: 'top 80%',
+      }
+    });
+
+    // Also reveal the section header
+    const header = document.querySelector('.capabilities-header');
+    if (header) {
+      gsap.fromTo(header,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: header,
+            start: 'top 85%',
+          }
+        }
+      );
+    }
   }
 
 })();

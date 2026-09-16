@@ -188,13 +188,173 @@
 }
 
 /* ============================================================================
-   CAPABILITIES / SERVICES
+   CAPABILITIES — Glowing Circuit Cards
    ============================================================================ */
 .section-capabilities {
-  background: var(--bg-surface);
-  border-top: 1px solid var(--border-subtle);
-  border-bottom: 1px solid var(--border-subtle);
+  background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-surface) 30%, var(--bg-surface) 70%, var(--bg-primary) 100%);
+  border: none;
+  padding: var(--space-10) 0;
 }
+
+.capabilities-header {
+  text-align: center;
+  margin-bottom: var(--space-9);
+}
+
+.capabilities-header .section-label {
+  display: block;
+  margin-bottom: var(--space-4);
+}
+
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .capabilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-7);
+  }
+}
+
+@media (min-width: 1200px) {
+  .capabilities-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --- The Card Shell (Animated Glow Border) --- */
+.cap-card {
+  position: relative;
+  border-radius: var(--radius-lg, 12px);
+  padding: 1px; /* This 1px is the border — the glow shows through */
+  background: conic-gradient(
+    from var(--border-angle),
+    var(--border-subtle) 0%,
+    var(--accent) 12%,
+    var(--border-subtle) 33%,
+    var(--accent) 55%,
+    var(--border-subtle) 80%,
+    var(--accent) 100%
+  );
+  animation: rotate-border 8s linear infinite;
+  will-change: transform;
+  opacity: 0; /* Hidden by default, GSAP reveals */
+  transform: translateY(40px);
+}
+
+@keyframes rotate-border {
+  to { --border-angle: 360deg; }
+}
+
+.cap-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--border-angle),
+    transparent 0%,
+    var(--accent-glow) 12%,
+    transparent 33%,
+    var(--accent-glow) 55%,
+    transparent 80%,
+    var(--accent-glow) 100%
+  );
+  filter: blur(12px);
+  opacity: 0;
+  transition: opacity 0.5s var(--ease-out);
+  z-index: -1;
+}
+
+.cap-card:hover::before {
+  opacity: 1;
+}
+
+.cap-card:hover {
+  animation-duration: 3s; /* Spin faster on hover */
+}
+
+/* --- Card Inner (The Dark Glass Surface) --- */
+.cap-card-inner {
+  position: relative;
+  background: var(--bg-elevated);
+  border-radius: calc(var(--radius-lg, 12px) - 1px);
+  padding: var(--space-7) var(--space-6);
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
+  display: flex;
+  flex-direction: column;
+  min-height: 260px;
+}
+
+.cap-card:hover .cap-card-inner {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(196, 115, 74, 0.08);
+}
+
+/* --- Ghost Number --- */
+.cap-ghost-number {
+  position: absolute;
+  top: -10px;
+  right: var(--space-5);
+  font-family: var(--font-headline);
+  font-size: clamp(5rem, 10vw, 7rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.06;
+  pointer-events: none;
+  user-select: none;
+  transition: opacity 0.4s var(--ease-out);
+}
+
+.cap-card:hover .cap-ghost-number {
+  opacity: 0.12;
+}
+
+/* --- Card Title --- */
+.cap-title {
+  font-family: var(--font-headline);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-3);
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Card Description --- */
+.cap-desc {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  flex-grow: 1;
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Arrow Indicator --- */
+.cap-arrow {
+  display: inline-block;
+  font-size: 1.25rem;
+  color: var(--accent);
+  margin-top: var(--space-5);
+  transform: translateX(0);
+  transition: transform 0.3s var(--ease-out), color 0.3s var(--ease-out);
+  position: relative;
+  z-index: 1;
+}
+
+.cap-card:hover .cap-arrow {
+  transform: translateX(8px);
+  color: var(--accent-hover);
+}
+
 
 /* ============================================================================
    SELECTED WORK
