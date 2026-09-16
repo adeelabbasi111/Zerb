@@ -1,4 +1,4 @@
-/* ============================================================================
+﻿/* ============================================================================
    HOMEPAGE STYLES
    ============================================================================ */
 
@@ -188,7 +188,7 @@
 }
 
 /* ============================================================================
-   CAPABILITIES — Glowing Circuit Cards
+   CAPABILITIES â€” Glowing Circuit Cards
    ============================================================================ */
 .section-capabilities {
   background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-surface) 30%, var(--bg-surface) 70%, var(--bg-primary) 100%);
@@ -229,7 +229,7 @@
 .cap-card {
   position: relative;
   border-radius: var(--radius-lg, 12px);
-  padding: 1px; /* This 1px is the border — the glow shows through */
+  padding: 1px; /* This 1px is the border â€” the glow shows through */
   background: conic-gradient(
     from var(--border-angle),
     var(--border-subtle) 0%,
@@ -288,7 +288,37 @@
   transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
   display: flex;
   flex-direction: column;
-  min-height: 260px;
+  min-height: 380px;
+}
+
+/* --- Image Wrapper --- */
+.cap-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  margin: calc(var(--space-7) * -1) calc(var(--space-6) * -1) var(--space-5);
+  overflow: hidden;
+  border-radius: calc(var(--radius-lg, 12px) - 1px) calc(var(--radius-lg, 12px) - 1px) 0 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.cap-image-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, var(--bg-elevated) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.cap-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.cap-card:hover .cap-image-wrapper img {
+  transform: scale(1.05);
 }
 
 .cap-card:hover .cap-card-inner {
@@ -565,6 +595,7 @@
   max-width: 480px;
   margin: 0 auto var(--space-7);
 }
+
 
 
 
