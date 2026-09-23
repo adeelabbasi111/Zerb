@@ -15,6 +15,8 @@
     initStatementScrollytelling();
     initCapabilitiesReveal();
     initProcessHorizontalScroll();
+    initCustomCursor();
+    init3DTilt();
   });
 
   // ========================================================================
@@ -246,6 +248,96 @@
           scrub: 1, // smooth scrubbing
           invalidateOnRefresh: true, // recalculate on resize
         }
+      });
+    });
+  }
+
+
+  // ========================================================================
+  // CUSTOM MAGNETIC CURSOR
+  // ========================================================================
+  function initCustomCursor() {
+    const cursor = document.querySelector('.custom-cursor');
+    const follower = document.querySelector('.custom-cursor-follower');
+    
+    if (!cursor || !follower || window.innerWidth <= 1024) return;
+
+    let mouseX = 0;
+    let mouseY = 0;
+    let followerX = 0;
+    let followerY = 0;
+
+    gsap.to({}, {
+      duration: 0.016,
+      repeat: -1,
+      onRepeat: () => {
+        followerX += (mouseX - followerX) * 0.15;
+        followerY += (mouseY - followerY) * 0.15;
+        
+        gsap.set(cursor, { x: mouseX, y: mouseY });
+        gsap.set(follower, { x: followerX, y: followerY });
+      }
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    const hoverElements = document.querySelectorAll('a, button, .cap-card, .project-card, .nav-toggle');
+    
+    hoverElements.forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        cursor.classList.add('hovering');
+        follower.classList.add('hovering');
+      });
+      el.addEventListener('mouseleave', () => {
+        cursor.classList.remove('hovering');
+        follower.classList.remove('hovering');
+      });
+    });
+  }
+
+
+  // ========================================================================
+  // 3D TILT EFFECT (Capabilities Cards)
+  // ========================================================================
+  function init3DTilt() {
+    const cards = document.querySelectorAll('.cap-card');
+    if (!cards.length || window.innerWidth <= 1024) return;
+
+    cards.forEach(card => {
+      const inner = card.querySelector('.cap-card-inner');
+      if(!inner) return;
+
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        // Calculate tilt angles (max 8 degrees)
+        const tiltX = ((centerY - y) / centerY) * 8;
+        const tiltY = ((x - centerX) / centerX) * 8;
+
+        gsap.to(inner, {
+          duration: 0.5,
+          rotateX: tiltX,
+          rotateY: tiltY,
+          transformPerspective: 1000,
+          ease: 'power2.out'
+        });
+      });
+
+      card.addEventListener('mouseleave', () => {
+        gsap.to(inner, {
+          duration: 0.8,
+          rotateX: 0,
+          rotateY: 0,
+          ease: 'power3.out'
+        });
       });
     });
   }
