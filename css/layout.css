@@ -442,7 +442,8 @@
   font-family: var(--font-headline);
   font-size: 22vw;
   line-height: 0.75;
-  color: var(--bg-primary);
+  color: transparent;
+  -webkit-text-stroke: 1px var(--border-subtle);
   text-align: center;
   user-select: none;
   margin-bottom: -5vw;
@@ -457,4 +458,5 @@
   font-family: var(--font-mono);
   font-size: 0.875rem;
 }
+
 
