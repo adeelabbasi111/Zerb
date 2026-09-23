@@ -1,4 +1,14 @@
-﻿/* ============================================================================
+﻿/* Hide scrollbars globally for Awwwards level immersion */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  display: none;
+}
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+/* ============================================================================
    ZERB LAYOUT
    Navigation, Footer, Section Structures
    ============================================================================ */
@@ -447,6 +457,12 @@
   text-align: center;
   user-select: none;
   margin-bottom: -5vw;
+  transition: color 0.6s ease, -webkit-text-stroke-color 0.6s ease;
+  cursor: default;
+}
+.footer-massive-text:hover {
+  color: var(--accent);
+  -webkit-text-stroke-color: var(--accent);
 }
 
 .footer-bottom {
@@ -458,5 +474,6 @@
   font-family: var(--font-mono);
   font-size: 0.875rem;
 }
+
 
 
