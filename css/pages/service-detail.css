@@ -1,0 +1,132 @@
+﻿/* ============================================================================
+   SERVICE DETAIL PAGE STYLES
+   ============================================================================ */
+
+.service-detail-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: var(--space-11);
+  overflow: hidden;
+}
+
+/* Abstract glowing shape shifting orb */
+.service-hero-orb {
+  position: absolute;
+  top: 50%;
+  right: -10%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.15;
+  transform: translateY(-50%);
+  animation: orb-shift 20s ease-in-out infinite alternate;
+  z-index: -1;
+  pointer-events: none;
+}
+
+@keyframes orb-shift {
+  0% { transform: translateY(-50%) scale(1) translateX(0); }
+  50% { transform: translateY(-30%) scale(1.2) translateX(-10%); }
+  100% { transform: translateY(-70%) scale(0.8) translateX(5%); }
+}
+
+.service-hero-title {
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  line-height: 0.9;
+  margin-bottom: var(--space-5);
+  max-width: 1200px;
+}
+
+.service-hero-desc {
+  font-size: var(--t-h4);
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin-bottom: var(--space-7);
+}
+
+/* Infinite Marquee */
+.tech-marquee-wrapper {
+  overflow: hidden;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: var(--space-7) 0;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  position: relative;
+  display: flex;
+}
+
+.tech-marquee {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee-scroll 30s linear infinite;
+}
+
+.tech-marquee-item {
+  font-family: var(--font-headline);
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: var(--text-tertiary);
+  margin-right: var(--space-9);
+  transition: color 0.4s ease;
+}
+
+.tech-marquee-item:hover {
+  color: var(--accent);
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Service Detail Approach */
+.approach-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  margin-top: var(--space-9);
+}
+
+@media (min-width: 1024px) {
+  .approach-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-10);
+  }
+}
+
+.approach-step {
+  position: relative;
+  padding-left: var(--space-7);
+  border-left: 2px solid var(--border-subtle);
+  transition: border-color 0.4s ease;
+}
+
+.approach-step:hover {
+  border-color: var(--accent);
+}
+
+.approach-step-num {
+  position: absolute;
+  top: -10px;
+  left: -20px;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--bg-primary);
+  background: var(--text-primary);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.approach-title {
+  margin-bottom: var(--space-3);
+}
+
+.approach-desc {
+  color: var(--text-secondary);
+}
