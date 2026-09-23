@@ -1,4 +1,4 @@
-/* ============================================================================
+﻿/* ============================================================================
    ZERB LAYOUT
    Navigation, Footer, Section Structures
    ============================================================================ */
@@ -18,11 +18,11 @@
 }
 
 .navbar.scrolled {
-  background: rgba(12, 10, 9, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   padding: var(--space-4) 0;
-  border-bottom: 1px solid var(--border-subtle);
 }
 
 .nav-inner {
@@ -365,7 +365,10 @@
   left: 0;
   width: 100vw;
   height: 100dvh;
-  background-color: var(--bg-primary);
+  background-color: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   z-index: 100000;
   display: flex;
   justify-content: center;
@@ -380,3 +383,78 @@
   letter-spacing: -0.02em;
   opacity: 0;
 }
+
+
+/* ============================================================================
+   GRAND FOOTER
+   ============================================================================ */
+.site-footer {
+  padding-top: var(--space-11);
+  background-color: var(--bg-surface);
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--space-8);
+  margin-bottom: var(--space-10);
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer-brand-text {
+  font-size: var(--t-h4);
+  color: var(--text-secondary);
+  max-width: 400px;
+  line-height: 1.4;
+}
+
+.footer-heading {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-tertiary);
+  margin-bottom: var(--space-4);
+}
+
+.footer-links-list a {
+  display: block;
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  margin-bottom: var(--space-3);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-links-list a:hover {
+  color: var(--accent);
+  transform: translateX(5px);
+}
+
+.footer-massive-text {
+  font-family: var(--font-headline);
+  font-size: 22vw;
+  line-height: 0.75;
+  color: var(--bg-primary);
+  text-align: center;
+  user-select: none;
+  margin-bottom: -5vw;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-5) 0;
+  border-top: 1px solid var(--border-subtle);
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+}
+

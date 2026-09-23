@@ -27,6 +27,8 @@
   .hero-grid {
     flex-direction: row;
     justify-content: center;
+  align-items: center;
+  text-align: center;
     gap: 0;
     margin-top: -40px;
   }
@@ -129,6 +131,7 @@
 }
 
 .statement-overlay {
+  background-color: rgba(10, 10, 10, 0.6) !important;
   position: absolute;
   inset: 0;
   /* Very heavy vignette so the text pops and the scene feels dramatic */
@@ -171,7 +174,9 @@
 }
 
 .statement-step.step-3 {
-  justify-content: center; /* Final resolution can be centered */
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Final resolution can be centered */
 }
 
 .statement-step .statement-text {
@@ -191,6 +196,9 @@
    CAPABILITIES â€” Glowing Circuit Cards
    ============================================================================ */
 .section-capabilities {
+  position: relative;
+  z-index: 10;
+  background-color: var(--bg-primary);
   background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-surface) 30%, var(--bg-surface) 70%, var(--bg-primary) 100%);
   border: none;
   padding: var(--space-10) 0;
@@ -565,6 +573,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   text-align: center;
   position: relative;
   border-top: 1px solid var(--border-subtle);
@@ -595,6 +605,7 @@
   max-width: 480px;
   margin: 0 auto var(--space-7);
 }
+
 
 
 
