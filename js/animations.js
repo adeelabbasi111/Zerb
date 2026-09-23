@@ -14,6 +14,7 @@
     initProjectReveals();
     initStatementScrollytelling();
     initCapabilitiesReveal();
+    initProcessHorizontalScroll();
   });
 
   // ========================================================================
@@ -209,6 +210,44 @@
         }
       );
     }
+  }
+
+  // ========================================================================
+  // PROCESS SECTION — Horizontal Scroll
+  // ========================================================================
+  function initProcessHorizontalScroll() {
+    const processSection = document.querySelector('.section-process');
+    const processWrapper = document.querySelector('.process-wrapper');
+    const processTrack = document.querySelector('.process-track');
+
+    if (!processSection || !processWrapper || !processTrack) return;
+
+    // Only apply horizontal scroll on desktop (match CSS query for touch snap)
+    let mm = gsap.matchMedia();
+
+    mm.add("(min-width: 1024px)", () => {
+      // Calculate how far to move horizontally
+      const trackWidth = processTrack.scrollWidth;
+      const viewportWidth = window.innerWidth;
+      
+      // If the track is smaller than the viewport, don't pin
+      if (trackWidth <= viewportWidth) return;
+
+      const xMove = trackWidth - viewportWidth + 120; // 120px extra padding buffer
+
+      gsap.to(processTrack, {
+        x: -xMove,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: processWrapper,
+          start: 'center center',
+          end: () => `+=${xMove}`, // scroll distance equals horizontal distance
+          pin: true,
+          scrub: 1, // smooth scrubbing
+          invalidateOnRefresh: true, // recalculate on resize
+        }
+      });
+    });
   }
 
 })();
