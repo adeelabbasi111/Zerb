@@ -1,5 +1,5 @@
-/* ============================================================================
-   ZERB â€” ANIMATIONS.JS
+﻿/* ============================================================================
+   ZERB Ã¢â‚¬â€ ANIMATIONS.JS
    GSAP ScrollTrigger sequences for homepage
    ============================================================================ */
 
@@ -34,7 +34,7 @@
 
     if (!heroLines.length) return;
 
-    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+    const tl = gsap.timeline({ defaults: { ease: 'power2.out' } });
 
     gsap.set(heroLines, { yPercent: 110 });
     gsap.set([heroLabel, heroSubtitle, heroCTA], { opacity: 0, y: 20 });
@@ -48,7 +48,7 @@
       .to(heroCTA, { opacity: 1, y: 0, duration: 0.6 }, 1.4);
 
     if (heroMedia) {
-      tl.to(heroMedia, { opacity: 1, scale: 1, x: 0, duration: 1.2, ease: 'power3.out' }, 0.8);
+      tl.to(heroMedia, { opacity: 1, scale: 1, x: 0, duration: 1.2, ease: 'power2.out' }, 0.8);
     }
   }
 
@@ -77,7 +77,7 @@
         gsap.from(innerImg, {
           scale: 1.15,
           duration: 1.4,
-          ease: 'power3.out',
+          ease: 'power2.out',
           scrollTrigger: {
             trigger: img,
             start: 'top 80%',
@@ -179,7 +179,7 @@
   }
 
   // ========================================================================
-  // CAPABILITIES — Staggered Card Reveal
+  // CAPABILITIES â€” Staggered Card Reveal
   // ========================================================================
   function initCapabilitiesReveal() {
     const cards = document.querySelectorAll('.cap-card');
@@ -190,7 +190,7 @@
       opacity: 1,
       y: 0,
       duration: 0.8,
-      ease: 'power3.out',
+      ease: 'power2.out',
       stagger: 0.15,
       scrollTrigger: {
         trigger: '.capabilities-grid',
@@ -207,7 +207,7 @@
           opacity: 1,
           y: 0,
           duration: 0.8,
-          ease: 'power3.out',
+          ease: 'power2.out',
           scrollTrigger: {
             trigger: header,
             start: 'top 85%',
@@ -218,7 +218,7 @@
   }
 
   // ========================================================================
-  // PROCESS SECTION — Horizontal Scroll
+  // PROCESS SECTION â€” Horizontal Scroll
   // ========================================================================
   function initProcessHorizontalScroll() {
     const processSection = document.querySelector('.section-process');
@@ -339,7 +339,7 @@
           duration: 0.8,
           rotateX: 0,
           rotateY: 0,
-          ease: 'power3.out'
+          ease: 'power2.out'
         });
       });
     });
@@ -418,6 +418,7 @@
   }
 
 })();
+
 
 
 
