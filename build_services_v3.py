@@ -52,7 +52,7 @@ SERVICES = [
 ]
 
 def generate_html(service):
-    marquee_html = "".join([f'<span class="tech-marquee-item">{{m}}</span>' for m in service["marquee"]])
+    marquee_html = "".join([f'<span class="tech-marquee-item">{m}</span>' for m in service["marquee"]])
     marquee_html += marquee_html
     
     html = f'''<!DOCTYPE html>
@@ -108,15 +108,17 @@ def generate_html(service):
     <div class="custom-cursor-follower" style="display: none !important;"></div>
     <div class="noise-overlay"></div>
 
-    <nav class="navbar glass-nav" id="navbar">
-        <div class="nav-container">
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container nav-inner">
             <a href="../index.html" class="brand-logo">ZERB</a>
+            
             <div class="nav-links-desktop">
-                <a href="../work.html">Work</a>
-                <a href="../services.html" aria-current="page">Services</a>
-                <a href="../about.html">About</a>
-                <a href="../contact.html" class="btn btn-primary btn-contact-nav">Start a project &rarr;</a>
+                <a href="../work.html" class="nav-link">Work</a>
+                <a href="../services.html" class="nav-link" aria-current="page">Services</a>
+                <a href="../about.html" class="nav-link">About</a>
+                <a href="../contact.html" class="btn btn-primary btn-contact-nav">Start a project <span class="arrow">&rarr;</span></a>
             </div>
+            
             <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
                 <span class="nav-toggle-line"></span>
                 <span class="nav-toggle-line"></span>
@@ -229,5 +231,7 @@ def generate_html(service):
 
 for s in SERVICES:
     generate_html(s)
+
+
 
 
