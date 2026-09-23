@@ -260,6 +260,7 @@
   // CUSTOM MAGNETIC CURSOR
   // ========================================================================
   function initCustomCursor() {
+    let cursorVisible = false;
     const cursor = document.querySelector('.custom-cursor');
     const follower = document.querySelector('.custom-cursor-follower');
     
@@ -418,6 +419,7 @@
   }
 
 })();
+
 
 
 
