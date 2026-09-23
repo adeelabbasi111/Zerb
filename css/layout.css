@@ -45,9 +45,9 @@ body::-webkit-scrollbar,
 }
 
 .navbar.scrolled {
-  background: rgba(10, 10, 10, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(5, 5, 5, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   padding: var(--space-4) 0;
 }
@@ -393,8 +393,8 @@ body::-webkit-scrollbar,
   width: 100vw;
   height: 100dvh;
   background-color: rgba(10, 10, 10, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   z-index: 100000;
   display: flex;
@@ -491,6 +491,7 @@ body::-webkit-scrollbar,
   font-family: var(--font-mono);
   font-size: 0.875rem;
 }
+
 
 
 

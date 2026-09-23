@@ -426,6 +426,11 @@
   border: none;
 }
 
+.meta-dot {
+  font-size: 0.5rem;
+  color: var(--border-visible);
+}
+
 .divider-accent {
   width: 48px;
   height: 2px;
@@ -491,4 +496,5 @@ a, button, .cap-card, .project-card {
     display: none;
   }
 }
+
 

@@ -1,4 +1,4 @@
-/* Work Page Styles */
+﻿/* Work Page Styles */
 
 .work-hero {
     min-height: 50vh;
@@ -43,14 +43,18 @@
 }
 
 .filter-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background: transparent;
     border: 1px solid var(--border-subtle);
     color: var(--text-secondary);
-    padding: 0.5rem 1.25rem;
+    padding: 0.6rem 1.5rem;
     border-radius: 100px;
     cursor: pointer;
     transition: all 0.3s ease;
     white-space: nowrap;
+    line-height: 1.2;
 }
 
 .filter-btn:hover {
@@ -167,3 +171,4 @@
 .mt-4 {
     margin-top: 2rem;
 }
+
