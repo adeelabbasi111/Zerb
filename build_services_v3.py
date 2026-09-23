@@ -1,9 +1,66 @@
-<!DOCTYPE html>
+﻿import os
+
+SERVICES = [
+    {
+        "id": "web-development",
+        "num": "01",
+        "title": "Web<br>Development",
+        "desc": "We engineer high-performance platforms, immersive marketing sites, and scalable web applications that redefine digital presence.",
+        "marquee": ["REACT.JS", "NEXT.JS", "NODE.JS", "TYPESCRIPT", "WEBGL", "THREE.JS"],
+        "orb": "var(--accent)"
+    },
+    {
+        "id": "app-development",
+        "num": "02",
+        "title": "App<br>Development",
+        "desc": "Native and cross-platform mobile applications that feel fast, look sharp, and solve real problems.",
+        "marquee": ["SWIFT", "KOTLIN", "REACT NATIVE", "FLUTTER", "FIREBASE", "COREML"],
+        "orb": "#3B82F6"
+    },
+    {
+        "id": "game-development",
+        "num": "03",
+        "title": "Game<br>Development",
+        "desc": "Game concepts, mechanics, UI systems, 3D assets, and full development from prototype to launch.",
+        "marquee": ["UNREAL ENGINE", "UNITY", "C++", "C#", "BLENDER", "MAYA"],
+        "orb": "#10B981"
+    },
+    {
+        "id": "graphic-design",
+        "num": "04",
+        "title": "Graphic<br>Design",
+        "desc": "Brand identity systems, visual design, marketing assets, social media, and digital campaigns with commercial intent.",
+        "marquee": ["ILLUSTRATOR", "PHOTOSHOP", "INDESIGN", "TYPOGRAPHY", "BRANDING", "PRINT"],
+        "orb": "#EC4899"
+    },
+    {
+        "id": "video-editing",
+        "num": "05",
+        "title": "Video<br>Editing",
+        "desc": "Commercials, social content, promotional videos, motion graphics, and post-production that tells your story.",
+        "marquee": ["PREMIERE PRO", "AFTER EFFECTS", "DAVINCI RESOLVE", "C4D", "COLOR GRADING", "VFX"],
+        "orb": "#F59E0B"
+    },
+    {
+        "id": "ui-ux-design",
+        "num": "06",
+        "title": "UI/UX<br>Design",
+        "desc": "Research, information architecture, wireframes, interface design, and interactive prototypes that people actually want to use.",
+        "marquee": ["FIGMA", "FRAMER", "PROTOTYPING", "USER RESEARCH", "WIREFRAMING", "DESIGN SYSTEMS"],
+        "orb": "#8B5CF6"
+    }
+]
+
+def generate_html(service):
+    marquee_html = "".join([f'<span class="tech-marquee-item">{{m}}</span>' for m in service["marquee"]])
+    marquee_html += marquee_html
+    
+    html = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZERB - Game Development</title>
+    <title>ZERB - {service['title'].replace('<br>', ' ')}</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +74,7 @@
     <link rel="stylesheet" href="../css/pages/service-detail.css">
     
     <style>
-        .service-hero-orb {
+        .service-hero-orb {{
             position: absolute;
             top: 50%;
             left: 50%;
@@ -31,12 +88,12 @@
             opacity: 0.8 !important;
             z-index: 0;
             pointer-events: none;
-        }
-        .tech-marquee-item {
+        }}
+        .tech-marquee-item {{
             color: transparent !important;
             -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3) !important;
             font-family: 'Hanken Grotesk', sans-serif !important;
-        }
+        }}
     </style>
 </head>
 <body class="keyboard-nav">
@@ -77,17 +134,17 @@
     </div>
 
     <header class="service-detail-hero section">
-        <div class="service-hero-orb" style="background-color: #10B981;"></div>
+        <div class="service-hero-orb" style="background-color: {service['orb']};"></div>
         <div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;">
-            <span class="t-mono t-label" style="display: block; margin-bottom: var(--space-4); color: var(--accent);">Capability // 03</span>
-            <h1 class="service-hero-title t-display">Game<br>Development</h1>
-            <p class="service-hero-desc">Game concepts, mechanics, UI systems, 3D assets, and full development from prototype to launch.</p>
+            <span class="t-mono t-label" style="display: block; margin-bottom: var(--space-4); color: var(--accent);">Capability // {service['num']}</span>
+            <h1 class="service-hero-title t-display">{service['title']}</h1>
+            <p class="service-hero-desc">{service['desc']}</p>
         </div>
     </header>
 
     <div class="tech-marquee-wrapper">
         <div class="tech-marquee">
-            <span class="tech-marquee-item">{m}</span><span class="tech-marquee-item">{m}</span><span class="tech-marquee-item">{m}</span><span class="tech-marquee-item">{m}</span><span class="tech-marquee-item">{m}</span><span class="tech-marquee-item">{m}</span><span class="tech-marquee-item">{m}</span><span class="tech-marquee-item">{m}</span><span class="tech-marquee-item">{m}</span><span class="tech-marquee-item">{m}</span><span class="tech-marquee-item">{m}</span><span class="tech-marquee-item">{m}</span>
+            {marquee_html}
         </div>
     </div>
 
@@ -165,4 +222,12 @@
     <script src="../js/core.js"></script>
     <script src="../js/animations.js"></script>
 </body>
-</html>
+</html>'''
+    with open(f"services/{service['id']}.html", "w", encoding="utf-8") as f:
+        f.write(html)
+    print(f"Generated {service['id']}.html")
+
+for s in SERVICES:
+    generate_html(s)
+
+

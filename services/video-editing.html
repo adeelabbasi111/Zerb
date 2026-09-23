@@ -15,6 +15,29 @@
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/pages/service-detail.css">
+    
+    <style>
+        .service-hero-orb {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80vw;
+            height: 80vw;
+            max-width: 800px;
+            max-height: 800px;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.8 !important;
+            z-index: 0;
+            pointer-events: none;
+        }
+        .tech-marquee-item {
+            color: transparent !important;
+            -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3) !important;
+            font-family: 'Hanken Grotesk', sans-serif !important;
+        }
+    </style>
 </head>
 <body class="keyboard-nav">
 
@@ -23,8 +46,9 @@
         <div class="page-transition-logo">ZERB</div>
     </div>
 
-    <div class="custom-cursor"></div>
-    <div class="custom-cursor-follower"></div>
+    <!-- Disabled Custom Cursor for service pages to avoid headless browser artifacts -->
+    <div class="custom-cursor" style="display: none !important;"></div>
+    <div class="custom-cursor-follower" style="display: none !important;"></div>
     <div class="noise-overlay"></div>
 
     <nav class="navbar glass-nav" id="navbar">
@@ -53,7 +77,7 @@
     </div>
 
     <header class="service-detail-hero section">
-        <div class="service-hero-orb" style="background: #F59E0B;"></div>
+        <div class="service-hero-orb" style="background-color: #F59E0B;"></div>
         <div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;">
             <span class="t-mono t-label" style="display: block; margin-bottom: var(--space-4); color: var(--accent);">Capability // 05</span>
             <h1 class="service-hero-title t-display">Video<br>Editing</h1>
@@ -73,22 +97,22 @@
             <div class="approach-grid">
                 <div class="approach-step">
                     <span class="approach-step-num">01</span>
-                    <h3 class="t-h3 approach-title" style="font-family: var(--font-body) !important;">Architecture First</h3>
+                    <h3 class="approach-title" style="font-family: 'Hanken Grotesk', sans-serif;">Architecture First</h3>
                     <p class="approach-desc">We don't just start building. We design the models, architecture, and systems to ensure the product scales effortlessly as your user base grows.</p>
                 </div>
                 <div class="approach-step">
                     <span class="approach-step-num">02</span>
-                    <h3 class="t-h3 approach-title" style="font-family: var(--font-body) !important;">Performance Obsession</h3>
+                    <h3 class="approach-title" style="font-family: 'Hanken Grotesk', sans-serif;">Performance Obsession</h3>
                     <p class="approach-desc">Sub-second load times aren't a luxury, they're a requirement. We optimize delivery, utilize best practices, and minimize main-thread execution.</p>
                 </div>
                 <div class="approach-step">
                     <span class="approach-step-num">03</span>
-                    <h3 class="t-h3 approach-title" style="font-family: var(--font-body) !important;">Fluid Interactions</h3>
+                    <h3 class="approach-title" style="font-family: 'Hanken Grotesk', sans-serif;">Fluid Interactions</h3>
                     <p class="approach-desc">A product should feel alive. We integrate physics-based animations, smooth page transitions, and micro-interactions that delight users.</p>
                 </div>
                 <div class="approach-step">
                     <span class="approach-step-num">04</span>
-                    <h3 class="t-h3 approach-title" style="font-family: var(--font-body) !important;">Bulletproof Deployment</h3>
+                    <h3 class="approach-title" style="font-family: 'Hanken Grotesk', sans-serif;">Bulletproof Deployment</h3>
                     <p class="approach-desc">Automated testing, continuous integration, and rigorous QA. We build infrastructure that lets you ship with confidence.</p>
                 </div>
             </div>
