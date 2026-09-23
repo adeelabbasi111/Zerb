@@ -38,7 +38,7 @@ body::-webkit-scrollbar,
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 9999 !important;
   padding: var(--space-5) 0;
   transition: background-color var(--duration-base) var(--ease-out),
               padding var(--duration-base) var(--ease-out);
@@ -491,6 +491,7 @@ body::-webkit-scrollbar,
   font-family: var(--font-mono);
   font-size: 0.875rem;
 }
+
 
 
 
