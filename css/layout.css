@@ -355,3 +355,28 @@
   background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');
   mix-blend-mode: overlay;
 }
+
+/* ============================================================================
+   PAGE TRANSITION OVERLAY
+   ============================================================================ */
+.page-transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh;
+  background-color: var(--bg-primary);
+  z-index: 100000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none; /* Block interactions until faded out */
+}
+
+.page-transition-logo {
+  font-family: var(--font-headline);
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: var(--accent);
+  letter-spacing: -0.02em;
+  opacity: 0;
+}

@@ -9,6 +9,8 @@
   const { prefersReduced } = window.ZERB || {};
   if (prefersReduced) return;
 
+  initPageTransition();
+
   document.fonts.ready.then(() => {
     initHeroAnimations();
     initProjectReveals();
@@ -17,6 +19,7 @@
     initProcessHorizontalScroll();
     initCustomCursor();
     init3DTilt();
+    initPortfolioFilters();
   });
 
   // ========================================================================
@@ -340,6 +343,78 @@
         });
       });
     });
+  }
+
+
+  // ========================================================================
+  // PORTFOLIO FILTERING
+  // ========================================================================
+  function initPortfolioFilters() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projects = document.querySelectorAll('.work-card');
+
+    if (!filterBtns.length || !projects.length) return;
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Update active class
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        // GSAP animation for filtering
+        projects.forEach(project => {
+          const category = project.getAttribute('data-category');
+          
+          if (filter === 'all' || filter === category) {
+            gsap.to(project, {
+              display: 'block',
+              opacity: 1,
+              scale: 1,
+              duration: 0.4,
+              ease: 'power2.out'
+            });
+          } else {
+            gsap.to(project, {
+              opacity: 0,
+              scale: 0.95,
+              duration: 0.3,
+              ease: 'power2.in',
+              onComplete: () => {
+                project.style.display = 'none';
+              }
+            });
+          }
+        });
+        
+        // Refresh ScrollTrigger to recalculate heights
+        setTimeout(() => {
+          ScrollTrigger.refresh();
+        }, 500);
+      });
+    });
+  }
+
+
+  // ========================================================================
+  // PAGE LOAD TRANSITION
+  // ========================================================================
+  function initPageTransition() {
+    const overlay = document.querySelector('.page-transition-overlay');
+    const logo = document.querySelector('.page-transition-logo');
+    
+    if (!overlay || !logo) return;
+
+    // Pulse logo in, then fade out overlay
+    const tl = gsap.timeline();
+    tl.to(logo, { opacity: 1, duration: 0.4, ease: 'power2.out' })
+      .to(logo, { opacity: 0, duration: 0.4, delay: 0.2, ease: 'power2.in' })
+      .to(overlay, { 
+        yPercent: -100, 
+        duration: 0.8, 
+        ease: 'power4.inOut' 
+      }, '-=0.2');
   }
 
 })();

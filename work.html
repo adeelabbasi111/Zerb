@@ -15,6 +15,12 @@
     <link rel="stylesheet" href="css/pages/work.css">
 </head>
 <body>
+
+    <!-- Page Transition Overlay -->
+    <div class="page-transition-overlay">
+        <div class="page-transition-logo">ZERB</div>
+    </div>
+
     <div class="scroll-progress" aria-hidden="true"></div>
     <!-- NAVIGATION (same as index.html) -->
     <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
@@ -57,15 +63,15 @@
             <div class="container">
                 <div class="work-filters reveal">
                     <button class="filter-btn active t-label">All</button>
-                    <button class="filter-btn t-label">Web</button>
-                    <button class="filter-btn t-label">Mobile</button>
-                    <button class="filter-btn t-label">Game</button>
-                    <button class="filter-btn t-label">Design</button>
+                    <button class="filter-btn t-label" data-filter="web">Web</button>
+                    <button class="filter-btn t-label" data-filter="mobile">Mobile</button>
+                    <button class="filter-btn t-label" data-filter="game">Game</button>
+                    <button class="filter-btn t-label" data-filter="design">Design</button>
                 </div>
 
                 <div class="project-grid reveal-stagger">
                     <!-- Project 1 -->
-                    <a href="#" class="project-card work-card">
+                    <a href="#" class="project-card work-card" data-category="web">
                         <div class="project-card-image clip-reveal">
                             <img src="assets/images/project-dashboard.jpg" alt="Analytics Hub Dashboard" loading="lazy">
                         </div>
@@ -81,7 +87,7 @@
                     </a>
 
                     <!-- Project 2 -->
-                    <a href="#" class="project-card work-card offset-card">
+                    <a href="#" class="project-card work-card offset-card" data-category="mobile">
                         <div class="project-card-image clip-reveal">
                             <img src="assets/images/project-mobile-app.jpg" alt="Pulse Fitness App" loading="lazy">
                         </div>
@@ -97,7 +103,7 @@
                     </a>
 
                     <!-- Project 3 -->
-                    <a href="#" class="project-card work-card">
+                    <a href="#" class="project-card work-card" data-category="game">
                         <div class="project-card-image clip-reveal">
                             <img src="assets/images/project-game.jpg" alt="Meridian Game Environment" loading="lazy">
                         </div>
@@ -113,7 +119,7 @@
                     </a>
 
                     <!-- Project 4 -->
-                    <a href="#" class="project-card work-card offset-card">
+                    <a href="#" class="project-card work-card offset-card" data-category="design">
                         <div class="project-card-image clip-reveal">
                             <img src="assets/images/project-branding.jpg" alt="Brand Mark Identity" loading="lazy">
                         </div>
