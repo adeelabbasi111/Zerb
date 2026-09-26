@@ -1,5 +1,5 @@
 ﻿/* ============================================================================
-   ZERB Ã¢â‚¬â€ ANIMATIONS.JS
+   ZERB — ANIMATIONS.JS
    GSAP ScrollTrigger sequences for homepage
    ============================================================================ */
 
@@ -25,6 +25,18 @@
   // ========================================================================
   // HERO ENTRANCE ANIMATION
   // ========================================================================
+  
+  // Simple Text Splitter Utility
+  function splitText(selector) {
+    const elements = document.querySelectorAll(selector);
+    elements.forEach(el => {
+      if (el.classList.contains('split-done')) return;
+      const text = el.innerText;
+      el.innerHTML = text.split('').map(char => char === ' ' ? '&nbsp;' : <span class="char" style="display:inline-block; opacity:0; transform:translateY(20px);"></span>).join('');
+      el.classList.add('split-done');
+    });
+  }
+
   function initHeroAnimations() {
     const heroLabel = document.querySelector('.hero-label');
     const heroLines = document.querySelectorAll('.hero-title .line-inner');
@@ -36,14 +48,20 @@
 
     const tl = gsap.timeline({ defaults: { ease: 'power2.out' } });
 
+    splitText('.hero-title');
+    const chars = document.querySelectorAll('.hero-title .char');
     gsap.set(heroLines, { yPercent: 110 });
     gsap.set([heroLabel, heroSubtitle, heroCTA], { opacity: 0, y: 20 });
     if (heroMedia) gsap.set(heroMedia, { opacity: 0, scale: 0.95, x: 20 });
 
     tl.to(heroLabel, { opacity: 1, y: 0, duration: 0.6 }, 0.3)
-      .to(heroLines[0], { yPercent: 0, duration: 0.9 }, 0.5)
-      .to(heroLines[1], { yPercent: 0, duration: 0.9 }, 0.65)
-      .to(heroLines[2], { yPercent: 0, duration: 0.9 }, 0.8)
+      .to(chars, {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        stagger: 0.02,
+        ease: 'back.out(1.7)'
+      }, 0.5)
       .to(heroSubtitle, { opacity: 1, y: 0, duration: 0.7 }, 1.2)
       .to(heroCTA, { opacity: 1, y: 0, duration: 0.6 }, 1.4);
 
@@ -179,7 +197,7 @@
   }
 
   // ========================================================================
-  // CAPABILITIES â€” Staggered Card Reveal
+  // CAPABILITIES — Staggered Card Reveal
   // ========================================================================
   function initCapabilitiesReveal() {
     const cards = document.querySelectorAll('.cap-card');
@@ -218,7 +236,7 @@
   }
 
   // ========================================================================
-  // PROCESS SECTION â€” Horizontal Scroll
+  // PROCESS SECTION — Horizontal Scroll
   // ========================================================================
   function initProcessHorizontalScroll() {
     const processSection = document.querySelector('.section-process');

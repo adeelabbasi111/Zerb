@@ -48,6 +48,7 @@
   const navToggle = document.getElementById('nav-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
   const mobileLinks = document.querySelectorAll('.mobile-menu-link');
+  const mobileOverlay = document.getElementById('mobile-overlay');
 
   // Scroll state for navbar
   if (navbar) {
@@ -62,12 +63,24 @@
       },
     });
   }
+  if (mobileOverlay) {
+    mobileOverlay.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+      mobileOverlay.classList.remove('active');
+      navToggle.classList.remove('active');
+      navToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      if (lenis) lenis.start();
+    });
+  }
+
 
   // Mobile menu toggle
   if (navToggle && mobileMenu) {
     navToggle.addEventListener('click', () => {
       const isOpen = mobileMenu.classList.contains('active');
       mobileMenu.classList.toggle('active');
+      if(mobileOverlay) mobileOverlay.classList.toggle('active');
       navToggle.classList.toggle('active');
       navToggle.setAttribute('aria-expanded', !isOpen);
 
@@ -83,6 +96,7 @@
     mobileLinks.forEach((link) => {
       link.addEventListener('click', () => {
         mobileMenu.classList.remove('active');
+        if(mobileOverlay) mobileOverlay.classList.remove('active');
         navToggle.classList.remove('active');
         navToggle.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
@@ -90,6 +104,17 @@
       });
     });
   }
+  if (mobileOverlay) {
+    mobileOverlay.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+      mobileOverlay.classList.remove('active');
+      navToggle.classList.remove('active');
+      navToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      if (lenis) lenis.start();
+    });
+  }
+
 
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -104,7 +129,18 @@
         }
       }
     });
-  });
+  }
+  if (mobileOverlay) {
+    mobileOverlay.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+      mobileOverlay.classList.remove('active');
+      navToggle.classList.remove('active');
+      navToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      if (lenis) lenis.start();
+    });
+  }
+);
 
   // ========================================================================
   // BASIC REVEAL OBSERVER (CSS Fallback — GSAP enhances in animations.js)
@@ -163,4 +199,50 @@
 
   // Expose lenis for other modules
   window.ZERB = { lenis, prefersReduced };
+
+  // ========================================================================
+  // BARBA.JS PAGE TRANSITIONS
+  // ========================================================================
+  if (typeof barba !== 'undefined') {
+    barba.init({
+      sync: true,
+      transitions: [{
+        name: 'opacity-transition',
+        leave(data) {
+          return gsap.to(data.current.container, {
+            opacity: 0,
+            y: -50,
+            duration: 0.5,
+            ease: 'power2.in'
+          });
+        },
+        enter(data) {
+          // Re-init WebGL if needed on new page
+          if (window.initHeroAnimations) window.initHeroAnimations();
+          if (window.ScrollTrigger) ScrollTrigger.refresh();
+          if (lenis) lenis.scrollTo(0, { immediate: true });
+          
+          return gsap.from(data.next.container, {
+            opacity: 0,
+            y: 50,
+            duration: 0.5,
+            ease: 'power2.out',
+            delay: 0.2
+          });
+        }
+      }]
+    });
+  }
+  if (mobileOverlay) {
+    mobileOverlay.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+      mobileOverlay.classList.remove('active');
+      navToggle.classList.remove('active');
+      navToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      if (lenis) lenis.start();
+    });
+  }
+
+
 })();

@@ -1,6 +1,6 @@
 ﻿/* ============================================================================
    ZERB DESIGN SYSTEM
-   Tokens, Typography, Grid, Motion â€” The DNA of every page
+   Tokens, Typography, Grid, Motion — The DNA of every page
    ============================================================================ */
 
 /* --- Custom Animatable Properties --- */
@@ -12,7 +12,7 @@
 
 /* --- Design Tokens --- */
 :root {
-  /* Colors â€” Warm Obsidian Palette */
+  /* Colors — Warm Obsidian Palette */
   --bg-primary:      #0C0A09;
   --bg-surface:      #171412;
   --bg-elevated:     #201C18;
@@ -155,7 +155,7 @@ input, textarea, select {
 
 /* ============================================================================
    TYPOGRAPHY SCALE
-   Fluid sizing with clamp() â€” no breakpoint jumps
+   Fluid sizing with clamp() — no breakpoint jumps
    ============================================================================ */
 .t-display {
   font-family: var(--font-headline);

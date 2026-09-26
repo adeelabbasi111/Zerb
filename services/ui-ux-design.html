@@ -38,8 +38,21 @@
             font-family: 'Hanken Grotesk', sans-serif !important;
         }
     </style>
+
+    <meta name="theme-color" content="#0C0A09">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta property="og:title" content="ZERB — Premium Software House">
+    <meta property="og:description" content="We engineer digital products that move industries.">
+    <meta property="og:image" content="/og-image.jpg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Three.js for WebGL Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
-<body class="keyboard-nav">
+<body class="keyboard-nav" data-barba="wrapper">
 
     <!-- Page Transition Overlay -->
     <div class="page-transition-overlay">
@@ -69,6 +82,7 @@
         </div>
     </nav>
 
+    <div class="mobile-overlay" id="mobile-overlay"></div>
     <div class="mobile-menu" id="mobile-menu">
         <div class="mobile-menu-inner">
             <a href="../work.html" class="mobile-link">Work</a>
@@ -166,5 +180,6 @@
     
     <script src="../js/core.js"></script>
     <script src="../js/animations.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
 </body>
 </html>

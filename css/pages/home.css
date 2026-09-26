@@ -166,7 +166,7 @@
 }
 
 /* ============================================================================
-   CAPABILITIES â€” Glowing Circuit Cards
+   CAPABILITIES — Glowing Circuit Cards
    ============================================================================ */
 .section-capabilities {
   position: relative;
@@ -213,7 +213,7 @@
 .cap-card {
   position: relative;
   border-radius: var(--radius-lg, 12px);
-  padding: 1px; /* This 1px is the border â€” the glow shows through */
+  padding: 1px; /* This 1px is the border — the glow shows through */
   background: conic-gradient(
     from var(--border-angle),
     var(--border-subtle) 0%,
