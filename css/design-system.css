@@ -12,12 +12,13 @@
 
 /* --- Design Tokens --- */
 :root {
-  /* Colors — Warm Obsidian Palette */
+  /* Colors — Warm Obsidian Palette (ZERB Signature) */
   --bg-primary:      #0C0A09;
   --bg-surface:      #171412;
   --bg-elevated:     #201C18;
   --border-subtle:   #2A2420;
   --border-visible:  #3D3630;
+  --border-active:   rgba(196, 115, 74, 0.45);
   --text-primary:    #F5F0EB;
   --text-secondary:  #A09890;
   --text-tertiary:   #5C554E;
@@ -25,6 +26,10 @@
   --accent-hover:    #D4885F;
   --accent-subtle:   rgba(196, 115, 74, 0.12);
   --accent-glow:     rgba(196, 115, 74, 0.25);
+  --accent-warm:     #E08758;
+  --accent-warm-glow:rgba(224, 135, 88, 0.25);
+  --accent-emerald:  #22C55E;
+  --accent-emerald-glow: rgba(34, 197, 94, 0.25);
   --white:           #FFFFFF;
   --black:           #000000;
 
@@ -309,9 +314,6 @@ body::after {
   to { transform: scaleX(1); }
 }
 
-/* ============================================================================
-   REDUCED MOTION
-   ============================================================================ */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -321,6 +323,99 @@ body::after {
   }
   .scroll-progress { display: none !important; }
 }
+
+/* ============================================================================
+   ZERB SIGNATURE DESIGN SYSTEM EXTENSIONS (WARM OBSIDIAN & COPPER)
+   ============================================================================ */
+.text-gradient-copper, .text-gradient-cyan {
+  background: linear-gradient(135deg, #F09B70 0%, #C4734A 50%, #9E4D26 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.text-gradient-warm {
+  background: linear-gradient(135deg, #F59E0B 0%, #C4734A 60%, #E27A44 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.badge-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  background: rgba(196, 115, 74, 0.1);
+  border: 1px solid rgba(196, 115, 74, 0.3);
+  color: #E28A5E;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22C55E;
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.6);
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-ring {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.nav-github-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background: rgba(245, 240, 235, 0.04);
+  border: 1px solid var(--border-visible);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.nav-github-pill:hover {
+  background: var(--accent-subtle);
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.nav-github-pill .repo-count {
+  background: rgba(196, 115, 74, 0.18);
+  color: var(--accent);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+}
+
+/* Glass Card */
+.card-glass {
+  background: rgba(23, 20, 18, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--duration-base) var(--ease-out), transform var(--duration-base) var(--ease-out), box-shadow var(--duration-base) var(--ease-out);
+}
+
+.card-glass:hover {
+  border-color: var(--border-active);
+  box-shadow: 0 16px 36px var(--accent-glow);
+}
+
 
 
 

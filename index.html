@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZERB &mdash; We Engineer Digital Products That Move Industries</title>
-    <meta name="description" content="ZERB is a premium software house specializing in web development, mobile apps, game development, graphic design, and UI/UX. From concept to launch.">
+    <title>ZERB &mdash; Software House | High-Performance Digital Products</title>
+    <meta name="description" content="ZERB is a premium software house specializing in high-performance web systems, autonomous AI pipelines, native Web Audio DSP engines, mobile applications, and UI/UX design. From concept to launch.">
+    <meta name="author" content="ZERB">
+    <link rel="canonical" href="https://zerb.io/">
 
     <!-- Preconnect for speed -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
 
     <!-- Lenis CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.css">
@@ -21,17 +23,43 @@
     <link rel="stylesheet" href="css/pages/home.css">
 
     <meta name="theme-color" content="#0C0A09">
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <meta property="og:title" content="ZERB — Premium Software House">
-    <meta property="og:description" content="We engineer digital products that move industries.">
-    <meta property="og:image" content="/og-image.jpg">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Open Graph / Meta tags -->
+    <meta property="og:title" content="ZERB — We Engineer Digital Products That Move Industries">
+    <meta property="og:description" content="ZERB is a premium software house specializing in web development, AI systems, Web Audio DSP, mobile apps, and UI/UX.">
+    <meta property="og:image" content="og-image.jpg">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ZERB — Premium Software House">
+    <meta name="twitter:description" content="We engineer digital products that move industries.">
+    <meta name="twitter:image" content="og-image.jpg">
+
+    <!-- Structured Data Schema for Software House -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ZERB",
+      "url": "https://zerb.io/",
+      "logo": "https://zerb.io/favicon.svg",
+      "description": "Premium software house specializing in full-stack web applications, AI research engines, Web Audio DSP, mobile apps, and UI/UX design.",
+      "foundingDate": "2024",
+      "founder": {
+        "@type": "Person",
+        "name": "Adeel Abbasi"
+      },
+      "sameAs": [
+        "https://github.com/adeelabbasi111",
+        "https://www.linkedin.com/in/adeelabbasi111/"
+      ]
+    }
+    </script>
 
     <!-- Three.js for WebGL Effects -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 <body data-barba="wrapper">
 
@@ -41,30 +69,38 @@
     </div>
 
     <!-- Custom Cursor -->
-    <div class="custom-cursor"></div>
-    <div class="custom-cursor-follower"></div>
-    <div class="noise-overlay"></div>
-
-    <!-- Scroll Progress (CSS-only) -->
-    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="custom-cursor" aria-hidden="true"></div>
+    <div class="custom-cursor-follower" aria-hidden="true"></div>
+    <div class="noise-overlay" aria-hidden="true"></div>
 
     <!-- ====================================================================
-         NAVIGATION
+         00 — NAVIGATION
          ==================================================================== -->
     <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
         <div class="container nav-inner">
-            <a href="index.html" class="brand-logo">ZERB</a>
+            <div style="display: flex; align-items: center; gap: 16px;">
+                <a href="index.html" class="brand-logo" aria-label="ZERB Homepage">ZERB</a>
+                <span class="badge-status" id="nav-status-badge">
+                    <span class="pulse-dot"></span> Accepting Q1 Projects
+                </span>
+            </div>
 
             <!-- Desktop Links -->
             <div class="nav-links-desktop">
-                <a href="work.html" class="nav-link">Work</a>
-                <a href="services.html" class="nav-link">Services</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="contact.html" class="btn btn-primary btn-contact-nav">Start a project <span class="arrow">&rarr;</span></a>
+                <a href="#work" class="nav-link">Work</a>
+                <a href="#capabilities" class="nav-link">Capabilities</a>
+                <a href="#terminal" class="nav-link">CLI Shell</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="https://github.com/adeelabbasi111" target="_blank" rel="noopener noreferrer" class="nav-github-pill" aria-label="ZERB GitHub Repositories">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>Engineered Repos</span>
+                    <span class="repo-count">21+</span>
+                </a>
+                <a href="#contact" class="btn btn-primary btn-contact-nav">Start a project <span class="arrow">&rarr;</span></a>
             </div>
 
             <!-- Mobile Toggle -->
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span class="nav-toggle-line"></span>
                 <span class="nav-toggle-line"></span>
                 <span class="nav-toggle-line"></span>
@@ -72,40 +108,84 @@
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-overlay" id="mobile-overlay"></div>
-    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile menu">
+    <!-- Mobile Menu Drawer -->
+    <div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+        <div style="margin-bottom: var(--space-6);">
+            <span class="badge-status">
+                <span class="pulse-dot"></span> Accepting Q1 Projects
+            </span>
+        </div>
         <ul class="mobile-menu-links">
-            <li><a href="work.html" class="mobile-menu-link">Work</a></li>
-            <li><a href="services.html" class="mobile-menu-link">Services</a></li>
-            <li><a href="about.html" class="mobile-menu-link">About</a></li>
-            <li><a href="contact.html" class="mobile-menu-link">Contact</a></li>
+            <li><a href="#work" class="mobile-menu-link">Work</a></li>
+            <li><a href="#capabilities" class="mobile-menu-link">Capabilities</a></li>
+            <li><a href="#terminal" class="mobile-menu-link">CLI Shell</a></li>
+            <li><a href="#about" class="mobile-menu-link">About ZERB</a></li>
+            <li><a href="#contact" class="mobile-menu-link" style="color: var(--accent);">Start a project &rarr;</a></li>
         </ul>
+        <div style="margin-top: var(--space-8); padding-top: var(--space-6); border-top: 1px solid var(--border-subtle); width: 100%;">
+            <a href="https://github.com/adeelabbasi111" target="_blank" rel="noopener noreferrer" class="nav-github-pill" style="width: 100%; justify-content: center;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <span>github.com/adeelabbasi111</span>
+            </a>
+        </div>
     </div>
 
     <!-- ====================================================================
-         01 — HERO
+         01 — HERO SECTION
          ==================================================================== -->
-    <header class="hero section">
+    <header class="hero section" id="hero">
         <div class="container hero-grid">
             <div class="hero-content">
-                <span class="t-label hero-label" style="color: var(--accent);">Software House &mdash; Est. 2024</span>
+                <div class="hero-label">
+                    <span class="t-label hero-label" style="color: var(--accent);">Software House &mdash; Est. 2024</span>
+                </div>
 
                 <h1 class="t-display hero-title" aria-label="We engineer digital products that move industries">
                     <span class="line"><span class="line-inner">We engineer</span></span>
                     <span class="line"><span class="line-inner">digital products</span></span>
-                    <span class="line"><span class="line-inner" style="color: var(--accent); white-space: nowrap;">that move industries.</span></span>
+                    <span class="line"><span class="line-inner text-gradient-copper">that move industries.</span></span>
                 </h1>
 
-                <p class="t-body-lg hero-subtitle">From first sketch to shipped product &mdash; design, engineering, and strategy under one roof.</p>
+                <p class="t-body-lg hero-subtitle" style="margin: 0 auto var(--space-7);">
+                    From concept to shipped product &mdash; design, engineering, and product strategy under one roof. We build high-performance web systems, autonomous AI pipelines, and native Web Audio DSP engines with zero bloat.
+                </p>
 
-                <a href="contact.html" class="btn btn-primary btn-lg btn-block-mobile">Start a project <span class="arrow">&rarr;</span></a>
+                <!-- Actions Strip -->
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary btn-lg">Start a project <span class="arrow">&rarr;</span></a>
+                    <a href="#work" class="btn btn-outline btn-lg">Explore Engineered Work <span class="arrow">&rarr;</span></a>
+                    <a href="#terminal" class="btn btn-outline btn-lg">ZERB CLI Shell</a>
+                </div>
+
+                <!-- Real-Time Telemetry HUD -->
+                <div class="hero-telemetry-hud">
+                    <div class="hero-hud-card">
+                        <span class="hud-card-label">SOFTWARE HOUSE</span>
+                        <span class="hud-card-val" style="color: var(--accent);">Est. 2024</span>
+                        <span class="hud-card-sub">Engineering &amp; Product Studio</span>
+                    </div>
+                    <div class="hero-hud-card">
+                        <span class="hud-card-label">ENGINEERED REPOSITORIES</span>
+                        <span class="hud-card-val" style="color: var(--text-primary);">21+</span>
+                        <span class="hud-card-sub">Verified Production Codebases</span>
+                    </div>
+                    <div class="hero-hud-card">
+                        <span class="hud-card-label">AUDIO DSP ENGINE</span>
+                        <span class="hud-card-val" style="color: var(--accent);">0 ms</span>
+                        <span class="hud-card-sub">Sample-Accurate Lookahead</span>
+                    </div>
+                    <div class="hero-hud-card">
+                        <span class="hud-card-label">CODE INTEGRITY</span>
+                        <span class="hud-card-val" style="color: var(--accent-warm);">100%</span>
+                        <span class="hud-card-sub">Zero Bloat &bull; First Principles</span>
+                    </div>
+                </div>
             </div>
 
+            <!-- Background Canvas & Video Texture -->
             <div class="hero-media" aria-hidden="true">
-                <video autoplay muted loop playsinline preload="auto">
-                    <source src="assets/videos/Potrait-animation-bw.mp4" type="video/mp4">
-                </video>
+                <canvas id="hero-webgl-canvas" style="position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0;"></canvas>
                 <div class="hero-media-overlay"></div>
             </div>
         </div>
@@ -114,16 +194,14 @@
     <!-- ====================================================================
          02 — CINEMATIC SCROLLYTELLING STATEMENT
          ==================================================================== -->
-    <section class="statement-scene" id="statement-scene" aria-label="Our philosophy">
-        <!-- Background Video -->
+    <section class="statement-scene" id="statement-scene" aria-label="Our Philosophy">
         <div class="statement-bg">
-            <video id="statement-video" muted playsinline preload="auto">
-                <source src="assets/videos/Section 2 bg.mp4" type="video/mp4">
+            <video id="statement-video" muted playsinline preload="auto" loop autoplay>
+                <source src="assets/videos/section-2-bg.mp4" type="video/mp4">
             </video>
             <div class="statement-overlay"></div>
         </div>
 
-        <!-- Pinned Content Area -->
         <div class="statement-content container">
             <div class="statement-step step-1">
                 <h2 class="t-h1 statement-text" style="color: var(--text-secondary); font-weight: 400;">Most software houses build<br>what you ask for.</h2>
@@ -137,18 +215,21 @@
             </div>
             
             <div class="statement-step step-3">
-                <p class="statement-subtext" style="color: var(--text-primary); max-width: 800px; font-size: 2.25rem; font-weight: 600; letter-spacing: 0.02em; line-height: 1.3;">Strategy, craft, and code under one roof.</p>
+                <p class="statement-subtext" style="color: var(--text-primary); max-width: 820px; font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 600; letter-spacing: 0.01em; line-height: 1.35;">
+                    Strategy, craft, and code under one roof.
+                </p>
             </div>
         </div>
     </section>
+
     <!-- ====================================================================
-         03 &mdash; CAPABILITIES
+         03 — CAPABILITIES (GLOWING CIRCUIT CARDS)
          ==================================================================== -->
-    <section class="section section-capabilities" id="capabilities" aria-label="Our capabilities">
+    <section class="section section-capabilities" id="capabilities" aria-label="ZERB Capabilities">
         <div class="container">
             <div class="capabilities-header">
-                <span class="section-label">What we do</span>
-                <h2 class="t-h1 statement-text" style="color: var(--text-primary);">Capabilities</h2>
+                <span class="section-label" style="color: var(--accent); font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;">What we do</span>
+                <h2 class="t-h1 statement-text" style="color: var(--text-primary); margin-top: 6px;">Capabilities</h2>
             </div>
 
             <div class="capabilities-grid">
@@ -159,7 +240,7 @@
                         </div>
                         <span class="cap-ghost-number">01</span>
                         <h3 class="cap-title"><a href="services/web-development.html" style="color: inherit; text-decoration: none; position: static;">Web Development</a></h3>
-                        <p class="cap-desc">Modern websites, web applications, dashboards, e-commerce platforms, and custom SaaS products built for performance and scale.</p>
+                        <p class="cap-desc">Modern websites, web applications, dashboards, e-commerce platforms, and custom SaaS products built for performance, resilience, and scale.</p>
                         <span class="cap-arrow">&rarr;</span>
                     </div>
                 </div>
@@ -170,7 +251,7 @@
                         </div>
                         <span class="cap-ghost-number">02</span>
                         <h3 class="cap-title">App Development</h3>
-                        <p class="cap-desc">Native and cross-platform mobile applications that feel fast, look sharp, and solve real problems.</p>
+                        <p class="cap-desc">Native and cross-platform mobile applications that feel fast, look sharp, and solve mission-critical problems for modern users.</p>
                         <span class="cap-arrow">&rarr;</span>
                     </div>
                 </div>
@@ -181,7 +262,7 @@
                         </div>
                         <span class="cap-ghost-number">03</span>
                         <h3 class="cap-title">Game Development</h3>
-                        <p class="cap-desc">Game concepts, mechanics, UI systems, 3D assets, and full development from prototype to launch.</p>
+                        <p class="cap-desc">Interactive game mechanics, UI systems, 2D/3D physics, audio integration, and complete development from prototype to launch.</p>
                         <span class="cap-arrow">&rarr;</span>
                     </div>
                 </div>
@@ -191,8 +272,8 @@
                             <img src="assets/images/project-branding.jpg" alt="Graphic Design" loading="lazy">
                         </div>
                         <span class="cap-ghost-number">04</span>
-                        <h3 class="cap-title">Graphic Design</h3>
-                        <p class="cap-desc">Brand identity systems, visual design, marketing assets, social media, and digital campaigns with commercial intent.</p>
+                        <h3 class="cap-title">Graphic Design &amp; Brand Systems</h3>
+                        <p class="cap-desc">Comprehensive brand identity systems, design tokens, marketing assets, and digital campaigns engineered with commercial intent.</p>
                         <span class="cap-arrow">&rarr;</span>
                     </div>
                 </div>
@@ -202,8 +283,8 @@
                             <img src="assets/images/project-mobile-app.jpg" alt="Video Editing" loading="lazy" style="filter: hue-rotate(15deg);">
                         </div>
                         <span class="cap-ghost-number">05</span>
-                        <h3 class="cap-title">Video Editing</h3>
-                        <p class="cap-desc">Commercials, social content, promotional videos, motion graphics, and post-production that tells your story.</p>
+                        <h3 class="cap-title">Video &amp; Motion Design</h3>
+                        <p class="cap-desc">Commercials, social narratives, promotional videos, motion graphics, and audio post-production that elevates brand presence.</p>
                         <span class="cap-arrow">&rarr;</span>
                     </div>
                 </div>
@@ -213,8 +294,8 @@
                             <img src="assets/images/project-dashboard.jpg" alt="UI/UX Design" loading="lazy">
                         </div>
                         <span class="cap-ghost-number">06</span>
-                        <h3 class="cap-title">UI/UX Design</h3>
-                        <p class="cap-desc">Research, information architecture, wireframes, interface design, and interactive prototypes that people actually want to use.</p>
+                        <h3 class="cap-title">UI/UX Architecture</h3>
+                        <p class="cap-desc">User research, information architecture, wireframes, interface design, and high-fidelity prototypes that drive user adoption.</p>
                         <span class="cap-arrow">&rarr;</span>
                     </div>
                 </div>
@@ -222,361 +303,542 @@
         </div>
     </section>
 
-
     <!-- ====================================================================
-         04 — SELECTED WORK
+         04 — SELECTED WORK (REAL ZERB CODEBASES & SYSTEMS)
          ==================================================================== -->
-    <section class="section" id="work" aria-label="Selected work">
+    <section class="section" id="work" aria-label="ZERB Selected Work">
         <div class="container">
-            <div class="section-header reveal">
-                <span class="section-label">Selected projects</span>
-                <h2 class="t-h2">Work</h2>
+            <div class="section-header reveal" style="margin-bottom: var(--space-6);">
+                <span class="t-label" style="color: var(--accent); margin-bottom: var(--space-2); display: block;">ENGINEERED PRODUCTION SYSTEMS</span>
+                <h2 class="t-h1">Selected Work</h2>
+                <p class="t-body-lg" style="max-width: 640px; margin-top: var(--space-3);">
+                    A curated showcase of production-ready web applications, native Web Audio DSP engines, AI news research pipelines, and enterprise automation software engineered by ZERB.
+                </p>
             </div>
 
-            <div class="projects-list">
-                <!-- Project 1 -->
-                <article class="project-card reveal">
-                    <div class="project-card-image clip-reveal">
-                        <img src="assets/images/project-dashboard.jpg" 
-                             alt="Analytics Hub — SaaS dashboard with revenue metrics and user analytics" 
-                             loading="lazy" width="800" height="500">
-                    </div>
-                    <div class="project-card-meta">
-                        <h3 class="project-card-title">Analytics Hub</h3>
-                        <span class="project-card-tags">2024 · Web Platform — React — Node.js</span>
-                    </div>
-                </article>
-
-                <!-- Project 2 -->
-                <article class="project-card reveal">
-                    <div class="project-card-image clip-reveal">
-                        <img src="assets/images/project-mobile-app.jpg" 
-                             alt="Pulse Fitness — Health and workout tracking mobile application" 
-                             loading="lazy" width="800" height="500">
-                    </div>
-                    <div class="project-card-meta">
-                        <h3 class="project-card-title">Pulse Fitness</h3>
-                        <span class="project-card-tags">2024 · Mobile App — React Native — Firebase</span>
-                    </div>
-                </article>
-
-                <!-- Project 3 -->
-                <article class="project-card reveal">
-                    <div class="project-card-image clip-reveal">
-                        <img src="assets/images/project-game.jpg" 
-                             alt="Meridian —fi game environment with futuristic cityscape" 
-                             loading="lazy" width="800" height="500">
-                    </div>
-                    <div class="project-card-meta">
-                        <h3 class="project-card-title">Meridian</h3>
-                        <span class="project-card-tags">2025 · Game Dev — Unreal Engine 5</span>
-                    </div>
-                </article>
-
-                <!-- Project 4 -->
-                <article class="project-card reveal">
-                    <div class="project-card-image clip-reveal">
-                        <img src="assets/images/project-branding.jpg" 
-                             alt="Brand Mark — Complete brand identity system with premium materials" 
-                             loading="lazy" width="800" height="500">
-                    </div>
-                    <div class="project-card-meta">
-                        <h3 class="project-card-title">Brand Mark</h3>
-                        <span class="project-card-tags">2025 · Brand Identity — Visual Design</span>
-                    </div>
-                </article>
+            <!-- Category Filter Tabs -->
+            <div class="projects-filter-bar reveal">
+                <button class="filter-btn active" data-filter="all">All Systems (6)</button>
+                <button class="filter-btn" data-filter="ai-systems">AI &amp; Data Pipelines</button>
+                <button class="filter-btn" data-filter="web-audio">Web Audio &amp; Full-Stack</button>
+                <button class="filter-btn" data-filter="automation">Automation &amp; Desktop</button>
+                <button class="filter-btn" data-filter="cpp">C++ Systems</button>
             </div>
 
-            <div style="margin-top: var(--space-8); text-align: center;" class="reveal">
-                <a href="work.html" class="btn btn-outline">View all work <span class="arrow">&rarr;</span></a>
+            <!-- Projects Grid -->
+            <div class="projects-list" id="projects-container">
+
+                <!-- 1. BEATGRID -->
+                <article class="featured-project-card reveal" data-category="web-audio">
+                    <div class="project-media-wrap">
+                        <div class="project-badge-overlay">
+                            <span class="badge-tag highlight">DSP AUDIO ENGINE</span>
+                            <span class="badge-tag">WEB AUDIO API</span>
+                        </div>
+                        <img src="assets/images/projects/beatgrid-active.png" alt="BeatGrid Interactive Web Audio Sampler and 16-Step Looper" loading="lazy">
+                    </div>
+                    <div class="project-body">
+                        <span class="project-category-label">Native Web Audio &bull; Lookahead Scheduling</span>
+                        <div class="project-headline-row">
+                            <h3 class="project-title">BeatGrid — 16-Pad Sampler &amp; Looper</h3>
+                        </div>
+                        <p class="project-summary">
+                            Browser-based interactive 16-pad drum machine and polyphonic step sequencer. Implements Chris Wilson's "A Tale of Two Clocks" dual-timer lookahead scheduler, Roger Linn shuffle/swing algorithms, and procedural drum synthesis via OfflineAudioContext with zero audio-visual latency.
+                        </p>
+                        <div class="project-spec-grid">
+                            <div>
+                                <span class="spec-item-label">TIMING ENGINE</span>
+                                <span class="spec-item-val">Sample-Accurate Lookahead</span>
+                            </div>
+                            <div>
+                                <span class="spec-item-label">ACCESSIBILITY</span>
+                                <span class="spec-item-val">WCAG 2.1 AA Compliant</span>
+                            </div>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">Web Audio API</span>
+                            <span class="tech-badge">Vanilla JavaScript</span>
+                            <span class="tech-badge">Vite</span>
+                            <span class="tech-badge">OfflineAudioContext</span>
+                            <span class="tech-badge">HTML5 Canvas</span>
+                        </div>
+                        <div class="project-actions-row">
+                            <a href="https://github.com/adeelabbasi111/Beat-Grid" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                <span>Source Code &rarr;</span>
+                            </a>
+                            <button class="btn-inspect-arch" onclick="openArchModal('beatgrid')">View Architecture &bull;</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2. AI NEWS-SCRAPER -->
+                <article class="featured-project-card reveal" data-category="ai-systems">
+                    <div class="project-media-wrap">
+                        <div class="project-badge-overlay">
+                            <span class="badge-tag highlight">GEMINI 2.5 FLASH</span>
+                            <span class="badge-tag">TOKEN OPTIMIZED</span>
+                        </div>
+                        <img src="assets/images/projects/ai-news-scraper.jpg" alt="AI News Research and Automated Content Generator" loading="lazy">
+                    </div>
+                    <div class="project-body">
+                        <span class="project-category-label">Autonomous AI &bull; Token Cost Optimization</span>
+                        <div class="project-headline-row">
+                            <h3 class="project-title">AI News Research &amp; Content Engine</h3>
+                        </div>
+                        <p class="project-summary">
+                            FastAPI platform utilizing Google Custom Search API and Gemini 2.5 Flash for deep news research. Enforces local HTML cleaning with Trafilatura and BeautifulSoup to strip boilerplate, cutting token usage by 65%. Features intelligent credit ledgers and dual Short/Long form synthesis.
+                        </p>
+                        <div class="project-spec-grid">
+                            <div>
+                                <span class="spec-item-label">PIPELINE PHILOSOPHY</span>
+                                <span class="spec-item-val">Python-First Filtering</span>
+                            </div>
+                            <div>
+                                <span class="spec-item-label">LEDGER SYSTEM</span>
+                                <span class="spec-item-val">Auto-Refunding on Fail</span>
+                            </div>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">FastAPI</span>
+                            <span class="tech-badge">Google Gemini 2.5 Flash</span>
+                            <span class="tech-badge">Trafilatura</span>
+                            <span class="tech-badge">SQLAlchemy</span>
+                            <span class="tech-badge">Uvicorn</span>
+                        </div>
+                        <div class="project-actions-row">
+                            <a href="https://github.com/adeelabbasi111/News-Scraper" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                <span>Source Code &rarr;</span>
+                            </a>
+                            <button class="btn-inspect-arch" onclick="openArchModal('newsscraper')">View Architecture &bull;</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 3. XLOVEBEATS -->
+                <article class="featured-project-card reveal" data-category="web-audio">
+                    <div class="project-media-wrap">
+                        <div class="project-badge-overlay">
+                            <span class="badge-tag highlight">E-COMMERCE &bull; FLASK</span>
+                            <span class="badge-tag">PDF AUTOMATION</span>
+                        </div>
+                        <img src="assets/images/projects/xlovebeatz-hero.jpg" alt="XLoveBeats Digital Audio Marketplace Platform" loading="lazy">
+                    </div>
+                    <div class="project-body">
+                        <span class="project-category-label">Full-Stack Platform &bull; Automated Licensing</span>
+                        <div class="project-headline-row">
+                            <h3 class="project-title">XLoveBeats — Audio Storefront &amp; DRM</h3>
+                        </div>
+                        <p class="project-summary">
+                            Architected digital distribution engine for music producers. Incorporates Flask application factories, modular blueprints, SQLAlchemy schema migrations, Razorpay payment processing, streaming preview audio player, and automated ReportLab PDF license certificate generation.
+                        </p>
+                        <div class="project-spec-grid">
+                            <div>
+                                <span class="spec-item-label">SECURITY</span>
+                                <span class="spec-item-val">CSRF &bull; Scoped Auth</span>
+                            </div>
+                            <div>
+                                <span class="spec-item-label">DOCUMENT ENGINE</span>
+                                <span class="spec-item-val">ReportLab PDF Dynamic</span>
+                            </div>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">Python Flask</span>
+                            <span class="tech-badge">Flask-SQLAlchemy</span>
+                            <span class="tech-badge">Razorpay API</span>
+                            <span class="tech-badge">ReportLab PDF</span>
+                            <span class="tech-badge">Jinja2</span>
+                        </div>
+                        <div class="project-actions-row">
+                            <a href="https://github.com/adeelabbasi111/XloveBeatz" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                <span>Source Code &rarr;</span>
+                            </a>
+                            <button class="btn-inspect-arch" onclick="openArchModal('xlovebeatz')">View Architecture &bull;</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 4. WHATSAPP AUTOMATER -->
+                <article class="featured-project-card reveal" data-category="automation">
+                    <div class="project-media-wrap">
+                        <div class="project-badge-overlay">
+                            <span class="badge-tag highlight">ANTI-DETECTION</span>
+                            <span class="badge-tag">HEURISTICS ENGINE</span>
+                        </div>
+                        <img src="assets/images/projects/whatsapp-automater.jpg" alt="WhatsApp Automater Campaign Engine" loading="lazy">
+                    </div>
+                    <div class="project-body">
+                        <span class="project-category-label">Automation &bull; Human Behavioral Modeling</span>
+                        <div class="project-headline-row">
+                            <h3 class="project-title">WhatsApp Automater Campaign System</h3>
+                        </div>
+                        <p class="project-summary">
+                            Advanced campaign dispatch engine featuring human behavioral synthesis: Bezier curve mouse movements with physiological micro-tremor, variable Gaussian typing latency, and anti-ban heuristics. Incorporates atomic crash-safe run recovery and CSV Pakistani phone normalization.
+                        </p>
+                        <div class="project-spec-grid">
+                            <div>
+                                <span class="spec-item-label">MOUSE KINEMATICS</span>
+                                <span class="spec-item-val">Bezier + Tremor Noise</span>
+                            </div>
+                            <div>
+                                <span class="spec-item-label">STATE RECOVERY</span>
+                                <span class="spec-item-val">Atomic Checkpointing</span>
+                            </div>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">Python 3.10+</span>
+                            <span class="tech-badge">PyAutoGUI</span>
+                            <span class="tech-badge">pywin32</span>
+                            <span class="tech-badge">Pillow</span>
+                            <span class="tech-badge">Atomic State Machine</span>
+                        </div>
+                        <div class="project-actions-row">
+                            <a href="https://github.com/adeelabbasi111/Whatsapp-Automater" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                <span>Source Code &rarr;</span>
+                            </a>
+                            <button class="btn-inspect-arch" onclick="openArchModal('whatsapp')">View Architecture &bull;</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 5. CUST PORTAL REWORKED -->
+                <article class="featured-project-card reveal" data-category="automation">
+                    <div class="project-media-wrap">
+                        <div class="project-badge-overlay">
+                            <span class="badge-tag highlight">SELENIUM 4</span>
+                            <span class="badge-tag">PYINSTALLER EXE</span>
+                        </div>
+                        <img src="assets/images/project-dashboard.jpg" alt="CUST Portal Reworked Scraper and Visualizer" loading="lazy">
+                    </div>
+                    <div class="project-body">
+                        <span class="project-category-label">Data Extraction &bull; Windows Standalone App</span>
+                        <div class="project-headline-row">
+                            <h3 class="project-title">CUST Portal Scraper &amp; Visualizer</h3>
+                        </div>
+                        <p class="project-summary">
+                            Windows-packaged academic performance visualizer for the Capital University portal. Orchestrates headless Microsoft Edge automation via Selenium 4, parses academic course gradebooks, and presents responsive visual breakdown dashboards in local Flask runtime.
+                        </p>
+                        <div class="project-spec-grid">
+                            <div>
+                                <span class="spec-item-label">AUTOMATION ENGINE</span>
+                                <span class="spec-item-val">Edge WebDriver + SSO</span>
+                            </div>
+                            <div>
+                                <span class="spec-item-label">PACKAGING</span>
+                                <span class="spec-item-val">PyInstaller Windows EXE</span>
+                            </div>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Selenium 4</span>
+                            <span class="tech-badge">Flask</span>
+                            <span class="tech-badge">Tkinter</span>
+                            <span class="tech-badge">PyInstaller</span>
+                        </div>
+                        <div class="project-actions-row">
+                            <a href="https://github.com/adeelabbasi111/CUST-PORTAL-2.0" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                <span>Source Code &rarr;</span>
+                            </a>
+                            <button class="btn-inspect-arch" onclick="openArchModal('custportal')">View Architecture &bull;</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 6. CHIT CHAT CLI -->
+                <article class="featured-project-card reveal" data-category="cpp">
+                    <div class="project-media-wrap">
+                        <div class="project-badge-overlay">
+                            <span class="badge-tag highlight">C++11 &bull; OOP</span>
+                            <span class="badge-tag">CRYPTO ENGINE</span>
+                        </div>
+                        <img src="assets/images/projects/chitchat-cli.jpg" alt="Chit Chat CLI C++ Encrypted Messenger" loading="lazy">
+                    </div>
+                    <div class="project-body">
+                        <span class="project-category-label">Systems Programming &bull; Terminal Cryptography</span>
+                        <div class="project-headline-row">
+                            <h3 class="project-title">Chit-Chat CLI — Encrypted Messenger</h3>
+                        </div>
+                        <p class="project-summary">
+                            Terminal-based peer-to-peer secure messaging application crafted in C++11. Leverages Windows Console API for dynamic colored boxed layouts, auto-managing storage directories and encrypting message payloads and user authentication vaults with custom Caesar cryptographic algorithms.
+                        </p>
+                        <div class="project-spec-grid">
+                            <div>
+                                <span class="spec-item-label">ARCHITECTURE</span>
+                                <span class="spec-item-val">Object-Oriented C++</span>
+                            </div>
+                            <div>
+                                <span class="spec-item-label">DEPENDENCIES</span>
+                                <span class="spec-item-val">Zero (Pure Win32 / STL)</span>
+                            </div>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">C++11</span>
+                            <span class="tech-badge">Windows API</span>
+                            <span class="tech-badge">File I/O Streams</span>
+                            <span class="tech-badge">Cryptography</span>
+                            <span class="tech-badge">OOP</span>
+                        </div>
+                        <div class="project-actions-row">
+                            <a href="https://github.com/adeelabbasi111/Chit-Chat-CLI" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                <span>Source Code &rarr;</span>
+                            </a>
+                            <button class="btn-inspect-arch" onclick="openArchModal('chitchat')">View Architecture &bull;</button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Additional Repositories Strip -->
+            <div style="margin-top: var(--space-9); padding: var(--space-6); background: rgba(23, 20, 18, 0.65); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg);" class="reveal">
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: var(--space-4);">
+                    <div>
+                        <span class="t-label" style="color: var(--accent);">OPEN SOURCE ARCHIVE</span>
+                        <h4 class="t-h4" style="margin-top: 4px;">Explore The Full 21-Repository Index</h4>
+                        <p style="font-size: 0.875rem; color: var(--text-secondary); margin-top: 4px;">Includes <em>The Chain Reaction</em> (Habit Lab), <em>mosquitobusters.pk</em> (Production Commercial Site), <em>Neon Breakout</em> (Pygame), <em>Dice</em>, and more.</p>
+                    </div>
+                    <a href="https://github.com/adeelabbasi111?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                        View All Repositories on GitHub <span class="arrow">&rarr;</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- ====================================================================
-         05 — WHY ZERB
+         05 — INTERACTIVE DEVELOPER SHELL (ZERB CLI TERMINAL)
          ==================================================================== -->
-    <section class="section" aria-label="Why choose ZERB">
+    <section class="section" id="terminal" aria-label="ZERB Interactive Developer Shell">
+        <div class="container">
+            <div class="section-header reveal" style="text-align: center; margin-bottom: var(--space-6);">
+                <span class="t-label" style="color: var(--accent); margin-bottom: var(--space-2); display: block;">ENGINEERING CONSOLE</span>
+                <h2 class="t-h1">Interactive Developer Shell</h2>
+                <p class="t-body-lg" style="max-width: 600px; margin: var(--space-2) auto 0;">
+                    Query ZERB capabilities, inspect technical architectures, or query engineered codebases directly from this command shell. Type <code style="color: var(--accent); background: var(--accent-subtle); padding: 2px 6px; border-radius: 4px;">help</code> to begin.
+                </p>
+            </div>
+
+            <div class="terminal-window reveal">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="terminal-dot dot-red"></span>
+                        <span class="terminal-dot dot-yellow"></span>
+                        <span class="terminal-dot dot-green"></span>
+                    </div>
+                    <span class="terminal-title">zerb@software-house: ~/portfolio (zsh)</span>
+                    <span style="font-family: var(--font-mono); font-size: 0.6875rem; color: #22C55E;">● SECURE</span>
+                </div>
+                <div class="terminal-body" id="terminal-body" onclick="document.getElementById('terminal-input').focus();">
+                    <div class="terminal-output" id="terminal-output">Welcome to ZERB Terminal Interface v2.5.0
+Type "help" to see available commands or "projects" to query codebases.
+------------------------------------------------------------------</div>
+                    <div class="terminal-input-row">
+                        <span class="terminal-prompt">zerb@software-house:~$</span>
+                        <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false" aria-label="Terminal command prompt">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================================
+         06 — WHY ZERB (DIFFERENTIATORS & ENGINEERING PEDIGREE)
+         ==================================================================== -->
+    <section class="section" id="about" aria-label="Why Choose ZERB">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-label">Why ZERB</span>
-                <h2 class="t-h2">What makes us different</h2>
+                <span class="t-label" style="color: var(--accent); margin-bottom: var(--space-2); display: block;">OUR PHILOSOPHY</span>
+                <h2 class="t-h2">What makes ZERB different</h2>
             </div>
 
             <div class="diff-grid reveal-stagger">
                 <div class="diff-item">
                     <span class="diff-number">01</span>
-                    <h3 class="diff-title">Design + Engineering. One team.</h3>
-                    <p class="diff-desc">No handoffs between siloed departments. Designers who understand code. Engineers who care about pixels. The product is better because of it.</p>
+                    <h3 class="diff-title">Design + Engineering. One roof.</h3>
+                    <p class="diff-desc">No disconnects between siloed departments. Designers who understand technical constraints. Engineers who obsess over sub-pixel precision and fluid motion.</p>
                 </div>
                 <div class="diff-item">
                     <span class="diff-number">02</span>
-                    <h3 class="diff-title">We ship.</h3>
-                    <p class="diff-desc">Not endless wireframes. Not beautiful decks that collect dust. Working software, tested and deployed. That's what you're paying for.</p>
+                    <h3 class="diff-title">We ship production software.</h3>
+                    <p class="diff-desc">Not endless pitch decks. Not mockups that never leave Figma. Resilient, deployable codebases with clean tests and deterministic architectures.</p>
                 </div>
                 <div class="diff-item">
                     <span class="diff-number">03</span>
-                    <h3 class="diff-title">Product thinking, not task execution.</h3>
-                    <p class="diff-desc">We don't just take orders. We question assumptions, challenge briefs, and push for the solution that actually solves the problem.</p>
+                    <h3 class="diff-title">First-principles engineering.</h3>
+                    <p class="diff-desc">We do not blindly stitch bloated third-party templates. From sample-accurate Web Audio timers to token-efficient local AI preprocessing, we solve the actual technical problem.</p>
                 </div>
                 <div class="diff-item">
                     <span class="diff-number">04</span>
-                    <h3 class="diff-title">Full-spectrum capability.</h3>
-                    <p class="diff-desc">Web, mobile, games, brand, video, UI/UX — all under one roof. One relationship, one quality standard, zero coordination headaches.</p>
+                    <h3 class="diff-title">Engineering Leadership &amp; Pedigree.</h3>
+                    <p class="diff-desc">Founded and engineered by Adeel Abbasi &bull; Specializing in Artificial Intelligence (CUST AI '29, GPA 3.74/4.00) &bull; Zynvex Solutions Track 01 Frontend (FED-02 BeatGrid).</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ====================================================================
-         06 — PROCESS
+         07 — CONTACT & PROJECT INQUIRY
          ==================================================================== -->
-    <section class="section section-process" id="process" aria-label="Our process">
+    <section class="section section-cta" id="contact" aria-label="Start your project with ZERB">
         <div class="container">
-            <div class="section-header reveal">
-                <span class="section-label">How we work</span>
-                <h2 class="t-h2">Process</h2>
-            </div>
-        </div>
-
-        <div class="process-wrapper">
-            <div class="process-track" role="list">
-            <div class="process-step" role="listitem">
-                <span class="process-step-number">01</span>
-                <h3 class="process-step-title">Discover</h3>
-                <p class="process-step-desc">Deep dive into your business, users, and market. We learn before we build.</p>
-            </div>
-            <span class="process-connector" aria-hidden="true">—</span>
-            <div class="process-step" role="listitem">
-                <span class="process-step-number">02</span>
-                <h3 class="process-step-title">Define</h3>
-                <p class="process-step-desc">Turn insights into strategy. Scope, architecture, and a clear path forward.</p>
-            </div>
-            <span class="process-connector" aria-hidden="true">—</span>
-            <div class="process-step" role="listitem">
-                <span class="process-step-number">03</span>
-                <h3 class="process-step-title">Design</h3>
-                <p class="process-step-desc">Interface design, prototypes, and visual systems. Every screen, every state, every interaction.</p>
-            </div>
-            <span class="process-connector" aria-hidden="true">—</span>
-            <div class="process-step" role="listitem">
-                <span class="process-step-number">04</span>
-                <h3 class="process-step-title">Build</h3>
-                <p class="process-step-desc">Production-quality code. Modular, tested, performant. No shortcuts.</p>
-            </div>
-            <span class="process-connector" aria-hidden="true">—</span>
-            <div class="process-step" role="listitem">
-                <span class="process-step-number">05</span>
-                <h3 class="process-step-title">Test</h3>
-                <p class="process-step-desc">Rigorous QA across devices, browsers, and user scenarios. We break it so your users don't.</p>
-            </div>
-            <span class="process-connector" aria-hidden="true">—</span>
-            <div class="process-step" role="listitem">
-                <span class="process-step-number">06</span>
-                <h3 class="process-step-title">Launch</h3>
-                <p class="process-step-desc">Deployment, monitoring, and handover. Your product goes live with confidence.</p>
-            </div>
-            <span class="process-connector" aria-hidden="true">—</span>
-            <div class="process-step" role="listitem">
-                <span class="process-step-number">07</span>
-                <h3 class="process-step-title">Evolve</h3>
-                <p class="process-step-desc">Iterate based on real usage data. Products improve after launch, not before.</p>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <!-- ====================================================================
-         07 — TECHNOLOGY
-         ==================================================================== -->
-    <section class="section" id="technology" aria-label="Technology stack">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="section-label">Technology</span>
-                <h2 class="t-h2">Built with serious tools</h2>
+            <div class="section-header reveal" style="text-align: center; margin-bottom: var(--space-7);">
+                <span class="t-label" style="color: var(--accent); margin-bottom: var(--space-2); display: block;">START A PROJECT</span>
+                <h2 class="t-h1">Every product starts<br>as a conversation.</h2>
+                <p class="t-body-lg" style="max-width: 600px; margin: var(--space-3) auto 0;">
+                    Tell us what you're building. We'll tell you how we can engineer it with unmatched precision, speed, and elegance.
+                </p>
             </div>
 
-            <div class="tech-grid reveal-stagger">
-                <div class="tech-category">
-                    <h3 class="tech-category-name">Frontend</h3>
-                    <div class="tech-items">
-                        <span class="tech-item">React</span>
-                        <span class="tech-item">Next.js</span>
-                        <span class="tech-item">Vue</span>
-                        <span class="tech-item">TypeScript</span>
-                        <span class="tech-item">Tailwind</span>
-                    </div>
-                </div>
-                <div class="tech-category">
-                    <h3 class="tech-category-name">Backend</h3>
-                    <div class="tech-items">
-                        <span class="tech-item">Node.js</span>
-                        <span class="tech-item">Python</span>
-                        <span class="tech-item">PHP</span>
-                        <span class="tech-item">.NET</span>
-                    </div>
-                </div>
-                <div class="tech-category">
-                    <h3 class="tech-category-name">Mobile</h3>
-                    <div class="tech-items">
-                        <span class="tech-item">React Native</span>
-                        <span class="tech-item">Flutter</span>
-                        <span class="tech-item">Swift</span>
-                        <span class="tech-item">Kotlin</span>
-                    </div>
-                </div>
-                <div class="tech-category">
-                    <h3 class="tech-category-name">Game Dev</h3>
-                    <div class="tech-items">
-                        <span class="tech-item">Unity</span>
-                        <span class="tech-item">Unreal Engine</span>
-                        <span class="tech-item">Godot</span>
-                    </div>
-                </div>
-                <div class="tech-category">
-                    <h3 class="tech-category-name">Design</h3>
-                    <div class="tech-items">
-                        <span class="tech-item">Figma</span>
-                        <span class="tech-item">After Effects</span>
-                        <span class="tech-item">Blender</span>
-                        <span class="tech-item">Premiere Pro</span>
-                    </div>
-                </div>
-                <div class="tech-category">
-                    <h3 class="tech-category-name">Cloud & DevOps</h3>
-                    <div class="tech-items">
-                        <span class="tech-item">AWS</span>
-                        <span class="tech-item">Vercel</span>
-                        <span class="tech-item">Firebase</span>
-                        <span class="tech-item">Docker</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            <div class="contact-layout">
+                
+                <!-- Direct Communication Links -->
+                <div class="reveal">
+                    <h3 class="t-h3" style="margin-bottom: var(--space-4);">Direct Verified Channels</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: var(--space-6);">
+                        Connect with our engineering leads directly via Email, WhatsApp for rapid technical consultation, or LinkedIn.
+                    </p>
 
-    <!-- ====================================================================
-         08 — TESTIMONIALS
-         ==================================================================== -->
-    <section class="section" aria-label="Client testimonials">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="section-label">Clients</span>
-                <h2 class="t-h2">Kind words</h2>
-            </div>
-
-            <div class="testimonials-grid reveal-stagger">
-                <div class="testimonial-card">
-                    <p class="testimonial-quote">"ZERB didn't just execute — they challenged our assumptions and built something better than we imagined. The product shipped on time and users loved it from day one."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">NK</div>
+                    <a href="mailto:adeelabbasipersonal@gmail.com" class="contact-direct-card" target="_blank" rel="noopener noreferrer">
+                        <div class="contact-direct-icon">✉</div>
                         <div>
-                            <div class="testimonial-name">Nadia Khalil</div>
-                            <div class="testimonial-role">CEO, Catalyst Ventures</div>
+                            <span class="contact-direct-label">PRIMARY INQUIRIES</span>
+                            <div class="contact-direct-val">adeelabbasipersonal@gmail.com</div>
                         </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-quote">"We've worked with agencies that overpromise and underdeliver. ZERB is the opposite. Clear communication, beautiful design, and code that actually works in production."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">JM</div>
+                    </a>
+
+                    <a href="https://wa.me/923215773211" class="contact-direct-card" target="_blank" rel="noopener noreferrer">
+                        <div class="contact-direct-icon" style="color: #25D366; background: rgba(37, 211, 102, 0.1);">💬</div>
                         <div>
-                            <div class="testimonial-name">James Mitchell</div>
-                            <div class="testimonial-role">CTO, Luminary Health</div>
+                            <span class="contact-direct-label">WHATSAPP DIRECT</span>
+                            <div class="contact-direct-val">+92 321 5773211 (Instant Consultation)</div>
                         </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-quote">"They rebuilt our entire platform in 8 weeks. The performance alone justified the investment — page load times dropped by 60%. Exceptional technical team."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">SF</div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/adeelabbasi111/" class="contact-direct-card" target="_blank" rel="noopener noreferrer">
+                        <div class="contact-direct-icon" style="color: #0A66C2; background: rgba(10, 102, 194, 0.1);">in</div>
                         <div>
-                            <div class="testimonial-name">Sofia Ferretti</div>
-                            <div class="testimonial-role">Head of Product, Nexus Digital</div>
+                            <span class="contact-direct-label">LINKEDIN NETWORK</span>
+                            <div class="contact-direct-val">linkedin.com/in/adeelabbasi111</div>
                         </div>
+                    </a>
+
+                    <a href="https://github.com/adeelabbasi111" class="contact-direct-card" target="_blank" rel="noopener noreferrer">
+                        <div class="contact-direct-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        </div>
+                        <div>
+                            <span class="contact-direct-label">GITHUB VERIFIED REPOS</span>
+                            <div class="contact-direct-val">github.com/adeelabbasi111</div>
+                        </div>
+                    </a>
+
+                    <div style="margin-top: var(--space-5);">
+                        <span class="badge-status">
+                            <span class="pulse-dot"></span> Islamabad Local Time: <span id="current-local-time">Loading PKT...</span>
+                        </span>
                     </div>
                 </div>
+
+                <!-- Interactive Message Form -->
+                <div class="contact-form-card reveal">
+                    <h3 class="t-h3" style="margin-bottom: var(--space-4);">Start A Project</h3>
+                    <form id="portfolio-contact-form" onsubmit="handleContactSubmit(event)">
+                        <div class="form-group">
+                            <label for="contact-name" class="form-label">Your Name / Organization</label>
+                            <input type="text" id="contact-name" class="form-control" placeholder="e.g. Alex Vance, VP Product" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email" class="form-label">Work Email</label>
+                            <input type="email" id="contact-email" class="form-control" placeholder="alex@company.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject" class="form-label">Project Scope / Capability</label>
+                            <input type="text" id="contact-subject" class="form-control" placeholder="Web Platform / AI Pipeline / Audio DSP" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message" class="form-label">Project Details &amp; Timeline</label>
+                            <textarea id="contact-message" rows="4" class="form-control" placeholder="Tell us about the project goals, deliverables, and timeline..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;">
+                            Submit Inquiry <span class="arrow">&rarr;</span>
+                        </button>
+                        <div id="contact-status-feedback" style="margin-top: var(--space-3); font-family: var(--font-mono); font-size: 0.8125rem; display: none;"></div>
+                    </form>
+                </div>
+
             </div>
         </div>
     </section>
 
     <!-- ====================================================================
-         09 — CTA
-         ==================================================================== -->
-    <section class="section section-cta" aria-label="Start your project">
-        <div class="cta-content reveal">
-            <span class="t-label" style="color: var(--accent); display: block; margin-bottom: var(--space-4);">Ready?</span>
-            <h2 class="t-h1 cta-heading">Every product starts<br>as a conversation.</h2>
-            <p class="t-body-lg cta-sub">Tell us what you're building. We'll tell you how we can help.</p>
-            <a href="contact.html" class="btn btn-primary btn-lg">Start a project <span class="arrow">&rarr;</span></a>
-        </div>
-    </section>
-
-    <!-- ====================================================================
-         FOOTER
-         ==================================================================== -->
-    
-    <!-- ====================================================================
-         GRAND FOOTER
+         08 — GRAND FOOTER
          ==================================================================== -->
     <footer class="site-footer" role="contentinfo">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <p class="footer-brand-text">A software house that designs, engineers, and ships digital products. From concept to launch and beyond.</p>
+                    <span style="font-family: var(--font-headline); font-size: 1.75rem; font-weight: 700; color: #fff;">ZERB</span>
+                    <p class="footer-brand-text" style="margin-top: 8px;">
+                        A premium software house that designs, engineers, and ships digital products. From concept to launch and beyond.
+                    </p>
                 </div>
                 <div class="footer-links">
-                    <h3 class="footer-heading">Navigate</h3>
+                    <h3 class="footer-heading">Capabilities</h3>
                     <div class="footer-links-list">
-                        <a href="work.html">Work</a>
-                        <a href="services.html">Services</a>
-                        <a href="about.html">About</a>
-                        <a href="contact.html">Contact</a>
+                        <a href="services/web-development.html">Web Development</a>
+                        <a href="services/app-development.html">App Development</a>
+                        <a href="services/game-development.html">Game Development</a>
+                        <a href="services/ui-ux-design.html">UI/UX Architecture</a>
                     </div>
                 </div>
                 <div class="footer-links">
                     <h3 class="footer-heading">Connect</h3>
                     <div class="footer-links-list">
-                        <a href="#" target="_blank">LinkedIn</a>
-                        <a href="#" target="_blank">Instagram</a>
-                        <a href="#" target="_blank">Dribbble</a>
+                        <a href="https://github.com/adeelabbasi111" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://www.linkedin.com/in/adeelabbasi111/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://wa.me/923215773211" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                        <a href="https://www.instagram.com/adeelabbasi111" target="_blank" rel="noopener noreferrer">Instagram</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer-massive-text">ZERB</div>
+        <div class="footer-massive-text" aria-hidden="true">ZERB</div>
         <div class="container">
             <div class="footer-bottom">
-                <p>&copy; 2024 — 2026 ZERB. All rights reserved.</p>
-                <p>Designed & built by ZERB.</p>
+                <p>&copy; 2024 &mdash; 2026 ZERB. All rights reserved.</p>
+                <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent);">
+                    Designed &amp; engineered by ZERB.
+                </p>
             </div>
         </div>
     </footer>
 
+    <!-- ====================================================================
+         09 — ARCHITECTURE INSPECTOR MODAL
+         ==================================================================== -->
+    <div class="arch-modal-backdrop" id="arch-modal" role="dialog" aria-modal="true" aria-labelledby="modal-arch-title" onclick="if(event.target === this) closeArchModal();">
+        <div class="arch-modal-content">
+            <button class="arch-modal-close" onclick="closeArchModal()" aria-label="Close architecture modal">&times;</button>
+            <div id="arch-modal-body">
+                <!-- Dynamically injected architecture content -->
+            </div>
+        </div>
+    </div>
 
     <!-- ====================================================================
-         SCRIPTS
+         10 — SCRIPTS
          ==================================================================== -->
     <!-- Lenis Smooth Scroll -->
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
-    <!-- GSAP + Plugins -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <!-- App -->
-    <script src="js/core.js"></script>
-    <script src="js/webgl-hero.js"></script>
-    <script src="js/animations.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+    <!-- Core App Logic -->
+    <script src="js/core.js?v=2.1"></script>
+    <script src="js/webgl-hero.js?v=2.1"></script>
+    <script src="js/animations.js?v=2.1"></script>
+    <script src="js/portfolio-interactive.js?v=2.1"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-

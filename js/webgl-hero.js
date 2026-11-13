@@ -27,13 +27,6 @@
     // Insert behind content but inside hero
     heroSection.insertBefore(container, heroSection.firstChild);
     
-    // Hide the existing video/image background to let WebGL shine
-    const oldMedia = document.querySelector('.hero-media');
-    if (oldMedia) {
-        oldMedia.style.opacity = '0';
-        oldMedia.style.visibility = 'hidden';
-    }
-
     // Three.js setup
     const scene = new THREE.Scene();
     
@@ -42,21 +35,35 @@
     camera.position.z = 30;
     
     // Renderer
-    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    const existingCanvas = document.getElementById('hero-webgl-canvas');
+    const heroMedia = document.querySelector('.hero-media');
+    if (heroMedia) {
+        heroMedia.style.opacity = '1';
+        heroMedia.style.visibility = 'visible';
+    }
+
+    const renderer = new THREE.WebGLRenderer({
+        canvas: existingCanvas || undefined,
+        alpha: true,
+        antialias: true
+    });
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    container.appendChild(renderer.domElement);
+    if (!existingCanvas) {
+        container.appendChild(renderer.domElement);
+    }
     
     // Particles
     const particlesGeometry = new THREE.BufferGeometry();
-    const particlesCount = window.innerWidth < 768 ? 1500 : 4000;
+    const particlesCount = window.innerWidth < 768 ? 1600 : 4200;
     
     const posArray = new Float32Array(particlesCount * 3);
     const colorsArray = new Float32Array(particlesCount * 3);
     
-    // ZERB Brand Colors: Copper/Orange (#C4734A) and subtle whites
+    // ZERB Brand Colors: Signature Copper (#C4734A) & Warm Ivory (#F5F0EB)
     const colorPrimary = new THREE.Color('#C4734A');
     const colorSecondary = new THREE.Color('#F5F0EB');
+    const colorTertiary = new THREE.Color('#E08758');
     
     for(let i = 0; i < particlesCount * 3; i+=3) {
         // Spread particles over a large area
@@ -64,8 +71,14 @@
         posArray[i+1] = (Math.random() - 0.5) * 100;
         posArray[i+2] = (Math.random() - 0.5) * 50;
         
-        // Mix colors
-        const mixedColor = colorPrimary.clone().lerp(colorSecondary, Math.random());
+        // Mix colors with mostly copper and warm ivory sparks
+        let mixedColor;
+        const rand = Math.random();
+        if (rand < 0.70) {
+            mixedColor = colorPrimary.clone().lerp(colorTertiary, Math.random());
+        } else {
+            mixedColor = colorPrimary.clone().lerp(colorSecondary, Math.random() * 0.8);
+        }
         colorsArray[i] = mixedColor.r;
         colorsArray[i+1] = mixedColor.g;
         colorsArray[i+2] = mixedColor.b;
@@ -76,10 +89,10 @@
     
     // Custom Shader Material for glowing particles
     const particlesMaterial = new THREE.PointsMaterial({
-        size: 0.15,
+        size: 0.18,
         vertexColors: true,
         transparent: true,
-        opacity: 0.8,
+        opacity: 0.85,
         blending: THREE.AdditiveBlending
     });
     

@@ -1,4 +1,4 @@
-﻿/* ============================================================================
+/* ============================================================================
    ZERB — ANIMATIONS.JS
    GSAP ScrollTrigger sequences for homepage
    ============================================================================ */
@@ -19,7 +19,6 @@
     initProcessHorizontalScroll();
     initCustomCursor();
     init3DTilt();
-    initPortfolioFilters();
   });
 
   // ========================================================================
@@ -32,7 +31,7 @@
     elements.forEach(el => {
       if (el.classList.contains('split-done')) return;
       const text = el.innerText;
-      el.innerHTML = text.split('').map(char => char === ' ' ? '&nbsp;' : <span class="char" style="display:inline-block; opacity:0; transform:translateY(20px);"></span>).join('');
+      el.innerHTML = text.split('').map(char => char === ' ' ? '&nbsp;' : `<span class="char" style="display:inline-block; opacity:0; transform:translateY(20px);">${char}</span>`).join('');
       el.classList.add('split-done');
     });
   }
@@ -41,32 +40,34 @@
     const heroLabel = document.querySelector('.hero-label');
     const heroLines = document.querySelectorAll('.hero-title .line-inner');
     const heroSubtitle = document.querySelector('.hero-subtitle');
-    const heroCTA = document.querySelector('.hero-content .btn');
+    const heroCTA = document.querySelectorAll('.hero-actions .btn, .hero-content .btn');
     const heroMedia = document.querySelector('.hero-media');
+    const heroTelemetry = document.querySelectorAll('.hero-hud-card, .telemetry-strip');
 
     if (!heroLines.length) return;
 
-    const tl = gsap.timeline({ defaults: { ease: 'power2.out' } });
+    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-    splitText('.hero-title');
-    const chars = document.querySelectorAll('.hero-title .char');
-    gsap.set(heroLines, { yPercent: 110 });
-    gsap.set([heroLabel, heroSubtitle, heroCTA], { opacity: 0, y: 20 });
-    if (heroMedia) gsap.set(heroMedia, { opacity: 0, scale: 0.95, x: 20 });
+    gsap.set(heroLines, { yPercent: 110, opacity: 0 });
+    gsap.set([heroLabel, heroSubtitle], { opacity: 0, y: 20 });
+    gsap.set(heroCTA, { opacity: 0, y: 15 });
+    if (heroTelemetry.length) gsap.set(heroTelemetry, { opacity: 0, y: 20 });
+    if (heroMedia) gsap.set(heroMedia, { opacity: 0, scale: 0.95 });
 
-    tl.to(heroLabel, { opacity: 1, y: 0, duration: 0.6 }, 0.3)
-      .to(chars, {
+    tl.to(heroLabel, { opacity: 1, y: 0, duration: 0.6 }, 0.2)
+      .to(heroLines, {
         opacity: 1,
-        y: 0,
-        duration: 0.8,
-        stagger: 0.02,
-        ease: 'back.out(1.7)'
-      }, 0.5)
-      .to(heroSubtitle, { opacity: 1, y: 0, duration: 0.7 }, 1.2)
-      .to(heroCTA, { opacity: 1, y: 0, duration: 0.6 }, 1.4);
+        yPercent: 0,
+        duration: 0.9,
+        stagger: 0.15,
+        ease: 'power3.out'
+      }, 0.3)
+      .to(heroSubtitle, { opacity: 1, y: 0, duration: 0.7 }, 0.7)
+      .to(heroCTA, { opacity: 1, y: 0, stagger: 0.1, duration: 0.5 }, 0.9)
+      .to(heroTelemetry, { opacity: 1, y: 0, stagger: 0.08, duration: 0.6 }, 1.1);
 
     if (heroMedia) {
-      tl.to(heroMedia, { opacity: 1, scale: 1, x: 0, duration: 1.2, ease: 'power2.out' }, 0.8);
+      tl.to(heroMedia, { opacity: 1, scale: 1, duration: 1.2, ease: 'power2.out' }, 0.4);
     }
   }
 
@@ -365,55 +366,7 @@
   }
 
 
-  // ========================================================================
-  // PORTFOLIO FILTERING
-  // ========================================================================
-  function initPortfolioFilters() {
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const projects = document.querySelectorAll('.work-card');
 
-    if (!filterBtns.length || !projects.length) return;
-
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        // Update active class
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        const filter = btn.getAttribute('data-filter');
-
-        // GSAP animation for filtering
-        projects.forEach(project => {
-          const category = project.getAttribute('data-category');
-          
-          if (filter === 'all' || filter === category) {
-            gsap.to(project, {
-              display: 'block',
-              opacity: 1,
-              scale: 1,
-              duration: 0.4,
-              ease: 'power2.out'
-            });
-          } else {
-            gsap.to(project, {
-              opacity: 0,
-              scale: 0.95,
-              duration: 0.3,
-              ease: 'power2.in',
-              onComplete: () => {
-                project.style.display = 'none';
-              }
-            });
-          }
-        });
-        
-        // Refresh ScrollTrigger to recalculate heights
-        setTimeout(() => {
-          ScrollTrigger.refresh();
-        }, 500);
-      });
-    });
-  }
 
 
   // ========================================================================
