@@ -952,7 +952,7 @@
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  background: #100E0D;
+  background: var(--bg-surface);
   border: 1px solid var(--border-visible);
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -960,7 +960,7 @@
 }
 
 .terminal-header {
-  background: #171412;
+  background: var(--bg-elevated);
   padding: 10px 16px;
   display: flex;
   align-items: center;
@@ -1053,7 +1053,7 @@
 }
 
 .arch-modal-content {
-  background: #171412;
+  background: var(--bg-surface);
   border: 1px solid var(--border-active);
   border-radius: var(--radius-lg);
   width: 100%;
@@ -1095,14 +1095,14 @@
 }
 
 .arch-diagram-box {
-  background: #0C0A09;
+  background: var(--bg-primary);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   padding: var(--space-4);
   margin: var(--space-4) 0;
   font-family: var(--font-mono);
   font-size: 0.8125rem;
-  color: #E28A5E;
+  color: var(--accent);
   overflow-x: auto;
 }
 
