@@ -420,31 +420,10 @@ body::-webkit-scrollbar,
 }
 
 /* ============================================================================
-   PAGE TRANSITION OVERLAY
+   PAGE TRANSITION OVERLAY (Disabled to ensure instant, zero-hang rendering)
    ============================================================================ */
 .page-transition-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100dvh;
-  background-color: rgba(10, 10, 10, 0.75);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  z-index: 100000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  pointer-events: none; /* Block interactions until faded out */
-}
-
-.page-transition-logo {
-  font-family: var(--font-headline);
-  font-size: clamp(2rem, 5vw, 4rem);
-  color: var(--accent);
-  letter-spacing: -0.02em;
-  opacity: 0; visibility: hidden;
+  display: none !important;
 }
 
 

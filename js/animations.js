@@ -11,7 +11,7 @@
 
   initPageTransition();
 
-  document.fonts.ready.then(() => {
+  const startAnimations = () => {
     initHeroAnimations();
     initProjectReveals();
     initStatementScrollytelling();
@@ -19,7 +19,16 @@
     initProcessHorizontalScroll();
     initCustomCursor();
     init3DTilt();
-  });
+  };
+
+  if (document.fonts && document.fonts.ready) {
+    Promise.race([
+      document.fonts.ready,
+      new Promise(r => setTimeout(r, 250))
+    ]).then(startAnimations);
+  } else {
+    startAnimations();
+  }
 
   // ========================================================================
   // HERO ENTRANCE ANIMATION
