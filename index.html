@@ -187,6 +187,32 @@
             <!-- Background Canvas & Video Texture -->
             <div class="hero-media" aria-hidden="true">
                 <canvas id="hero-webgl-canvas" style="position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0;"></canvas>
+                <!-- Cinematic Glowing Light Arcs (ZERB Signature Showcase) -->
+                <svg class="hero-light-ribbons" viewBox="0 0 1440 900" fill="none" preserveAspectRatio="none" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; opacity: 0.8; mix-blend-mode: screen;">
+                    <path d="M-80,85 C220,100 350,180 520,380 C680,560 920,680 1520,600" stroke="url(#hero-arc-grad-1)" stroke-width="2.2" filter="url(#hero-arc-glow)" />
+                    <path d="M-100,550 C280,480 620,720 1050,780 C1280,810 1460,760 1550,710" stroke="url(#hero-arc-grad-2)" stroke-width="1.8" filter="url(#hero-arc-glow)" />
+                    <path d="M1100,-40 C1260,180 1340,320 1520,420" stroke="url(#hero-arc-grad-1)" stroke-width="2.5" filter="url(#hero-arc-glow)" />
+                    <defs>
+                        <linearGradient id="hero-arc-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="var(--accent-hover)" stop-opacity="0.95" />
+                            <stop offset="45%" stop-color="var(--accent)" stop-opacity="0.75" />
+                            <stop offset="85%" stop-color="var(--accent)" stop-opacity="0.1" />
+                            <stop offset="100%" stop-color="var(--accent)" stop-opacity="0" />
+                        </linearGradient>
+                        <linearGradient id="hero-arc-grad-2" x1="0%" y1="100%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="var(--accent-warm)" stop-opacity="0.95" />
+                            <stop offset="40%" stop-color="var(--accent)" stop-opacity="0.65" />
+                            <stop offset="100%" stop-color="var(--accent)" stop-opacity="0" />
+                        </linearGradient>
+                        <filter id="hero-arc-glow" x="-20%" y="-20%" width="140%" height="140%">
+                            <feGaussianBlur stdDeviation="3.5" result="blur" />
+                            <feMerge>
+                                <feMergeNode in="blur" />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+                    </defs>
+                </svg>
                 <div class="hero-media-overlay"></div>
             </div>
         </div>

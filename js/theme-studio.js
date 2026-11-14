@@ -1,20 +1,188 @@
 /**
  * ZERB Theme & Typography Studio
- * Interactive Real-Time Customizer (15 Palettes & 10 Font Pairings)
+ * Interactive Real-Time Customizer (Gold Collection + Cyan & Lime)
  */
 
 (function () {
   'use strict';
 
   // ==========================================================================
-  // 1. DATA: 15 WORLD-CLASS COLOR PALETTES (Dark + Light + Gold)
+  // 1. DATA: CURATED PALETTES (Exact Image Gold + Variants + Cyan & Lime)
   // ==========================================================================
   const COLOR_PALETTES = [
-    // ── KEEP: Nordic Titanium & Frost Cyan ──────────────────────────────────
+    // ── 01. FLAGSHIP: EXACT SCREENSHOT MATCH (Imperial Champagne Gold) ──────
+    {
+      id: 'imperial-champagne-gold',
+      name: 'Imperial Champagne Gold',
+      archetype: 'Exact Screenshot Match · Prestige Noir',
+      tokens: {
+        '--bg-primary': '#0A0806',
+        '--bg-surface': '#140F0B',
+        '--bg-elevated': '#1D1611',
+        '--border-subtle': '#271D15',
+        '--border-visible': '#3D2E21',
+        '--border-active': 'rgba(200, 157, 108, 0.5)',
+        '--text-primary': '#FAF5EE',
+        '--text-secondary': '#B3A292',
+        '--text-tertiary': '#706254',
+        '--accent': '#C89D6C',
+        '--accent-hover': '#DFBA8F',
+        '--accent-subtle': 'rgba(200, 157, 108, 0.15)',
+        '--accent-glow': 'rgba(200, 157, 108, 0.35)',
+        '--accent-warm': '#FBE6C9',
+        '--accent-warm-glow': 'rgba(251, 230, 201, 0.35)'
+      }
+    },
+
+    // ── 02. LUMINOUS ROYAL GOLD ─────────────────────────────────────────────
+    {
+      id: 'luminous-royal-gold',
+      name: 'Luminous Royal Gold',
+      archetype: '24K Radiant Sheen · Dark',
+      tokens: {
+        '--bg-primary': '#080706',
+        '--bg-surface': '#120F0C',
+        '--bg-elevated': '#1B1611',
+        '--border-subtle': '#282118',
+        '--border-visible': '#3F3426',
+        '--border-active': 'rgba(218, 175, 78, 0.5)',
+        '--text-primary': '#FCF9F2',
+        '--text-secondary': '#BDB09B',
+        '--text-tertiary': '#756854',
+        '--accent': '#D4AF37',
+        '--accent-hover': '#ECD27A',
+        '--accent-subtle': 'rgba(212, 175, 55, 0.16)',
+        '--accent-glow': 'rgba(212, 175, 55, 0.35)',
+        '--accent-warm': '#FFF0BE',
+        '--accent-warm-glow': 'rgba(255, 240, 190, 0.35)'
+      }
+    },
+
+    // ── 03. VENETIAN BRONZE GOLD ────────────────────────────────────────────
+    {
+      id: 'venetian-bronze-gold',
+      name: 'Venetian Bronze Gold',
+      archetype: 'Deep Burnished Metal · Dark',
+      tokens: {
+        '--bg-primary': '#0B0907',
+        '--bg-surface': '#15110E',
+        '--bg-elevated': '#1E1712',
+        '--border-subtle': '#2A1E17',
+        '--border-visible': '#412E22',
+        '--border-active': 'rgba(186, 135, 78, 0.5)',
+        '--text-primary': '#F8F2EC',
+        '--text-secondary': '#AE9B8B',
+        '--text-tertiary': '#6D5C4E',
+        '--accent': '#BA874E',
+        '--accent-hover': '#D7A368',
+        '--accent-subtle': 'rgba(186, 135, 78, 0.15)',
+        '--accent-glow': 'rgba(186, 135, 78, 0.35)',
+        '--accent-warm': '#F2C895',
+        '--accent-warm-glow': 'rgba(242, 200, 149, 0.35)'
+      }
+    },
+
+    // ── 04. NOCTURNE RAW GOLD ───────────────────────────────────────────────
+    {
+      id: 'nocturne-raw-gold',
+      name: 'Nocturne Raw Gold',
+      archetype: 'Pitch Obsidian & Molten Gold',
+      tokens: {
+        '--bg-primary': '#050403',
+        '--bg-surface': '#0D0A08',
+        '--bg-elevated': '#17120E',
+        '--border-subtle': '#231B13',
+        '--border-visible': '#3A2D20',
+        '--border-active': 'rgba(229, 169, 85, 0.55)',
+        '--text-primary': '#FFFDF9',
+        '--text-secondary': '#B3A593',
+        '--text-tertiary': '#6F6150',
+        '--accent': '#E5A955',
+        '--accent-hover': '#F5C278',
+        '--accent-subtle': 'rgba(229, 169, 85, 0.16)',
+        '--accent-glow': 'rgba(229, 169, 85, 0.38)',
+        '--accent-warm': '#FFDC9E',
+        '--accent-warm-glow': 'rgba(255, 220, 158, 0.38)'
+      }
+    },
+
+    // ── 05. SAHARA SAND GOLD ────────────────────────────────────────────────
+    {
+      id: 'sahara-sand-gold',
+      name: 'Sahara Sand Gold',
+      archetype: 'Understated Warm Cashmere',
+      tokens: {
+        '--bg-primary': '#0B0908',
+        '--bg-surface': '#151210',
+        '--bg-elevated': '#1E1916',
+        '--border-subtle': '#2A231F',
+        '--border-visible': '#3F352E',
+        '--border-active': 'rgba(194, 159, 120, 0.5)',
+        '--text-primary': '#FAF6F2',
+        '--text-secondary': '#B0A398',
+        '--text-tertiary': '#6E6257',
+        '--accent': '#C29F78',
+        '--accent-hover': '#D8BCA0',
+        '--accent-subtle': 'rgba(194, 159, 120, 0.14)',
+        '--accent-glow': 'rgba(194, 159, 120, 0.3)',
+        '--accent-warm': '#F5E5D3',
+        '--accent-warm-glow': 'rgba(245, 229, 211, 0.3)'
+      }
+    },
+
+    // ── 06. ROSE AUREATE GOLD ───────────────────────────────────────────────
+    {
+      id: 'rose-aureate-gold',
+      name: 'Rose Aureate Gold',
+      archetype: 'Warm Sunset Champagne · Dark',
+      tokens: {
+        '--bg-primary': '#0C0807',
+        '--bg-surface': '#16100F',
+        '--bg-elevated': '#201715',
+        '--border-subtle': '#2E201E',
+        '--border-visible': '#44312E',
+        '--border-active': 'rgba(200, 147, 121, 0.5)',
+        '--text-primary': '#FAF3F2',
+        '--text-secondary': '#B4A2A0',
+        '--text-tertiary': '#745E5C',
+        '--accent': '#C89379',
+        '--accent-hover': '#DFAEA0',
+        '--accent-subtle': 'rgba(200, 147, 121, 0.15)',
+        '--accent-glow': 'rgba(200, 147, 121, 0.35)',
+        '--accent-warm': '#F8D8CF',
+        '--accent-warm-glow': 'rgba(248, 216, 207, 0.35)'
+      }
+    },
+
+    // ── 07. MONACO SILK GOLD (LIGHT LUXURY VARIANT) ─────────────────────────
+    {
+      id: 'monaco-silk-gold',
+      name: 'Monaco Silk Gold',
+      archetype: 'Haute Couture Cream · Light',
+      tokens: {
+        '--bg-primary': '#FCFAF6',
+        '--bg-surface': '#F5F1E8',
+        '--bg-elevated': '#FFFFFF',
+        '--border-subtle': '#E8E1D5',
+        '--border-visible': '#D5C9B8',
+        '--border-active': 'rgba(168, 123, 69, 0.45)',
+        '--text-primary': '#221A12',
+        '--text-secondary': '#605143',
+        '--text-tertiary': '#958573',
+        '--accent': '#A87B45',
+        '--accent-hover': '#C4965D',
+        '--accent-subtle': 'rgba(168, 123, 69, 0.12)',
+        '--accent-glow': 'rgba(168, 123, 69, 0.25)',
+        '--accent-warm': '#D8AC74',
+        '--accent-warm-glow': 'rgba(216, 172, 116, 0.25)'
+      }
+    },
+
+    // ── 08. KEPT: NORDIC TITANIUM & FROST CYAN ──────────────────────────────
     {
       id: 'nordic-titanium-frost',
       name: 'Nordic Titanium & Frost Cyan',
-      archetype: 'Anodized Hardware · Dark',
+      archetype: 'Anodized Hardware · Cyan',
       tokens: {
         '--bg-primary': '#0B0E11',
         '--bg-surface': '#13181E',
@@ -34,101 +202,11 @@
       }
     },
 
-    // ── GOLD SHADES (3) ─────────────────────────────────────────────────────
-    {
-      id: 'obsidian-gold-classic',
-      name: 'Obsidian & Classic Gold',
-      archetype: 'Prestige Dark · Gold',
-      tokens: {
-        '--bg-primary': '#09080A',
-        '--bg-surface': '#121110',
-        '--bg-elevated': '#1C1A18',
-        '--border-subtle': '#2A2622',
-        '--border-visible': '#3E3830',
-        '--border-active': 'rgba(212, 175, 55, 0.5)',
-        '--text-primary': '#FAF6EE',
-        '--text-secondary': '#B8AD9A',
-        '--text-tertiary': '#6E6355',
-        '--accent': '#D4AF37',
-        '--accent-hover': '#E5C44E',
-        '--accent-subtle': 'rgba(212, 175, 55, 0.14)',
-        '--accent-glow': 'rgba(212, 175, 55, 0.3)',
-        '--accent-warm': '#E8C950',
-        '--accent-warm-glow': 'rgba(212, 175, 55, 0.3)'
-      }
-    },
-    {
-      id: 'champagne-rose-gold',
-      name: 'Champagne & Rosé Gold',
-      archetype: 'Sophisticated Warmth · Light',
-      tokens: {
-        '--bg-primary': '#FDFAF6',
-        '--bg-surface': '#F7F2EC',
-        '--bg-elevated': '#FFF9F3',
-        '--border-subtle': '#E8DFD4',
-        '--border-visible': '#D5C9BA',
-        '--border-active': 'rgba(184, 134, 90, 0.5)',
-        '--text-primary': '#2C2218',
-        '--text-secondary': '#6B5D4F',
-        '--text-tertiary': '#A09284',
-        '--accent': '#B8865A',
-        '--accent-hover': '#CF9A6B',
-        '--accent-subtle': 'rgba(184, 134, 90, 0.12)',
-        '--accent-glow': 'rgba(184, 134, 90, 0.25)',
-        '--accent-warm': '#D4A06E',
-        '--accent-warm-glow': 'rgba(184, 134, 90, 0.25)'
-      }
-    },
-    {
-      id: 'midnight-antique-gold',
-      name: 'Midnight & Antique Gold',
-      archetype: 'Heritage Opulence · Dark',
-      tokens: {
-        '--bg-primary': '#0A0A0E',
-        '--bg-surface': '#131218',
-        '--bg-elevated': '#1B1A22',
-        '--border-subtle': '#2A2836',
-        '--border-visible': '#3D3A4C',
-        '--border-active': 'rgba(194, 160, 80, 0.5)',
-        '--text-primary': '#F5F1E8',
-        '--text-secondary': '#AEA690',
-        '--text-tertiary': '#6D665A',
-        '--accent': '#C2A050',
-        '--accent-hover': '#D8B862',
-        '--accent-subtle': 'rgba(194, 160, 80, 0.14)',
-        '--accent-glow': 'rgba(194, 160, 80, 0.3)',
-        '--accent-warm': '#DEBA64',
-        '--accent-warm-glow': 'rgba(194, 160, 80, 0.3)'
-      }
-    },
-
-    // ── DARK MODE PALETTES ──────────────────────────────────────────────────
-    {
-      id: 'deep-ocean-cobalt',
-      name: 'Deep Ocean Cobalt',
-      archetype: 'Enterprise SaaS · Dark',
-      tokens: {
-        '--bg-primary': '#060A12',
-        '--bg-surface': '#0C1220',
-        '--bg-elevated': '#141D2E',
-        '--border-subtle': '#1E2C42',
-        '--border-visible': '#2A3D5A',
-        '--border-active': 'rgba(56, 132, 255, 0.5)',
-        '--text-primary': '#F0F4FA',
-        '--text-secondary': '#8FA3BE',
-        '--text-tertiary': '#506580',
-        '--accent': '#3884FF',
-        '--accent-hover': '#5A9EFF',
-        '--accent-subtle': 'rgba(56, 132, 255, 0.14)',
-        '--accent-glow': 'rgba(56, 132, 255, 0.3)',
-        '--accent-warm': '#6AAFFF',
-        '--accent-warm-glow': 'rgba(56, 132, 255, 0.3)'
-      }
-    },
+    // ── 09. KEPT: CHARCOAL & ELECTRIC LIME ──────────────────────────────────
     {
       id: 'charcoal-electric-lime',
       name: 'Charcoal & Electric Lime',
-      archetype: 'Startup Energy · Dark',
+      archetype: 'Startup Energy · Lime',
       tokens: {
         '--bg-primary': '#0C0D0B',
         '--bg-surface': '#141614',
@@ -146,214 +224,24 @@
         '--accent-warm': '#C8F56E',
         '--accent-warm-glow': 'rgba(163, 230, 53, 0.28)'
       }
-    },
-    {
-      id: 'volcanic-magma-red',
-      name: 'Volcanic Magma',
-      archetype: 'Bold Power · Dark',
-      tokens: {
-        '--bg-primary': '#0C0808',
-        '--bg-surface': '#161010',
-        '--bg-elevated': '#201818',
-        '--border-subtle': '#302424',
-        '--border-visible': '#443434',
-        '--border-active': 'rgba(239, 68, 68, 0.5)',
-        '--text-primary': '#FCF2F2',
-        '--text-secondary': '#BEA0A0',
-        '--text-tertiary': '#7A5E5E',
-        '--accent': '#EF4444',
-        '--accent-hover': '#F87171',
-        '--accent-subtle': 'rgba(239, 68, 68, 0.14)',
-        '--accent-glow': 'rgba(239, 68, 68, 0.3)',
-        '--accent-warm': '#FB8A8A',
-        '--accent-warm-glow': 'rgba(239, 68, 68, 0.3)'
-      }
-    },
-    {
-      id: 'moonstone-lavender',
-      name: 'Moonstone & Lavender',
-      archetype: 'Creative Studio · Dark',
-      tokens: {
-        '--bg-primary': '#0D0B10',
-        '--bg-surface': '#16131C',
-        '--bg-elevated': '#1E1A28',
-        '--border-subtle': '#2D2840',
-        '--border-visible': '#413A58',
-        '--border-active': 'rgba(167, 139, 250, 0.5)',
-        '--text-primary': '#F5F3FA',
-        '--text-secondary': '#A99FC0',
-        '--text-tertiary': '#6A607E',
-        '--accent': '#A78BFA',
-        '--accent-hover': '#C4B5FD',
-        '--accent-subtle': 'rgba(167, 139, 250, 0.14)',
-        '--accent-glow': 'rgba(167, 139, 250, 0.3)',
-        '--accent-warm': '#D0C0FF',
-        '--accent-warm-glow': 'rgba(167, 139, 250, 0.3)'
-      }
-    },
-    {
-      id: 'stealth-graphite',
-      name: 'Stealth Graphite',
-      archetype: 'Pure Monochrome · Dark',
-      tokens: {
-        '--bg-primary': '#0A0A0A',
-        '--bg-surface': '#121212',
-        '--bg-elevated': '#1A1A1A',
-        '--border-subtle': '#262626',
-        '--border-visible': '#383838',
-        '--border-active': 'rgba(229, 229, 229, 0.35)',
-        '--text-primary': '#ECECEC',
-        '--text-secondary': '#9A9A9A',
-        '--text-tertiary': '#5C5C5C',
-        '--accent': '#E5E5E5',
-        '--accent-hover': '#FFFFFF',
-        '--accent-subtle': 'rgba(229, 229, 229, 0.1)',
-        '--accent-glow': 'rgba(229, 229, 229, 0.2)',
-        '--accent-warm': '#F5F5F5',
-        '--accent-warm-glow': 'rgba(229, 229, 229, 0.2)'
-      }
-    },
-
-    // ── LIGHT MODE PALETTES ─────────────────────────────────────────────────
-    {
-      id: 'snow-obsidian-ink',
-      name: 'Snow & Obsidian Ink',
-      archetype: 'Swiss Clarity · Light',
-      tokens: {
-        '--bg-primary': '#FAFAFA',
-        '--bg-surface': '#F2F2F2',
-        '--bg-elevated': '#FFFFFF',
-        '--border-subtle': '#E5E5E5',
-        '--border-visible': '#D4D4D4',
-        '--border-active': 'rgba(23, 23, 23, 0.35)',
-        '--text-primary': '#171717',
-        '--text-secondary': '#525252',
-        '--text-tertiary': '#A3A3A3',
-        '--accent': '#171717',
-        '--accent-hover': '#404040',
-        '--accent-subtle': 'rgba(23, 23, 23, 0.08)',
-        '--accent-glow': 'rgba(23, 23, 23, 0.15)',
-        '--accent-warm': '#333333',
-        '--accent-warm-glow': 'rgba(23, 23, 23, 0.15)'
-      }
-    },
-    {
-      id: 'ivory-azure-sky',
-      name: 'Ivory & Azure Sky',
-      archetype: 'Trust & Clarity · Light',
-      tokens: {
-        '--bg-primary': '#F8FAFC',
-        '--bg-surface': '#F0F5FA',
-        '--bg-elevated': '#FFFFFF',
-        '--border-subtle': '#E1E8F0',
-        '--border-visible': '#CBD5E1',
-        '--border-active': 'rgba(37, 99, 235, 0.4)',
-        '--text-primary': '#0F172A',
-        '--text-secondary': '#475569',
-        '--text-tertiary': '#94A3B8',
-        '--accent': '#2563EB',
-        '--accent-hover': '#3B82F6',
-        '--accent-subtle': 'rgba(37, 99, 235, 0.1)',
-        '--accent-glow': 'rgba(37, 99, 235, 0.2)',
-        '--accent-warm': '#4F8EF7',
-        '--accent-warm-glow': 'rgba(37, 99, 235, 0.2)'
-      }
-    },
-    {
-      id: 'pearl-emerald-garden',
-      name: 'Pearl & Emerald Garden',
-      archetype: 'Organic Growth · Light',
-      tokens: {
-        '--bg-primary': '#F6FAF7',
-        '--bg-surface': '#EDF5EF',
-        '--bg-elevated': '#FFFFFF',
-        '--border-subtle': '#D6E8DA',
-        '--border-visible': '#B8D6BF',
-        '--border-active': 'rgba(5, 150, 105, 0.4)',
-        '--text-primary': '#0D1F15',
-        '--text-secondary': '#3D6E50',
-        '--text-tertiary': '#7FAA8F',
-        '--accent': '#059669',
-        '--accent-hover': '#10B981',
-        '--accent-subtle': 'rgba(5, 150, 105, 0.1)',
-        '--accent-glow': 'rgba(5, 150, 105, 0.2)',
-        '--accent-warm': '#22C588',
-        '--accent-warm-glow': 'rgba(5, 150, 105, 0.2)'
-      }
-    },
-    {
-      id: 'linen-terracotta-warmth',
-      name: 'Linen & Terracotta',
-      archetype: 'Warm Earth · Light',
-      tokens: {
-        '--bg-primary': '#FBF8F4',
-        '--bg-surface': '#F4EDE4',
-        '--bg-elevated': '#FFFCF8',
-        '--border-subtle': '#E6D9CB',
-        '--border-visible': '#D4C3B0',
-        '--border-active': 'rgba(180, 95, 55, 0.4)',
-        '--text-primary': '#2A1F16',
-        '--text-secondary': '#6E5844',
-        '--text-tertiary': '#A8947E',
-        '--accent': '#B45F37',
-        '--accent-hover': '#CC7448',
-        '--accent-subtle': 'rgba(180, 95, 55, 0.1)',
-        '--accent-glow': 'rgba(180, 95, 55, 0.2)',
-        '--accent-warm': '#D8804E',
-        '--accent-warm-glow': 'rgba(180, 95, 55, 0.2)'
-      }
-    },
-    {
-      id: 'frost-electric-indigo',
-      name: 'Frost & Electric Indigo',
-      archetype: 'Modern SaaS · Light',
-      tokens: {
-        '--bg-primary': '#F7F7FB',
-        '--bg-surface': '#EEEEF5',
-        '--bg-elevated': '#FFFFFF',
-        '--border-subtle': '#DDDDE8',
-        '--border-visible': '#C8C8DA',
-        '--border-active': 'rgba(79, 70, 229, 0.4)',
-        '--text-primary': '#1A1736',
-        '--text-secondary': '#4C476A',
-        '--text-tertiary': '#9590B0',
-        '--accent': '#4F46E5',
-        '--accent-hover': '#6366F1',
-        '--accent-subtle': 'rgba(79, 70, 229, 0.1)',
-        '--accent-glow': 'rgba(79, 70, 229, 0.2)',
-        '--accent-warm': '#7C7AF5',
-        '--accent-warm-glow': 'rgba(79, 70, 229, 0.2)'
-      }
-    },
-    {
-      id: 'cloud-coral-sunset',
-      name: 'Cloud & Coral Sunset',
-      archetype: 'Vibrant Warmth · Light',
-      tokens: {
-        '--bg-primary': '#FFFAF8',
-        '--bg-surface': '#FFF0EB',
-        '--bg-elevated': '#FFFFFF',
-        '--border-subtle': '#F5DED4',
-        '--border-visible': '#EBC8B8',
-        '--border-active': 'rgba(236, 72, 89, 0.4)',
-        '--text-primary': '#2B1318',
-        '--text-secondary': '#7D4050',
-        '--text-tertiary': '#B88494',
-        '--accent': '#EC4859',
-        '--accent-hover': '#F06B7A',
-        '--accent-subtle': 'rgba(236, 72, 89, 0.1)',
-        '--accent-glow': 'rgba(236, 72, 89, 0.2)',
-        '--accent-warm': '#F48490',
-        '--accent-warm-glow': 'rgba(236, 72, 89, 0.2)'
-      }
     }
   ];
 
   // ==========================================================================
-  // 2. DATA: 10 PREMIER FONT PAIRINGS (Futuristic + Humanist + 8 New)
+  // 2. DATA: 10 PREMIER FONT PAIRINGS
   // ==========================================================================
   const FONT_PAIRINGS = [
-    // ── KEEP: Futuristic Nordic Terminal ─────────────────────────────────────
+    // ── 01. WARMING HUMANIST CRAFT (Exact Screenshot Serif Aesthetic) ────────
+    {
+      id: 'warming-humanist-craft',
+      name: 'Warming Humanist Craft',
+      tone: 'Exact Serif Luxury (Screenshot Match)',
+      headlineFamily: "'Fraunces', Georgia, serif",
+      bodyFamily: "'DM Sans', sans-serif",
+      monoFamily: "'IBM Plex Mono', monospace",
+      googleUrl: 'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&display=swap'
+    },
+    // ── 02. FUTURISTIC NORDIC TERMINAL (Kept as user requested) ─────────────
     {
       id: 'futuristic-nordic-terminal',
       name: 'Futuristic Nordic Terminal',
@@ -363,17 +251,17 @@
       monoFamily: "'JetBrains Mono', monospace",
       googleUrl: 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600&family=Sora:wght@500;600;700&display=swap'
     },
-    // ── KEEP: Warming Humanist Craft ────────────────────────────────────────
+    // ── 03. EDITORIAL ROYAL SERIF ───────────────────────────────────────────
     {
-      id: 'warming-humanist-craft',
-      name: 'Warming Humanist Craft',
-      tone: 'Warm, approachable product craftsmanship (Basecamp)',
-      headlineFamily: "'Fraunces', serif",
-      bodyFamily: "'DM Sans', sans-serif",
-      monoFamily: "'IBM Plex Mono', monospace",
-      googleUrl: 'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&display=swap'
+      id: 'editorial-modern-luxury',
+      name: 'Editorial Royal Serif',
+      tone: 'Bespoke high-fashion craft & couture',
+      headlineFamily: "'Playfair Display', Georgia, serif",
+      bodyFamily: "'Hanken Grotesk', -apple-system, sans-serif",
+      monoFamily: "'JetBrains Mono', monospace",
+      googleUrl: 'https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap'
     },
-    // ── NEW 1: Geometric Precision ──────────────────────────────────────────
+    // ── 04. GEOMETRIC PRECISION ─────────────────────────────────────────────
     {
       id: 'geometric-precision-duo',
       name: 'Geometric Precision',
@@ -383,7 +271,7 @@
       monoFamily: "'Fira Code', monospace",
       googleUrl: 'https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter+Tight:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap'
     },
-    // ── NEW 2: Dramatic Serif ───────────────────────────────────────────────
+    // ── 05. DRAMATIC EDITORIAL SERIF ────────────────────────────────────────
     {
       id: 'dramatic-editorial-serif',
       name: 'Dramatic Editorial Serif',
@@ -393,7 +281,7 @@
       monoFamily: "'Source Code Pro', monospace",
       googleUrl: 'https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Code+Pro:wght@400;500&family=Source+Sans+3:wght@400;500;600&display=swap'
     },
-    // ── NEW 3: Monospace Engineering ────────────────────────────────────────
+    // ── 06. MONOSPACE ENGINEERING ───────────────────────────────────────────
     {
       id: 'monospace-engineering',
       name: 'Monospace Engineering',
@@ -403,7 +291,7 @@
       monoFamily: "'JetBrains Mono', monospace",
       googleUrl: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap'
     },
-    // ── NEW 4: Scientific Rationalist ───────────────────────────────────────
+    // ── 07. SCIENTIFIC RATIONALIST ──────────────────────────────────────────
     {
       id: 'scientific-rationalist',
       name: 'Scientific Rationalist',
@@ -413,7 +301,7 @@
       monoFamily: "'IBM Plex Mono', monospace",
       googleUrl: 'https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap'
     },
-    // ── NEW 5: Humanist Neo-Classic ─────────────────────────────────────────
+    // ── 08. HUMANIST NEO-CLASSIC ────────────────────────────────────────────
     {
       id: 'humanist-neo-classic',
       name: 'Humanist Neo-Classic',
@@ -423,7 +311,7 @@
       monoFamily: "'Inconsolata', monospace",
       googleUrl: 'https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600&family=Lato:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap'
     },
-    // ── NEW 6: Expressive Display ───────────────────────────────────────────
+    // ── 09. EXPRESSIVE DISPLAY BOLD ─────────────────────────────────────────
     {
       id: 'expressive-display-bold',
       name: 'Expressive Display Bold',
@@ -433,17 +321,7 @@
       monoFamily: "'Space Mono', monospace",
       googleUrl: 'https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Outfit:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap'
     },
-    // ── NEW 7: Elegant Contemporary ─────────────────────────────────────────
-    {
-      id: 'elegant-contemporary',
-      name: 'Elegant Contemporary',
-      tone: 'Refined luxury meets tech clarity (Lemon Squeezy / Rauno)',
-      headlineFamily: "'Manrope', sans-serif",
-      bodyFamily: "'Nunito Sans', sans-serif",
-      monoFamily: "'Geist Mono', monospace",
-      googleUrl: 'https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=Manrope:wght@500;600;700;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700&display=swap'
-    },
-    // ── NEW 8: Space-Age Industrial ─────────────────────────────────────────
+    // ── 10. SPACE-AGE INDUSTRIAL ────────────────────────────────────────────
     {
       id: 'space-age-industrial',
       name: 'Space-Age Industrial',
@@ -459,8 +337,9 @@
   const STORAGE_KEY_PALETTE = 'zerb_selected_palette';
   const STORAGE_KEY_FONT = 'zerb_selected_font';
 
-  let activePaletteId = localStorage.getItem(STORAGE_KEY_PALETTE) || 'nordic-titanium-frost';
-  let activeFontId = localStorage.getItem(STORAGE_KEY_FONT) || 'futuristic-nordic-terminal';
+  // Default to exact screenshot match: Imperial Champagne Gold & Warming Humanist Craft
+  let activePaletteId = localStorage.getItem(STORAGE_KEY_PALETTE) || 'imperial-champagne-gold';
+  let activeFontId = localStorage.getItem(STORAGE_KEY_FONT) || 'warming-humanist-craft';
 
   // Loaded fonts cache
   const loadedFonts = new Set();
@@ -556,7 +435,7 @@
     launcher.innerHTML = `
       <span class="launcher-icon">✦</span>
       <span>Themes &amp; Fonts</span>
-      <span class="launcher-badge">15 × 10</span>
+      <span class="launcher-badge">${COLOR_PALETTES.length} × 10</span>
     `;
 
     // 2. Studio Drawer Container
@@ -572,7 +451,7 @@
             <span class="sparkle">✦</span>
             <span>Design Studio Experimenter</span>
           </div>
-          <div class="studio-subtitle">15 Color Palettes · 10 Font Pairings · Dark & Light</div>
+          <div class="studio-subtitle">Gold Collection · Cyan &amp; Lime · 10 Curated Fonts</div>
         </div>
         <button class="studio-close-btn" id="studio-close" aria-label="Close studio">&times;</button>
       </div>
@@ -588,7 +467,7 @@
       </div>
 
       <div class="studio-tabs">
-        <button class="studio-tab-btn active" data-tab="palettes">Color Palettes (15)</button>
+        <button class="studio-tab-btn active" data-tab="palettes">Palettes (${COLOR_PALETTES.length})</button>
         <button class="studio-tab-btn" data-tab="fonts">Typography (10)</button>
       </div>
 
@@ -694,8 +573,8 @@
 
     // Reset button
     drawer.querySelector('#studio-reset').addEventListener('click', () => {
-      applyPalette('nordic-titanium-frost');
-      applyFontPairing('futuristic-nordic-terminal');
+      applyPalette('imperial-champagne-gold');
+      applyFontPairing('warming-humanist-craft');
     });
 
     // Copy configuration button

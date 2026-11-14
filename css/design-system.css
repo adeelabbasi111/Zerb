@@ -12,22 +12,22 @@
 
 /* --- Design Tokens --- */
 :root {
-  /* Colors — Warm Obsidian Palette (ZERB Signature) */
-  --bg-primary:      #0C0A09;
-  --bg-surface:      #171412;
-  --bg-elevated:     #201C18;
-  --border-subtle:   #2A2420;
-  --border-visible:  #3D3630;
-  --border-active:   rgba(196, 115, 74, 0.45);
-  --text-primary:    #F5F0EB;
-  --text-secondary:  #A09890;
-  --text-tertiary:   #5C554E;
-  --accent:          #C4734A;
-  --accent-hover:    #D4885F;
-  --accent-subtle:   rgba(196, 115, 74, 0.12);
-  --accent-glow:     rgba(196, 115, 74, 0.25);
-  --accent-warm:     #E08758;
-  --accent-warm-glow:rgba(224, 135, 88, 0.25);
+  /* Colors — Imperial Champagne Gold (ZERB Signature Flagship) */
+  --bg-primary:      #0A0806;
+  --bg-surface:      #140F0B;
+  --bg-elevated:     #1D1611;
+  --border-subtle:   #271D15;
+  --border-visible:  #3D2E21;
+  --border-active:   rgba(200, 157, 108, 0.5);
+  --text-primary:    #FAF5EE;
+  --text-secondary:  #B3A292;
+  --text-tertiary:   #706254;
+  --accent:          #C89D6C;
+  --accent-hover:    #DFBA8F;
+  --accent-subtle:   rgba(200, 157, 108, 0.15);
+  --accent-glow:     rgba(200, 157, 108, 0.35);
+  --accent-warm:     #FBE6C9;
+  --accent-warm-glow:rgba(251, 230, 201, 0.35);
   --accent-emerald:  #22C55E;
   --accent-emerald-glow: rgba(34, 197, 94, 0.25);
   --white:           #FFFFFF;
@@ -327,15 +327,15 @@ body::after {
 /* ============================================================================
    ZERB SIGNATURE DESIGN SYSTEM EXTENSIONS (DYNAMIC PALETTE ADAPTIVE)
    ============================================================================ */
-.text-gradient-copper, .text-gradient-cyan {
-  background: linear-gradient(135deg, var(--accent-hover) 0%, var(--accent) 50%, var(--accent-hover) 100%) !important;
+.text-gradient-copper, .text-gradient-cyan, .text-gradient-gold {
+  background: linear-gradient(135deg, var(--accent-warm, var(--accent-hover)) 0%, var(--accent-hover) 35%, var(--accent) 70%, var(--accent-warm, var(--accent-hover)) 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   display: inline-block;
 }
 
 .text-gradient-warm {
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 60%, var(--accent) 100%) !important;
+  background: linear-gradient(135deg, var(--accent-warm, var(--accent)) 0%, var(--accent-hover) 50%, var(--accent) 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   display: inline-block;
