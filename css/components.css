@@ -470,7 +470,7 @@ a, button, .cap-card, .project-card {
   left: 0;
   width: 36px;
   height: 36px;
-  border: 1px solid rgba(196, 115, 74, 0.5);
+  border: 1px solid var(--accent);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
@@ -485,7 +485,7 @@ a, button, .cap-card, .project-card {
 .custom-cursor-follower.hovering {
   width: 56px;
   height: 56px;
-  background-color: rgba(196, 115, 74, 0.12);
+  background-color: var(--accent-subtle);
   border-color: var(--accent);
   box-shadow: 0 0 20px var(--accent-glow);
 }
@@ -533,7 +533,7 @@ a, button, .cap-card, .project-card {
 .skill-domain-card:hover {
   border-color: var(--border-active);
   transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(196, 115, 74, 0.08);
+  box-shadow: 0 12px 30px var(--accent-glow);
 }
 
 .skill-domain-header {
@@ -549,7 +549,7 @@ a, button, .cap-card, .project-card {
   width: 36px;
   height: 36px;
   border-radius: 8px;
-  background: rgba(196, 115, 74, 0.12);
+  background: var(--accent-subtle);
   color: var(--accent);
   display: flex;
   align-items: center;
@@ -584,7 +584,7 @@ a, button, .cap-card, .project-card {
 .skill-pill:hover {
   border-color: var(--accent);
   color: var(--text-primary);
-  background: rgba(196, 115, 74, 0.1);
+  background: var(--accent-subtle);
 }
 
 /* ============================================================================
@@ -622,7 +622,7 @@ a, button, .cap-card, .project-card {
 
 .timeline-card:hover {
   border-color: var(--border-active);
-  box-shadow: 0 12px 30px rgba(196, 115, 74, 0.08);
+  box-shadow: 0 12px 30px var(--accent-glow);
 }
 
 .timeline-badge-col {
@@ -696,7 +696,7 @@ a, button, .cap-card, .project-card {
 
 .contact-direct-card:hover {
   border-color: var(--accent);
-  background: rgba(196, 115, 74, 0.08);
+  background: var(--accent-subtle);
   transform: translateX(4px);
 }
 
@@ -704,7 +704,7 @@ a, button, .cap-card, .project-card {
   width: 44px;
   height: 44px;
   border-radius: 8px;
-  background: rgba(196, 115, 74, 0.12);
+  background: var(--accent-subtle);
   color: var(--accent);
   display: flex;
   align-items: center;
@@ -896,8 +896,8 @@ a, button, .cap-card, .project-card {
   font-size: 0.75rem;
   padding: 4px 10px;
   border-radius: 6px;
-  background: rgba(196, 115, 74, 0.1);
-  border: 1px solid rgba(196, 115, 74, 0.25);
+  background: var(--accent-subtle);
+  border: 1px solid var(--border-active);
   color: var(--text-primary);
 }
 

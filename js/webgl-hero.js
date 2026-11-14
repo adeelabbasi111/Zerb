@@ -60,29 +60,43 @@
     const posArray = new Float32Array(particlesCount * 3);
     const colorsArray = new Float32Array(particlesCount * 3);
     
-    // ZERB Brand Colors: Signature Copper (#C4734A) & Warm Ivory (#F5F0EB)
-    const colorPrimary = new THREE.Color('#C4734A');
-    const colorSecondary = new THREE.Color('#F5F0EB');
-    const colorTertiary = new THREE.Color('#E08758');
+    // Dynamic Particle Theme Recoloring
+    function updateHeroParticlesTheme(accentHex, primaryTextHex, accentHoverHex) {
+        if (!particlesGeometry) return;
+        const colorPrimary = new THREE.Color(accentHex || '#C4734A');
+        const colorSecondary = new THREE.Color(primaryTextHex || '#F5F0EB');
+        const colorTertiary = new THREE.Color(accentHoverHex || accentHex || '#E08758');
+        
+        for (let i = 0; i < particlesCount * 3; i += 3) {
+            let mixedColor;
+            const rand = Math.random();
+            if (rand < 0.70) {
+                mixedColor = colorPrimary.clone().lerp(colorTertiary, Math.random());
+            } else {
+                mixedColor = colorPrimary.clone().lerp(colorSecondary, Math.random() * 0.8);
+            }
+            colorsArray[i] = mixedColor.r;
+            colorsArray[i+1] = mixedColor.g;
+            colorsArray[i+2] = mixedColor.b;
+        }
+        if (particlesGeometry.attributes && particlesGeometry.attributes.color) {
+            particlesGeometry.attributes.color.needsUpdate = true;
+        }
+    }
+    window.updateHeroParticlesTheme = updateHeroParticlesTheme;
     
     for(let i = 0; i < particlesCount * 3; i+=3) {
         // Spread particles over a large area
         posArray[i] = (Math.random() - 0.5) * 100;
         posArray[i+1] = (Math.random() - 0.5) * 100;
         posArray[i+2] = (Math.random() - 0.5) * 50;
-        
-        // Mix colors with mostly copper and warm ivory sparks
-        let mixedColor;
-        const rand = Math.random();
-        if (rand < 0.70) {
-            mixedColor = colorPrimary.clone().lerp(colorTertiary, Math.random());
-        } else {
-            mixedColor = colorPrimary.clone().lerp(colorSecondary, Math.random() * 0.8);
-        }
-        colorsArray[i] = mixedColor.r;
-        colorsArray[i+1] = mixedColor.g;
-        colorsArray[i+2] = mixedColor.b;
     }
+    
+    // Initial color population using current CSS variables
+    const initAccent = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#C4734A';
+    const initText = getComputedStyle(document.documentElement).getPropertyValue('--text-primary').trim() || '#F5F0EB';
+    const initAccentHover = getComputedStyle(document.documentElement).getPropertyValue('--accent-hover').trim() || '#E08758';
+    updateHeroParticlesTheme(initAccent, initText, initAccentHover);
     
     particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
     particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colorsArray, 3));

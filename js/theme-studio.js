@@ -27,7 +27,9 @@
         '--accent': '#5E6AD2',
         '--accent-hover': '#717DEC',
         '--accent-subtle': 'rgba(94, 106, 210, 0.15)',
-        '--accent-glow': 'rgba(94, 106, 210, 0.3)'
+        '--accent-glow': 'rgba(94, 106, 210, 0.3)',
+        '--accent-warm': '#828EFA',
+        '--accent-warm-glow': 'rgba(94, 106, 210, 0.3)'
       }
     },
     {
@@ -47,7 +49,9 @@
         '--accent': '#C4734A',
         '--accent-hover': '#DB855B',
         '--accent-subtle': 'rgba(196, 115, 74, 0.15)',
-        '--accent-glow': 'rgba(196, 115, 74, 0.3)'
+        '--accent-glow': 'rgba(196, 115, 74, 0.3)',
+        '--accent-warm': '#E08758',
+        '--accent-warm-glow': 'rgba(224, 135, 88, 0.25)'
       }
     },
     {
@@ -67,7 +71,9 @@
         '--accent': '#0070F3',
         '--accent-hover': '#0080FF',
         '--accent-subtle': 'rgba(0, 112, 243, 0.15)',
-        '--accent-glow': 'rgba(0, 112, 243, 0.3)'
+        '--accent-glow': 'rgba(0, 112, 243, 0.3)',
+        '--accent-warm': '#3291FF',
+        '--accent-warm-glow': 'rgba(0, 112, 243, 0.3)'
       }
     },
     {
@@ -87,7 +93,9 @@
         '--accent': '#7952FF',
         '--accent-hover': '#926FFD',
         '--accent-subtle': 'rgba(121, 82, 255, 0.15)',
-        '--accent-glow': 'rgba(121, 82, 255, 0.3)'
+        '--accent-glow': 'rgba(121, 82, 255, 0.3)',
+        '--accent-warm': '#A380FF',
+        '--accent-warm-glow': 'rgba(121, 82, 255, 0.3)'
       }
     },
     {
@@ -107,7 +115,9 @@
         '--accent': '#00E5FF',
         '--accent-hover': '#33EBFF',
         '--accent-subtle': 'rgba(0, 229, 255, 0.15)',
-        '--accent-glow': 'rgba(0, 229, 255, 0.3)'
+        '--accent-glow': 'rgba(0, 229, 255, 0.3)',
+        '--accent-warm': '#33EBFF',
+        '--accent-warm-glow': 'rgba(0, 229, 255, 0.3)'
       }
     },
     {
@@ -127,7 +137,9 @@
         '--accent': '#D4AF37',
         '--accent-hover': '#E5C358',
         '--accent-subtle': 'rgba(212, 175, 55, 0.15)',
-        '--accent-glow': 'rgba(212, 175, 55, 0.3)'
+        '--accent-glow': 'rgba(212, 175, 55, 0.3)',
+        '--accent-warm': '#ECD27A',
+        '--accent-warm-glow': 'rgba(212, 175, 55, 0.3)'
       }
     },
     {
@@ -147,7 +159,9 @@
         '--accent': '#FF3333',
         '--accent-hover': '#FF5555',
         '--accent-subtle': 'rgba(255, 51, 51, 0.15)',
-        '--accent-glow': 'rgba(255, 51, 51, 0.3)'
+        '--accent-glow': 'rgba(255, 51, 51, 0.3)',
+        '--accent-warm': '#FF6666',
+        '--accent-warm-glow': 'rgba(255, 51, 51, 0.3)'
       }
     },
     {
@@ -167,7 +181,9 @@
         '--accent': '#10B981',
         '--accent-hover': '#34D399',
         '--accent-subtle': 'rgba(16, 185, 129, 0.15)',
-        '--accent-glow': 'rgba(16, 185, 129, 0.3)'
+        '--accent-glow': 'rgba(16, 185, 129, 0.3)',
+        '--accent-warm': '#34D399',
+        '--accent-warm-glow': 'rgba(16, 185, 129, 0.3)'
       }
     },
     {
@@ -187,7 +203,9 @@
         '--accent': '#E040FB',
         '--accent-hover': '#EA66FF',
         '--accent-subtle': 'rgba(224, 64, 251, 0.15)',
-        '--accent-glow': 'rgba(224, 64, 251, 0.3)'
+        '--accent-glow': 'rgba(224, 64, 251, 0.3)',
+        '--accent-warm': '#F07FFF',
+        '--accent-warm-glow': 'rgba(224, 64, 251, 0.3)'
       }
     },
     {
@@ -207,7 +225,9 @@
         '--accent': '#FF5E3A',
         '--accent-hover': '#FF7A5C',
         '--accent-subtle': 'rgba(255, 94, 58, 0.15)',
-        '--accent-glow': 'rgba(255, 94, 58, 0.3)'
+        '--accent-glow': 'rgba(255, 94, 58, 0.3)',
+        '--accent-warm': '#FF8C70',
+        '--accent-warm-glow': 'rgba(255, 94, 58, 0.3)'
       }
     }
   ];
@@ -331,6 +351,21 @@
       root.style.setProperty(prop, val);
     });
 
+    // Ensure secondary accent & warm glow match the chosen palette
+    const warmVal = palette.tokens['--accent-warm'] || palette.tokens['--accent-hover'] || palette.tokens['--accent'];
+    const warmGlowVal = palette.tokens['--accent-warm-glow'] || palette.tokens['--accent-glow'] || 'rgba(0, 0, 0, 0.25)';
+    root.style.setProperty('--accent-warm', warmVal);
+    root.style.setProperty('--accent-warm-glow', warmGlowVal);
+
+    // Dynamic 3D Hero WebGL Particle Recoloring
+    if (typeof window.updateHeroParticlesTheme === 'function') {
+      window.updateHeroParticlesTheme(
+        palette.tokens['--accent'],
+        palette.tokens['--text-primary'],
+        palette.tokens['--accent-hover']
+      );
+    }
+
     // Update active badges in DOM
     document.querySelectorAll('.palette-card').forEach(card => {
       const isSelected = card.dataset.paletteId === palette.id;
@@ -400,6 +435,9 @@
     // 2. Studio Drawer Container
     const drawer = document.createElement('div');
     drawer.className = 'theme-studio-drawer';
+    drawer.setAttribute('data-lenis-prevent', 'true');
+    drawer.setAttribute('data-lenis-prevent-wheel', 'true');
+    drawer.setAttribute('data-lenis-prevent-touch', 'true');
     drawer.innerHTML = `
       <div class="studio-header">
         <div class="studio-title-wrap">
@@ -427,7 +465,7 @@
         <button class="studio-tab-btn" data-tab="fonts">Typography (10)</button>
       </div>
 
-      <div class="studio-content-pane">
+      <div class="studio-content-pane" data-lenis-prevent="true" data-lenis-prevent-wheel="true" data-lenis-prevent-touch="true">
         <!-- Tab 1: Palettes -->
         <div class="studio-tab-panel active" id="tab-palettes"></div>
 
@@ -445,6 +483,15 @@
 
     document.body.appendChild(launcher);
     document.body.appendChild(drawer);
+
+    // Prevent Lenis smooth scroll interception & allow native scrolling inside drawer
+    drawer.addEventListener('wheel', (e) => {
+      e.stopPropagation();
+    }, { passive: false });
+
+    drawer.addEventListener('touchmove', (e) => {
+      e.stopPropagation();
+    }, { passive: false });
 
     // 3. Populate Palettes Tab
     const palettesPanel = drawer.querySelector('#tab-palettes');

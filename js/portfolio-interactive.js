@@ -271,7 +271,7 @@
       <div style="margin-top: var(--space-5);">
         <h4 class="t-h4" style="color: var(--text-primary); margin-bottom: var(--space-2);">Core Technology Stack</h4>
         <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-          ${data.stack.map(s => `<span class="tech-badge" style="background: rgba(196, 115, 74, 0.12); border-color: rgba(196, 115, 74, 0.25); color: var(--text-primary);">${s}</span>`).join('')}
+          ${data.stack.map(s => `<span class="tech-badge" style="background: var(--accent-subtle); border: 1px solid var(--accent); color: var(--text-primary);">${s}</span>`).join('')}
         </div>
       </div>
 

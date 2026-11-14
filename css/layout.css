@@ -51,7 +51,7 @@ body::-webkit-scrollbar,
   background: rgba(12, 10, 9, 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(196, 115, 74, 0.2);
+  border-bottom: 1px solid var(--border-active);
   padding: 12px 0;
 }
 
