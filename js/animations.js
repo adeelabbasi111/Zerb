@@ -1,5 +1,5 @@
 /* ============================================================================
-   ZERB — ANIMATIONS.JS
+   ZERB -  ANIMATIONS.JS
    GSAP ScrollTrigger sequences for homepage
    ============================================================================ */
 
@@ -198,7 +198,7 @@
   }
 
   // ========================================================================
-  // CAPABILITIES — Staggered Card Reveal
+  // CAPABILITIES - Staggered Card Reveal
   // ========================================================================
   function initCapabilitiesReveal() {
     const cards = document.querySelectorAll('.cap-card');
@@ -237,7 +237,7 @@
   }
 
   // ========================================================================
-  // PROCESS SECTION — Horizontal Scroll
+  // PROCESS SECTION - Horizontal Scroll
   // ========================================================================
   function initProcessHorizontalScroll() {
     const processSection = document.querySelector('.section-process');

@@ -1,5 +1,5 @@
-﻿/* ============================================================================
-   ZERB â€” CORE.JS
+/* ============================================================================
+   ZERB   " CORE.JS
    Initialization: Lenis, GSAP, Navigation, Accessibility
    ============================================================================ */
 
@@ -128,7 +128,7 @@
   });
 
   // ========================================================================
-  // BASIC REVEAL OBSERVER (CSS Fallback â€” GSAP enhances in animations.js)
+  // BASIC REVEAL OBSERVER (CSS Fallback   " GSAP enhances in animations.js)
   // ========================================================================
   const revealObserver = new IntersectionObserver(
     (entries) => {
@@ -170,7 +170,7 @@
   });
 
   // ========================================================================
-  // KEYBOARD ACCESSIBILITY â€” Focus visible
+  // KEYBOARD ACCESSIBILITY   " Focus visible
   // ========================================================================
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Tab') {

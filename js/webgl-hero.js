@@ -1,4 +1,4 @@
-﻿(function() {
+(function() {
     'use strict';
     
     // Only initialize if we have the hero section

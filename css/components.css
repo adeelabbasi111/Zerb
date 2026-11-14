@@ -768,6 +768,147 @@ a, button, .cap-card, .project-card {
   box-shadow: 0 0 12px var(--accent-subtle);
 }
 
+/* ============================================================================
+   STICKY STACKING PROJECT CARD SYSTEM (from web.html)
+   ============================================================================ */
+.project-stack-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.project-stack-card {
+  position: sticky;
+  top: 100px;
+  min-height: 460px;
+  background: rgba(23, 20, 18, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  padding: clamp(1.5rem, 3.5vw, 2.75rem);
+  margin-bottom: var(--space-8);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+  transition: transform 0.4s var(--ease-out), border-color 0.3s ease, box-shadow 0.3s ease;
+  transform-origin: center top;
+  overflow: hidden;
+}
+
+@media (min-width: 900px) {
+  .project-stack-card {
+    grid-template-columns: 1.25fr 1fr;
+    gap: var(--space-7);
+    align-items: center;
+  }
+}
+
+.project-stack-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.7), 0 0 35px var(--accent-glow);
+}
+
+.project-stack-media {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--bg-surface);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+@media (min-width: 900px) {
+  .project-stack-media {
+    height: 100%;
+    min-height: 360px;
+  }
+}
+
+.project-stack-media img,
+.project-stack-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.project-stack-card:hover .project-stack-media img,
+.project-stack-card:hover .project-stack-media video {
+  transform: scale(1.04);
+}
+
+.project-stack-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-stack-index {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.project-stack-index::after {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 2px;
+  background: var(--accent);
+  opacity: 0.5;
+}
+
+.project-stack-title {
+  font-family: var(--font-headline);
+  font-size: clamp(1.6rem, 2.8vw, 2.25rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: var(--space-3);
+}
+
+.project-stack-desc {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: var(--space-5);
+}
+
+.project-stack-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: var(--space-6);
+}
+
+.project-stack-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: rgba(196, 115, 74, 0.1);
+  border: 1px solid rgba(196, 115, 74, 0.25);
+  color: var(--text-primary);
+}
+
+.project-stack-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+
 
 
 

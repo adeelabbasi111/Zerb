@@ -76,141 +76,215 @@
         <section class="work-gallery section" style="padding-top: 0;">
             <div class="container">
                 <div class="work-filters reveal">
-                    <button class="filter-btn active t-label" data-filter="all">All</button>
-                    <button class="filter-btn t-label" data-filter="web">Web</button>
-                    <button class="filter-btn t-label" data-filter="mobile">Mobile</button>
-                    <button class="filter-btn t-label" data-filter="game">Game</button>
-                    <button class="filter-btn t-label" data-filter="design">Design</button>
+                    <button class="filter-btn active t-label" data-filter="all">All Systems (8)</button>
+                    <button class="filter-btn t-label" data-filter="web">Web &amp; DSP</button>
+                    <button class="filter-btn t-label" data-filter="mobile">Automation &amp; Desktop</button>
+                    <button class="filter-btn t-label" data-filter="game">Games &amp; Interactive</button>
+                    <button class="filter-btn t-label" data-filter="design">Systems &amp; C++</button>
                 </div>
 
-                <div class="project-grid reveal-stagger">
+                <div class="project-stack-container" id="projects-container">
+                    
                     <!-- Project 1: BeatGrid -->
-                    <a href="https://github.com/adeelabbasi111/Beat-Grid" target="_blank" rel="noopener noreferrer" class="project-card work-card" data-category="web">
-                        <div class="project-card-image clip-reveal">
+                    <article class="project-stack-card work-card reveal" data-category="web">
+                        <div class="project-stack-media">
                             <img src="assets/images/projects/beatgrid-active.png" alt="BeatGrid Web Audio Sampler" loading="lazy">
                         </div>
-                        <div class="project-card-info">
-                            <h2 class="t-h3">BeatGrid &mdash; 16-Pad Sampler &amp; Looper</h2>
-                            <div class="project-meta t-mono">
-                                <span>Web Audio DSP</span>
-                                <span class="meta-dot">•</span>
-                                <span>FED-02</span>
+                        <div class="project-stack-content">
+                            <span class="project-stack-index">01</span>
+                            <h2 class="project-stack-title">BeatGrid &mdash; 16-Pad Sampler &amp; Looper</h2>
+                            <p class="project-stack-desc">
+                                Sample-accurate 16-pad drum machine and polyphonic step sequencer built for the modern browser. Employs Chris Wilson's dual-timer lookahead scheduler, Roger Linn swing algorithms, and procedural drum synthesis via OfflineAudioContext with zero audio-visual latency.
+                            </p>
+                            <div class="project-stack-tags">
+                                <span class="project-stack-tag">Web Audio API</span>
+                                <span class="project-stack-tag">Lookahead Scheduler</span>
+                                <span class="project-stack-tag">OfflineAudioContext</span>
+                                <span class="project-stack-tag">WCAG 2.1 AA</span>
                             </div>
-                            <p class="project-tech t-body">Web Audio API, Lookahead Scheduler, Vite, WCAG AA</p>
+                            <div class="project-stack-links">
+                                <a href="https://github.com/adeelabbasi111/Beat-Grid" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                    Source Code &rarr;
+                                </a>
+                            </div>
                         </div>
-                    </a>
+                    </article>
 
                     <!-- Project 2: AI News Research Engine -->
-                    <a href="https://github.com/adeelabbasi111/News-Scraper" target="_blank" rel="noopener noreferrer" class="project-card work-card offset-card" data-category="web">
-                        <div class="project-card-image clip-reveal">
+                    <article class="project-stack-card work-card reveal" data-category="web">
+                        <div class="project-stack-media">
                             <img src="assets/images/projects/ai-news-scraper.jpg" alt="AI News Research and Content Generator" loading="lazy">
                         </div>
-                        <div class="project-card-info">
-                            <h2 class="t-h3">AI News Research &amp; Content Engine</h2>
-                            <div class="project-meta t-mono">
-                                <span>AI Pipeline</span>
-                                <span class="meta-dot">•</span>
-                                <span>2024</span>
+                        <div class="project-stack-content">
+                            <span class="project-stack-index">02</span>
+                            <h2 class="project-stack-title">AI News Research &amp; Content Engine</h2>
+                            <p class="project-stack-desc">
+                                FastAPI platform orchestrating Google Search API and Gemini 2.5 Flash for autonomous market intelligence. Employs local Trafilatura HTML sanitization to strip boilerplate before LLM ingest, reducing token expenditure by 65%. Automated transactional credit ledger with auto-refunding.
+                            </p>
+                            <div class="project-stack-tags">
+                                <span class="project-stack-tag">FastAPI</span>
+                                <span class="project-stack-tag">Gemini 2.5 Flash</span>
+                                <span class="project-stack-tag">Trafilatura</span>
+                                <span class="project-stack-tag">Token Optimization</span>
                             </div>
-                            <p class="project-tech t-body">FastAPI, Google Gemini 2.5 Flash, Trafilatura</p>
+                            <div class="project-stack-links">
+                                <a href="https://github.com/adeelabbasi111/News-Scraper" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                    Source Code &rarr;
+                                </a>
+                            </div>
                         </div>
-                    </a>
+                    </article>
 
                     <!-- Project 3: XLoveBeats -->
-                    <a href="https://github.com/adeelabbasi111/XloveBeatz" target="_blank" rel="noopener noreferrer" class="project-card work-card" data-category="web">
-                        <div class="project-card-image clip-reveal">
+                    <article class="project-stack-card work-card reveal" data-category="web">
+                        <div class="project-stack-media">
                             <img src="assets/images/projects/xlovebeatz-hero.jpg" alt="XLoveBeats Storefront and DRM Platform" loading="lazy">
                         </div>
-                        <div class="project-card-info">
-                            <h2 class="t-h3">XLoveBeats &mdash; Audio Storefront &amp; DRM</h2>
-                            <div class="project-meta t-mono">
-                                <span>Full-Stack SaaS</span>
-                                <span class="meta-dot">•</span>
-                                <span>2024</span>
+                        <div class="project-stack-content">
+                            <span class="project-stack-index">03</span>
+                            <h2 class="project-stack-title">XLoveBeats &mdash; Audio Storefront &amp; DRM</h2>
+                            <p class="project-stack-desc">
+                                Production audio marketplace and dynamic digital rights management licensing platform. Implements ReportLab automated PDF license generation, encrypted asset tokens, Razorpay gateway integration, and persistent waveform preview audio streaming.
+                            </p>
+                            <div class="project-stack-tags">
+                                <span class="project-stack-tag">Flask</span>
+                                <span class="project-stack-tag">SQLAlchemy</span>
+                                <span class="project-stack-tag">Razorpay</span>
+                                <span class="project-stack-tag">ReportLab PDF DRM</span>
                             </div>
-                            <p class="project-tech t-body">Flask, SQLAlchemy, Razorpay, ReportLab PDF</p>
+                            <div class="project-stack-links">
+                                <a href="https://github.com/adeelabbasi111/XloveBeatz" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                    Source Code &rarr;
+                                </a>
+                            </div>
                         </div>
-                    </a>
+                    </article>
 
                     <!-- Project 4: WhatsApp Automater -->
-                    <a href="https://github.com/adeelabbasi111/Whatsapp-Automater" target="_blank" rel="noopener noreferrer" class="project-card work-card offset-card" data-category="mobile">
-                        <div class="project-card-image clip-reveal">
-                            <img src="assets/images/projects/whatsapp-automater.jpg" alt="WhatsApp Automater Campaign Engine" loading="lazy">
+                    <article class="project-stack-card work-card reveal" data-category="mobile">
+                        <div class="project-stack-media">
+                            <img src="assets/images/projects/whatsapp.gif" alt="WhatsApp Automater Campaign Engine in action" loading="lazy">
                         </div>
-                        <div class="project-card-info">
-                            <h2 class="t-h3">WhatsApp Automater Campaign System</h2>
-                            <div class="project-meta t-mono">
-                                <span>Automation &bull; Anti-Detection</span>
-                                <span class="meta-dot">•</span>
-                                <span>2024</span>
+                        <div class="project-stack-content">
+                            <span class="project-stack-index">04</span>
+                            <h2 class="project-stack-title">WhatsApp Automater Campaign System</h2>
+                            <p class="project-stack-desc">
+                                Windows desktop tool managing bulk WhatsApp Web outreach with human-like kinematics. Simulates cubic Bézier mouse movement, micro-tremor jitter, variable Gaussian typing speeds, and atomic SQLite state logging with instant crash recovery.
+                            </p>
+                            <div class="project-stack-tags">
+                                <span class="project-stack-tag">Python</span>
+                                <span class="project-stack-tag">PyAutoGUI</span>
+                                <span class="project-stack-tag">pywin32</span>
+                                <span class="project-stack-tag">Bezier Kinematics</span>
                             </div>
-                            <p class="project-tech t-body">Python, PyAutoGUI, pywin32, Bezier Kinematics</p>
+                            <div class="project-stack-links">
+                                <a href="https://github.com/adeelabbasi111/Whatsapp-Automater" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                    Source Code &rarr;
+                                </a>
+                            </div>
                         </div>
-                    </a>
+                    </article>
 
-                    <!-- Project 5: CUST Portal Scraper & Visualizer -->
-                    <a href="https://github.com/adeelabbasi111/CUST-PORTAL-2.0" target="_blank" rel="noopener noreferrer" class="project-card work-card" data-category="web">
-                        <div class="project-card-image clip-reveal">
-                            <img src="assets/images/project-dashboard.jpg" alt="CUST Portal Reworked Dashboard Visualizer" loading="lazy">
+                    <!-- Project 5: CUST Portal 2.0 -->
+                    <article class="project-stack-card work-card reveal" data-category="web">
+                        <div class="project-stack-media">
+                            <img src="assets/images/projects/portal.gif" alt="CUST Portal 2.0 Academic Performance Visualizer" loading="lazy">
                         </div>
-                        <div class="project-card-info">
-                            <h2 class="t-h3">CUST Portal Scraper &amp; Visualizer</h2>
-                            <div class="project-meta t-mono">
-                                <span>Browser Automation</span>
-                                <span class="meta-dot">•</span>
-                                <span>Windows EXE</span>
+                        <div class="project-stack-content">
+                            <span class="project-stack-index">05</span>
+                            <h2 class="project-stack-title">CUST Portal 2.0 &mdash; Academic Visualizer</h2>
+                            <p class="project-stack-desc">
+                                Automated academic grade extraction tool for CUST University. Employs Selenium 4 Microsoft Edge automation to navigate ASP.NET portals, extract semester records, and present interactive GPA trajectory charts via an embedded Flask web interface compiled with PyInstaller.
+                            </p>
+                            <div class="project-stack-tags">
+                                <span class="project-stack-tag">Selenium 4 Edge</span>
+                                <span class="project-stack-tag">Flask GUI</span>
+                                <span class="project-stack-tag">PyInstaller EXE</span>
+                                <span class="project-stack-tag">Data Visualizer</span>
                             </div>
-                            <p class="project-tech t-body">Selenium 4, Microsoft Edge, Flask, PyInstaller</p>
+                            <div class="project-stack-links">
+                                <a href="https://github.com/adeelabbasi111/CUST-PORTAL-2.0" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                    Source Code &rarr;
+                                </a>
+                            </div>
                         </div>
-                    </a>
+                    </article>
 
                     <!-- Project 6: Chit-Chat CLI -->
-                    <a href="https://github.com/adeelabbasi111/Chit-Chat-CLI" target="_blank" rel="noopener noreferrer" class="project-card work-card offset-card" data-category="design">
-                        <div class="project-card-image clip-reveal">
+                    <article class="project-stack-card work-card reveal" data-category="design">
+                        <div class="project-stack-media">
                             <img src="assets/images/projects/chitchat-cli.jpg" alt="Chit Chat CLI C++ Messenger" loading="lazy">
                         </div>
-                        <div class="project-card-info">
-                            <h2 class="t-h3">Chit-Chat CLI &mdash; Encrypted Messenger</h2>
-                            <div class="project-meta t-mono">
-                                <span>Systems &bull; Cryptography</span>
-                                <span class="meta-dot">•</span>
-                                <span>C++11</span>
+                        <div class="project-stack-content">
+                            <span class="project-stack-index">06</span>
+                            <h2 class="project-stack-title">Chit-Chat CLI &mdash; Encrypted Messenger</h2>
+                            <p class="project-stack-desc">
+                                Terminal-based messaging engine engineered in pure C++11. Direct integration with the native Windows Console API for colored buffers, responsive keyboard event polling, multi-threaded communication, and custom cryptographic cipher encryption with zero third-party dependencies.
+                            </p>
+                            <div class="project-stack-tags">
+                                <span class="project-stack-tag">C++11</span>
+                                <span class="project-stack-tag">Windows API</span>
+                                <span class="project-stack-tag">Custom Cipher</span>
+                                <span class="project-stack-tag">Zero Dependencies</span>
                             </div>
-                            <p class="project-tech t-body">C++11 OOP, Windows Console API, Custom Cipher</p>
+                            <div class="project-stack-links">
+                                <a href="https://github.com/adeelabbasi111/Chit-Chat-CLI" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                    Source Code &rarr;
+                                </a>
+                            </div>
                         </div>
-                    </a>
+                    </article>
 
-                    <!-- Project 7: mosquitobusters.pk -->
-                    <a href="https://github.com/adeelabbasi111/mosquitobusters.pk" target="_blank" rel="noopener noreferrer" class="project-card work-card" data-category="web">
-                        <div class="project-card-image clip-reveal">
-                            <img src="assets/images/project-branding.jpg" alt="Mosquito Busters Platform" loading="lazy">
+                    <!-- Project 7: Neon Breakout -->
+                    <article class="project-stack-card work-card reveal" data-category="game">
+                        <div class="project-stack-media">
+                            <img src="assets/images/projects/breakout.gif" alt="Neon Breakout Arcade Physics Game" loading="lazy">
                         </div>
-                        <div class="project-card-info">
-                            <h2 class="t-h3">mosquitobusters.pk &mdash; Commercial Platform</h2>
-                            <div class="project-meta t-mono">
-                                <span>Production Web</span>
-                                <span class="meta-dot">•</span>
-                                <span>Commercial Client</span>
+                        <div class="project-stack-content">
+                            <span class="project-stack-index">07</span>
+                            <h2 class="project-stack-title">Neon Breakout &mdash; Arcade Physics Engine</h2>
+                            <p class="project-stack-desc">
+                                Compact, fast-paced neon arcade Breakout clone built in Python with Pygame. Features continuous 2D ball-paddle reflection physics, glowing particle explosions, procedural sound synthesis, persistent high-score serialization, and 60fps game loops.
+                            </p>
+                            <div class="project-stack-tags">
+                                <span class="project-stack-tag">Python</span>
+                                <span class="project-stack-tag">Pygame</span>
+                                <span class="project-stack-tag">2D Physics</span>
+                                <span class="project-stack-tag">Particle Systems</span>
                             </div>
-                            <p class="project-tech t-body">HTML5, CSS3, Responsive Design, Lead Conversion</p>
+                            <div class="project-stack-links">
+                                <a href="https://github.com/adeelabbasi111/Break-out-Game" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                    Source Code &rarr;
+                                </a>
+                            </div>
                         </div>
-                    </a>
+                    </article>
 
-                    <!-- Project 8: The Chain Reaction -->
-                    <a href="https://github.com/adeelabbasi111/The-Chain-Reaction" target="_blank" rel="noopener noreferrer" class="project-card work-card offset-card" data-category="game">
-                        <div class="project-card-image clip-reveal">
-                            <img src="assets/images/project-game.jpg" alt="The Chain Reaction Lab" loading="lazy">
+                    <!-- Project 8: mosquitobusters.pk -->
+                    <article class="project-stack-card work-card reveal" data-category="web">
+                        <div class="project-stack-media">
+                            <img src="assets/images/project-branding.jpg" alt="mosquitobusters.pk Commercial Web Platform" loading="lazy">
                         </div>
-                        <div class="project-card-info">
-                            <h2 class="t-h3">The Chain Reaction &mdash; Grooming Lab</h2>
-                            <div class="project-meta t-mono">
-                                <span>Interactive Web</span>
-                                <span class="meta-dot">•</span>
-                                <span>Psychology &bull; Habit</span>
+                        <div class="project-stack-content">
+                            <span class="project-stack-index">08</span>
+                            <h2 class="project-stack-title">mosquitobusters.pk &mdash; Commercial Platform</h2>
+                            <p class="project-stack-desc">
+                                High-performance commercial platform engineered for pest control operations. Implements interactive service pricing calculators, direct WhatsApp lead dispatch, and responsive layouts engineered for sub-second load times on 3G/4G networks.
+                            </p>
+                            <div class="project-stack-tags">
+                                <span class="project-stack-tag">Commercial Web</span>
+                                <span class="project-stack-tag">Lead Conversion</span>
+                                <span class="project-stack-tag">Performance SEO</span>
+                                <span class="project-stack-tag">WhatsApp API</span>
                             </div>
-                            <p class="project-tech t-body">Modern Web Audio, Micro-Interactions, CSS Canvas</p>
+                            <div class="project-stack-links">
+                                <a href="https://github.com/adeelabbasi111/mosquitobusters.pk" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                    Source Code &rarr;
+                                </a>
+                            </div>
                         </div>
-                    </a>
+                    </article>
+
                 </div>
             </div>
         </section>
@@ -246,9 +320,9 @@
                 <div>
                     <h3 class="footer-heading">Connect</h3>
                     <div class="footer-links-list">
-                        <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                        <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
-                        <a href="#" target="_blank" rel="noopener noreferrer">Dribbble</a>
+                        <a href="https://github.com/adeelabbasi111" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://www.linkedin.com/in/adeelabbasi111/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://wa.me/923215773211" target="_blank" rel="noopener noreferrer">WhatsApp</a>
                     </div>
                 </div>
             </div>

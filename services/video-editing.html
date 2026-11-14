@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZERB - Video Editing</title>
+    <title>ZERB &mdash; Video Editing &amp; Motion Design</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,43 +27,38 @@
             max-width: 800px;
             max-height: 800px;
             border-radius: 50%;
-            filter: blur(100px);
-            opacity: 0.8 !important;
+            filter: blur(120px);
+            opacity: 0.18 !important;
+            background-color: var(--accent);
             z-index: 0;
             pointer-events: none;
-        }
-        .tech-marquee-item {
-            color: transparent !important;
-            -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3) !important;
-            font-family: 'Hanken Grotesk', sans-serif !important;
         }
     </style>
 
     <meta name="theme-color" content="#0C0A09">
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <meta property="og:title" content="ZERB — Premium Software House">
-    <meta property="og:description" content="We engineer digital products that move industries.">
-    <meta property="og:image" content="/og-image.jpg">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <meta property="og:title" content="ZERB — Video Editing & Motion Design">
+    <meta property="og:description" content="Cinematic commercials, motion graphics, and audio post-production engineered by ZERB.">
+    <meta property="og:image" content="../og-image.jpg">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Three.js for WebGL Effects -->
+    <!-- Three.js & GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
-<body class="keyboard-nav" data-barba="wrapper">
+<body class="keyboard-nav">
 
     <!-- Page Transition Overlay -->
     <div class="page-transition-overlay">
         <div class="page-transition-logo">ZERB</div>
     </div>
 
-    <!-- Disabled Custom Cursor for service pages to avoid headless browser artifacts -->
-    <div class="custom-cursor" style="display: none !important;"></div>
-    <div class="custom-cursor-follower" style="display: none !important;"></div>
     <div class="noise-overlay"></div>
 
+    <!-- NAVIGATION -->
     <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
         <div class="container nav-inner">
             <a href="../index.html" class="brand-logo">ZERB</a>
@@ -78,70 +73,210 @@
             <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
                 <span class="nav-toggle-line"></span>
                 <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
             </button>
         </div>
     </nav>
 
     <div class="mobile-overlay" id="mobile-overlay"></div>
-    <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile menu">
         <div class="mobile-menu-inner">
-            <a href="../work.html" class="mobile-link">Work</a>
-            <a href="../services.html" class="mobile-link">Services</a>
-            <a href="../about.html" class="mobile-link">About</a>
-            <a href="../contact.html" class="mobile-link">Contact</a>
+            <a href="../work.html" class="mobile-menu-link">Work</a>
+            <a href="../services.html" class="mobile-menu-link">Services</a>
+            <a href="../about.html" class="mobile-menu-link">About</a>
+            <a href="../contact.html" class="mobile-menu-link">Contact</a>
         </div>
     </div>
 
+    <!-- HERO SECTION -->
     <header class="service-detail-hero section">
-        <div class="service-hero-orb" style="background-color: #F59E0B;"></div>
+        <div class="service-hero-orb"></div>
         <div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;">
             <span class="t-mono t-label" style="display: block; margin-bottom: var(--space-4); color: var(--accent);">Capability // 05</span>
-            <h1 class="service-hero-title t-display">Video<br>Editing</h1>
-            <p class="service-hero-desc">Commercials, social content, promotional videos, motion graphics, and post-production that tells your story.</p>
+            <h1 class="service-hero-title t-display">Video &amp;<br>Motion Design</h1>
+            <p class="service-hero-desc">We craft cinematic stories, brand narratives, high-impact commercials, and dynamic motion graphics that elevate brand authority and command attention.</p>
         </div>
     </header>
 
+    <!-- TECH MARQUEE -->
     <div class="tech-marquee-wrapper">
         <div class="tech-marquee">
-            <span class="tech-marquee-item">PREMIERE PRO</span><span class="tech-marquee-item">AFTER EFFECTS</span><span class="tech-marquee-item">DAVINCI RESOLVE</span><span class="tech-marquee-item">C4D</span><span class="tech-marquee-item">COLOR GRADING</span><span class="tech-marquee-item">VFX</span><span class="tech-marquee-item">PREMIERE PRO</span><span class="tech-marquee-item">AFTER EFFECTS</span><span class="tech-marquee-item">DAVINCI RESOLVE</span><span class="tech-marquee-item">C4D</span><span class="tech-marquee-item">COLOR GRADING</span><span class="tech-marquee-item">VFX</span>
+            <span class="tech-marquee-item">PREMIERE PRO</span>
+            <span class="tech-marquee-item">AFTER EFFECTS</span>
+            <span class="tech-marquee-item">DAVINCI RESOLVE</span>
+            <span class="tech-marquee-item">LUMETRI COLOR</span>
+            <span class="tech-marquee-item">4K LOG GRADING</span>
+            <span class="tech-marquee-item">SOUND DESIGN</span>
+            <span class="tech-marquee-item">KINETIC TYPOGRAPHY</span>
+            <span class="tech-marquee-item">MOTION GRAPHICS</span>
+            <span class="tech-marquee-item">PREMIERE PRO</span>
+            <span class="tech-marquee-item">AFTER EFFECTS</span>
         </div>
     </div>
 
-    <section class="section">
+    <!-- STICKY STACKING SHOWCASE SECTION -->
+    <section class="section project-stack-section" id="showcase">
         <div class="container">
-            <h2 class="t-h2">Our Approach</h2>
-            <div class="approach-grid">
+            <div class="section-header reveal text-center" style="margin-bottom: var(--space-7);">
+                <span class="t-label" style="color: var(--accent); margin-bottom: var(--space-2); display: block;">ENGINEERED PRODUCTION SYSTEMS</span>
+                <h2 class="t-h1">Featured Video &amp; Motion Projects</h2>
+                <p class="t-body-lg" style="max-width: 660px; margin: var(--space-2) auto 0;">
+                    Explore our commercial brand stories, color grades, and motion graphics reels. Scroll down to experience the stacked card progression.
+                </p>
+            </div>
+
+            <div class="project-stack-container">
+                
+                <!-- Card 01: Corporate Brand Story -->
+                <article class="project-stack-card reveal">
+                    <div class="project-stack-media">
+                        <video src="../assets/videos/section-2-bg.mp4" autoplay muted loop playsinline></video>
+                    </div>
+                    <div class="project-stack-content">
+                        <span class="project-stack-index">01</span>
+                        <h3 class="project-stack-title">Corporate Brand Story &amp; Tech Commercial</h3>
+                        <p class="project-stack-desc">
+                            A high-production narrative crafted for technology and venture-backed startups. Features rhythmic pacing, custom Foley sound design, and surgical color grading that communicates authority and innovation.
+                        </p>
+                        <div class="project-stack-tags">
+                            <span class="project-stack-tag">Premiere Pro</span>
+                            <span class="project-stack-tag">Sound Design</span>
+                            <span class="project-stack-tag">Narrative Flow</span>
+                            <span class="project-stack-tag">4K Master</span>
+                        </div>
+                        <div class="project-stack-links">
+                            <a href="../contact.html" class="btn btn-primary">
+                                Discuss Video Project &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 02: Cinematic Travel Narrative -->
+                <article class="project-stack-card reveal">
+                    <div class="project-stack-media">
+                        <video src="../assets/videos/portrait-animation-bw.mp4" autoplay muted loop playsinline></video>
+                    </div>
+                    <div class="project-stack-content">
+                        <span class="project-stack-index">02</span>
+                        <h3 class="project-stack-title">Cinematic Travel Narrative &amp; Color Grade</h3>
+                        <p class="project-stack-desc">
+                            Dynamic visual storytelling capturing the kinetic atmosphere of global travel. Features wide-gamut logarithmic color grading, speed ramps, and seamless whip transitions synchronized to acoustic soundscapes.
+                        </p>
+                        <div class="project-stack-tags">
+                            <span class="project-stack-tag">DaVinci Resolve</span>
+                            <span class="project-stack-tag">Lumetri Color</span>
+                            <span class="project-stack-tag">Speed Ramping</span>
+                            <span class="project-stack-tag">Color Grading</span>
+                        </div>
+                        <div class="project-stack-links">
+                            <a href="../contact.html" class="btn btn-primary">
+                                Discuss Video Project &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 03: Indie Music Video Rhythm Edit -->
+                <article class="project-stack-card reveal">
+                    <div class="project-stack-media">
+                        <video src="../assets/videos/Kinetic Particles.mp4" autoplay muted loop playsinline></video>
+                    </div>
+                    <div class="project-stack-content">
+                        <span class="project-stack-index">03</span>
+                        <h3 class="project-stack-title">Music Video Rhythm Edit &amp; Visual FX</h3>
+                        <p class="project-stack-desc">
+                            Frame-accurate rhythmic cutting locked to drum transients and baseline beats. Features custom glitch shaders, kinetic particle overlays, and atmospheric lighting grading that amplifies the artist's musical narrative.
+                        </p>
+                        <div class="project-stack-tags">
+                            <span class="project-stack-tag">After Effects</span>
+                            <span class="project-stack-tag">Rhythm Cutting</span>
+                            <span class="project-stack-tag">Audio Sync</span>
+                            <span class="project-stack-tag">Visual FX</span>
+                        </div>
+                        <div class="project-stack-links">
+                            <a href="../contact.html" class="btn btn-primary">
+                                Discuss Video Project &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 04: Product UI Motion Reel -->
+                <article class="project-stack-card reveal">
+                    <div class="project-stack-media">
+                        <video src="../assets/videos/liquid animation.mp4" autoplay muted loop playsinline></video>
+                    </div>
+                    <div class="project-stack-content">
+                        <span class="project-stack-index">04</span>
+                        <h3 class="project-stack-title">Product UI &amp; Motion Graphics Reel</h3>
+                        <p class="project-stack-desc">
+                            High-engagement product feature videos and isometric device walkthroughs. Implements kinetic typography, animated interface mockups, branded lower-thirds, and micro-motion highlights designed for high social conversion.
+                        </p>
+                        <div class="project-stack-tags">
+                            <span class="project-stack-tag">After Effects</span>
+                            <span class="project-stack-tag">UI Animation</span>
+                            <span class="project-stack-tag">Kinetic Type</span>
+                            <span class="project-stack-tag">Product Walkthrough</span>
+                        </div>
+                        <div class="project-stack-links">
+                            <a href="../contact.html" class="btn btn-primary">
+                                Discuss Motion Project &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR APPROACH SECTION -->
+    <section class="section" style="border-top: 1px solid var(--border-subtle); padding-top: var(--space-8);">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label t-label" style="color: var(--accent);">Production Discipline</span>
+                <h2 class="t-h2">How we edit and direct motion.</h2>
+            </div>
+            
+            <div class="approach-grid reveal-stagger">
                 <div class="approach-step">
                     <span class="approach-step-num">01</span>
-                    <h3 class="approach-title" style="font-family: 'Hanken Grotesk', sans-serif;">Architecture First</h3>
-                    <p class="approach-desc">We don't just start building. We design the models, architecture, and systems to ensure the product scales effortlessly as your user base grows.</p>
+                    <h3 class="approach-title">Narrative Pacing &amp; Rhythm</h3>
+                    <p class="approach-desc">We structure cuts around emotional beats and information retention rather than arbitrary transitions. Every second of footage must justify its place in the timeline.</p>
                 </div>
                 <div class="approach-step">
                     <span class="approach-step-num">02</span>
-                    <h3 class="approach-title" style="font-family: 'Hanken Grotesk', sans-serif;">Performance Obsession</h3>
-                    <p class="approach-desc">Sub-second load times aren't a luxury, they're a requirement. We optimize delivery, utilize best practices, and minimize main-thread execution.</p>
+                    <h3 class="approach-title">Cinematic Color Science</h3>
+                    <p class="approach-desc">We grade footage from logarithmic sensor profiles into calibrated tone curves, establishing consistent color temperature, natural skintones, and distinct atmospheric looks.</p>
                 </div>
                 <div class="approach-step">
                     <span class="approach-step-num">03</span>
-                    <h3 class="approach-title" style="font-family: 'Hanken Grotesk', sans-serif;">Fluid Interactions</h3>
-                    <p class="approach-desc">A product should feel alive. We integrate physics-based animations, smooth page transitions, and micro-interactions that delight users.</p>
+                    <h3 class="approach-title">Immersive Sound Architecture</h3>
+                    <p class="approach-desc">Over 50% of video perception is auditory. We clean dialogue tracks, mix multi-layer atmospheric Foley, and synchronize music stems to give visual cuts visceral weight.</p>
                 </div>
                 <div class="approach-step">
                     <span class="approach-step-num">04</span>
-                    <h3 class="approach-title" style="font-family: 'Hanken Grotesk', sans-serif;">Bulletproof Deployment</h3>
-                    <p class="approach-desc">Automated testing, continuous integration, and rigorous QA. We build infrastructure that lets you ship with confidence.</p>
+                    <h3 class="approach-title">Multi-Format Delivery</h3>
+                    <p class="approach-desc">We deliver pristine master files formatted for 16:9 widescreen broadcast, 9:16 vertical reels, and high-bitrate WebM/MP4 web embedding with optimal compression.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- FINAL CTA -->
     <section class="section cta-section">
         <div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-            <h2 class="t-h2" style="margin-bottom: var(--space-4);">Ready to build your platform?</h2>
-            <a href="../contact.html" class="btn btn-primary btn-lg">Start a project &rarr;</a>
+            <span class="t-mono t-label" style="color: var(--accent); margin-bottom: var(--space-2);">DIRECT &amp; EDIT</span>
+            <h2 class="t-h2" style="margin-bottom: var(--space-4);">Ready to produce your next video project?</h2>
+            <p class="t-body-lg" style="max-width: 580px; margin-bottom: var(--space-6); color: var(--text-secondary);">
+                Commission high-impact commercials, motion graphic assets, or product reels with ZERB.
+            </p>
+            <a href="../contact.html" class="btn btn-primary btn-lg">Start a video project &rarr;</a>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="site-footer" role="contentinfo">
         <div class="container">
             <div class="footer-grid">
@@ -161,25 +296,22 @@
                 <div class="footer-links">
                     <h3 class="footer-heading">Connect</h3>
                     <div class="footer-links-list">
-                        <a href="#" target="_blank">LinkedIn</a>
-                        <a href="#" target="_blank">Instagram</a>
-                        <a href="#" target="_blank">Dribbble</a>
+                        <a href="https://github.com/adeelabbasi111" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://www.linkedin.com/in/adeelabbasi111/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://wa.me/923215773211" target="_blank" rel="noopener noreferrer">WhatsApp</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 - 2026 ZERB. All rights reserved.</p>
-                <p>Designed & built by ZERB.</p>
+                <p>&copy; 2024 &mdash; 2026 ZERB. All rights reserved.</p>
+                <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent);">Designed &amp; built by ZERB.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Core Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    
-    <script src="../js/core.js?v=2.1"></script>
-    <script src="../js/animations.js?v=2.1"></script>
-
+    <script src="../js/core.js?v=2.2"></script>
+    <script src="../js/animations.js?v=2.2"></script>
 </body>
 </html>

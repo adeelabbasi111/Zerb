@@ -92,6 +92,10 @@
     color: inherit;
 }
 
+.project-stack-card.work-card {
+    display: grid;
+}
+
 .project-card-image {
     width: 100%;
     aspect-ratio: 4/5;

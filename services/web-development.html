@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZERB - Web Development</title>
+    <title>ZERB &mdash; Web Development &amp; Systems Architecture</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,43 +27,38 @@
             max-width: 800px;
             max-height: 800px;
             border-radius: 50%;
-            filter: blur(100px);
-            opacity: 0.8 !important;
+            filter: blur(120px);
+            opacity: 0.18 !important;
+            background-color: var(--accent);
             z-index: 0;
             pointer-events: none;
-        }
-        .tech-marquee-item {
-            color: transparent !important;
-            -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3) !important;
-            font-family: 'Hanken Grotesk', sans-serif !important;
         }
     </style>
 
     <meta name="theme-color" content="#0C0A09">
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <meta property="og:title" content="ZERB — Premium Software House">
-    <meta property="og:description" content="We engineer digital products that move industries.">
-    <meta property="og:image" content="/og-image.jpg">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <meta property="og:title" content="ZERB — Web Development & Systems Architecture">
+    <meta property="og:description" content="High-performance web applications, native Web Audio DSP engines, and full-stack SaaS platforms engineered by ZERB.">
+    <meta property="og:image" content="../og-image.jpg">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Three.js for WebGL Effects -->
+    <!-- Three.js & GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
-<body class="keyboard-nav" data-barba="wrapper">
+<body class="keyboard-nav">
 
     <!-- Page Transition Overlay -->
     <div class="page-transition-overlay">
         <div class="page-transition-logo">ZERB</div>
     </div>
 
-    <!-- Disabled Custom Cursor for service pages to avoid headless browser artifacts -->
-    <div class="custom-cursor" style="display: none !important;"></div>
-    <div class="custom-cursor-follower" style="display: none !important;"></div>
     <div class="noise-overlay"></div>
 
+    <!-- NAVIGATION -->
     <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
         <div class="container nav-inner">
             <a href="../index.html" class="brand-logo">ZERB</a>
@@ -78,70 +73,243 @@
             <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
                 <span class="nav-toggle-line"></span>
                 <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
             </button>
         </div>
     </nav>
 
     <div class="mobile-overlay" id="mobile-overlay"></div>
-    <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile menu">
         <div class="mobile-menu-inner">
-            <a href="../work.html" class="mobile-link">Work</a>
-            <a href="../services.html" class="mobile-link">Services</a>
-            <a href="../about.html" class="mobile-link">About</a>
-            <a href="../contact.html" class="mobile-link">Contact</a>
+            <a href="../work.html" class="mobile-menu-link">Work</a>
+            <a href="../services.html" class="mobile-menu-link">Services</a>
+            <a href="../about.html" class="mobile-menu-link">About</a>
+            <a href="../contact.html" class="mobile-menu-link">Contact</a>
         </div>
     </div>
 
+    <!-- HERO SECTION -->
     <header class="service-detail-hero section">
-        <div class="service-hero-orb" style="background-color: var(--accent);"></div>
+        <div class="service-hero-orb"></div>
         <div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;">
             <span class="t-mono t-label" style="display: block; margin-bottom: var(--space-4); color: var(--accent);">Capability // 01</span>
-            <h1 class="service-hero-title t-display">Web<br>Development</h1>
-            <p class="service-hero-desc">We engineer high-performance platforms, immersive marketing sites, and scalable web applications that redefine digital presence.</p>
+            <h1 class="service-hero-title t-display">Web Development &amp;<br>Systems Architecture</h1>
+            <p class="service-hero-desc">We engineer high-performance web systems, sample-accurate browser DSP engines, and scalable SaaS platforms built from first principles. Sub-second response times, zero unnecessary bloat, and rock-solid codebases.</p>
         </div>
     </header>
 
+    <!-- TECH MARQUEE -->
     <div class="tech-marquee-wrapper">
         <div class="tech-marquee">
-            <span class="tech-marquee-item">REACT.JS</span><span class="tech-marquee-item">NEXT.JS</span><span class="tech-marquee-item">NODE.JS</span><span class="tech-marquee-item">TYPESCRIPT</span><span class="tech-marquee-item">WEBGL</span><span class="tech-marquee-item">THREE.JS</span><span class="tech-marquee-item">REACT.JS</span><span class="tech-marquee-item">NEXT.JS</span><span class="tech-marquee-item">NODE.JS</span><span class="tech-marquee-item">TYPESCRIPT</span><span class="tech-marquee-item">WEBGL</span><span class="tech-marquee-item">THREE.JS</span>
+            <span class="tech-marquee-item">REACT.JS</span>
+            <span class="tech-marquee-item">NEXT.JS</span>
+            <span class="tech-marquee-item">TYPESCRIPT</span>
+            <span class="tech-marquee-item">FASTAPI</span>
+            <span class="tech-marquee-item">WEB AUDIO DSP</span>
+            <span class="tech-marquee-item">FLASK</span>
+            <span class="tech-marquee-item">SQLALCHEMY</span>
+            <span class="tech-marquee-item">POSTGRESQL</span>
+            <span class="tech-marquee-item">DOCKER</span>
+            <span class="tech-marquee-item">TAILWIND</span>
+            <span class="tech-marquee-item">REACT.JS</span>
+            <span class="tech-marquee-item">NEXT.JS</span>
+            <span class="tech-marquee-item">TYPESCRIPT</span>
+            <span class="tech-marquee-item">FASTAPI</span>
+            <span class="tech-marquee-item">WEB AUDIO DSP</span>
         </div>
     </div>
 
-    <section class="section">
+    <!-- STICKY STACKING SHOWCASE SECTION (from web.html) -->
+    <section class="section project-stack-section" id="showcase">
         <div class="container">
-            <h2 class="t-h2">Our Approach</h2>
-            <div class="approach-grid">
+            <div class="section-header reveal text-center" style="margin-bottom: var(--space-7);">
+                <span class="t-label" style="color: var(--accent); margin-bottom: var(--space-2); display: block;">ENGINEERED PRODUCTION SYSTEMS</span>
+                <h2 class="t-h1">Featured Web Projects</h2>
+                <p class="t-body-lg" style="max-width: 660px; margin: var(--space-2) auto 0;">
+                    Explore our deployed web platforms, native Web Audio DSP synthesis engines, and autonomous AI data pipelines. Scroll down to experience the stacked card progression.
+                </p>
+            </div>
+
+            <div class="project-stack-container">
+                
+                <!-- Card 01: BeatGrid -->
+                <article class="project-stack-card reveal">
+                    <div class="project-stack-media">
+                        <img src="../assets/images/projects/beatgrid-active.png" alt="BeatGrid Web Audio Sampler and 16-Step Looper" loading="lazy">
+                    </div>
+                    <div class="project-stack-content">
+                        <span class="project-stack-index">01</span>
+                        <h3 class="project-stack-title">BeatGrid &mdash; Web Audio Sampler &amp; Looper</h3>
+                        <p class="project-stack-desc">
+                            Sample-accurate 16-pad drum machine and polyphonic step sequencer built for the web. Implements Chris Wilson's dual-timer lookahead scheduler, Roger Linn shuffle/swing algorithms, and procedural drum synthesis via OfflineAudioContext with zero audio-visual latency.
+                        </p>
+                        <div class="project-stack-tags">
+                            <span class="project-stack-tag">Web Audio API</span>
+                            <span class="project-stack-tag">Lookahead Timing</span>
+                            <span class="project-stack-tag">OfflineAudioContext</span>
+                            <span class="project-stack-tag">Vanilla JS</span>
+                            <span class="project-stack-tag">WCAG AA</span>
+                        </div>
+                        <div class="project-stack-links">
+                            <a href="https://github.com/adeelabbasi111/Beat-Grid" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                Inspect Repository &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 02: AI News Research Engine -->
+                <article class="project-stack-card reveal">
+                    <div class="project-stack-media">
+                        <img src="../assets/images/projects/ai-news-scraper.jpg" alt="AI News Research & Content Generator" loading="lazy">
+                    </div>
+                    <div class="project-stack-content">
+                        <span class="project-stack-index">02</span>
+                        <h3 class="project-stack-title">AI News Research &amp; Autonomous Pipeline</h3>
+                        <p class="project-stack-desc">
+                            High-throughput FastAPI research engine leveraging Gemini 2.5 Flash and Google Search API. Employs local Trafilatura HTML sanitization to strip boilerplate before LLM ingest, cutting token costs by 65%. Automated transactional credit ledger with auto-refunding on pipeline failure.
+                        </p>
+                        <div class="project-stack-tags">
+                            <span class="project-stack-tag">FastAPI</span>
+                            <span class="project-stack-tag">Gemini 2.5 Flash</span>
+                            <span class="project-stack-tag">Trafilatura</span>
+                            <span class="project-stack-tag">Token Optimization</span>
+                            <span class="project-stack-tag">Python 3.11</span>
+                        </div>
+                        <div class="project-stack-links">
+                            <a href="https://github.com/adeelabbasi111/News-Scraper" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                Inspect Repository &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 03: XLoveBeats -->
+                <article class="project-stack-card reveal">
+                    <div class="project-stack-media">
+                        <img src="../assets/images/projects/xlovebeatz-hero.jpg" alt="XLoveBeats Storefront and DRM Platform" loading="lazy">
+                    </div>
+                    <div class="project-stack-content">
+                        <span class="project-stack-index">03</span>
+                        <h3 class="project-stack-title">XLoveBeats &mdash; Audio Storefront &amp; DRM</h3>
+                        <p class="project-stack-desc">
+                            Full-stack e-commerce marketplace and digital rights management platform for music producers. Features dynamic ReportLab PDF license certificate generation, encrypted download tokens, Razorpay gateway integration, and interactive waveform audio streaming.
+                        </p>
+                        <div class="project-stack-tags">
+                            <span class="project-stack-tag">Flask</span>
+                            <span class="project-stack-tag">SQLAlchemy</span>
+                            <span class="project-stack-tag">Razorpay</span>
+                            <span class="project-stack-tag">ReportLab PDF</span>
+                            <span class="project-stack-tag">PostgreSQL</span>
+                        </div>
+                        <div class="project-stack-links">
+                            <a href="https://github.com/adeelabbasi111/XloveBeatz" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                Inspect Repository &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 04: mosquitobusters.pk -->
+                <article class="project-stack-card reveal">
+                    <div class="project-stack-media">
+                        <img src="../assets/images/project-branding.jpg" alt="mosquitobusters.pk Commercial Web Platform" loading="lazy">
+                    </div>
+                    <div class="project-stack-content">
+                        <span class="project-stack-index">04</span>
+                        <h3 class="project-stack-title">mosquitobusters.pk &mdash; Commercial Platform</h3>
+                        <p class="project-stack-desc">
+                            High-conversion production web platform engineered for a leading pest management enterprise. Implements interactive service pricing calculators, direct WhatsApp lead dispatch, and responsive layouts engineered for sub-second load times on 3G/4G networks.
+                        </p>
+                        <div class="project-stack-tags">
+                            <span class="project-stack-tag">Commercial Web</span>
+                            <span class="project-stack-tag">Lead Conversion</span>
+                            <span class="project-stack-tag">WhatsApp API</span>
+                            <span class="project-stack-tag">Performance SEO</span>
+                        </div>
+                        <div class="project-stack-links">
+                            <a href="https://github.com/adeelabbasi111/mosquitobusters.pk" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                Inspect Repository &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 05: The Chain Reaction -->
+                <article class="project-stack-card reveal">
+                    <div class="project-stack-media">
+                        <img src="../assets/images/project-game.jpg" alt="The Chain Reaction Interactive Web Application" loading="lazy">
+                    </div>
+                    <div class="project-stack-content">
+                        <span class="project-stack-index">05</span>
+                        <h3 class="project-stack-title">The Chain Reaction &mdash; Habit Psychology Lab</h3>
+                        <p class="project-stack-desc">
+                            Interactive behavioral web application applying cognitive psychology and habit loop mechanics. Features custom canvas milestone visualizations, synthesized audio click responses, persistent state storage, and micro-interactions designed to sustain daily momentum.
+                        </p>
+                        <div class="project-stack-tags">
+                            <span class="project-stack-tag">Interactive Canvas</span>
+                            <span class="project-stack-tag">Web Audio API</span>
+                            <span class="project-stack-tag">Behavioral Science</span>
+                            <span class="project-stack-tag">Local Persistence</span>
+                        </div>
+                        <div class="project-stack-links">
+                            <a href="https://github.com/adeelabbasi111/The-Chain-Reaction" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                Inspect Repository &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR APPROACH SECTION -->
+    <section class="section" style="border-top: 1px solid var(--border-subtle); padding-top: var(--space-8);">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label t-label" style="color: var(--accent);">Architectural Standards</span>
+                <h2 class="t-h2">How we build web platforms.</h2>
+            </div>
+            
+            <div class="approach-grid reveal-stagger">
                 <div class="approach-step">
                     <span class="approach-step-num">01</span>
-                    <h3 class="approach-title" style="font-family: 'Hanken Grotesk', sans-serif;">Architecture First</h3>
-                    <p class="approach-desc">We don't just start building. We design the models, architecture, and systems to ensure the product scales effortlessly as your user base grows.</p>
+                    <h3 class="approach-title">First-Principles Architecture</h3>
+                    <p class="approach-desc">We design systems from foundational requirements rather than piling on bloated templates. Every dependency is vetted for performance, security, and long-term maintainability.</p>
                 </div>
                 <div class="approach-step">
                     <span class="approach-step-num">02</span>
-                    <h3 class="approach-title" style="font-family: 'Hanken Grotesk', sans-serif;">Performance Obsession</h3>
-                    <p class="approach-desc">Sub-second load times aren't a luxury, they're a requirement. We optimize delivery, utilize best practices, and minimize main-thread execution.</p>
+                    <h3 class="approach-title">Performance Obsession</h3>
+                    <p class="approach-desc">Sub-second load times aren't optional. We optimize delivery pipelines, minimize main-thread execution, and maintain perfect Core Web Vitals across low-powered mobile devices.</p>
                 </div>
                 <div class="approach-step">
                     <span class="approach-step-num">03</span>
-                    <h3 class="approach-title" style="font-family: 'Hanken Grotesk', sans-serif;">Fluid Interactions</h3>
-                    <p class="approach-desc">A product should feel alive. We integrate physics-based animations, smooth page transitions, and micro-interactions that delight users.</p>
+                    <h3 class="approach-title">Fluid Tactile Interactions</h3>
+                    <p class="approach-desc">A digital product should feel alive. We integrate physics-based motion, smooth scroll synchronization, and responsive micro-interactions that communicate system state instantly.</p>
                 </div>
                 <div class="approach-step">
                     <span class="approach-step-num">04</span>
-                    <h3 class="approach-title" style="font-family: 'Hanken Grotesk', sans-serif;">Bulletproof Deployment</h3>
-                    <p class="approach-desc">Automated testing, continuous integration, and rigorous QA. We build infrastructure that lets you ship with confidence.</p>
+                    <h3 class="approach-title">Bulletproof Deployment</h3>
+                    <p class="approach-desc">Automated testing, continuous integration, and containerized Docker environments ensure that your platform ships with confidence and scales without downtime.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- FINAL CTA -->
     <section class="section cta-section">
         <div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-            <h2 class="t-h2" style="margin-bottom: var(--space-4);">Ready to build your platform?</h2>
-            <a href="../contact.html" class="btn btn-primary btn-lg">Start a project &rarr;</a>
+            <span class="t-mono t-label" style="color: var(--accent); margin-bottom: var(--space-2);">DEPLOY WITH ZERB</span>
+            <h2 class="t-h2" style="margin-bottom: var(--space-4);">Ready to engineer your web platform?</h2>
+            <p class="t-body-lg" style="max-width: 580px; margin-bottom: var(--space-6); color: var(--text-secondary);">
+                From native browser audio synthesis to enterprise web applications, let's architect a solution that sets your product apart.
+            </p>
+            <a href="../contact.html" class="btn btn-primary btn-lg">Start a web project &rarr;</a>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="site-footer" role="contentinfo">
         <div class="container">
             <div class="footer-grid">
@@ -161,25 +329,22 @@
                 <div class="footer-links">
                     <h3 class="footer-heading">Connect</h3>
                     <div class="footer-links-list">
-                        <a href="#" target="_blank">LinkedIn</a>
-                        <a href="#" target="_blank">Instagram</a>
-                        <a href="#" target="_blank">Dribbble</a>
+                        <a href="https://github.com/adeelabbasi111" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://www.linkedin.com/in/adeelabbasi111/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://wa.me/923215773211" target="_blank" rel="noopener noreferrer">WhatsApp</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 - 2026 ZERB. All rights reserved.</p>
-                <p>Designed & built by ZERB.</p>
+                <p>&copy; 2024 &mdash; 2026 ZERB. All rights reserved.</p>
+                <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent);">Designed &amp; built by ZERB.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Core Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    
-    <script src="../js/core.js?v=2.1"></script>
-    <script src="../js/animations.js?v=2.1"></script>
-
+    <script src="../js/core.js?v=2.2"></script>
+    <script src="../js/animations.js?v=2.2"></script>
 </body>
 </html>

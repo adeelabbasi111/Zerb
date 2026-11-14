@@ -1,5 +1,5 @@
 /* ============================================================================
-   ADEEL ABBASI — PORTFOLIO INTERACTIVE MODULE
+   ADEEL ABBASI - PORTFOLIO INTERACTIVE MODULE
    Interactive Terminal, Project Filter Tabs, Architecture Modal, Time HUD
    ============================================================================ */
 
@@ -438,7 +438,7 @@ Mission: We engineer digital products that move industries &mdash; design, engin
 
     feedback.style.display = 'block';
     feedback.style.color = '#22C55E';
-    feedback.innerHTML = `✓ Inquiry queued. Initializing direct dispatch to ZERB Software House...`;
+    feedback.innerHTML = `  Inquiry queued. Initializing direct dispatch to ZERB Software House...`;
 
     // Construct WhatsApp pre-filled link
     const waText = encodeURIComponent(`*New Project Inquiry for ZERB*\n*From:* ${name} (${email})\n*Subject:* ${subject}\n*Message:* ${message}`);
@@ -446,7 +446,7 @@ Mission: We engineer digital products that move industries &mdash; design, engin
 
     setTimeout(() => {
       window.open(waUrl, '_blank');
-      feedback.innerHTML = `✓ WhatsApp dispatch launched. Alternatively, you can email directly at <a href="mailto:adeelabbasipersonal@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}" style="color: var(--accent); text-decoration: underline;">adeelabbasipersonal@gmail.com</a>.`;
+      feedback.innerHTML = `  WhatsApp dispatch launched. Alternatively, you can email directly at <a href="mailto:adeelabbasipersonal@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}" style="color: var(--accent); text-decoration: underline;">adeelabbasipersonal@gmail.com</a>.`;
     }, 600);
   };
 

@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZERB - Graphic Design</title>
+    <title>ZERB &mdash; Graphic Design &amp; Brand Systems</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css" />
     
     <link rel="stylesheet" href="../css/design-system.css">
     <link rel="stylesheet" href="../css/layout.css">
@@ -27,43 +28,40 @@
             max-width: 800px;
             max-height: 800px;
             border-radius: 50%;
-            filter: blur(100px);
-            opacity: 0.8 !important;
+            filter: blur(120px);
+            opacity: 0.18 !important;
+            background-color: var(--accent);
             z-index: 0;
             pointer-events: none;
-        }
-        .tech-marquee-item {
-            color: transparent !important;
-            -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3) !important;
-            font-family: 'Hanken Grotesk', sans-serif !important;
         }
     </style>
 
     <meta name="theme-color" content="#0C0A09">
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <meta property="og:title" content="ZERB — Premium Software House">
-    <meta property="og:description" content="We engineer digital products that move industries.">
-    <meta property="og:image" content="/og-image.jpg">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <meta property="og:title" content="ZERB — Graphic Design & Brand Systems">
+    <meta property="og:description" content="Commercial visual identities, photo retouching, restoration, composite manipulation, and branding engineered by ZERB.">
+    <meta property="og:image" content="../og-image.jpg">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Three.js for WebGL Effects -->
+    <!-- Three.js & GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
 </head>
-<body class="keyboard-nav" data-barba="wrapper">
+<body class="keyboard-nav">
 
     <!-- Page Transition Overlay -->
     <div class="page-transition-overlay">
         <div class="page-transition-logo">ZERB</div>
     </div>
 
-    <!-- Disabled Custom Cursor for service pages to avoid headless browser artifacts -->
-    <div class="custom-cursor" style="display: none !important;"></div>
-    <div class="custom-cursor-follower" style="display: none !important;"></div>
+    <!-- Noise overlay -->
     <div class="noise-overlay"></div>
 
+    <!-- NAVIGATION -->
     <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
         <div class="container nav-inner">
             <a href="../index.html" class="brand-logo">ZERB</a>
@@ -78,70 +76,291 @@
             <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
                 <span class="nav-toggle-line"></span>
                 <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
             </button>
         </div>
     </nav>
 
     <div class="mobile-overlay" id="mobile-overlay"></div>
-    <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile menu">
         <div class="mobile-menu-inner">
-            <a href="../work.html" class="mobile-link">Work</a>
-            <a href="../services.html" class="mobile-link">Services</a>
-            <a href="../about.html" class="mobile-link">About</a>
-            <a href="../contact.html" class="mobile-link">Contact</a>
+            <a href="../work.html" class="mobile-menu-link">Work</a>
+            <a href="../services.html" class="mobile-menu-link">Services</a>
+            <a href="../about.html" class="mobile-menu-link">About</a>
+            <a href="../contact.html" class="mobile-menu-link">Contact</a>
         </div>
     </div>
 
+    <!-- HERO SECTION -->
     <header class="service-detail-hero section">
-        <div class="service-hero-orb" style="background-color: #EC4899;"></div>
+        <div class="service-hero-orb"></div>
         <div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;">
             <span class="t-mono t-label" style="display: block; margin-bottom: var(--space-4); color: var(--accent);">Capability // 04</span>
-            <h1 class="service-hero-title t-display">Graphic<br>Design</h1>
-            <p class="service-hero-desc">Brand identity systems, visual design, marketing assets, social media, and digital campaigns with commercial intent.</p>
+            <h1 class="service-hero-title t-display">Graphic Design &amp;<br>Brand Systems</h1>
+            <p class="service-hero-desc">Transforming pixels into commercial perfection. Explore our verified work in precision photo manipulation, archival restoration, high-end skin retouching, and cohesive brand systems.</p>
         </div>
     </header>
 
-    <div class="tech-marquee-wrapper">
-        <div class="tech-marquee">
-            <span class="tech-marquee-item">ILLUSTRATOR</span><span class="tech-marquee-item">PHOTOSHOP</span><span class="tech-marquee-item">INDESIGN</span><span class="tech-marquee-item">TYPOGRAPHY</span><span class="tech-marquee-item">BRANDING</span><span class="tech-marquee-item">PRINT</span><span class="tech-marquee-item">ILLUSTRATOR</span><span class="tech-marquee-item">PHOTOSHOP</span><span class="tech-marquee-item">INDESIGN</span><span class="tech-marquee-item">TYPOGRAPHY</span><span class="tech-marquee-item">BRANDING</span><span class="tech-marquee-item">PRINT</span>
-        </div>
-    </div>
-
-    <section class="section">
+    <!-- INTERACTIVE BEFORE/AFTER SHOWCASE -->
+    <section id="portfolio-grid" class="section pt-0">
         <div class="container">
-            <h2 class="t-h2">Our Approach</h2>
-            <div class="approach-grid">
+            <div class="section-header reveal text-center" style="margin-bottom: var(--space-6);">
+                <span class="t-label" style="color: var(--accent); margin-bottom: var(--space-2); display: block;">INTERACTIVE SHOWCASE</span>
+                <h2 class="t-h1">Interactive Before &amp; After Studio</h2>
+                <p class="t-body-lg" style="max-width: 680px; margin: var(--space-2) auto 0;">
+                    Drag or hover the comparison sliders on each showcase card below to inspect the non-destructive editing, edge feathering, and color grading.
+                </p>
+            </div>
+
+            <!-- Tab Navigation -->
+            <div class="portfolio-nav reveal">
+                <button class="nav-btn active" data-target="manipulation">Manipulation</button>
+                <button class="nav-btn" data-target="restoration">Restoration</button>
+                <button class="nav-btn" data-target="retouching">Editing &amp; Retouching</button>
+                <button class="nav-btn" data-target="design">Graphic Design</button>
+            </div>
+
+            <!-- 1. MANIPULATION SECTION -->
+            <div id="manipulation" class="portfolio-section active">
+                <p class="t-body text-center" style="color: var(--text-secondary); max-width: 720px; margin: 0 auto var(--space-6); line-height: 1.6;">
+                    Creative photo manipulation including seamless distraction removal, contextual background replacements, and surreal composite scene creation with realistic lighting and shadow integration.
+                </p>
+                <div class="portfolio-items">
+                    <div class="gd-portfolio-card">
+                        <div class="gd-card-header">
+                            <h3>Object Removal</h3>
+                            <p>Seamless removal of complex unwanted elements and background distractions with photorealistic texture synthesis.</p>
+                        </div>
+                        <img-comparison-slider class="slider-theme" hover="true">
+                            <img slot="first" src="../assets/images/graphic-design/Manipulation/removal1.jpg" alt="Object Removal Before" loading="lazy" />
+                            <img slot="second" src="../assets/images/graphic-design/Manipulation/removal0.jpg" alt="Object Removal After" loading="lazy" />
+                        </img-comparison-slider>
+                    </div>
+
+                    <div class="gd-portfolio-card">
+                        <div class="gd-card-header">
+                            <h3>Background Replacement</h3>
+                            <p>Complete environment replacement with matched depth-of-field, perspective vanishing points, and ambient bounce lighting.</p>
+                        </div>
+                        <img-comparison-slider class="slider-theme" hover="true">
+                            <img slot="first" src="../assets/images/graphic-design/Manipulation/bg-replace1.jpg" alt="Background Replacement Before" loading="lazy" />
+                            <img slot="second" src="../assets/images/graphic-design/Manipulation/bg-replace0.jpg" alt="Background Replacement After" loading="lazy" />
+                        </img-comparison-slider>
+                    </div>
+
+                    <div class="gd-portfolio-card">
+                        <div class="gd-card-header">
+                            <h3>Creative Composite</h3>
+                            <p>Blending multiple distinct photographic plates into unified, atmospheric scenes with seamless masking and grading.</p>
+                        </div>
+                        <img-comparison-slider class="slider-theme" hover="true">
+                            <img slot="first" src="../assets/images/graphic-design/Manipulation/composite1.jpg" alt="Creative Composite Before" loading="lazy" />
+                            <img slot="second" src="../assets/images/graphic-design/Manipulation/composite0.jpg" alt="Creative Composite After" loading="lazy" />
+                        </img-comparison-slider>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. RESTORATION SECTION -->
+            <div id="restoration" class="portfolio-section">
+                <p class="t-body text-center" style="color: var(--text-secondary); max-width: 720px; margin: 0 auto var(--space-6); line-height: 1.6;">
+                    Archival photo restoration reviving heavily degraded, scratched, or blurred photographs, recovering forgotten facial details and historic memories using modern digital darkroom techniques.
+                </p>
+                <div class="portfolio-items">
+                    <div class="gd-portfolio-card">
+                        <div class="gd-card-header">
+                            <h3>Photo Restoration</h3>
+                            <p>Rebuilding cracked emulations, dust tears, and paper creases while preserving authentic vintage grain structure.</p>
+                        </div>
+                        <img-comparison-slider class="slider-theme" hover="true">
+                            <img slot="first" src="../assets/images/graphic-design/Restoration/restoration1.jpg" alt="Photo Restoration Before" loading="lazy" />
+                            <img slot="second" src="../assets/images/graphic-design/Restoration/restoration0.jpg" alt="Photo Restoration After" loading="lazy" />
+                        </img-comparison-slider>
+                    </div>
+
+                    <div class="gd-portfolio-card">
+                        <div class="gd-card-header">
+                            <h3>Unblur &amp; Clarity Recovery</h3>
+                            <p>Restoring sharp high-frequency edge definition and structural contrast to out-of-focus and low-resolution captures.</p>
+                        </div>
+                        <img-comparison-slider class="slider-theme" hover="true">
+                            <img slot="first" src="../assets/images/graphic-design/Restoration/unblur1.jpg" alt="Unblur Before" loading="lazy" />
+                            <img slot="second" src="../assets/images/graphic-design/Restoration/unblur0.jpg" alt="Unblur After" loading="lazy" />
+                        </img-comparison-slider>
+                    </div>
+
+                    <div class="gd-portfolio-card">
+                        <div class="gd-card-header">
+                            <h3>Color Restoration</h3>
+                            <p>Revitalizing sun-faded dye pigments and historic black-and-white plates with realistic skin tones and period-accurate colorization.</p>
+                        </div>
+                        <img-comparison-slider class="slider-theme" hover="true">
+                            <img slot="first" src="../assets/images/graphic-design/Restoration/color1.jpg" alt="Color Restoration Before" loading="lazy" />
+                            <img slot="second" src="../assets/images/graphic-design/Restoration/color0.jpg" alt="Color Restoration After" loading="lazy" />
+                        </img-comparison-slider>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. RETOUCHING SECTION -->
+            <div id="retouching" class="portfolio-section">
+                <p class="t-body text-center" style="color: var(--text-secondary); max-width: 720px; margin: 0 auto var(--space-6); line-height: 1.6;">
+                    Editorial portrait and product retouching featuring frequency separation, micro-dodge-and-burn, blemish elimination, and precise anatomical contouring.
+                </p>
+                <div class="portfolio-items">
+                    <div class="gd-portfolio-card">
+                        <div class="gd-card-header">
+                            <h3>Exposure &amp; Tone Balance</h3>
+                            <p>Recovering dynamic range in blown highlights and clipped shadows to produce balanced, luminous skin luminescence.</p>
+                        </div>
+                        <img-comparison-slider class="slider-theme" hover="true">
+                            <img slot="first" src="../assets/images/graphic-design/Retouching/brightness1.jpg" alt="Exposure Adjustment Before" loading="lazy" />
+                            <img slot="second" src="../assets/images/graphic-design/Retouching/brightness0.jpg" alt="Exposure Adjustment After" loading="lazy" />
+                        </img-comparison-slider>
+                    </div>
+
+                    <div class="gd-portfolio-card">
+                        <div class="gd-card-header">
+                            <h3>Editorial Skin Retouching</h3>
+                            <p>Frequency separation workflow removing blemishes, scars, and redness while preserving 100% natural pore texture.</p>
+                        </div>
+                        <img-comparison-slider class="slider-theme" hover="true">
+                            <img slot="first" src="../assets/images/graphic-design/Retouching/retouching1.jpg" alt="Blemish Removal Before" loading="lazy" />
+                            <img slot="second" src="../assets/images/graphic-design/Retouching/retouching0.jpg" alt="Blemish Removal After" loading="lazy" />
+                        </img-comparison-slider>
+                    </div>
+
+                    <div class="gd-portfolio-card">
+                        <div class="gd-card-header">
+                            <h3>Portrait &amp; Body Contouring</h3>
+                            <p>Natural posture refinement and silhouette contouring executed with anatomical accuracy for confident commercial portraits.</p>
+                        </div>
+                        <img-comparison-slider class="slider-theme" hover="true">
+                            <img slot="first" src="../assets/images/graphic-design/Retouching/body1.jpg" alt="Body Transformation Before" loading="lazy" />
+                            <img slot="second" src="../assets/images/graphic-design/Retouching/body0.jpg" alt="Body Transformation After" loading="lazy" />
+                        </img-comparison-slider>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. GRAPHIC DESIGN SECTION -->
+            <div id="design" class="portfolio-section">
+                <p class="t-body text-center" style="color: var(--text-secondary); max-width: 720px; margin: 0 auto var(--space-6); line-height: 1.6;">
+                    Comprehensive graphic design and identity systems including vector monogram marks, commercial stationery superimposition, and custom digital promotional artwork.
+                </p>
+                <div class="portfolio-items">
+                    <div class="gd-portfolio-card">
+                        <div class="gd-card-header">
+                            <h3>Logo Identity Design</h3>
+                            <p>Distinctive monogram typography and geometry engineered to command authority across print and digital media.</p>
+                        </div>
+                        <img-comparison-slider class="slider-theme" hover="true">
+                            <img slot="first" src="../assets/images/graphic-design/Graphics/logo1.jpg" alt="Logo Design Before" loading="lazy" />
+                            <img slot="second" src="../assets/images/graphic-design/Graphics/logo0.jpg" alt="Logo Design After" loading="lazy" />
+                        </img-comparison-slider>
+                    </div>
+
+                    <div class="gd-portfolio-card">
+                        <div class="gd-card-header">
+                            <h3>Commercial Branding Systems</h3>
+                            <p>Cohesive brand packaging, business stationery, and collateral mockups tested against physical lighting environments.</p>
+                        </div>
+                        <img-comparison-slider class="slider-theme" hover="true">
+                            <img slot="first" src="../assets/images/graphic-design/Graphics/impose1.jpg" alt="Branding Materials Before" loading="lazy" />
+                            <img slot="second" src="../assets/images/graphic-design/Graphics/impose0.jpg" alt="Branding Materials After" loading="lazy" />
+                        </img-comparison-slider>
+                    </div>
+
+                    <div class="gd-portfolio-card">
+                        <div class="gd-card-header">
+                            <h3>Digital Artistry &amp; Posters</h3>
+                            <p>Custom stylized promotional artwork, typography compositions, and social campaign graphics optimized for high engagement.</p>
+                        </div>
+                        <img-comparison-slider class="slider-theme" hover="true">
+                            <img slot="first" src="../assets/images/graphic-design/Graphics/art1.jpg" alt="Digital Artwork Before" loading="lazy" />
+                            <img slot="second" src="../assets/images/graphic-design/Graphics/art0.jpg" alt="Digital Artwork After" loading="lazy" />
+                        </img-comparison-slider>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Navigation Controls -->
+            <div class="section-nav-flex reveal">
+                <button id="prev-section-btn" class="section-nav-btn" disabled>
+                    &larr; Previous Category
+                </button>
+                <button id="next-section-btn" class="section-nav-btn">
+                    Next Category &rarr;
+                </button>
+            </div>
+
+            <!-- CERTIFICATE VERIFICATION SECTION -->
+            <div class="certificate-wrapper reveal">
+                <div class="certificate-frame">
+                    <img src="../assets/images/graphic-design/photoshop-certificate.jpg" alt="Adobe Certified Professional Credential in Photoshop" loading="lazy" />
+                    <div class="scanline"></div>
+                </div>
+                <div class="certificate-info">
+                    <span class="t-mono t-label" style="color: var(--accent); display: block; margin-bottom: 8px;">VERIFIED CREDENTIAL</span>
+                    <h3>Adobe Certified Professional in Photoshop</h3>
+                    <p>
+                        Verified certification in digital imaging, non-destructive compositing, frequency separation, advanced mask manipulation, and color theory. Every project executed by ZERB adheres to strict commercial print and digital standards.
+                    </p>
+                    <a href="https://www.udemy.com/certificate/UC-a8604cdb-f551-4751-b0dc-d1c760b67e3a/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        Verify Authenticity &rarr;
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- OUR APPROACH SECTION -->
+    <section class="section" style="border-top: 1px solid var(--border-subtle); padding-top: var(--space-8);">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label t-label" style="color: var(--accent);">Our Methodology</span>
+                <h2 class="t-h2">Precision engineering for visual assets.</h2>
+            </div>
+            
+            <div class="approach-grid reveal-stagger">
                 <div class="approach-step">
                     <span class="approach-step-num">01</span>
-                    <h3 class="approach-title" style="font-family: 'Hanken Grotesk', sans-serif;">Architecture First</h3>
-                    <p class="approach-desc">We don't just start building. We design the models, architecture, and systems to ensure the product scales effortlessly as your user base grows.</p>
+                    <h3 class="approach-title">First-Principles Composition</h3>
+                    <p class="approach-desc">We analyze focal hierarchy, visual weight, and lighting coherence before retouching begins, ensuring every adjustment supports narrative intent.</p>
                 </div>
                 <div class="approach-step">
                     <span class="approach-step-num">02</span>
-                    <h3 class="approach-title" style="font-family: 'Hanken Grotesk', sans-serif;">Performance Obsession</h3>
-                    <p class="approach-desc">Sub-second load times aren't a luxury, they're a requirement. We optimize delivery, utilize best practices, and minimize main-thread execution.</p>
+                    <h3 class="approach-title">Non-Destructive Workflows</h3>
+                    <p class="approach-desc">100% parametric adjustment layers, vector smart objects, and frequency separation masks permit infinite iteration without image degradation.</p>
                 </div>
                 <div class="approach-step">
                     <span class="approach-step-num">03</span>
-                    <h3 class="approach-title" style="font-family: 'Hanken Grotesk', sans-serif;">Fluid Interactions</h3>
-                    <p class="approach-desc">A product should feel alive. We integrate physics-based animations, smooth page transitions, and micro-interactions that delight users.</p>
+                    <h3 class="approach-title">Color Science &amp; Gamut Control</h3>
+                    <p class="approach-desc">Calibrated color spaces ensure visual consistency from wide-gamut Display P3 web delivery to CMYK offset print production.</p>
                 </div>
                 <div class="approach-step">
                     <span class="approach-step-num">04</span>
-                    <h3 class="approach-title" style="font-family: 'Hanken Grotesk', sans-serif;">Bulletproof Deployment</h3>
-                    <p class="approach-desc">Automated testing, continuous integration, and rigorous QA. We build infrastructure that lets you ship with confidence.</p>
+                    <h3 class="approach-title">Production Asset Optimization</h3>
+                    <p class="approach-desc">Assets are exported with optimal WebP/AVIF compression matrices, responsive 2x retina densities, and precise metadata hygiene.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- CTA SECTION -->
     <section class="section cta-section">
         <div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-            <h2 class="t-h2" style="margin-bottom: var(--space-4);">Ready to build your platform?</h2>
-            <a href="../contact.html" class="btn btn-primary btn-lg">Start a project &rarr;</a>
+            <span class="t-mono t-label" style="color: var(--accent); margin-bottom: var(--space-2);">COLLABORATE</span>
+            <h2 class="t-h2" style="margin-bottom: var(--space-4);">Ready to elevate your visual identity?</h2>
+            <p class="t-body-lg" style="max-width: 580px; margin-bottom: var(--space-6); color: var(--text-secondary);">
+                Commission custom brand assets, photo retouching campaigns, or comprehensive visual identity systems directly with ZERB.
+            </p>
+            <a href="../contact.html" class="btn btn-primary btn-lg">Start a design project &rarr;</a>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="site-footer" role="contentinfo">
         <div class="container">
             <div class="footer-grid">
@@ -161,25 +380,23 @@
                 <div class="footer-links">
                     <h3 class="footer-heading">Connect</h3>
                     <div class="footer-links-list">
-                        <a href="#" target="_blank">LinkedIn</a>
-                        <a href="#" target="_blank">Instagram</a>
-                        <a href="#" target="_blank">Dribbble</a>
+                        <a href="https://github.com/adeelabbasi111" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://www.linkedin.com/in/adeelabbasi111/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://wa.me/923215773211" target="_blank" rel="noopener noreferrer">WhatsApp</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 - 2026 ZERB. All rights reserved.</p>
-                <p>Designed & built by ZERB.</p>
+                <p>&copy; 2024 &mdash; 2026 ZERB. All rights reserved.</p>
+                <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent);">Designed &amp; built by ZERB.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Core Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    
-    <script src="../js/core.js?v=2.1"></script>
-    <script src="../js/animations.js?v=2.1"></script>
-
+    <script src="../js/core.js?v=2.2"></script>
+    <script src="../js/animations.js?v=2.2"></script>
+    <script src="../js/pages/graphic-design.js?v=2.2"></script>
 </body>
 </html>
