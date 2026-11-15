@@ -117,120 +117,365 @@
         </div>
     </div>
 
-    <!-- STICKY STACKING SHOWCASE SECTION -->
-    <section class="section project-stack-section" id="showcase">
+    <!-- INTERACTIVE SUB-SERVICES & SHOWCASE SECTION -->
+    <section class="section service-tabs-section" id="showcase">
         <div class="container">
             <div class="section-header reveal text-center" style="margin-bottom: var(--space-7);">
-                <span class="t-label" style="color: var(--accent); margin-bottom: var(--space-2); display: block;">ENGINEERED PRODUCTION SYSTEMS</span>
-                <h2 class="t-h1">Featured Mobile &amp; App Projects</h2>
+                <span class="t-label" style="color: var(--accent); margin-bottom: var(--space-2); display: block;">SPECIALIZED DISCIPLINES</span>
+                <h2 class="t-h1">Interactive Sub-Service Offerings</h2>
                 <p class="t-body-lg" style="max-width: 660px; margin: var(--space-2) auto 0;">
-                    From advanced anti-detection campaign automation to pixel-perfect cross-platform mobile apps. Scroll down to experience the stacked card progression.
+                    Explore our mobile architectures, robotic desktop automation, real-time telemetry systems, and encrypted WebSocket infrastructure.
                 </p>
             </div>
 
-            <div class="project-stack-container">
-                
-                <!-- Card 01: WhatsApp Automater -->
-                <article class="project-stack-card reveal">
-                    <div class="project-stack-media">
-                        <img src="../assets/images/projects/whatsapp.gif" alt="WhatsApp Automater Campaign Engine running" loading="lazy">
-                    </div>
-                    <div class="project-stack-content">
-                        <span class="project-stack-index">01</span>
-                        <h3 class="project-stack-title">WhatsApp Automater Campaign System</h3>
-                        <p class="project-stack-desc">
-                            Windows-based desktop automation engine managing bulk WhatsApp outreach with human-grade kinematic movement. Implements cubic Bézier curve trajectories, micro-tremor simulations, randomized Gaussian keystroke latencies, and crash-resilient transactional logging.
-                        </p>
-                        <div class="project-stack-tags">
-                            <span class="project-stack-tag">Python</span>
-                            <span class="project-stack-tag">PyAutoGUI</span>
-                            <span class="project-stack-tag">pywin32</span>
-                            <span class="project-stack-tag">Bezier Kinematics</span>
-                            <span class="project-stack-tag">Crash Recovery</span>
-                        </div>
-                        <div class="project-stack-links">
-                            <a href="https://github.com/adeelabbasi111/Whatsapp-Automater" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                                Inspect Repository &rarr;
-                            </a>
-                        </div>
-                    </div>
-                </article>
+            <!-- Tab Navigation (WAI-ARIA Compliant) -->
+            <div class="service-tabs-nav" role="tablist" aria-label="App Development Specialized Disciplines">
+                <button type="button" class="service-tab-btn active" role="tab" id="tab-app-mobile" aria-selected="true" tabindex="0" aria-controls="panel-app-mobile">
+                    Cross-Platform Mobile Applications
+                </button>
+                <button type="button" class="service-tab-btn" role="tab" id="tab-app-automation" aria-selected="false" tabindex="-1" aria-controls="panel-app-automation">
+                    Kinematic Desktop &amp; OS-Level Automation
+                </button>
+                <button type="button" class="service-tab-btn" role="tab" id="tab-app-telemetry" aria-selected="false" tabindex="-1" aria-controls="panel-app-telemetry">
+                    Real-Time Telemetry &amp; Athletic Analytics
+                </button>
+                <button type="button" class="service-tab-btn" role="tab" id="tab-app-websocket" aria-selected="false" tabindex="-1" aria-controls="panel-app-websocket">
+                    Duplex WebSocket Encrypted Messaging
+                </button>
+            </div>
 
-                <!-- Card 02: Cross-Platform E-Commerce Mobile App -->
-                <article class="project-stack-card reveal">
-                    <div class="project-stack-media">
-                        <img src="../assets/images/project-mobile-app.jpg" alt="Cross-Platform E-Commerce Mobile App" loading="lazy">
-                    </div>
-                    <div class="project-stack-content">
-                        <span class="project-stack-index">02</span>
-                        <h3 class="project-stack-title">Cross-Platform E-Commerce Mobile Store</h3>
-                        <p class="project-stack-desc">
-                            Production mobile commerce storefront deployed simultaneously to iOS and Android from a single Flutter codebase. Features real-time Firestore catalog synchronization, biometric Apple Pay &amp; Google Pay checkout, and offline cart persistence.
-                        </p>
-                        <div class="project-stack-tags">
-                            <span class="project-stack-tag">Flutter</span>
-                            <span class="project-stack-tag">Dart</span>
-                            <span class="project-stack-tag">Firebase</span>
-                            <span class="project-stack-tag">Stripe Mobile</span>
-                            <span class="project-stack-tag">BLoC Pattern</span>
-                        </div>
-                        <div class="project-stack-links">
-                            <a href="../contact.html" class="btn btn-primary">
-                                Discuss Mobile App &rarr;
-                            </a>
-                        </div>
-                    </div>
-                </article>
+            <!-- Tab Panels Container -->
+            <div class="service-tab-panels">
 
-                <!-- Card 03: Fitness & Workout Telemetry Tracker -->
-                <article class="project-stack-card reveal">
-                    <div class="project-stack-media">
-                        <img src="../assets/images/project-dashboard.jpg" alt="Fitness & Workout Telemetry Tracker" loading="lazy">
-                    </div>
-                    <div class="project-stack-content">
-                        <span class="project-stack-index">03</span>
-                        <h3 class="project-stack-title">Workout Telemetry &amp; Analytics Tracker</h3>
-                        <p class="project-stack-desc">
-                            High-performance athletic tracking mobile app featuring custom hardware-accelerated canvas chart visualizers. Implements offline-first SQLite synchronization, rest interval timers, volume progression analytics, and zero battery drain.
-                        </p>
-                        <div class="project-stack-tags">
-                            <span class="project-stack-tag">Flutter</span>
-                            <span class="project-stack-tag">Custom Painter</span>
-                            <span class="project-stack-tag">SQLite</span>
-                            <span class="project-stack-tag">Telemetry Analytics</span>
+                <!-- Panel 1: Cross-Platform Mobile Applications -->
+                <div class="service-tab-panel active" role="tabpanel" id="panel-app-mobile" aria-labelledby="tab-app-mobile" tabindex="0">
+                    <div class="service-tab-card">
+                        <div class="service-tab-grid">
+                            <div class="service-tab-info">
+                                <span class="service-badge-pill">&#9679; CROSS-PLATFORM PRECISION</span>
+                                <h3 class="service-tab-title">Production Cross-Platform Mobile Applications</h3>
+                                <p class="service-tab-desc">
+                                    We build smooth, native iOS and Android applications utilizing Flutter and React Native. 60 FPS fluid gesture controls, offline-first SQLite synchronization, and seamless cloud push architectures engineered for mobile users.
+                                </p>
+                                <h4 class="service-deliverables-title">&check; Deliverables &amp; Engineering Scope</h4>
+                                <div class="service-deliverables-grid">
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Universal iOS &amp; Android Single-Codebase Architecture</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Real-Time Firestore &amp; GraphQL Cloud Synchronization</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Biometric Apple Pay, Google Pay &amp; Stripe Mobile Checkouts</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Offline-First SQLite Local Persistence &amp; Caching</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>60/120 FPS Fluid Gestures &amp; Hero Screen Transitions</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Automated App Store &amp; Google Play Store CI/CD Deployments</span>
+                                    </div>
+                                </div>
+                                <span class="service-stack-title">Core Technology Stack:</span>
+                                <div class="service-stack-wrap">
+                                    <span class="service-stack-pill">Flutter</span>
+                                    <span class="service-stack-pill">Dart</span>
+                                    <span class="service-stack-pill">React Native</span>
+                                    <span class="service-stack-pill">Firebase</span>
+                                    <span class="service-stack-pill">Stripe Mobile</span>
+                                    <span class="service-stack-pill">BLoC Pattern</span>
+                                    <span class="service-stack-pill">SQLite</span>
+                                </div>
+                                <div class="service-pane-action">
+                                    <a href="../contact.html?service=mobile-apps" class="btn btn-primary">
+                                        Start Mobile Project &rarr;
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="service-tab-showcase">
+                                <article class="service-showcase-card">
+                                    <div class="service-showcase-media">
+                                        <img src="../assets/images/project-mobile-app.jpg" alt="Cross-Platform E-Commerce Mobile App" loading="lazy">
+                                    </div>
+                                    <div class="service-showcase-body">
+                                        <span class="service-showcase-label">FEATURED PRODUCTION CASE STUDY</span>
+                                        <h4 class="service-showcase-title">Cross-Platform E-Commerce Mobile Store</h4>
+                                        <p class="service-showcase-desc">
+                                            Production mobile commerce storefront deployed simultaneously to iOS and Android from a single Flutter codebase. Features real-time Firestore catalog synchronization, biometric Apple Pay &amp; Google Pay checkout, and offline cart persistence.
+                                        </p>
+                                        <div class="project-stack-tags">
+                                            <span class="project-stack-tag">Flutter</span>
+                                            <span class="project-stack-tag">Dart</span>
+                                            <span class="project-stack-tag">Firebase</span>
+                                            <span class="project-stack-tag">Stripe Mobile</span>
+                                            <span class="project-stack-tag">BLoC Pattern</span>
+                                        </div>
+                                        <div class="service-showcase-links">
+                                            <a href="../contact.html" class="btn btn-primary">
+                                                Discuss Mobile App &rarr;
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
                         </div>
-                        <div class="project-stack-links">
-                            <a href="../contact.html" class="btn btn-primary">
-                                Discuss Mobile App &rarr;
-                            </a>
-                        </div>
                     </div>
-                </article>
+                </div>
 
-                <!-- Card 04: Real-Time Mobile Chat Engine -->
-                <article class="project-stack-card reveal">
-                    <div class="project-stack-media">
-                        <img src="../assets/images/projects/chitchat-cli.jpg" alt="Real-Time Mobile Chat Engine" loading="lazy">
-                    </div>
-                    <div class="project-stack-content">
-                        <span class="project-stack-index">04</span>
-                        <h3 class="project-stack-title">Duplex WebSocket Encrypted Messaging</h3>
-                        <p class="project-stack-desc">
-                            Cross-platform mobile messaging architecture powered by full-duplex WebSocket channels. Features client-side cryptographic message encryption, media caching, online status indicators, and sub-10ms packet routing.
-                        </p>
-                        <div class="project-stack-tags">
-                            <span class="project-stack-tag">WebSockets</span>
-                            <span class="project-stack-tag">Dart</span>
-                            <span class="project-stack-tag">E2E Cryptography</span>
-                            <span class="project-stack-tag">Cross-Platform</span>
+                <!-- Panel 2: Kinematic Desktop & OS-Level Automation -->
+                <div class="service-tab-panel" role="tabpanel" id="panel-app-automation" aria-labelledby="tab-app-automation" tabindex="0" hidden>
+                    <div class="service-tab-card">
+                        <div class="service-tab-grid">
+                            <div class="service-tab-info">
+                                <span class="service-badge-pill">&#9679; KINEMATIC BEZIER AUTOMATION</span>
+                                <h3 class="service-tab-title">Kinematic Desktop &amp; OS-Level Automation</h3>
+                                <p class="service-tab-desc">
+                                    Windows and macOS automation engines engineered for bulk outreach and workflow execution with human-grade kinematic movement. Implements cubic Bézier trajectories, micro-tremor simulations, and crash-resilient transactional logging.
+                                </p>
+                                <h4 class="service-deliverables-title">&check; Deliverables &amp; Engineering Scope</h4>
+                                <div class="service-deliverables-grid">
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Windows &amp; macOS OS-Level Robotic Process Automation</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Cubic Bézier Curve Trajectories for Human-Grade Mouse Pacing</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Randomized Gaussian Keystroke Latency &amp; Micro-Tremor Simulation</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Crash-Resilient Transactional Logging &amp; Auto-Resume State</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Multi-Account Session Isolation &amp; Proxy Rotation Systems</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Anti-Detection Security Compliance &amp; Headless Fallbacks</span>
+                                    </div>
+                                </div>
+                                <span class="service-stack-title">Core Technology Stack:</span>
+                                <div class="service-stack-wrap">
+                                    <span class="service-stack-pill">Python</span>
+                                    <span class="service-stack-pill">PyAutoGUI</span>
+                                    <span class="service-stack-pill">pywin32</span>
+                                    <span class="service-stack-pill">Bezier Kinematics</span>
+                                    <span class="service-stack-pill">Crash Recovery</span>
+                                    <span class="service-stack-pill">SQLite</span>
+                                    <span class="service-stack-pill">Threading</span>
+                                </div>
+                                <div class="service-pane-action">
+                                    <a href="../contact.html?service=automation" class="btn btn-primary">
+                                        Build Automation System &rarr;
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="service-tab-showcase">
+                                <article class="service-showcase-card">
+                                    <div class="service-showcase-media">
+                                        <img src="../assets/images/projects/whatsapp.gif" alt="WhatsApp Automater Campaign Engine running" loading="lazy">
+                                    </div>
+                                    <div class="service-showcase-body">
+                                        <span class="service-showcase-label">FEATURED PRODUCTION CASE STUDY</span>
+                                        <h4 class="service-showcase-title">WhatsApp Automater Campaign System</h4>
+                                        <p class="service-showcase-desc">
+                                            Windows-based desktop automation engine managing bulk WhatsApp outreach with human-grade kinematic movement. Implements cubic Bézier curve trajectories, micro-tremor simulations, randomized Gaussian keystroke latencies, and crash-resilient transactional logging.
+                                        </p>
+                                        <div class="project-stack-tags">
+                                            <span class="project-stack-tag">Python</span>
+                                            <span class="project-stack-tag">PyAutoGUI</span>
+                                            <span class="project-stack-tag">pywin32</span>
+                                            <span class="project-stack-tag">Bezier Kinematics</span>
+                                            <span class="project-stack-tag">Crash Recovery</span>
+                                        </div>
+                                        <div class="service-showcase-links">
+                                            <a href="https://github.com/adeelabbasi111/Whatsapp-Automater" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                                Inspect Repository &rarr;
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
                         </div>
-                        <div class="project-stack-links">
-                            <a href="https://github.com/adeelabbasi111/Chit-Chat-CLI" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                                Inspect Systems Base &rarr;
-                            </a>
+                    </div>
+                </div>
+
+                <!-- Panel 3: Real-Time Telemetry & Athletic Analytics -->
+                <div class="service-tab-panel" role="tabpanel" id="panel-app-telemetry" aria-labelledby="tab-app-telemetry" tabindex="0" hidden>
+                    <div class="service-tab-card">
+                        <div class="service-tab-grid">
+                            <div class="service-tab-info">
+                                <span class="service-badge-pill">&#9679; REAL-TIME TELEMETRY SYSTEMS</span>
+                                <h3 class="service-tab-title">Real-Time Telemetry &amp; Athletic Analytics</h3>
+                                <p class="service-tab-desc">
+                                    High-performance mobile tracking and telemetry applications featuring custom hardware-accelerated canvas chart visualizers. Built with offline-first SQLite synchronization, rest interval timers, volume progression analytics, and zero battery drain.
+                                </p>
+                                <h4 class="service-deliverables-title">&check; Deliverables &amp; Engineering Scope</h4>
+                                <div class="service-deliverables-grid">
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Hardware-Accelerated Custom Canvas Chart Renderers</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Offline-First SQLite Local Database Persistence</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Microsecond Rest Interval Timers &amp; Audio Transients</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Progressive Overload Volume Progression Analytics Engines</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Zero-Background Battery Drain Performance Optimization</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Multi-Sensor BLE Heart Rate &amp; Wearable Device Ingestion</span>
+                                    </div>
+                                </div>
+                                <span class="service-stack-title">Core Technology Stack:</span>
+                                <div class="service-stack-wrap">
+                                    <span class="service-stack-pill">Flutter</span>
+                                    <span class="service-stack-pill">Custom Painter</span>
+                                    <span class="service-stack-pill">SQLite</span>
+                                    <span class="service-stack-pill">BLE Protocols</span>
+                                    <span class="service-stack-pill">Telemetry Analytics</span>
+                                    <span class="service-stack-pill">Dart</span>
+                                    <span class="service-stack-pill">Local Storage</span>
+                                </div>
+                                <div class="service-pane-action">
+                                    <a href="../contact.html?service=telemetry" class="btn btn-primary">
+                                        Discuss Telemetry App &rarr;
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="service-tab-showcase">
+                                <article class="service-showcase-card">
+                                    <div class="service-showcase-media">
+                                        <img src="../assets/images/project-dashboard.jpg" alt="Fitness & Workout Telemetry Tracker" loading="lazy">
+                                    </div>
+                                    <div class="service-showcase-body">
+                                        <span class="service-showcase-label">FEATURED PRODUCTION CASE STUDY</span>
+                                        <h4 class="service-showcase-title">Workout Telemetry &amp; Analytics Tracker</h4>
+                                        <p class="service-showcase-desc">
+                                            High-performance athletic tracking mobile app featuring custom hardware-accelerated canvas chart visualizers. Implements offline-first SQLite synchronization, rest interval timers, volume progression analytics, and zero battery drain.
+                                        </p>
+                                        <div class="project-stack-tags">
+                                            <span class="project-stack-tag">Flutter</span>
+                                            <span class="project-stack-tag">Custom Painter</span>
+                                            <span class="project-stack-tag">SQLite</span>
+                                            <span class="project-stack-tag">Telemetry Analytics</span>
+                                        </div>
+                                        <div class="service-showcase-links">
+                                            <a href="../contact.html" class="btn btn-primary">
+                                                Discuss Mobile App &rarr;
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
                         </div>
                     </div>
-                </article>
+                </div>
+
+                <!-- Panel 4: Duplex WebSocket Encrypted Messaging -->
+                <div class="service-tab-panel" role="tabpanel" id="panel-app-websocket" aria-labelledby="tab-app-websocket" tabindex="0" hidden>
+                    <div class="service-tab-card">
+                        <div class="service-tab-grid">
+                            <div class="service-tab-info">
+                                <span class="service-badge-pill">&#9679; FULL-DUPLEX WEBSOCKET MESH</span>
+                                <h3 class="service-tab-title">Duplex WebSocket Encrypted Messaging</h3>
+                                <p class="service-tab-desc">
+                                    Cross-platform mobile messaging architecture powered by full-duplex WebSocket channels. Features client-side cryptographic message encryption, media caching, online status indicators, and sub-10ms packet routing.
+                                </p>
+                                <h4 class="service-deliverables-title">&check; Deliverables &amp; Engineering Scope</h4>
+                                <div class="service-deliverables-grid">
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Bi-Directional Full-Duplex WebSocket Network Channels</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Client-Side Cryptographic Message Encryption (AES-256-GCM)</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>High-Throughput Sub-10ms Packet Routing &amp; Broadcasts</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Real-Time Presence Detection, Typing Indicators &amp; Heartbeats</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Ephemeral Media Caching &amp; Secure Memory Shredding</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Fallback Long-Polling &amp; Exponential Reconnection Backoff</span>
+                                    </div>
+                                </div>
+                                <span class="service-stack-title">Core Technology Stack:</span>
+                                <div class="service-stack-wrap">
+                                    <span class="service-stack-pill">WebSockets</span>
+                                    <span class="service-stack-pill">Dart</span>
+                                    <span class="service-stack-pill">E2E Cryptography</span>
+                                    <span class="service-stack-pill">AES-GCM</span>
+                                    <span class="service-stack-pill">Cross-Platform</span>
+                                    <span class="service-stack-pill">Python Server</span>
+                                    <span class="service-stack-pill">Redis Pub/Sub</span>
+                                </div>
+                                <div class="service-pane-action">
+                                    <a href="../contact.html?service=websockets" class="btn btn-primary">
+                                        Deploy Messaging Mesh &rarr;
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="service-tab-showcase">
+                                <article class="service-showcase-card">
+                                    <div class="service-showcase-media">
+                                        <img src="../assets/images/projects/chitchat-cli.jpg" alt="Real-Time Mobile Chat Engine" loading="lazy">
+                                    </div>
+                                    <div class="service-showcase-body">
+                                        <span class="service-showcase-label">FEATURED PRODUCTION CASE STUDY</span>
+                                        <h4 class="service-showcase-title">Duplex WebSocket Encrypted Messaging</h4>
+                                        <p class="service-showcase-desc">
+                                            Cross-platform mobile messaging architecture powered by full-duplex WebSocket channels. Features client-side cryptographic message encryption, media caching, online status indicators, and sub-10ms packet routing.
+                                        </p>
+                                        <div class="project-stack-tags">
+                                            <span class="project-stack-tag">WebSockets</span>
+                                            <span class="project-stack-tag">Dart</span>
+                                            <span class="project-stack-tag">E2E Cryptography</span>
+                                            <span class="project-stack-tag">Cross-Platform</span>
+                                        </div>
+                                        <div class="service-showcase-links">
+                                            <a href="https://github.com/adeelabbasi111/Chit-Chat-CLI" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                                Inspect Systems Base &rarr;
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -318,5 +563,6 @@
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
     <script src="../js/core.js?v=2.2"></script>
     <script src="../js/animations.js?v=2.2"></script>
+    <script src="../js/pages/service-tabs.js"></script>
 </body>
 </html>

@@ -1,0 +1,714 @@
+{
+  "timestamp": "2026-11-15T19:33:35.232Z",
+  "overallScore": 10,
+  "allPassed": true,
+  "summary": {
+    "totalPages": 11,
+    "passedPages": 11,
+    "failedPages": 0,
+    "averageScore": 10,
+    "targetScore": 9
+  },
+  "pages": [
+    {
+      "slug": "index",
+      "title": "Homepage / Capabilities",
+      "path": "/index.html",
+      "url": "http://127.0.0.1:54390/index.html",
+      "isServiceDetail": false,
+      "totalScore": 10,
+      "grade": "Great / Pass",
+      "passed": true,
+      "loadDurationMs": 23642,
+      "pillars": {
+        "runtimeAndConsoleHygiene": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Zero console errors (clean runtime)",
+            "Zero uncaught page exceptions",
+            "Zero 404 or failed network requests"
+          ]
+        },
+        "visualAndDesignTokens": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Zero legacy Theme Studio elements/scripts (fully purged)",
+            "Zero horizontal overflow (responsive bounds respected)",
+            "Imperial palette tokens & Libre Baskerville / Lato typography active"
+          ]
+        },
+        "interactiveTabsAndNavigation": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Primary navigation bar verified (12 navigation anchors)",
+            "Site-wide header, mobile drawer trigger, and footer links valid"
+          ]
+        },
+        "contentCompletenessAndHierarchy": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Single semantic h1 tag verified: \"We engineer\ndigital products\nthat move i\"",
+            "Semantic heading hierarchy structured (7 h2, 20 h3 tags)",
+            "Title tag populated: \"ZERB — Software House | High-Performance Digital Products\"",
+            "SEO metadata & OpenGraph tags configured",
+            "Rich agency cards & capability modules rendered (6 cards)"
+          ]
+        }
+      },
+      "diagnostics": {
+        "consoleErrors": [],
+        "consoleWarnings": [],
+        "pageExceptions": [],
+        "failedRequests": [],
+        "themeStudioDetected": 0,
+        "horizontalOverflow": false,
+        "h1Count": 1,
+        "h2Count": 7,
+        "cardCount": 6,
+        "tabsDetected": 0,
+        "allTabsSwitchedSuccessfully": false
+      },
+      "screenshot": "critic-reports/screenshots/index.png"
+    },
+    {
+      "slug": "services",
+      "title": "Services Index",
+      "path": "/services.html",
+      "url": "http://127.0.0.1:54390/services.html",
+      "isServiceDetail": false,
+      "totalScore": 10,
+      "grade": "Great / Pass",
+      "passed": true,
+      "loadDurationMs": 5128,
+      "pillars": {
+        "runtimeAndConsoleHygiene": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Zero console errors (clean runtime)",
+            "Zero uncaught page exceptions",
+            "Zero 404 or failed network requests"
+          ]
+        },
+        "visualAndDesignTokens": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Zero legacy Theme Studio elements/scripts (fully purged)",
+            "Zero horizontal overflow (responsive bounds respected)",
+            "Imperial palette tokens & Libre Baskerville / Lato typography active"
+          ]
+        },
+        "interactiveTabsAndNavigation": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Primary navigation bar verified (9 navigation anchors)",
+            "Site-wide header, mobile drawer trigger, and footer links valid"
+          ]
+        },
+        "contentCompletenessAndHierarchy": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Single semantic h1 tag verified: \"What we build.\"",
+            "Semantic heading hierarchy structured (8 h2, 19 h3 tags)",
+            "Title tag populated: \"ZERB — Services\"",
+            "SEO metadata & OpenGraph tags configured"
+          ]
+        }
+      },
+      "diagnostics": {
+        "consoleErrors": [],
+        "consoleWarnings": [],
+        "pageExceptions": [],
+        "failedRequests": [],
+        "themeStudioDetected": 0,
+        "horizontalOverflow": false,
+        "h1Count": 1,
+        "h2Count": 8,
+        "cardCount": 0,
+        "tabsDetected": 0,
+        "allTabsSwitchedSuccessfully": false
+      },
+      "screenshot": "critic-reports/screenshots/services.png"
+    },
+    {
+      "slug": "work",
+      "title": "Work Portfolio",
+      "path": "/work.html",
+      "url": "http://127.0.0.1:54390/work.html",
+      "isServiceDetail": false,
+      "totalScore": 10,
+      "grade": "Great / Pass",
+      "passed": true,
+      "loadDurationMs": 8476,
+      "pillars": {
+        "runtimeAndConsoleHygiene": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Zero console errors (clean runtime)",
+            "Zero uncaught page exceptions",
+            "Zero 404 or failed network requests"
+          ]
+        },
+        "visualAndDesignTokens": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Zero legacy Theme Studio elements/scripts (fully purged)",
+            "Zero horizontal overflow (responsive bounds respected)",
+            "Imperial palette tokens & Libre Baskerville / Lato typography active"
+          ]
+        },
+        "interactiveTabsAndNavigation": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Primary navigation bar verified (9 navigation anchors)",
+            "Site-wide header, mobile drawer trigger, and footer links valid"
+          ]
+        },
+        "contentCompletenessAndHierarchy": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Single semantic h1 tag verified: \"Work that speaks for itself.\"",
+            "Semantic heading hierarchy structured (9 h2, 2 h3 tags)",
+            "Title tag populated: \"ZERB — Work\"",
+            "SEO metadata & OpenGraph tags configured"
+          ]
+        }
+      },
+      "diagnostics": {
+        "consoleErrors": [],
+        "consoleWarnings": [],
+        "pageExceptions": [],
+        "failedRequests": [],
+        "themeStudioDetected": 0,
+        "horizontalOverflow": false,
+        "h1Count": 1,
+        "h2Count": 9,
+        "cardCount": 0,
+        "tabsDetected": 0,
+        "allTabsSwitchedSuccessfully": false
+      },
+      "screenshot": "critic-reports/screenshots/work.png"
+    },
+    {
+      "slug": "about",
+      "title": "About Agency",
+      "path": "/about.html",
+      "url": "http://127.0.0.1:54390/about.html",
+      "isServiceDetail": false,
+      "totalScore": 10,
+      "grade": "Great / Pass",
+      "passed": true,
+      "loadDurationMs": 5050,
+      "pillars": {
+        "runtimeAndConsoleHygiene": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Zero console errors (clean runtime)",
+            "Zero uncaught page exceptions",
+            "Zero 404 or failed network requests"
+          ]
+        },
+        "visualAndDesignTokens": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Zero legacy Theme Studio elements/scripts (fully purged)",
+            "Zero horizontal overflow (responsive bounds respected)",
+            "Imperial palette tokens & Libre Baskerville / Lato typography active"
+          ]
+        },
+        "interactiveTabsAndNavigation": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Primary navigation bar verified (9 navigation anchors)",
+            "Site-wide header, mobile drawer trigger, and footer links valid"
+          ]
+        },
+        "contentCompletenessAndHierarchy": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Single semantic h1 tag verified: \"We build things that matter.\"",
+            "Semantic heading hierarchy structured (8 h2, 7 h3 tags)",
+            "Title tag populated: \"ZERB — About\"",
+            "SEO metadata & OpenGraph tags configured"
+          ]
+        }
+      },
+      "diagnostics": {
+        "consoleErrors": [],
+        "consoleWarnings": [],
+        "pageExceptions": [],
+        "failedRequests": [],
+        "themeStudioDetected": 0,
+        "horizontalOverflow": false,
+        "h1Count": 1,
+        "h2Count": 8,
+        "cardCount": 0,
+        "tabsDetected": 0,
+        "allTabsSwitchedSuccessfully": false
+      },
+      "screenshot": "critic-reports/screenshots/about.png"
+    },
+    {
+      "slug": "contact",
+      "title": "Contact & Inquiry",
+      "path": "/contact.html",
+      "url": "http://127.0.0.1:54390/contact.html",
+      "isServiceDetail": false,
+      "totalScore": 10,
+      "grade": "Great / Pass",
+      "passed": true,
+      "loadDurationMs": 3835,
+      "pillars": {
+        "runtimeAndConsoleHygiene": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Zero console errors (clean runtime)",
+            "Zero uncaught page exceptions",
+            "Zero 404 or failed network requests"
+          ]
+        },
+        "visualAndDesignTokens": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Zero legacy Theme Studio elements/scripts (fully purged)",
+            "Zero horizontal overflow (responsive bounds respected)",
+            "Imperial palette tokens & Libre Baskerville / Lato typography active"
+          ]
+        },
+        "interactiveTabsAndNavigation": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Primary navigation bar verified (9 navigation anchors)",
+            "Site-wide header, mobile drawer trigger, and footer links valid"
+          ]
+        },
+        "contentCompletenessAndHierarchy": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Single semantic h1 tag verified: \"Let's build something.\"",
+            "Semantic heading hierarchy structured (1 h2, 7 h3 tags)",
+            "Title tag populated: \"ZERB — Contact\"",
+            "SEO metadata & OpenGraph tags configured"
+          ]
+        }
+      },
+      "diagnostics": {
+        "consoleErrors": [],
+        "consoleWarnings": [],
+        "pageExceptions": [],
+        "failedRequests": [],
+        "themeStudioDetected": 0,
+        "horizontalOverflow": false,
+        "h1Count": 1,
+        "h2Count": 1,
+        "cardCount": 0,
+        "tabsDetected": 0,
+        "allTabsSwitchedSuccessfully": false
+      },
+      "screenshot": "critic-reports/screenshots/contact.png"
+    },
+    {
+      "slug": "service-web-development",
+      "title": "Web Development Service",
+      "path": "/services/web-development.html",
+      "url": "http://127.0.0.1:54390/services/web-development.html",
+      "isServiceDetail": true,
+      "totalScore": 10,
+      "grade": "Great / Pass",
+      "passed": true,
+      "loadDurationMs": 9597,
+      "pillars": {
+        "runtimeAndConsoleHygiene": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Zero console errors (clean runtime)",
+            "Zero uncaught page exceptions",
+            "Zero 404 or failed network requests"
+          ]
+        },
+        "visualAndDesignTokens": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Zero legacy Theme Studio elements/scripts (fully purged)",
+            "Zero horizontal overflow (responsive bounds respected)",
+            "Imperial palette tokens & Libre Baskerville / Lato typography active"
+          ]
+        },
+        "interactiveTabsAndNavigation": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "4 domain-aligned sub-service tabs present (E-COMMERCE & HEADLESS STOREFRONTS, SAAS PLATFORMS & AUTONOMOUS DATA PIPELINES, WEB AUDIO DSP & REAL-TIME SYNTHESIS, INTERACTIVE BEHAVIORAL SCIENCE & CANVAS LABS)",
+            "Sequential tab switching functional; panels reveal/hide properly",
+            "WAI-ARIA compliance verified ([role=\"tablist\"], [role=\"tab\"], [role=\"tabpanel\"])"
+          ]
+        },
+        "contentCompletenessAndHierarchy": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Single semantic h1 tag verified: \"Web Development &\nSystems Architecture\"",
+            "Semantic heading hierarchy structured (3 h2, 10 h3 tags)",
+            "Title tag populated: \"ZERB — Web Development & Systems Architecture\"",
+            "SEO metadata & OpenGraph tags configured"
+          ]
+        }
+      },
+      "diagnostics": {
+        "consoleErrors": [],
+        "consoleWarnings": [],
+        "pageExceptions": [],
+        "failedRequests": [],
+        "themeStudioDetected": 0,
+        "horizontalOverflow": false,
+        "h1Count": 1,
+        "h2Count": 3,
+        "cardCount": 0,
+        "tabsDetected": 4,
+        "allTabsSwitchedSuccessfully": true
+      },
+      "screenshot": "critic-reports/screenshots/service-web-development.png"
+    },
+    {
+      "slug": "service-app-development",
+      "title": "App Development Service",
+      "path": "/services/app-development.html",
+      "url": "http://127.0.0.1:54390/services/app-development.html",
+      "isServiceDetail": true,
+      "totalScore": 10,
+      "grade": "Great / Pass",
+      "passed": true,
+      "loadDurationMs": 10361,
+      "pillars": {
+        "runtimeAndConsoleHygiene": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Zero console errors (clean runtime)",
+            "Zero uncaught page exceptions",
+            "Zero 404 or failed network requests"
+          ]
+        },
+        "visualAndDesignTokens": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Zero legacy Theme Studio elements/scripts (fully purged)",
+            "Zero horizontal overflow (responsive bounds respected)",
+            "Imperial palette tokens & Libre Baskerville / Lato typography active"
+          ]
+        },
+        "interactiveTabsAndNavigation": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "4 domain-aligned sub-service tabs present (CROSS-PLATFORM MOBILE APPLICATIONS, KINEMATIC DESKTOP & OS-LEVEL AUTOMATION, REAL-TIME TELEMETRY & ATHLETIC ANALYTICS, DUPLEX WEBSOCKET ENCRYPTED MESSAGING)",
+            "Sequential tab switching functional; panels reveal/hide properly",
+            "WAI-ARIA compliance verified ([role=\"tablist\"], [role=\"tab\"], [role=\"tabpanel\"])"
+          ]
+        },
+        "contentCompletenessAndHierarchy": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Single semantic h1 tag verified: \"Mobile App\nDevelopment\"",
+            "Semantic heading hierarchy structured (3 h2, 10 h3 tags)",
+            "Title tag populated: \"ZERB — Mobile App Development & Native Systems\"",
+            "SEO metadata & OpenGraph tags configured"
+          ]
+        }
+      },
+      "diagnostics": {
+        "consoleErrors": [],
+        "consoleWarnings": [],
+        "pageExceptions": [],
+        "failedRequests": [],
+        "themeStudioDetected": 0,
+        "horizontalOverflow": false,
+        "h1Count": 1,
+        "h2Count": 3,
+        "cardCount": 0,
+        "tabsDetected": 4,
+        "allTabsSwitchedSuccessfully": true
+      },
+      "screenshot": "critic-reports/screenshots/service-app-development.png"
+    },
+    {
+      "slug": "service-game-development",
+      "title": "Game Development Service",
+      "path": "/services/game-development.html",
+      "url": "http://127.0.0.1:54390/services/game-development.html",
+      "isServiceDetail": true,
+      "totalScore": 10,
+      "grade": "Great / Pass",
+      "passed": true,
+      "loadDurationMs": 10479,
+      "pillars": {
+        "runtimeAndConsoleHygiene": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Zero console errors (clean runtime)",
+            "Zero uncaught page exceptions",
+            "Zero 404 or failed network requests"
+          ]
+        },
+        "visualAndDesignTokens": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Zero legacy Theme Studio elements/scripts (fully purged)",
+            "Zero horizontal overflow (responsive bounds respected)",
+            "Imperial palette tokens & Libre Baskerville / Lato typography active"
+          ]
+        },
+        "interactiveTabsAndNavigation": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "4 domain-aligned sub-service tabs present (ARCADE DYNAMICS & 2D PHYSICS SIMULATIONS, PC & CONSOLE PROCEDURAL DUNGEON CRAWLERS, VIRTUAL REALITY & SPATIAL HAPTICS, GAMIFICATION & BEHAVIORAL LABS)",
+            "Sequential tab switching functional; panels reveal/hide properly",
+            "WAI-ARIA compliance verified ([role=\"tablist\"], [role=\"tab\"], [role=\"tabpanel\"])"
+          ]
+        },
+        "contentCompletenessAndHierarchy": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Single semantic h1 tag verified: \"Game Development &\nPhysics Engines\"",
+            "Semantic heading hierarchy structured (3 h2, 10 h3 tags)",
+            "Title tag populated: \"ZERB — Game Development & Interactive Simulations\"",
+            "SEO metadata & OpenGraph tags configured"
+          ]
+        }
+      },
+      "diagnostics": {
+        "consoleErrors": [],
+        "consoleWarnings": [],
+        "pageExceptions": [],
+        "failedRequests": [],
+        "themeStudioDetected": 0,
+        "horizontalOverflow": false,
+        "h1Count": 1,
+        "h2Count": 3,
+        "cardCount": 0,
+        "tabsDetected": 4,
+        "allTabsSwitchedSuccessfully": true
+      },
+      "screenshot": "critic-reports/screenshots/service-game-development.png"
+    },
+    {
+      "slug": "service-graphic-design",
+      "title": "Graphic Design Service",
+      "path": "/services/graphic-design.html",
+      "url": "http://127.0.0.1:54390/services/graphic-design.html",
+      "isServiceDetail": true,
+      "totalScore": 10,
+      "grade": "Great / Pass",
+      "passed": true,
+      "loadDurationMs": 10418,
+      "pillars": {
+        "runtimeAndConsoleHygiene": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Zero console errors (clean runtime)",
+            "Zero uncaught page exceptions",
+            "Zero 404 or failed network requests"
+          ]
+        },
+        "visualAndDesignTokens": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Zero legacy Theme Studio elements/scripts (fully purged)",
+            "Zero horizontal overflow (responsive bounds respected)",
+            "Imperial palette tokens & Libre Baskerville / Lato typography active"
+          ]
+        },
+        "interactiveTabsAndNavigation": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "4 domain-aligned sub-service tabs present (CREATIVE PHOTO MANIPULATION, ARCHIVAL PHOTO RESTORATION, EDITORIAL RETOUCHING & COLOR SCIENCE, BRAND IDENTITY & COMMERCIAL SYSTEMS)",
+            "Sequential tab switching functional; panels reveal/hide properly",
+            "WAI-ARIA compliance verified ([role=\"tablist\"], [role=\"tab\"], [role=\"tabpanel\"])"
+          ]
+        },
+        "contentCompletenessAndHierarchy": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Single semantic h1 tag verified: \"Graphic Design &\nBrand Systems\"",
+            "Semantic heading hierarchy structured (3 h2, 19 h3 tags)",
+            "Title tag populated: \"ZERB — Graphic Design & Brand Systems\"",
+            "SEO metadata & OpenGraph tags configured"
+          ]
+        }
+      },
+      "diagnostics": {
+        "consoleErrors": [],
+        "consoleWarnings": [],
+        "pageExceptions": [],
+        "failedRequests": [],
+        "themeStudioDetected": 0,
+        "horizontalOverflow": false,
+        "h1Count": 1,
+        "h2Count": 3,
+        "cardCount": 0,
+        "tabsDetected": 4,
+        "allTabsSwitchedSuccessfully": true
+      },
+      "screenshot": "critic-reports/screenshots/service-graphic-design.png"
+    },
+    {
+      "slug": "service-ui-ux-design",
+      "title": "UI/UX Design Service",
+      "path": "/services/ui-ux-design.html",
+      "url": "http://127.0.0.1:54390/services/ui-ux-design.html",
+      "isServiceDetail": true,
+      "totalScore": 10,
+      "grade": "Great / Pass",
+      "passed": true,
+      "loadDurationMs": 9389,
+      "pillars": {
+        "runtimeAndConsoleHygiene": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Zero console errors (clean runtime)",
+            "Zero uncaught page exceptions",
+            "Zero 404 or failed network requests"
+          ]
+        },
+        "visualAndDesignTokens": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Zero legacy Theme Studio elements/scripts (fully purged)",
+            "Zero horizontal overflow (responsive bounds respected)",
+            "Imperial palette tokens & Libre Baskerville / Lato typography active"
+          ]
+        },
+        "interactiveTabsAndNavigation": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "4 domain-aligned sub-service tabs present (WORKSTATION & ERGONOMIC INTERFACE DESIGN, ENTERPRISE INFORMATION ARCHITECTURE & DASHBOARDS, E-COMMERCE CONVERSION & CHECKOUT FLOWS, SCALABLE DESIGN SYSTEMS & TOKEN ARCHITECTURE)",
+            "Sequential tab switching functional; panels reveal/hide properly",
+            "WAI-ARIA compliance verified ([role=\"tablist\"], [role=\"tab\"], [role=\"tabpanel\"])"
+          ]
+        },
+        "contentCompletenessAndHierarchy": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Single semantic h1 tag verified: \"UI/UX Architecture &\nProduct Design\"",
+            "Semantic heading hierarchy structured (3 h2, 10 h3 tags)",
+            "Title tag populated: \"ZERB — UI/UX Architecture & Product Design\"",
+            "SEO metadata & OpenGraph tags configured"
+          ]
+        }
+      },
+      "diagnostics": {
+        "consoleErrors": [],
+        "consoleWarnings": [],
+        "pageExceptions": [],
+        "failedRequests": [],
+        "themeStudioDetected": 0,
+        "horizontalOverflow": false,
+        "h1Count": 1,
+        "h2Count": 3,
+        "cardCount": 0,
+        "tabsDetected": 4,
+        "allTabsSwitchedSuccessfully": true
+      },
+      "screenshot": "critic-reports/screenshots/service-ui-ux-design.png"
+    },
+    {
+      "slug": "service-video-editing",
+      "title": "Video Editing Service",
+      "path": "/services/video-editing.html",
+      "url": "http://127.0.0.1:54390/services/video-editing.html",
+      "isServiceDetail": true,
+      "totalScore": 10,
+      "grade": "Great / Pass",
+      "passed": true,
+      "loadDurationMs": 10514,
+      "pillars": {
+        "runtimeAndConsoleHygiene": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Zero console errors (clean runtime)",
+            "Zero uncaught page exceptions",
+            "Zero 404 or failed network requests"
+          ]
+        },
+        "visualAndDesignTokens": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Zero legacy Theme Studio elements/scripts (fully purged)",
+            "Zero horizontal overflow (responsive bounds respected)",
+            "Imperial palette tokens & Libre Baskerville / Lato typography active"
+          ]
+        },
+        "interactiveTabsAndNavigation": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "4 domain-aligned sub-service tabs present (CORPORATE BRAND STORIES & TECH COMMERCIALS, CINEMATIC COLOR GRADING & WIDE-GAMUT FINISHING, MUSIC VIDEO RHYTHM EDITS & VISUAL FX, PRODUCT UI & KINETIC TYPOGRAPHY REELS)",
+            "Sequential tab switching functional; panels reveal/hide properly",
+            "WAI-ARIA compliance verified ([role=\"tablist\"], [role=\"tab\"], [role=\"tabpanel\"])"
+          ]
+        },
+        "contentCompletenessAndHierarchy": {
+          "score": 2.5,
+          "max": 2.5,
+          "notes": [
+            "Single semantic h1 tag verified: \"Video &\nMotion Design\"",
+            "Semantic heading hierarchy structured (3 h2, 10 h3 tags)",
+            "Title tag populated: \"ZERB — Video Editing & Motion Design\"",
+            "SEO metadata & OpenGraph tags configured"
+          ]
+        }
+      },
+      "diagnostics": {
+        "consoleErrors": [],
+        "consoleWarnings": [],
+        "pageExceptions": [],
+        "failedRequests": [],
+        "themeStudioDetected": 0,
+        "horizontalOverflow": false,
+        "h1Count": 1,
+        "h2Count": 3,
+        "cardCount": 0,
+        "tabsDetected": 4,
+        "allTabsSwitchedSuccessfully": true
+      },
+      "screenshot": "critic-reports/screenshots/service-video-editing.png"
+    }
+  ]
+}

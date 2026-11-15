@@ -63,9 +63,9 @@
     // Dynamic Particle Theme Recoloring
     function updateHeroParticlesTheme(accentHex, primaryTextHex, accentHoverHex) {
         if (!particlesGeometry) return;
-        const colorPrimary = new THREE.Color(accentHex || '#C4734A');
-        const colorSecondary = new THREE.Color(primaryTextHex || '#F5F0EB');
-        const colorTertiary = new THREE.Color(accentHoverHex || accentHex || '#E08758');
+        const colorPrimary = new THREE.Color(accentHex || '#C89D6C');
+        const colorSecondary = new THREE.Color(primaryTextHex || '#FAF5EE');
+        const colorTertiary = new THREE.Color(accentHoverHex || accentHex || '#DFBA8F');
         
         for (let i = 0; i < particlesCount * 3; i += 3) {
             let mixedColor;
@@ -93,9 +93,9 @@
     }
     
     // Initial color population using current CSS variables
-    const initAccent = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#C4734A';
-    const initText = getComputedStyle(document.documentElement).getPropertyValue('--text-primary').trim() || '#F5F0EB';
-    const initAccentHover = getComputedStyle(document.documentElement).getPropertyValue('--accent-hover').trim() || '#E08758';
+    const initAccent = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#C89D6C';
+    const initText = getComputedStyle(document.documentElement).getPropertyValue('--text-primary').trim() || '#FAF5EE';
+    const initAccentHover = getComputedStyle(document.documentElement).getPropertyValue('--accent-hover').trim() || '#DFBA8F';
     updateHeroParticlesTheme(initAccent, initText, initAccentHover);
     
     particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));

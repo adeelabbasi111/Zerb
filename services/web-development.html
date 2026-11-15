@@ -119,146 +119,364 @@
         </div>
     </div>
 
-    <!-- STICKY STACKING SHOWCASE SECTION (from web.html) -->
-    <section class="section project-stack-section" id="showcase">
+    <!-- INTERACTIVE SUB-SERVICES & SHOWCASE SECTION -->
+    <section class="section service-tabs-section" id="showcase">
         <div class="container">
             <div class="section-header reveal text-center" style="margin-bottom: var(--space-7);">
-                <span class="t-label" style="color: var(--accent); margin-bottom: var(--space-2); display: block;">ENGINEERED PRODUCTION SYSTEMS</span>
-                <h2 class="t-h1">Featured Web Projects</h2>
-                <p class="t-body-lg" style="max-width: 660px; margin: var(--space-2) auto 0;">
-                    Explore our deployed web platforms, native Web Audio DSP synthesis engines, and autonomous AI data pipelines. Scroll down to experience the stacked card progression.
+                <span class="t-label" style="color: var(--accent); margin-bottom: var(--space-2); display: block;">SPECIALIZED DISCIPLINES</span>
+                <h2 class="t-h1">Interactive Sub-Service Offerings</h2>
+                <p class="t-body-lg" style="max-width: 680px; margin: var(--space-2) auto 0;">
+                    Select an engineering discipline below to explore our technical specifications, deliverable checklists, production tech stack, and deployed client case studies.
                 </p>
             </div>
 
-            <div class="project-stack-container">
+            <!-- Tab Navigation (WAI-ARIA Compliant) -->
+            <div class="service-tabs-nav" role="tablist" aria-label="Web Development Specialized Disciplines">
+                <button type="button" class="service-tab-btn active" role="tab" id="tab-web-ecommerce" aria-selected="true" tabindex="0" aria-controls="panel-web-ecommerce">
+                    E-Commerce &amp; Headless Storefronts
+                </button>
+                <button type="button" class="service-tab-btn" role="tab" id="tab-web-saas" aria-selected="false" tabindex="-1" aria-controls="panel-web-saas">
+                    SaaS Platforms &amp; Autonomous Data Pipelines
+                </button>
+                <button type="button" class="service-tab-btn" role="tab" id="tab-web-webaudio" aria-selected="false" tabindex="-1" aria-controls="panel-web-webaudio">
+                    Web Audio DSP &amp; Real-Time Synthesis
+                </button>
+                <button type="button" class="service-tab-btn" role="tab" id="tab-web-behavioral" aria-selected="false" tabindex="-1" aria-controls="panel-web-behavioral">
+                    Interactive Behavioral Science &amp; Canvas Labs
+                </button>
+            </div>
+
+            <!-- Tab Panels Container -->
+            <div class="service-tab-panels">
                 
-                <!-- Card 01: BeatGrid -->
-                <article class="project-stack-card reveal">
-                    <div class="project-stack-media">
-                        <img src="../assets/images/projects/beatgrid-active.png" alt="BeatGrid Web Audio Sampler and 16-Step Looper" loading="lazy">
-                    </div>
-                    <div class="project-stack-content">
-                        <span class="project-stack-index">01</span>
-                        <h3 class="project-stack-title">BeatGrid &mdash; Web Audio Sampler &amp; Looper</h3>
-                        <p class="project-stack-desc">
-                            Sample-accurate 16-pad drum machine and polyphonic step sequencer built for the web. Implements Chris Wilson's dual-timer lookahead scheduler, Roger Linn shuffle/swing algorithms, and procedural drum synthesis via OfflineAudioContext with zero audio-visual latency.
-                        </p>
-                        <div class="project-stack-tags">
-                            <span class="project-stack-tag">Web Audio API</span>
-                            <span class="project-stack-tag">Lookahead Timing</span>
-                            <span class="project-stack-tag">OfflineAudioContext</span>
-                            <span class="project-stack-tag">Vanilla JS</span>
-                            <span class="project-stack-tag">WCAG AA</span>
+                <!-- Panel 1: E-Commerce & Headless Storefronts -->
+                <div class="service-tab-panel active" role="tabpanel" id="panel-web-ecommerce" aria-labelledby="tab-web-ecommerce" tabindex="0">
+                    <div class="service-tab-card">
+                        <div class="service-tab-grid">
+                            <div class="service-tab-info">
+                                <span class="service-badge-pill">&#9679; HIGH-CONVERSION ARCHITECTURE</span>
+                                <h3 class="service-tab-title">Scalable E-Commerce &amp; Headless Storefronts</h3>
+                                <p class="service-tab-desc">
+                                    We architect high-performance, conversion-engineered e-commerce ecosystems. By decoupling the presentation layer with headless Next.js Commerce and integrating custom checkout pipelines, we deliver sub-second product pages, international multi-currency billing, and real-time ERP inventory synchronization.
+                                </p>
+                                <h4 class="service-deliverables-title">&check; Deliverables &amp; Engineering Scope</h4>
+                                <div class="service-deliverables-grid">
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Headless Shopify Plus &amp; Next.js Commerce Storefronts</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Custom Stripe &amp; Global Multi-Currency Checkouts</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Real-Time Inventory Webhooks &amp; Order DSP Sync</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Sub-Second Page Loads (&lt; 0.9s Median LCP Across Devices)</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Automated Cart Recovery &amp; Retention Funnel Pipelines</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Conversion Rate Optimization (CRO) Infrastructure</span>
+                                    </div>
+                                </div>
+                                <span class="service-stack-title">Core Technology Stack:</span>
+                                <div class="service-stack-wrap">
+                                    <span class="service-stack-pill">Next.js Commerce</span>
+                                    <span class="service-stack-pill">Shopify Plus</span>
+                                    <span class="service-stack-pill">Stripe API</span>
+                                    <span class="service-stack-pill">TypeScript</span>
+                                    <span class="service-stack-pill">TailwindCSS</span>
+                                    <span class="service-stack-pill">PostgreSQL</span>
+                                    <span class="service-stack-pill">Redis Cache</span>
+                                </div>
+                                <div class="service-pane-action">
+                                    <a href="../contact.html?service=ecommerce" class="btn btn-primary">
+                                        Discuss Storefront Project &rarr;
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="service-tab-showcase">
+                                <article class="service-showcase-card">
+                                    <div class="service-showcase-media">
+                                        <img src="../assets/images/projects/xlovebeatz-hero.jpg" alt="XLoveBeats Storefront and DRM Platform" loading="lazy">
+                                    </div>
+                                    <div class="service-showcase-body">
+                                        <span class="service-showcase-label">FEATURED PRODUCTION CASE STUDY</span>
+                                        <h4 class="service-showcase-title">XLoveBeats &mdash; Audio Storefront &amp; DRM</h4>
+                                        <p class="service-showcase-desc">
+                                            Full-stack e-commerce marketplace and digital rights management platform for music producers. Features dynamic ReportLab PDF license certificate generation, encrypted download tokens, Razorpay gateway integration, and interactive waveform audio streaming.
+                                        </p>
+                                        <div class="project-stack-tags">
+                                            <span class="project-stack-tag">Flask</span>
+                                            <span class="project-stack-tag">SQLAlchemy</span>
+                                            <span class="project-stack-tag">Razorpay</span>
+                                            <span class="project-stack-tag">ReportLab PDF</span>
+                                            <span class="project-stack-tag">PostgreSQL</span>
+                                        </div>
+                                        <div class="service-showcase-links">
+                                            <a href="https://github.com/adeelabbasi111/XloveBeatz" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                                Inspect Repository &rarr;
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
                         </div>
-                        <div class="project-stack-links">
-                            <a href="https://github.com/adeelabbasi111/Beat-Grid" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                                Inspect Repository &rarr;
-                            </a>
-                        </div>
                     </div>
-                </article>
+                </div>
 
-                <!-- Card 02: AI News Research Engine -->
-                <article class="project-stack-card reveal">
-                    <div class="project-stack-media">
-                        <img src="../assets/images/projects/ai-news-scraper.jpg" alt="AI News Research & Content Generator" loading="lazy">
-                    </div>
-                    <div class="project-stack-content">
-                        <span class="project-stack-index">02</span>
-                        <h3 class="project-stack-title">AI News Research &amp; Autonomous Pipeline</h3>
-                        <p class="project-stack-desc">
-                            High-throughput FastAPI research engine leveraging Gemini 2.5 Flash and Google Search API. Employs local Trafilatura HTML sanitization to strip boilerplate before LLM ingest, cutting token costs by 65%. Automated transactional credit ledger with auto-refunding on pipeline failure.
-                        </p>
-                        <div class="project-stack-tags">
-                            <span class="project-stack-tag">FastAPI</span>
-                            <span class="project-stack-tag">Gemini 2.5 Flash</span>
-                            <span class="project-stack-tag">Trafilatura</span>
-                            <span class="project-stack-tag">Token Optimization</span>
-                            <span class="project-stack-tag">Python 3.11</span>
+                <!-- Panel 2: SaaS Platforms & Autonomous Data Pipelines -->
+                <div class="service-tab-panel" role="tabpanel" id="panel-web-saas" aria-labelledby="tab-web-saas" tabindex="0" hidden>
+                    <div class="service-tab-card">
+                        <div class="service-tab-grid">
+                            <div class="service-tab-info">
+                                <span class="service-badge-pill">&#9679; AUTONOMOUS DATA PIPELINES</span>
+                                <h3 class="service-tab-title">Complex SaaS Platforms &amp; Autonomous AI Pipelines</h3>
+                                <p class="service-tab-desc">
+                                    We architect robust, data-dense cloud applications and autonomous LLM extraction engines capable of handling continuous high throughput. Engineered with asynchronous microservices, resilient background task queues, and transactional ledger accounting.
+                                </p>
+                                <h4 class="service-deliverables-title">&check; Deliverables &amp; Engineering Scope</h4>
+                                <div class="service-deliverables-grid">
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Reactive Single-Page &amp; Cloud SaaS Multi-Tenant Systems</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Autonomous AI Research Pipelines &amp; Agent Infrastructure</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Trafilatura HTML Sanitization (-65% Token Cost Reduction)</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Transactional Credit Ledger with Automated Failover Refunds</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Enterprise OAuth2, JWT &amp; Role-Based Access Control (RBAC)</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Automated Docker CI/CD &amp; Multi-Region Cloud Deployment</span>
+                                    </div>
+                                </div>
+                                <span class="service-stack-title">Core Technology Stack:</span>
+                                <div class="service-stack-wrap">
+                                    <span class="service-stack-pill">FastAPI</span>
+                                    <span class="service-stack-pill">Python 3.11</span>
+                                    <span class="service-stack-pill">Gemini 2.5 Flash</span>
+                                    <span class="service-stack-pill">Trafilatura</span>
+                                    <span class="service-stack-pill">Docker</span>
+                                    <span class="service-stack-pill">PostgreSQL</span>
+                                    <span class="service-stack-pill">Redis</span>
+                                </div>
+                                <div class="service-pane-action">
+                                    <a href="../contact.html?service=saas" class="btn btn-primary">
+                                        Architect Your SaaS &rarr;
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="service-tab-showcase">
+                                <article class="service-showcase-card">
+                                    <div class="service-showcase-media">
+                                        <img src="../assets/images/projects/ai-news-scraper.jpg" alt="AI News Research & Content Generator" loading="lazy">
+                                    </div>
+                                    <div class="service-showcase-body">
+                                        <span class="service-showcase-label">FEATURED PRODUCTION CASE STUDY</span>
+                                        <h4 class="service-showcase-title">AI News Research &amp; Autonomous Pipeline</h4>
+                                        <p class="service-showcase-desc">
+                                            High-throughput FastAPI research engine leveraging Gemini 2.5 Flash and Google Search API. Employs local Trafilatura HTML sanitization to strip boilerplate before LLM ingest, cutting token costs by 65%. Automated transactional credit ledger with auto-refunding on pipeline failure.
+                                        </p>
+                                        <div class="project-stack-tags">
+                                            <span class="project-stack-tag">FastAPI</span>
+                                            <span class="project-stack-tag">Gemini 2.5 Flash</span>
+                                            <span class="project-stack-tag">Trafilatura</span>
+                                            <span class="project-stack-tag">Token Optimization</span>
+                                            <span class="project-stack-tag">Python 3.11</span>
+                                        </div>
+                                        <div class="service-showcase-links">
+                                            <a href="https://github.com/adeelabbasi111/News-Scraper" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                                Inspect Repository &rarr;
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
                         </div>
-                        <div class="project-stack-links">
-                            <a href="https://github.com/adeelabbasi111/News-Scraper" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                                Inspect Repository &rarr;
-                            </a>
-                        </div>
                     </div>
-                </article>
+                </div>
 
-                <!-- Card 03: XLoveBeats -->
-                <article class="project-stack-card reveal">
-                    <div class="project-stack-media">
-                        <img src="../assets/images/projects/xlovebeatz-hero.jpg" alt="XLoveBeats Storefront and DRM Platform" loading="lazy">
-                    </div>
-                    <div class="project-stack-content">
-                        <span class="project-stack-index">03</span>
-                        <h3 class="project-stack-title">XLoveBeats &mdash; Audio Storefront &amp; DRM</h3>
-                        <p class="project-stack-desc">
-                            Full-stack e-commerce marketplace and digital rights management platform for music producers. Features dynamic ReportLab PDF license certificate generation, encrypted download tokens, Razorpay gateway integration, and interactive waveform audio streaming.
-                        </p>
-                        <div class="project-stack-tags">
-                            <span class="project-stack-tag">Flask</span>
-                            <span class="project-stack-tag">SQLAlchemy</span>
-                            <span class="project-stack-tag">Razorpay</span>
-                            <span class="project-stack-tag">ReportLab PDF</span>
-                            <span class="project-stack-tag">PostgreSQL</span>
+                <!-- Panel 3: Web Audio DSP & Real-Time Synthesis -->
+                <div class="service-tab-panel" role="tabpanel" id="panel-web-webaudio" aria-labelledby="tab-web-webaudio" tabindex="0" hidden>
+                    <div class="service-tab-card">
+                        <div class="service-tab-grid">
+                            <div class="service-tab-info">
+                                <span class="service-badge-pill">&#9679; SAMPLE-ACCURATE BROWSER DSP</span>
+                                <h3 class="service-tab-title">Web Audio DSP &amp; Real-Time Synthesis</h3>
+                                <p class="service-tab-desc">
+                                    We push the modern web platform to its physical audio limits with low-latency Web Audio API graph engineering. From hardware-emulated polyphonic step sequencers to algorithmic audio synthesis, we achieve desktop-grade digital signal processing directly in browser sandboxes.
+                                </p>
+                                <h4 class="service-deliverables-title">&check; Deliverables &amp; Engineering Scope</h4>
+                                <div class="service-deliverables-grid">
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Sample-Accurate 16-Pad Drum Machine &amp; Looper Engines</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Chris Wilson Dual-Timer Lookahead Scheduler Integration</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Roger Linn Micro-Timing Shuffle &amp; Swing Logic</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>OfflineAudioContext Procedural Drum &amp; Tone Synthesis</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Zero-Latency Canvas Audio Visualizers &amp; Oscilloscopes</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Fully Accessible WCAG 2.1 AA Keyboard Drum Grid Matrix</span>
+                                    </div>
+                                </div>
+                                <span class="service-stack-title">Core Technology Stack:</span>
+                                <div class="service-stack-wrap">
+                                    <span class="service-stack-pill">Web Audio API</span>
+                                    <span class="service-stack-pill">OfflineAudioContext</span>
+                                    <span class="service-stack-pill">Lookahead Timing</span>
+                                    <span class="service-stack-pill">AudioWorklet</span>
+                                    <span class="service-stack-pill">Vanilla ES6+</span>
+                                    <span class="service-stack-pill">Canvas 2D</span>
+                                </div>
+                                <div class="service-pane-action">
+                                    <a href="../contact.html?service=audio-dsp" class="btn btn-primary">
+                                        Build Audio Web App &rarr;
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="service-tab-showcase">
+                                <article class="service-showcase-card">
+                                    <div class="service-showcase-media">
+                                        <img src="../assets/images/projects/beatgrid-active.png" alt="BeatGrid Web Audio Sampler and 16-Step Looper" loading="lazy">
+                                    </div>
+                                    <div class="service-showcase-body">
+                                        <span class="service-showcase-label">FEATURED PRODUCTION CASE STUDY</span>
+                                        <h4 class="service-showcase-title">BeatGrid &mdash; Web Audio Sampler &amp; Looper</h4>
+                                        <p class="service-showcase-desc">
+                                            Sample-accurate 16-pad drum machine and polyphonic step sequencer built for the web. Implements Chris Wilson's dual-timer lookahead scheduler, Roger Linn shuffle/swing algorithms, and procedural drum synthesis via OfflineAudioContext with zero audio-visual latency.
+                                        </p>
+                                        <div class="project-stack-tags">
+                                            <span class="project-stack-tag">Web Audio API</span>
+                                            <span class="project-stack-tag">Lookahead Timing</span>
+                                            <span class="project-stack-tag">OfflineAudioContext</span>
+                                            <span class="project-stack-tag">Vanilla JS</span>
+                                            <span class="project-stack-tag">WCAG AA</span>
+                                        </div>
+                                        <div class="service-showcase-links">
+                                            <a href="https://github.com/adeelabbasi111/Beat-Grid" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                                Inspect Repository &rarr;
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
                         </div>
-                        <div class="project-stack-links">
-                            <a href="https://github.com/adeelabbasi111/XloveBeatz" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                                Inspect Repository &rarr;
-                            </a>
-                        </div>
                     </div>
-                </article>
+                </div>
 
-                <!-- Card 04: mosquitobusters.pk -->
-                <article class="project-stack-card reveal">
-                    <div class="project-stack-media">
-                        <img src="../assets/images/project-branding.jpg" alt="mosquitobusters.pk Commercial Web Platform" loading="lazy">
-                    </div>
-                    <div class="project-stack-content">
-                        <span class="project-stack-index">04</span>
-                        <h3 class="project-stack-title">mosquitobusters.pk &mdash; Commercial Platform</h3>
-                        <p class="project-stack-desc">
-                            High-conversion production web platform engineered for a leading pest management enterprise. Implements interactive service pricing calculators, direct WhatsApp lead dispatch, and responsive layouts engineered for sub-second load times on 3G/4G networks.
-                        </p>
-                        <div class="project-stack-tags">
-                            <span class="project-stack-tag">Commercial Web</span>
-                            <span class="project-stack-tag">Lead Conversion</span>
-                            <span class="project-stack-tag">WhatsApp API</span>
-                            <span class="project-stack-tag">Performance SEO</span>
+                <!-- Panel 4: Interactive Behavioral Science & Canvas Labs -->
+                <div class="service-tab-panel" role="tabpanel" id="panel-web-behavioral" aria-labelledby="tab-web-behavioral" tabindex="0" hidden>
+                    <div class="service-tab-card">
+                        <div class="service-tab-grid">
+                            <div class="service-tab-info">
+                                <span class="service-badge-pill">&#9679; BEHAVIORAL SCIENCE &amp; GRAPHICS</span>
+                                <h3 class="service-tab-title">Interactive Behavioral Science &amp; Canvas Labs</h3>
+                                <p class="service-tab-desc">
+                                    We engineer interactive digital platforms that translate cognitive behavioral psychology into sustained daily momentum. Combining habit-loop mechanics with hardware-accelerated HTML5 Canvas graphics, tactile audio feedback, and zero-loss client persistence.
+                                </p>
+                                <h4 class="service-deliverables-title">&check; Deliverables &amp; Engineering Scope</h4>
+                                <div class="service-deliverables-grid">
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Cognitive Behavioral Psychology Habit Loop Systems</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Hardware-Accelerated 2D Canvas Milestone Visualizations</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Procedural Synthesized Web Audio Clicks &amp; Micro-Tones</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>LocalStorage &amp; IndexedDB Zero-Loss State Persistence</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Fluid Physics-Based Micro-Interactions &amp; Particle Dynamics</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>High-Conversion Lead Capture Funnels (WhatsApp &amp; APIs)</span>
+                                    </div>
+                                </div>
+                                <span class="service-stack-title">Core Technology Stack:</span>
+                                <div class="service-stack-wrap">
+                                    <span class="service-stack-pill">Interactive Canvas</span>
+                                    <span class="service-stack-pill">Web Audio API</span>
+                                    <span class="service-stack-pill">Behavioral Science</span>
+                                    <span class="service-stack-pill">Local Persistence</span>
+                                    <span class="service-stack-pill">Vanilla JS</span>
+                                    <span class="service-stack-pill">Responsive Layouts</span>
+                                </div>
+                                <div class="service-pane-action">
+                                    <a href="../contact.html?service=behavioral" class="btn btn-primary">
+                                        Create Interactive Experience &rarr;
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="service-tab-showcase">
+                                <article class="service-showcase-card">
+                                    <div class="service-showcase-media">
+                                        <img src="../assets/images/project-game.jpg" alt="The Chain Reaction Interactive Web Application" loading="lazy">
+                                    </div>
+                                    <div class="service-showcase-body">
+                                        <span class="service-showcase-label">FEATURED PRODUCTION CASE STUDY</span>
+                                        <h4 class="service-showcase-title">The Chain Reaction &mdash; Habit Psychology Lab</h4>
+                                        <p class="service-showcase-desc">
+                                            Interactive behavioral web application applying cognitive psychology and habit loop mechanics. Features custom canvas milestone visualizations, synthesized audio click responses, persistent state storage, and micro-interactions designed to sustain daily momentum.
+                                        </p>
+                                        <div class="project-stack-tags">
+                                            <span class="project-stack-tag">Interactive Canvas</span>
+                                            <span class="project-stack-tag">Web Audio API</span>
+                                            <span class="project-stack-tag">Behavioral Science</span>
+                                            <span class="project-stack-tag">Local Persistence</span>
+                                        </div>
+                                        <div class="service-showcase-links">
+                                            <a href="https://github.com/adeelabbasi111/The-Chain-Reaction" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                                Inspect Repository &rarr;
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
                         </div>
-                        <div class="project-stack-links">
-                            <a href="https://github.com/adeelabbasi111/mosquitobusters.pk" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                                Inspect Repository &rarr;
-                            </a>
-                        </div>
                     </div>
-                </article>
-
-                <!-- Card 05: The Chain Reaction -->
-                <article class="project-stack-card reveal">
-                    <div class="project-stack-media">
-                        <img src="../assets/images/project-game.jpg" alt="The Chain Reaction Interactive Web Application" loading="lazy">
-                    </div>
-                    <div class="project-stack-content">
-                        <span class="project-stack-index">05</span>
-                        <h3 class="project-stack-title">The Chain Reaction &mdash; Habit Psychology Lab</h3>
-                        <p class="project-stack-desc">
-                            Interactive behavioral web application applying cognitive psychology and habit loop mechanics. Features custom canvas milestone visualizations, synthesized audio click responses, persistent state storage, and micro-interactions designed to sustain daily momentum.
-                        </p>
-                        <div class="project-stack-tags">
-                            <span class="project-stack-tag">Interactive Canvas</span>
-                            <span class="project-stack-tag">Web Audio API</span>
-                            <span class="project-stack-tag">Behavioral Science</span>
-                            <span class="project-stack-tag">Local Persistence</span>
-                        </div>
-                        <div class="project-stack-links">
-                            <a href="https://github.com/adeelabbasi111/The-Chain-Reaction" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                                Inspect Repository &rarr;
-                            </a>
-                        </div>
-                    </div>
-                </article>
+                </div>
 
             </div>
         </div>
@@ -346,5 +564,6 @@
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
     <script src="../js/core.js?v=2.2"></script>
     <script src="../js/animations.js?v=2.2"></script>
+    <script src="../js/pages/service-tabs.js"></script>
 </body>
 </html>

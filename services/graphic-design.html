@@ -113,15 +113,15 @@
             </div>
 
             <!-- Tab Navigation -->
-            <div class="portfolio-nav reveal">
-                <button class="nav-btn active" data-target="manipulation">Manipulation</button>
-                <button class="nav-btn" data-target="restoration">Restoration</button>
-                <button class="nav-btn" data-target="retouching">Editing &amp; Retouching</button>
-                <button class="nav-btn" data-target="design">Graphic Design</button>
+            <div class="service-tabs-nav portfolio-nav" role="tablist" aria-label="Graphic Design Disciplines">
+                <button type="button" class="service-tab-btn nav-btn active" role="tab" id="tab-manipulation" aria-selected="true" tabindex="0" aria-controls="manipulation" data-target="manipulation">Creative Photo Manipulation</button>
+                <button type="button" class="service-tab-btn nav-btn" role="tab" id="tab-restoration" aria-selected="false" tabindex="-1" aria-controls="restoration" data-target="restoration">Archival Photo Restoration</button>
+                <button type="button" class="service-tab-btn nav-btn" role="tab" id="tab-retouching" aria-selected="false" tabindex="-1" aria-controls="retouching" data-target="retouching">Editorial Retouching &amp; Color Science</button>
+                <button type="button" class="service-tab-btn nav-btn" role="tab" id="tab-design" aria-selected="false" tabindex="-1" aria-controls="design" data-target="design">Brand Identity &amp; Commercial Systems</button>
             </div>
 
             <!-- 1. MANIPULATION SECTION -->
-            <div id="manipulation" class="portfolio-section active">
+            <div id="manipulation" class="service-tab-panel portfolio-section active" role="tabpanel" aria-labelledby="tab-manipulation" tabindex="0">
                 <p class="t-body text-center" style="color: var(--text-secondary); max-width: 720px; margin: 0 auto var(--space-6); line-height: 1.6;">
                     Creative photo manipulation including seamless distraction removal, contextual background replacements, and surreal composite scene creation with realistic lighting and shadow integration.
                 </p>
@@ -162,7 +162,7 @@
             </div>
 
             <!-- 2. RESTORATION SECTION -->
-            <div id="restoration" class="portfolio-section">
+            <div id="restoration" class="service-tab-panel portfolio-section" role="tabpanel" aria-labelledby="tab-restoration" tabindex="0" hidden>
                 <p class="t-body text-center" style="color: var(--text-secondary); max-width: 720px; margin: 0 auto var(--space-6); line-height: 1.6;">
                     Archival photo restoration reviving heavily degraded, scratched, or blurred photographs, recovering forgotten facial details and historic memories using modern digital darkroom techniques.
                 </p>
@@ -203,7 +203,7 @@
             </div>
 
             <!-- 3. RETOUCHING SECTION -->
-            <div id="retouching" class="portfolio-section">
+            <div id="retouching" class="service-tab-panel portfolio-section" role="tabpanel" aria-labelledby="tab-retouching" tabindex="0" hidden>
                 <p class="t-body text-center" style="color: var(--text-secondary); max-width: 720px; margin: 0 auto var(--space-6); line-height: 1.6;">
                     Editorial portrait and product retouching featuring frequency separation, micro-dodge-and-burn, blemish elimination, and precise anatomical contouring.
                 </p>
@@ -244,7 +244,7 @@
             </div>
 
             <!-- 4. GRAPHIC DESIGN SECTION -->
-            <div id="design" class="portfolio-section">
+            <div id="design" class="service-tab-panel portfolio-section" role="tabpanel" aria-labelledby="tab-design" tabindex="0" hidden>
                 <p class="t-body text-center" style="color: var(--text-secondary); max-width: 720px; margin: 0 auto var(--space-6); line-height: 1.6;">
                     Comprehensive graphic design and identity systems including vector monogram marks, commercial stationery superimposition, and custom digital promotional artwork.
                 </p>
@@ -285,7 +285,7 @@
             </div>
 
             <!-- Section Navigation Controls -->
-            <div class="section-nav-flex reveal">
+            <div class="section-nav-flex">
                 <button id="prev-section-btn" class="section-nav-btn" disabled>
                     &larr; Previous Category
                 </button>
@@ -397,6 +397,6 @@
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
     <script src="../js/core.js?v=2.2"></script>
     <script src="../js/animations.js?v=2.2"></script>
-    <script src="../js/pages/graphic-design.js?v=2.2"></script>
+    <script src="../js/pages/service-tabs.js"></script>
 </body>
 </html>

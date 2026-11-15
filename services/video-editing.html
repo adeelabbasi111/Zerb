@@ -114,118 +114,359 @@
         </div>
     </div>
 
-    <!-- STICKY STACKING SHOWCASE SECTION -->
-    <section class="section project-stack-section" id="showcase">
+    <!-- INTERACTIVE SUB-SERVICES & SHOWCASE SECTION -->
+    <section class="section service-tabs-section" id="showcase">
         <div class="container">
             <div class="section-header reveal text-center" style="margin-bottom: var(--space-7);">
-                <span class="t-label" style="color: var(--accent); margin-bottom: var(--space-2); display: block;">ENGINEERED PRODUCTION SYSTEMS</span>
-                <h2 class="t-h1">Featured Video &amp; Motion Projects</h2>
+                <span class="t-label" style="color: var(--accent); margin-bottom: var(--space-2); display: block;">SPECIALIZED DISCIPLINES</span>
+                <h2 class="t-h1">Interactive Sub-Service Offerings</h2>
                 <p class="t-body-lg" style="max-width: 660px; margin: var(--space-2) auto 0;">
-                    Explore our commercial brand stories, color grades, and motion graphics reels. Scroll down to experience the stacked card progression.
+                    Explore our commercial brand stories, wide-gamut cinematic color grading, music video rhythm cutting, and kinetic UI motion graphics reels.
                 </p>
             </div>
 
-            <div class="project-stack-container">
-                
-                <!-- Card 01: Corporate Brand Story -->
-                <article class="project-stack-card reveal">
-                    <div class="project-stack-media">
-                        <video src="../assets/videos/section-2-bg.mp4" autoplay muted loop playsinline></video>
-                    </div>
-                    <div class="project-stack-content">
-                        <span class="project-stack-index">01</span>
-                        <h3 class="project-stack-title">Corporate Brand Story &amp; Tech Commercial</h3>
-                        <p class="project-stack-desc">
-                            A high-production narrative crafted for technology and venture-backed startups. Features rhythmic pacing, custom Foley sound design, and surgical color grading that communicates authority and innovation.
-                        </p>
-                        <div class="project-stack-tags">
-                            <span class="project-stack-tag">Premiere Pro</span>
-                            <span class="project-stack-tag">Sound Design</span>
-                            <span class="project-stack-tag">Narrative Flow</span>
-                            <span class="project-stack-tag">4K Master</span>
-                        </div>
-                        <div class="project-stack-links">
-                            <a href="../contact.html" class="btn btn-primary">
-                                Discuss Video Project &rarr;
-                            </a>
-                        </div>
-                    </div>
-                </article>
+            <!-- Tab Navigation (WAI-ARIA Compliant) -->
+            <div class="service-tabs-nav" role="tablist" aria-label="Video Editing Specialized Disciplines">
+                <button type="button" class="service-tab-btn active" role="tab" id="tab-video-corporate" aria-selected="true" tabindex="0" aria-controls="panel-video-corporate">
+                    Corporate Brand Stories &amp; Tech Commercials
+                </button>
+                <button type="button" class="service-tab-btn" role="tab" id="tab-video-grading" aria-selected="false" tabindex="-1" aria-controls="panel-video-grading">
+                    Cinematic Color Grading &amp; Wide-Gamut Finishing
+                </button>
+                <button type="button" class="service-tab-btn" role="tab" id="tab-video-rhythm" aria-selected="false" tabindex="-1" aria-controls="panel-video-rhythm">
+                    Music Video Rhythm Edits &amp; Visual FX
+                </button>
+                <button type="button" class="service-tab-btn" role="tab" id="tab-video-motion" aria-selected="false" tabindex="-1" aria-controls="panel-video-motion">
+                    Product UI &amp; Kinetic Typography Reels
+                </button>
+            </div>
 
-                <!-- Card 02: Cinematic Travel Narrative -->
-                <article class="project-stack-card reveal">
-                    <div class="project-stack-media">
-                        <video src="../assets/videos/portrait-animation-bw.mp4" autoplay muted loop playsinline></video>
-                    </div>
-                    <div class="project-stack-content">
-                        <span class="project-stack-index">02</span>
-                        <h3 class="project-stack-title">Cinematic Travel Narrative &amp; Color Grade</h3>
-                        <p class="project-stack-desc">
-                            Dynamic visual storytelling capturing the kinetic atmosphere of global travel. Features wide-gamut logarithmic color grading, speed ramps, and seamless whip transitions synchronized to acoustic soundscapes.
-                        </p>
-                        <div class="project-stack-tags">
-                            <span class="project-stack-tag">DaVinci Resolve</span>
-                            <span class="project-stack-tag">Lumetri Color</span>
-                            <span class="project-stack-tag">Speed Ramping</span>
-                            <span class="project-stack-tag">Color Grading</span>
-                        </div>
-                        <div class="project-stack-links">
-                            <a href="../contact.html" class="btn btn-primary">
-                                Discuss Video Project &rarr;
-                            </a>
-                        </div>
-                    </div>
-                </article>
+            <!-- Tab Panels Container -->
+            <div class="service-tab-panels">
 
-                <!-- Card 03: Indie Music Video Rhythm Edit -->
-                <article class="project-stack-card reveal">
-                    <div class="project-stack-media">
-                        <video src="../assets/videos/Kinetic Particles.mp4" autoplay muted loop playsinline></video>
-                    </div>
-                    <div class="project-stack-content">
-                        <span class="project-stack-index">03</span>
-                        <h3 class="project-stack-title">Music Video Rhythm Edit &amp; Visual FX</h3>
-                        <p class="project-stack-desc">
-                            Frame-accurate rhythmic cutting locked to drum transients and baseline beats. Features custom glitch shaders, kinetic particle overlays, and atmospheric lighting grading that amplifies the artist's musical narrative.
-                        </p>
-                        <div class="project-stack-tags">
-                            <span class="project-stack-tag">After Effects</span>
-                            <span class="project-stack-tag">Rhythm Cutting</span>
-                            <span class="project-stack-tag">Audio Sync</span>
-                            <span class="project-stack-tag">Visual FX</span>
+                <!-- Panel 1: Corporate Brand Stories & Tech Commercials -->
+                <div class="service-tab-panel active" role="tabpanel" id="panel-video-corporate" aria-labelledby="tab-video-corporate" tabindex="0">
+                    <div class="service-tab-card">
+                        <div class="service-tab-grid">
+                            <div class="service-tab-info">
+                                <span class="service-badge-pill">&#9679; BRAND NARRATIVE &amp; COMMERCIAL</span>
+                                <h3 class="service-tab-title">Corporate Brand Stories &amp; Tech Commercials</h3>
+                                <p class="service-tab-desc">
+                                    High-production brand narratives crafted for venture-backed tech startups and global enterprises. Features rhythmic pacing, bespoke Foley sound design, strategic problem-solution structuring, and surgical color grading that communicates leadership and trust.
+                                </p>
+                                <h4 class="service-deliverables-title">&check; Deliverables &amp; Engineering Scope</h4>
+                                <div class="service-deliverables-grid">
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>High-Production Brand Narratives for VC &amp; Tech Startups</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Information-Dense Story Arc &amp; Strategic Problem-Solution Flow</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Multi-Layer Foley Sound Architecture &amp; Dynamic Acoustic Mixing</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Mastered Dynamic Range Delivery (ProRes Broadcast &amp; Web H.265)</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Strategic B-Roll Selection &amp; Visual Metaphor Assembly</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>4K Master Deliverables with Full Asset Stems &amp; Clean Feeds</span>
+                                    </div>
+                                </div>
+                                <span class="service-stack-title">Core Technology Stack:</span>
+                                <div class="service-stack-wrap">
+                                    <span class="service-stack-pill">Premiere Pro</span>
+                                    <span class="service-stack-pill">Sound Design</span>
+                                    <span class="service-stack-pill">Narrative Flow</span>
+                                    <span class="service-stack-pill">4K Master</span>
+                                    <span class="service-stack-pill">DaVinci Resolve</span>
+                                    <span class="service-stack-pill">ProRes 422 HQ</span>
+                                </div>
+                                <div class="service-pane-action">
+                                    <a href="../contact.html?service=commercials" class="btn btn-primary">
+                                        Discuss Commercial &rarr;
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="service-tab-showcase">
+                                <article class="service-showcase-card">
+                                    <div class="service-showcase-media">
+                                        <video src="../assets/videos/section-2-bg.mp4" autoplay muted loop playsinline></video>
+                                    </div>
+                                    <div class="service-showcase-body">
+                                        <span class="service-showcase-label">FEATURED PRODUCTION CASE STUDY</span>
+                                        <h4 class="service-showcase-title">Corporate Brand Story &amp; Tech Commercial</h4>
+                                        <p class="service-showcase-desc">
+                                            A high-production narrative crafted for technology and venture-backed startups. Features rhythmic pacing, custom Foley sound design, and surgical color grading that communicates authority and innovation.
+                                        </p>
+                                        <div class="project-stack-tags">
+                                            <span class="project-stack-tag">Premiere Pro</span>
+                                            <span class="project-stack-tag">Sound Design</span>
+                                            <span class="project-stack-tag">Narrative Flow</span>
+                                            <span class="project-stack-tag">4K Master</span>
+                                        </div>
+                                        <div class="service-showcase-links">
+                                            <a href="../contact.html" class="btn btn-primary">
+                                                Discuss Video Project &rarr;
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
                         </div>
-                        <div class="project-stack-links">
-                            <a href="../contact.html" class="btn btn-primary">
-                                Discuss Video Project &rarr;
-                            </a>
-                        </div>
                     </div>
-                </article>
+                </div>
 
-                <!-- Card 04: Product UI Motion Reel -->
-                <article class="project-stack-card reveal">
-                    <div class="project-stack-media">
-                        <video src="../assets/videos/liquid animation.mp4" autoplay muted loop playsinline></video>
-                    </div>
-                    <div class="project-stack-content">
-                        <span class="project-stack-index">04</span>
-                        <h3 class="project-stack-title">Product UI &amp; Motion Graphics Reel</h3>
-                        <p class="project-stack-desc">
-                            High-engagement product feature videos and isometric device walkthroughs. Implements kinetic typography, animated interface mockups, branded lower-thirds, and micro-motion highlights designed for high social conversion.
-                        </p>
-                        <div class="project-stack-tags">
-                            <span class="project-stack-tag">After Effects</span>
-                            <span class="project-stack-tag">UI Animation</span>
-                            <span class="project-stack-tag">Kinetic Type</span>
-                            <span class="project-stack-tag">Product Walkthrough</span>
+                <!-- Panel 2: Cinematic Color Grading & Wide-Gamut Finishing -->
+                <div class="service-tab-panel" role="tabpanel" id="panel-video-grading" aria-labelledby="tab-video-grading" tabindex="0" hidden>
+                    <div class="service-tab-card">
+                        <div class="service-tab-grid">
+                            <div class="service-tab-info">
+                                <span class="service-badge-pill">&#9679; WIDE-GAMUT LOGARITHMIC FINISHING</span>
+                                <h3 class="service-tab-title">Cinematic Color Grading &amp; Wide-Gamut Finishing</h3>
+                                <p class="service-tab-desc">
+                                    Dynamic visual storytelling capturing the kinetic atmosphere of high-end productions. Features wide-gamut logarithmic camera profile normalization (Arri, Sony, RED), film emulation tone curves, precision skin tone isolation, and atmospheric color separation.
+                                </p>
+                                <h4 class="service-deliverables-title">&check; Deliverables &amp; Engineering Scope</h4>
+                                <div class="service-deliverables-grid">
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Wide-Gamut Logarithmic Camera Profile Normalization (Arri/Sony/RED)</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Custom Film Stock Emulation &amp; Photochemical Tone Curves</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Precise Skin Tone Isolation &amp; Micro-Contrast Balancing</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Atmospheric Color Separation (Moody Bronze, Deep Shadows)</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>High Dynamic Range (HDR) Color Grading in DaVinci Resolve Studio</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Broadcast Legalization &amp; Multi-Display Gamut Calibration</span>
+                                    </div>
+                                </div>
+                                <span class="service-stack-title">Core Technology Stack:</span>
+                                <div class="service-stack-wrap">
+                                    <span class="service-stack-pill">DaVinci Resolve</span>
+                                    <span class="service-stack-pill">Lumetri Color</span>
+                                    <span class="service-stack-pill">ACES Workflow</span>
+                                    <span class="service-stack-pill">Color Science</span>
+                                    <span class="service-stack-pill">Wide Gamut</span>
+                                    <span class="service-stack-pill">HDR10</span>
+                                </div>
+                                <div class="service-pane-action">
+                                    <a href="../contact.html?service=color-grading" class="btn btn-primary">
+                                        Book Color Grading &rarr;
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="service-tab-showcase">
+                                <article class="service-showcase-card">
+                                    <div class="service-showcase-media">
+                                        <video src="../assets/videos/portrait-animation-bw.mp4" autoplay muted loop playsinline></video>
+                                    </div>
+                                    <div class="service-showcase-body">
+                                        <span class="service-showcase-label">FEATURED PRODUCTION CASE STUDY</span>
+                                        <h4 class="service-showcase-title">Cinematic Travel Narrative &amp; Color Grade</h4>
+                                        <p class="service-showcase-desc">
+                                            Dynamic visual storytelling capturing the kinetic atmosphere of global travel. Features wide-gamut logarithmic color grading, speed ramps, and seamless whip transitions synchronized to acoustic soundscapes.
+                                        </p>
+                                        <div class="project-stack-tags">
+                                            <span class="project-stack-tag">DaVinci Resolve</span>
+                                            <span class="project-stack-tag">Lumetri Color</span>
+                                            <span class="project-stack-tag">Speed Ramping</span>
+                                            <span class="project-stack-tag">Color Grading</span>
+                                        </div>
+                                        <div class="service-showcase-links">
+                                            <a href="../contact.html" class="btn btn-primary">
+                                                Discuss Video Project &rarr;
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
                         </div>
-                        <div class="project-stack-links">
-                            <a href="../contact.html" class="btn btn-primary">
-                                Discuss Motion Project &rarr;
-                            </a>
+                    </div>
+                </div>
+
+                <!-- Panel 3: Music Video Rhythm Edits & Visual FX -->
+                <div class="service-tab-panel" role="tabpanel" id="panel-video-rhythm" aria-labelledby="tab-video-rhythm" tabindex="0" hidden>
+                    <div class="service-tab-card">
+                        <div class="service-tab-grid">
+                            <div class="service-tab-info">
+                                <span class="service-badge-pill">&#9679; KINETIC RHYTHM &amp; VISUAL FX</span>
+                                <h3 class="service-tab-title">Music Video Rhythm Edits &amp; Visual FX</h3>
+                                <p class="service-tab-desc">
+                                    Frame-accurate rhythmic cutting locked to drum transients and musical pacing. Features custom glitch shaders, kinetic particle overlays, speed ramps, and atmospheric lighting grading that amplifies the artist's musical narrative.
+                                </p>
+                                <h4 class="service-deliverables-title">&check; Deliverables &amp; Engineering Scope</h4>
+                                <div class="service-deliverables-grid">
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Frame-Accurate Cutting Locked to Drum Transients &amp; BPM Pacing</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Custom Procedural Glitch Shaders &amp; Geometric Distortion FX</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Kinetic Particle Overlay Generation &amp; Atmospheric Light Leaks</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Speed Ramps &amp; Flow-State Whip Pan Camera Transitions</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Atmospheric Split-Toning &amp; Vintage Grain Synthesis</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Multi-Aspect Ratio Deliverables (16:9 Cinema, 9:16 Social, 1:1)</span>
+                                    </div>
+                                </div>
+                                <span class="service-stack-title">Core Technology Stack:</span>
+                                <div class="service-stack-wrap">
+                                    <span class="service-stack-pill">After Effects</span>
+                                    <span class="service-stack-pill">Rhythm Cutting</span>
+                                    <span class="service-stack-pill">Audio Sync</span>
+                                    <span class="service-stack-pill">Visual FX</span>
+                                    <span class="service-stack-pill">Boris FX</span>
+                                    <span class="service-stack-pill">Color Timing</span>
+                                </div>
+                                <div class="service-pane-action">
+                                    <a href="../contact.html?service=music-video" class="btn btn-primary">
+                                        Edit Music Video &rarr;
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="service-tab-showcase">
+                                <article class="service-showcase-card">
+                                    <div class="service-showcase-media">
+                                        <video src="../assets/videos/Kinetic Particles.mp4" autoplay muted loop playsinline></video>
+                                    </div>
+                                    <div class="service-showcase-body">
+                                        <span class="service-showcase-label">FEATURED PRODUCTION CASE STUDY</span>
+                                        <h4 class="service-showcase-title">Music Video Rhythm Edit &amp; Visual FX</h4>
+                                        <p class="service-showcase-desc">
+                                            Frame-accurate rhythmic cutting locked to drum transients and baseline beats. Features custom glitch shaders, kinetic particle overlays, and atmospheric lighting grading that amplifies the artist's musical narrative.
+                                        </p>
+                                        <div class="project-stack-tags">
+                                            <span class="project-stack-tag">After Effects</span>
+                                            <span class="project-stack-tag">Rhythm Cutting</span>
+                                            <span class="project-stack-tag">Audio Sync</span>
+                                            <span class="project-stack-tag">Visual FX</span>
+                                        </div>
+                                        <div class="service-showcase-links">
+                                            <a href="../contact.html" class="btn btn-primary">
+                                                Discuss Video Project &rarr;
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
                         </div>
                     </div>
-                </article>
+                </div>
+
+                <!-- Panel 4: Product UI & Kinetic Typography Reels -->
+                <div class="service-tab-panel" role="tabpanel" id="panel-video-motion" aria-labelledby="tab-video-motion" tabindex="0" hidden>
+                    <div class="service-tab-card">
+                        <div class="service-tab-grid">
+                            <div class="service-tab-info">
+                                <span class="service-badge-pill">&#9679; PRODUCT UI &amp; MOTION GRAPHICS</span>
+                                <h3 class="service-tab-title">Product UI &amp; Kinetic Typography Reels</h3>
+                                <p class="service-tab-desc">
+                                    High-engagement product feature videos and isometric device walkthroughs. Implements kinetic typography, animated interface mockups, branded lower-thirds, and micro-motion highlights designed for high social conversion.
+                                </p>
+                                <h4 class="service-deliverables-title">&check; Deliverables &amp; Engineering Scope</h4>
+                                <div class="service-deliverables-grid">
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Isometric 3D Device Screen Replacements &amp; Interface Walkthroughs</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Kinetic Typography Sequences Synced to Voiceover Timings</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Animated Micro-Interactions &amp; UI Cursor Motion Paths</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>Branded Lower Thirds, HUDs &amp; Feature Highlight Graphics</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>High-Engagement Social Ad Cuts (LinkedIn, Meta, YouTube)</span>
+                                    </div>
+                                    <div class="service-deliverable-item">
+                                        <span class="service-check-icon">&check;</span>
+                                        <span>60 FPS Render Exports Optimized for Web &amp; Ad Networks</span>
+                                    </div>
+                                </div>
+                                <span class="service-stack-title">Core Technology Stack:</span>
+                                <div class="service-stack-wrap">
+                                    <span class="service-stack-pill">After Effects</span>
+                                    <span class="service-stack-pill">UI Animation</span>
+                                    <span class="service-stack-pill">Kinetic Type</span>
+                                    <span class="service-stack-pill">Product Walkthrough</span>
+                                    <span class="service-stack-pill">3D Camera</span>
+                                    <span class="service-stack-pill">Motion Graphics</span>
+                                </div>
+                                <div class="service-pane-action">
+                                    <a href="../contact.html?service=ui-motion" class="btn btn-primary">
+                                        Create Motion Reel &rarr;
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="service-tab-showcase">
+                                <article class="service-showcase-card">
+                                    <div class="service-showcase-media">
+                                        <video src="../assets/videos/liquid animation.mp4" autoplay muted loop playsinline></video>
+                                    </div>
+                                    <div class="service-showcase-body">
+                                        <span class="service-showcase-label">FEATURED PRODUCTION CASE STUDY</span>
+                                        <h4 class="service-showcase-title">Product UI &amp; Motion Graphics Reel</h4>
+                                        <p class="service-showcase-desc">
+                                            High-engagement product feature videos and isometric device walkthroughs. Implements kinetic typography, animated interface mockups, branded lower-thirds, and micro-motion highlights designed for high social conversion.
+                                        </p>
+                                        <div class="project-stack-tags">
+                                            <span class="project-stack-tag">After Effects</span>
+                                            <span class="project-stack-tag">UI Animation</span>
+                                            <span class="project-stack-tag">Kinetic Type</span>
+                                            <span class="project-stack-tag">Product Walkthrough</span>
+                                        </div>
+                                        <div class="service-showcase-links">
+                                            <a href="../contact.html" class="btn btn-primary">
+                                                Discuss Motion Project &rarr;
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -313,5 +554,6 @@
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
     <script src="../js/core.js?v=2.2"></script>
     <script src="../js/animations.js?v=2.2"></script>
+    <script src="../js/pages/service-tabs.js"></script>
 </body>
 </html>

@@ -25,6 +25,30 @@ body::-webkit-scrollbar,
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+.hero-content {
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+@media (max-width: 360px) {
+  .hero-title {
+    font-size: clamp(1.4rem, 6.5vw, 1.75rem) !important;
+    line-height: 1.2 !important;
+  }
+  .hero-title .line-inner {
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+}
 /* ============================================================================
    ZERB LAYOUT
    Navigation, Footer, Section Structures

@@ -101,6 +101,7 @@ html {
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 /* Lenis overrides */
@@ -300,8 +301,16 @@ body::after {
 }
 
 /* Brand logo persists across page transitions */
-.brand-logo {
+header .brand-logo,
+nav .brand-logo,
+.site-header .brand-logo {
   view-transition-name: zerb-logo;
+}
+
+footer .brand-logo,
+.site-footer .brand-logo,
+.footer-logo {
+  view-transition-name: none !important;
 }
 
 /* ============================================================================
@@ -355,6 +364,16 @@ body::after {
   font-weight: 500;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 360px) {
+  .badge-status {
+    font-size: 0.6875rem;
+    white-space: normal;
+    text-align: left;
+  }
 }
 
 .pulse-dot {

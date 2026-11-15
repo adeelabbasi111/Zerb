@@ -77,6 +77,14 @@
   padding: var(--space-5) var(--space-7);
 }
 
+@media (max-width: 360px) {
+  .btn-lg {
+    font-size: 0.9375rem;
+    padding: 12px 18px;
+    max-width: 100%;
+  }
+}
+
 /* Full-width mobile */
 @media (max-width: 639px) {
   .btn-block-mobile {
@@ -697,6 +705,14 @@ a, button, .cap-card, .project-card {
   border-radius: var(--radius-md);
   margin-bottom: var(--space-3);
   transition: all var(--duration-fast) var(--ease-out);
+  max-width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.contact-direct-card > div:last-child {
+  min-width: 0;
+  flex: 1 1 auto;
 }
 
 .contact-direct-card:hover {
@@ -730,6 +746,8 @@ a, button, .cap-card, .project-card {
   font-size: 0.875rem;
   color: var(--text-primary);
   font-weight: 500;
+  word-break: break-all;
+  overflow-wrap: anywhere;
 }
 
 .contact-form-card {
@@ -739,6 +757,18 @@ a, button, .cap-card, .project-card {
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   padding: var(--space-7);
+}
+
+@media (max-width: 639px) {
+  .contact-form-card {
+    padding: var(--space-5);
+  }
+}
+
+@media (max-width: 360px) {
+  .contact-form-card {
+    padding: var(--space-4);
+  }
 }
 
 .form-group {

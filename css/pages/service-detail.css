@@ -310,8 +310,8 @@
   font-size: 0.75rem;
   padding: 4px 10px;
   border-radius: 6px;
-  background: rgba(196, 115, 74, 0.1);
-  border: 1px solid rgba(196, 115, 74, 0.25);
+  background: rgba(200, 157, 108, 0.1);
+  border: 1px solid rgba(200, 157, 108, 0.25);
   color: var(--text-primary);
 }
 
@@ -323,49 +323,353 @@
 }
 
 /* ============================================================================
-   GRAPHIC DESIGN & BEFORE/AFTER SLIDER SHOWCASE
+   SHARED INTERACTIVE TABS & SUB-SERVICES SYSTEM (WAI-ARIA COMPLIANT)
    ============================================================================ */
+.service-tabs-section {
+  padding: var(--space-8) 0;
+  position: relative;
+}
+
+.service-tabs-nav,
 .portfolio-nav {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: var(--space-7);
+  margin-bottom: var(--space-8);
+  position: relative;
+  z-index: 5;
+  opacity: 1;
+  visibility: visible;
+  transform: none;
 }
 
+.service-tab-btn,
 .portfolio-nav .nav-btn {
-  background-color: rgba(23, 20, 18, 0.7);
+  background-color: rgba(20, 15, 11, 0.85);
   color: var(--text-secondary);
   border: 1px solid var(--border-subtle);
-  padding: 10px 22px;
+  padding: 12px 24px;
   border-radius: 100px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s var(--ease-out);
   font-family: var(--font-mono);
   font-size: 0.8125rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  white-space: nowrap;
 }
 
+.service-tab-btn:hover,
 .portfolio-nav .nav-btn:hover {
   color: var(--text-primary);
   border-color: var(--accent);
 }
 
-.portfolio-nav .nav-btn.active {
-  background-color: var(--accent);
-  color: #0C0A09;
-  border-color: var(--accent);
-  font-weight: 600;
-  box-shadow: 0 0 20px var(--accent-glow);
+.service-tab-btn:focus-visible,
+.portfolio-nav .nav-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
+.service-tab-btn[aria-selected="true"],
+.service-tab-btn.active,
+.portfolio-nav .nav-btn.active {
+  background-color: var(--accent);
+  color: #0A0806;
+  border-color: var(--accent);
+  font-weight: 700;
+  box-shadow: 0 0 25px var(--accent-glow);
+}
+
+/* WCAG 1.4.1 Shape Indicator for high-contrast and forced-colors modes */
+.service-tab-btn[aria-selected="true"]::after,
+.service-tab-btn.active::after,
+.portfolio-nav .nav-btn.active::after {
+  content: "";
+  position: absolute;
+  inset: auto 20px -5px 20px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.service-tab-panels {
+  position: relative;
+  width: 100%;
+}
+
+.service-tab-panel[hidden] {
+  display: none !important;
+}
+
+.service-tab-panel:not([hidden]) {
+  display: block;
+  animation: serviceTabFade 0.4s var(--ease-out);
+}
+
+@keyframes serviceTabFade {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tab Card Wrapper */
+.service-tab-card {
+  background: rgba(20, 15, 11, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: clamp(1.75rem, 4vw, 3.25rem);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-tab-card:hover {
+  border-color: rgba(200, 157, 108, 0.4);
+  box-shadow: 0 28px 75px rgba(0, 0, 0, 0.75), 0 0 35px var(--accent-glow);
+}
+
+.service-tab-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-7);
+  align-items: stretch;
+}
+
+@media (min-width: 992px) {
+  .service-tab-grid {
+    grid-template-columns: 1.15fr 1fr;
+    gap: var(--space-8);
+    align-items: center;
+  }
+}
+
+/* Left Column: Sub-Service Info & Deliverables */
+.service-tab-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(200, 157, 108, 0.12);
+  border: 1px solid rgba(200, 157, 108, 0.28);
+  padding: 5px 14px;
+  border-radius: 100px;
+  width: fit-content;
+  margin-bottom: var(--space-4);
+}
+
+.service-tab-title {
+  font-family: var(--font-headline);
+  font-size: clamp(1.75rem, 2.5vw, 2.35rem);
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: var(--space-3);
+}
+
+.service-tab-desc {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: var(--space-5);
+}
+
+.service-deliverables-title {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.service-deliverables-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-bottom: var(--space-5);
+}
+
+@media (min-width: 640px) {
+  .service-deliverables-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 18px;
+  }
+}
+
+.service-deliverable-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  line-height: 1.45;
+}
+
+.service-check-icon {
+  color: var(--accent);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.service-stack-title {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: var(--space-2);
+}
+
+.service-stack-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: var(--space-6);
+}
+
+.service-stack-pill {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 5px 12px;
+  border-radius: 6px;
+  background: rgba(200, 157, 108, 0.08);
+  border: 1px solid rgba(200, 157, 108, 0.22);
+  color: var(--text-primary);
+}
+
+.service-pane-action {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+/* Right Column: Project Showcase Card */
+.service-showcase-card {
+  background: rgba(10, 8, 6, 0.85);
+  border: 1px solid var(--border-visible);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+  transition: border-color 0.3s ease, transform 0.4s var(--ease-out), box-shadow 0.3s ease;
+}
+
+.service-showcase-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.65), 0 0 25px var(--accent-glow);
+}
+
+.service-showcase-media {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background: var(--bg-surface);
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+@media (min-width: 992px) {
+  .service-showcase-media {
+    height: 280px;
+  }
+}
+
+.service-showcase-media img,
+.service-showcase-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.service-showcase-card:hover .service-showcase-media img,
+.service-showcase-card:hover .service-showcase-media video {
+  transform: scale(1.04);
+}
+
+.service-showcase-body {
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
+}
+
+.service-showcase-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-2);
+  display: block;
+}
+
+.service-showcase-title {
+  font-family: var(--font-headline);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
+  margin-bottom: var(--space-2);
+}
+
+.service-showcase-desc {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+}
+
+.service-showcase-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+/* ============================================================================
+   GRAPHIC DESIGN & BEFORE/AFTER SLIDER SHOWCASE (LEGACY & ACCESSIBLE WRAPPER)
+   ============================================================================ */
 .portfolio-section {
   display: none;
   animation: fadeIn 0.4s ease;
 }
 
-.portfolio-section.active {
+.portfolio-section.active,
+.portfolio-section:not([hidden]) {
   display: block;
 }
 
@@ -377,7 +681,7 @@
 }
 
 .gd-portfolio-card {
-  background-color: rgba(23, 20, 18, 0.85);
+  background-color: rgba(20, 15, 11, 0.88);
   border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--border-subtle);
@@ -409,10 +713,10 @@
 
 .slider-theme {
   --divider-width: 3px;
-  --divider-color: #C4734A;
+  --divider-color: #C89D6C;
   --handle-size: 46px;
-  --handle-color: #C4734A;
-  --handle-icon-color: #0C0A09;
+  --handle-color: #C89D6C;
+  --handle-icon-color: #0A0806;
   --handle-outline-width: 0px;
   border-radius: 0 0 var(--radius-lg) var(--radius-lg);
   overflow: hidden;
@@ -430,7 +734,7 @@ img-comparison-slider img {
   display: flex;
   flex-direction: column;
   gap: var(--space-6);
-  background: rgba(23, 20, 18, 0.8);
+  background: rgba(20, 15, 11, 0.85);
   padding: clamp(1.5rem, 3vw, 3rem);
   border-radius: var(--radius-xl);
   border: 1px solid var(--border-subtle);
@@ -471,9 +775,9 @@ img-comparison-slider img {
   height: 50px;
   background: linear-gradient(
     to bottom,
-    rgba(196, 115, 74, 0),
-    rgba(196, 115, 74, 0.25),
-    rgba(196, 115, 74, 0)
+    rgba(200, 157, 108, 0),
+    rgba(200, 157, 108, 0.25),
+    rgba(200, 157, 108, 0)
   );
   animation: certScan 3.5s linear infinite;
 }
@@ -505,7 +809,7 @@ img-comparison-slider img {
 }
 
 .section-nav-btn {
-  background-color: rgba(23, 20, 18, 0.7);
+  background-color: rgba(20, 15, 11, 0.75);
   color: var(--text-primary);
   border: 1px solid var(--border-subtle);
   padding: 10px 24px;
