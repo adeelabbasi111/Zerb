@@ -11,17 +11,17 @@
     <!-- Preconnect for speed -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
     <!-- Lenis CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.css">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/design-system.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/components/theme-studio.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/pages/home.css">
+    <link rel="stylesheet" href="css/design-system.css?v=3.0">
+    <link rel="stylesheet" href="css/components.css?v=3.0">
+    <link rel="stylesheet" href="css/components/theme-studio.css?v=3.0">
+    <link rel="stylesheet" href="css/layout.css?v=3.0">
+    <link rel="stylesheet" href="css/pages/home.css?v=3.0">
 
     <meta name="theme-color" content="#0C0A09">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -187,32 +187,6 @@
             <!-- Background Canvas & Video Texture -->
             <div class="hero-media" aria-hidden="true">
                 <canvas id="hero-webgl-canvas" style="position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0;"></canvas>
-                <!-- Cinematic Glowing Light Arcs (ZERB Signature Showcase) -->
-                <svg class="hero-light-ribbons" viewBox="0 0 1440 900" fill="none" preserveAspectRatio="none" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; opacity: 0.8; mix-blend-mode: screen;">
-                    <path d="M-80,85 C220,100 350,180 520,380 C680,560 920,680 1520,600" stroke="url(#hero-arc-grad-1)" stroke-width="2.2" filter="url(#hero-arc-glow)" />
-                    <path d="M-100,550 C280,480 620,720 1050,780 C1280,810 1460,760 1550,710" stroke="url(#hero-arc-grad-2)" stroke-width="1.8" filter="url(#hero-arc-glow)" />
-                    <path d="M1100,-40 C1260,180 1340,320 1520,420" stroke="url(#hero-arc-grad-1)" stroke-width="2.5" filter="url(#hero-arc-glow)" />
-                    <defs>
-                        <linearGradient id="hero-arc-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="var(--accent-hover)" stop-opacity="0.95" />
-                            <stop offset="45%" stop-color="var(--accent)" stop-opacity="0.75" />
-                            <stop offset="85%" stop-color="var(--accent)" stop-opacity="0.1" />
-                            <stop offset="100%" stop-color="var(--accent)" stop-opacity="0" />
-                        </linearGradient>
-                        <linearGradient id="hero-arc-grad-2" x1="0%" y1="100%" x2="100%" y2="0%">
-                            <stop offset="0%" stop-color="var(--accent-warm)" stop-opacity="0.95" />
-                            <stop offset="40%" stop-color="var(--accent)" stop-opacity="0.65" />
-                            <stop offset="100%" stop-color="var(--accent)" stop-opacity="0" />
-                        </linearGradient>
-                        <filter id="hero-arc-glow" x="-20%" y="-20%" width="140%" height="140%">
-                            <feGaussianBlur stdDeviation="3.5" result="blur" />
-                            <feMerge>
-                                <feMergeNode in="blur" />
-                                <feMergeNode in="SourceGraphic" />
-                            </feMerge>
-                        </filter>
-                    </defs>
-                </svg>
                 <div class="hero-media-overlay"></div>
             </div>
         </div>
@@ -250,13 +224,456 @@
     </section>
 
     <!-- ====================================================================
-         03 — CAPABILITIES (GLOWING CIRCUIT CARDS)
+         03 — SERVICES & CORE CAPABILITIES (INTERACTIVE COMMAND DECK)
          ==================================================================== -->
-    <section class="section section-capabilities" id="capabilities" aria-label="ZERB Capabilities">
+    <section class="section section-capabilities" id="capabilities" aria-label="ZERB Capabilities and Services">
         <div class="container">
-            <div class="capabilities-header">
-                <span class="section-label" style="color: var(--accent); font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;">What we do</span>
-                <h2 class="t-h1 statement-text" style="color: var(--text-primary); margin-top: 6px;">Capabilities</h2>
+            <div class="capabilities-header" style="margin-bottom: var(--space-6);">
+                <span class="section-label" style="color: var(--accent); font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;">ENGINEERED PRODUCTION SUITE</span>
+                <h2 class="t-h1 statement-text" style="color: var(--text-primary); margin-top: 6px;">Services We Offer</h2>
+                <p class="t-body-lg" style="color: var(--text-secondary); max-width: 680px; margin-top: var(--space-2);">
+                    Explore our core engineering capabilities &mdash; from high-conversion e-commerce ecosystems and enterprise web development to real-time SaaS web applications.
+                </p>
+            </div>
+
+            <!-- INTERACTIVE SERVICES COMMAND DECK -->
+            <div class="services-interactive-deck">
+                <!-- Navigation Tabs -->
+                <div class="services-nav-tabs" role="tablist" aria-label="Service disciplines">
+                    <button class="service-nav-btn active" data-service-target="service-ecommerce" role="tab" aria-selected="true">
+                        <span class="service-icon">🛒</span>
+                        <span>E-Commerce Solutions</span>
+                    </button>
+                    <button class="service-nav-btn" data-service-target="service-webdev" role="tab" aria-selected="false">
+                        <span class="service-icon">🌐</span>
+                        <span>Web Development</span>
+                    </button>
+                    <button class="service-nav-btn" data-service-target="service-webapps" role="tab" aria-selected="false">
+                        <span class="service-icon">⚡</span>
+                        <span>Web Apps &amp; SaaS</span>
+                    </button>
+                    <button class="service-nav-btn" data-service-target="service-mobile" role="tab" aria-selected="false">
+                        <span class="service-icon">📱</span>
+                        <span>Mobile Apps</span>
+                    </button>
+                    <button class="service-nav-btn" data-service-target="service-uiux" role="tab" aria-selected="false">
+                        <span class="service-icon">🎨</span>
+                        <span>UI/UX Architecture</span>
+                    </button>
+                </div>
+
+                <!-- Pane 1: E-COMMERCE -->
+                <div class="service-pane active" id="service-ecommerce" role="tabpanel">
+                    <div class="service-detail-col">
+                        <span class="service-badge-pill">&#9679; HIGH-CONVERSION ARCHITECTURE</span>
+                        <h3 class="service-headline">Scalable E-Commerce &amp; Headless Storefronts</h3>
+                        <p class="service-desc">
+                            We architect high-performance, conversion-engineered e-commerce ecosystems. By decoupling the frontend with headless Next.js Commerce and integrating custom checkout pipelines, we deliver sub-second product pages, international multi-currency billing, and seamless ERP/inventory synchronization.
+                        </p>
+                        <div class="service-deliverables-grid">
+                            <div class="service-deliverable-item">
+                                <span class="service-check-icon">&check;</span>
+                                <span>Headless Shopify Plus &amp; Next.js Commerce</span>
+                            </div>
+                            <div class="service-deliverable-item">
+                                <span class="service-check-icon">&check;</span>
+                                <span>Custom Stripe &amp; Global Payment Checkouts</span>
+                            </div>
+                            <div class="service-deliverable-item">
+                                <span class="service-check-icon">&check;</span>
+                                <span>Real-Time Inventory Webhooks &amp; DSP Sync</span>
+                            </div>
+                            <div class="service-deliverable-item">
+                                <span class="service-check-icon">&check;</span>
+                                <span>Sub-Second Page Loads (&lt; 0.9s Median LCP)</span>
+                            </div>
+                            <div class="service-deliverable-item">
+                                <span class="service-check-icon">&check;</span>
+                                <span>Automated Cart Recovery &amp; Retention Funnels</span>
+                            </div>
+                            <div class="service-deliverable-item">
+                                <span class="service-check-icon">&check;</span>
+                                <span>Conversion Rate Optimization (CRO) Infrastructure</span>
+                            </div>
+                        </div>
+                        <div class="service-stack-wrap">
+                            <span class="service-stack-pill">Next.js Commerce</span>
+                            <span class="service-stack-pill">Shopify Plus</span>
+                            <span class="service-stack-pill">Stripe API</span>
+                            <span class="service-stack-pill">TypeScript</span>
+                            <span class="service-stack-pill">TailwindCSS</span>
+                            <span class="service-stack-pill">PostgreSQL</span>
+                            <span class="service-stack-pill">Redis</span>
+                        </div>
+                        <div style="margin-top: var(--space-4);">
+                            <a href="contact.html?service=ecommerce" class="btn btn-primary">
+                                Engineer Your Store <span class="arrow">&rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="service-telemetry-deck">
+                        <div class="telemetry-deck-header">
+                            <div class="telemetry-deck-dots">
+                                <span class="telemetry-dot"></span>
+                                <span class="telemetry-dot"></span>
+                                <span class="telemetry-dot"></span>
+                            </div>
+                            <span class="telemetry-deck-status">🟢 PRODUCTION VERIFIED</span>
+                        </div>
+                        <div class="telemetry-kpis">
+                            <div class="telemetry-kpi-item">
+                                <span class="kpi-val">+38.4%</span>
+                                <span class="kpi-label">Conversion Lift</span>
+                            </div>
+                            <div class="telemetry-kpi-item">
+                                <span class="kpi-val">&lt; 0.9s</span>
+                                <span class="kpi-label">Median LCP</span>
+                            </div>
+                            <div class="telemetry-kpi-item">
+                                <span class="kpi-val">120 ms</span>
+                                <span class="kpi-label">Checkout Latency</span>
+                            </div>
+                            <div class="telemetry-kpi-item">
+                                <span class="kpi-val">99.99%</span>
+                                <span class="kpi-label">Payment Uptime</span>
+                            </div>
+                        </div>
+                        <div class="telemetry-code-box">
+                            <div><span class="code-highlight">$ zerb deploy</span> --channel=ecommerce --production</div>
+                            <div><span class="code-success">&#10004;</span> CDN Edge Caching: 285+ Global PoPs</div>
+                            <div><span class="code-success">&#10004;</span> Stripe Engine: Multi-Currency Active</div>
+                            <div><span class="code-success">&#10004;</span> Cart Latency: 42ms (Zero Lock contention)</div>
+                            <div><span class="code-success">&#10004;</span> Core Web Vitals: 100/100 Passed</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pane 2: WEB DEVELOPMENT -->
+                <div class="service-pane" id="service-webdev" role="tabpanel">
+                    <div class="service-detail-col">
+                        <span class="service-badge-pill">&#9679; FULL-STACK PRODUCTION</span>
+                        <h3 class="service-headline">Full-Stack Web Development &amp; Platforms</h3>
+                        <p class="service-desc">
+                            We build modern corporate platforms, portfolio flagships, and web software designed from first principles. Clean semantic HTML, fluid motion systems (GSAP / Three.js), high performance, and zero bloat &mdash; tailored to establish unmistakable digital leadership.
+                        </p>
+                        <div class="service-deliverables-grid">
+                            <div class="service-deliverable-item">
+                                <span class="service-check-icon">&check;</span>
+                                <span>Bespoke Full-Stack React &amp; Next.js Engineering</span>
+                            </div>
+                            <div class="service-deliverable-item">
+                                <span class="service-check-icon">&check;</span>
+                                <span>Fluid GSAP, Lenis Smooth Scroll &amp; WebGL Motion</span>
+                            </div>
+                            <div class="service-deliverable-item">
+                                <span class="service-check-icon">&check;</span>
+                                <span>Headless CMS Architecture (Sanity, Strapi, MDX)</span>
+                            </div>
+                            <div class="service-deliverable-item">
+                                <span class="service-check-icon">&check;</span>
+                                <span>100/100 Lighthouse Performance &amp; Technical SEO</span>
+                            </div>
+                            <div class="service-deliverable-item">
+                                <span class="service-check-icon">&check;</span>
+                                <span>Fully Accessible Semantic Standards (WCAG 2.1 AA)</span>
+                            </div>
+                            <div class="service-deliverable-item">
+                                <span class="service-check-icon">&check;</span>
+                                <span>Zero-Bloat First-Principle Engineering</span>
+                            </div>
+                        </div>
+                        <div class="service-stack-wrap">
+                            <span class="service-stack-pill">Next.js 14/15</span>
+                            <span class="service-stack-pill">React 19</span>
+                            <span class="service-stack-pill">TypeScript</span>
+                            <span class="service-stack-pill">Node.js</span>
+                            <span class="service-stack-pill">GSAP</span>
+                            <span class="service-stack-pill">Three.js</span>
+                            <span class="service-stack-pill">TailwindCSS</span>
+                        </div>
+                        <div style="margin-top: var(--space-4);">
+                            <a href="contact.html?service=web-dev" class="btn btn-primary">
+                                Start Web Development <span class="arrow">&rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="service-telemetry-deck">
+                        <div class="telemetry-deck-header">
+                            <div class="telemetry-deck-dots">
+                                <span class="telemetry-dot"></span>
+                                <span class="telemetry-dot"></span>
+                                <span class="telemetry-dot"></span>
+                            </div>
+                            <span class="telemetry-deck-status">🟢 100/100 LIGHTHOUSE</span>
+                        </div>
+                        <div class="telemetry-kpis">
+                            <div class="telemetry-kpi-item">
+                                <span class="kpi-val">100 / 100</span>
+                                <span class="kpi-label">Performance</span>
+                            </div>
+                            <div class="telemetry-kpi-item">
+                                <span class="kpi-val">&lt; 0.4s</span>
+                                <span class="kpi-label">First Contentful Paint</span>
+                            </div>
+                            <div class="telemetry-kpi-item">
+                                <span class="kpi-val">100%</span>
+                                <span class="kpi-label">Type Safety</span>
+                            </div>
+                            <div class="telemetry-kpi-item">
+                                <span class="kpi-val">0.00</span>
+                                <span class="kpi-label">Cumulative Layout Shift</span>
+                            </div>
+                        </div>
+                        <div class="telemetry-code-box">
+                            <div><span class="code-highlight">$ zerb audit</span> --target=web-production</div>
+                            <div><span class="code-success">&#10004;</span> Semantic HTML5: Verified Strict</div>
+                            <div><span class="code-success">&#10004;</span> CSS Tokens: Synchronized 100%</div>
+                            <div><span class="code-success">&#10004;</span> Asset Tree: AVIF/WebP Auto-Optimized</div>
+                            <div><span class="code-success">&#10004;</span> SSR Stream: Hydration Completed in 8ms</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pane 3: WEB APPS & SAAS -->
+                <div class="service-pane" id="service-webapps" role="tabpanel">
+                    <div class="service-detail-col">
+                        <span class="service-badge-pill">&#9679; REACTIVE CLOUD PLATFORMS</span>
+                        <h3 class="service-headline">Complex Web Applications &amp; Cloud SaaS</h3>
+                        <p class="service-desc">
+                            We architect robust, data-dense web applications capable of handling complex operations at scale. From real-time telemetry dashboards and native Web Audio DSP engines to autonomous AI workflow pipelines, we engineer browser-native software with desktop-grade responsiveness.
+                        </p>
+                        <div class="service-deliverables-grid">
+                            <div class="service-deliverable-item">
+                                <span class="service-check-icon">&check;</span>
+                                <span>Reactive Single-Page &amp; Cloud SaaS Architectures</span>
+                            </div>
+                            <div class="service-deliverable-item">
+                                <span class="service-check-icon">&check;</span>
+                                <span>Real-Time WebSocket Streaming &amp; State Sync</span>
+                            </div>
+                            <div class="service-deliverable-item">
+                                <span class="service-check-icon">&check;</span>
+                                <span>Native Web Audio DSP &amp; High-Speed Canvas Engines</span>
+                            </div>
+                            <div class="service-deliverable-item">
+                                <span class="service-check-icon">&check;</span>
+                                <span>Autonomous AI Pipelines &amp; Agent Infrastructure</span>
+                            </div>
+                            <div class="service-deliverable-item">
+                                <span class="service-check-icon">&check;</span>
+                                <span>Enterprise Auth (OAuth2, Auth0, Role-Based Access)</span>
+                            </div>
+                            <div class="service-deliverable-item">
+                                <span class="service-check-icon">&check;</span>
+                                <span>Automated CI/CD, Docker &amp; Cloud Scale Deployment</span>
+                            </div>
+                        </div>
+                        <div class="service-stack-wrap">
+                            <span class="service-stack-pill">TypeScript</span>
+                            <span class="service-stack-pill">WebSockets</span>
+                            <span class="service-stack-pill">Web Audio DSP</span>
+                            <span class="service-stack-pill">FastAPI</span>
+                            <span class="service-stack-pill">Python</span>
+                            <span class="service-stack-pill">PostgreSQL</span>
+                            <span class="service-stack-pill">Docker</span>
+                        </div>
+                        <div style="margin-top: var(--space-4);">
+                            <a href="contact.html?service=web-apps" class="btn btn-primary">
+                                Build Your Web App <span class="arrow">&rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="service-telemetry-deck">
+                        <div class="telemetry-deck-header">
+                            <div class="telemetry-deck-dots">
+                                <span class="telemetry-dot"></span>
+                                <span class="telemetry-dot"></span>
+                                <span class="telemetry-dot"></span>
+                            </div>
+                            <span class="telemetry-deck-status">🟢 LOW-LATENCY DSP ENGINE</span>
+                        </div>
+                        <div class="telemetry-kpis">
+                            <div class="telemetry-kpi-item">
+                                <span class="kpi-val">0 ms</span>
+                                <span class="kpi-label">DSP Lookahead</span>
+                            </div>
+                            <div class="telemetry-kpi-item">
+                                <span class="kpi-val">&lt; 16 ms</span>
+                                <span class="kpi-label">WebSocket Sync</span>
+                            </div>
+                            <div class="telemetry-kpi-item">
+                                <span class="kpi-val">10k+</span>
+                                <span class="kpi-label">Req / Sec Capable</span>
+                            </div>
+                            <div class="telemetry-kpi-item">
+                                <span class="kpi-val">99.999%</span>
+                                <span class="kpi-label">Cloud Availability</span>
+                            </div>
+                        </div>
+                        <div class="telemetry-code-box">
+                            <div><span class="code-highlight">$ sys.stream</span> --audio-engine --realtime</div>
+                            <div><span class="code-success">&#10004;</span> AudioContext: 48,000 Hz Initialized</div>
+                            <div><span class="code-success">&#10004;</span> Polyphony Buffer: 16 Voices Allocated</div>
+                            <div><span class="code-success">&#10004;</span> AI Agent Stream: Connected &bull; WebSocket OK</div>
+                            <div><span class="code-success">&#10004;</span> Memory Footprint: 18.4 MB (Zero Leaks)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pane 4: MOBILE APPS -->
+                <div class="service-pane" id="service-mobile" role="tabpanel">
+                    <div class="service-detail-col">
+                        <span class="service-badge-pill">&#9679; CROSS-PLATFORM PRECISION</span>
+                        <h3 class="service-headline">Native &amp; Cross-Platform Mobile Applications</h3>
+                        <p class="service-desc">
+                            We build smooth, native iOS and Android applications utilizing React Native and Flutter. 60 FPS fluid gesture controls, offline-first SQLite synchronization, and seamless cloud push architectures engineered for mobile users.
+                        </p>
+                        <div class="service-deliverables-grid">
+                            <div class="service-deliverable-item">
+                                <span class="service-check-icon">&check;</span>
+                                <span>iOS (Swift / React Native) &amp; Android (Kotlin)</span>
+                            </div>
+                            <div class="service-deliverable-item">
+                                <span class="service-check-icon">&check;</span>
+                                <span>Offline-First Data Sync &amp; Local Persistence</span>
+                            </div>
+                            <div class="service-deliverable-item">
+                                <span class="service-check-icon">&check;</span>
+                                <span>Biometric Auth (FaceID / Fingerprint) &amp; Security</span>
+                            </div>
+                            <div class="service-deliverable-item">
+                                <span class="service-check-icon">&check;</span>
+                                <span>Real-Time Push Notification Engine</span>
+                            </div>
+                        </div>
+                        <div class="service-stack-wrap">
+                            <span class="service-stack-pill">React Native</span>
+                            <span class="service-stack-pill">Flutter</span>
+                            <span class="service-stack-pill">Swift</span>
+                            <span class="service-stack-pill">Kotlin</span>
+                            <span class="service-stack-pill">Firebase</span>
+                            <span class="service-stack-pill">GraphQL</span>
+                        </div>
+                        <div style="margin-top: var(--space-4);">
+                            <a href="contact.html?service=mobile" class="btn btn-primary">
+                                Start Mobile Project <span class="arrow">&rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="service-telemetry-deck">
+                        <div class="telemetry-deck-header">
+                            <div class="telemetry-deck-dots">
+                                <span class="telemetry-dot"></span>
+                                <span class="telemetry-dot"></span>
+                                <span class="telemetry-dot"></span>
+                            </div>
+                            <span class="telemetry-deck-status">🟢 60 FPS FLUID MOTION</span>
+                        </div>
+                        <div class="telemetry-kpis">
+                            <div class="telemetry-kpi-item">
+                                <span class="kpi-val">60 FPS</span>
+                                <span class="kpi-label">Frame Rate</span>
+                            </div>
+                            <div class="telemetry-kpi-item">
+                                <span class="kpi-val">&lt; 18 MB</span>
+                                <span class="kpi-label">App Bundle Size</span>
+                            </div>
+                            <div class="telemetry-kpi-item">
+                                <span class="kpi-val">100%</span>
+                                <span class="kpi-label">Offline Ready</span>
+                            </div>
+                            <div class="telemetry-kpi-item">
+                                <span class="kpi-val">4.9 &#9733;</span>
+                                <span class="kpi-label">Store Ready</span>
+                            </div>
+                        </div>
+                        <div class="telemetry-code-box">
+                            <div><span class="code-highlight">$ mobile.build</span> --release --platform=universal</div>
+                            <div><span class="code-success">&#10004;</span> iOS Target: Build 1.0.4 Verified</div>
+                            <div><span class="code-success">&#10004;</span> Android Bundle: AAB Signed</div>
+                            <div><span class="code-success">&#10004;</span> Push Notification: APNs/FCM Ready</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pane 5: UI/UX ARCHITECTURE -->
+                <div class="service-pane" id="service-uiux" role="tabpanel">
+                    <div class="service-detail-col">
+                        <span class="service-badge-pill">&#9679; DESIGN SYSTEMS &amp; TOKENS</span>
+                        <h3 class="service-headline">UI/UX Architecture &amp; Brand Systems</h3>
+                        <p class="service-desc">
+                            Design engineered for commercial conversion. We create mathematically proportioned design token architectures, interactive Figma prototypes, and cohesive visual identities that bridge high aesthetic luxury with frictionless usability.
+                        </p>
+                        <div class="service-deliverables-grid">
+                            <div class="service-deliverable-item">
+                                <span class="service-check-icon">&check;</span>
+                                <span>Multi-Theme Design Tokens &amp; Component Systems</span>
+                            </div>
+                            <div class="service-deliverable-item">
+                                <span class="service-check-icon">&check;</span>
+                                <span>Interactive Figma Prototypes &amp; Flow Validation</span>
+                            </div>
+                            <div class="service-deliverable-item">
+                                <span class="service-check-icon">&check;</span>
+                                <span>Conversion Rate Optimization &amp; UX Research</span>
+                            </div>
+                            <div class="service-deliverable-item">
+                                <span class="service-check-icon">&check;</span>
+                                <span>100% Production-Accurate Design-to-Code Handoff</span>
+                            </div>
+                        </div>
+                        <div class="service-stack-wrap">
+                            <span class="service-stack-pill">Figma</span>
+                            <span class="service-stack-pill">Design Tokens</span>
+                            <span class="service-stack-pill">Storybook</span>
+                            <span class="service-stack-pill">CSS Architecture</span>
+                        </div>
+                        <div style="margin-top: var(--space-4);">
+                            <a href="contact.html?service=ui-ux" class="btn btn-primary">
+                                Commission Product Design <span class="arrow">&rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="service-telemetry-deck">
+                        <div class="telemetry-deck-header">
+                            <div class="telemetry-deck-dots">
+                                <span class="telemetry-dot"></span>
+                                <span class="telemetry-dot"></span>
+                                <span class="telemetry-dot"></span>
+                            </div>
+                            <span class="telemetry-deck-status">🟢 TOKEN ACCURACY 100%</span>
+                        </div>
+                        <div class="telemetry-kpis">
+                            <div class="telemetry-kpi-item">
+                                <span class="kpi-val">100%</span>
+                                <span class="kpi-label">Token Coverage</span>
+                            </div>
+                            <div class="telemetry-kpi-item">
+                                <span class="kpi-val">8px</span>
+                                <span class="kpi-label">Harmonic Grid</span>
+                            </div>
+                            <div class="telemetry-kpi-item">
+                                <span class="kpi-val">4.5:1</span>
+                                <span class="kpi-label">Min Contrast Ratio</span>
+                            </div>
+                            <div class="telemetry-kpi-item">
+                                <span class="kpi-val">0 px</span>
+                                <span class="kpi-label">Handoff Deviation</span>
+                            </div>
+                        </div>
+                        <div class="telemetry-code-box">
+                            <div><span class="code-highlight">$ tokens.sync</span> --system=zerb-gold-bronze</div>
+                            <div><span class="code-success">&#10004;</span> Color Tokens: 100% Synchronized</div>
+                            <div><span class="code-success">&#10004;</span> Typography Scale: Libre Baskerville / Lato</div>
+                            <div><span class="code-success">&#10004;</span> Figma Variables: Exported to CSS</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ALL DISCIPLINE CARDS (CLEAN LUXURY BORDERS - NO SHINY GOLDEN LINE) -->
+            <div style="margin-top: var(--space-8); margin-bottom: var(--space-4);">
+                <h3 class="t-h3" style="color: var(--text-primary); font-family: var(--font-headline);">All Capability Disciplines</h3>
             </div>
 
             <div class="capabilities-grid">
@@ -863,11 +1280,11 @@ Type "help" to see available commands or "projects" to query codebases.
     <!-- Lenis Smooth Scroll -->
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
     <!-- Core App Logic -->
-    <script src="js/core.js?v=2.1"></script>
-    <script src="js/webgl-hero.js?v=2.1"></script>
-    <script src="js/animations.js?v=2.1"></script>
-    <script src="js/portfolio-interactive.js?v=2.1"></script>
+    <script src="js/portfolio-interactive.js?v=3.0"></script>
+    <script src="js/core.js?v=3.0"></script>
+    <script src="js/webgl-hero.js?v=3.0"></script>
+    <script src="js/animations.js?v=3.0"></script>
     <!-- Theme & Typography Studio (10 Palettes · 10 Font Pairings) -->
-    <script src="js/theme-studio.js?v=1.0"></script>
+    <script src="js/theme-studio.js?v=3.0"></script>
 </body>
 </html>

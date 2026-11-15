@@ -337,9 +337,10 @@
   const STORAGE_KEY_PALETTE = 'zerb_selected_palette';
   const STORAGE_KEY_FONT = 'zerb_selected_font';
 
-  // Default to exact screenshot match: Imperial Champagne Gold & Warming Humanist Craft
+  // Default to exact user choice: Imperial Champagne Gold & Humanist Neo Classic
   let activePaletteId = localStorage.getItem(STORAGE_KEY_PALETTE) || 'imperial-champagne-gold';
-  let activeFontId = localStorage.getItem(STORAGE_KEY_FONT) || 'warming-humanist-craft';
+  let activeFontId = 'humanist-neo-classic';
+  localStorage.setItem(STORAGE_KEY_FONT, 'humanist-neo-classic');
 
   // Loaded fonts cache
   const loadedFonts = new Set();
@@ -574,7 +575,7 @@
     // Reset button
     drawer.querySelector('#studio-reset').addEventListener('click', () => {
       applyPalette('imperial-champagne-gold');
-      applyFontPairing('warming-humanist-craft');
+      applyFontPairing('humanist-neo-classic');
     });
 
     // Copy configuration button

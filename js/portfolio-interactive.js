@@ -451,12 +451,49 @@ Mission: We engineer digital products that move industries &mdash; design, engin
   };
 
   // ========================================================================
+  // 6. INTERACTIVE SERVICES PANEL
+  // ========================================================================
+  function initServicesInteractivePanel() {
+    const decks = document.querySelectorAll('.services-interactive-deck');
+    if (!decks.length) return;
+
+    decks.forEach(deck => {
+      const navButtons = deck.querySelectorAll('.service-nav-btn');
+      const servicePanes = deck.querySelectorAll('.service-pane');
+
+      navButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetId = btn.getAttribute('data-service-target');
+
+          navButtons.forEach(b => {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+          });
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+
+          servicePanes.forEach(pane => {
+            if (pane.id === targetId) {
+              pane.classList.add('active');
+            } else {
+              pane.classList.remove('active');
+            }
+          });
+
+          if (window.ScrollTrigger) ScrollTrigger.refresh();
+        });
+      });
+    });
+  }
+
+  // ========================================================================
   // INITIALIZATION ON DOM READY
   // ========================================================================
   document.addEventListener('DOMContentLoaded', () => {
     initProjectFilters();
     initTerminal();
     initLiveClock();
+    initServicesInteractivePanel();
   });
 
 })();

@@ -232,62 +232,33 @@
   }
 }
 
-/* --- The Card Shell (Animated Glow Border) --- */
+/* --- The Card Shell (Clean Refined Luxury Border — No Shiny Rotating Lines) --- */
 .cap-card {
   position: relative;
   border-radius: var(--radius-lg, 12px);
-  padding: 1px; /* This 1px is the border — the glow shows through */
-  background: conic-gradient(
-    from var(--border-angle),
-    var(--border-subtle) 0%,
-    var(--accent) 12%,
-    var(--border-subtle) 33%,
-    var(--accent) 55%,
-    var(--border-subtle) 80%,
-    var(--accent) 100%
-  );
-  animation: rotate-border 8s linear infinite;
+  padding: 0;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
   will-change: transform;
   opacity: 0; /* Hidden by default, GSAP reveals */
   transform: translateY(40px);
-}
-
-@keyframes rotate-border {
-  to { --border-angle: 360deg; }
+  transition: border-color var(--duration-fast) var(--ease-out), transform var(--duration-fast) var(--ease-out), box-shadow var(--duration-fast) var(--ease-out);
 }
 
 .cap-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: conic-gradient(
-    from var(--border-angle),
-    transparent 0%,
-    var(--accent-glow) 12%,
-    transparent 33%,
-    var(--accent-glow) 55%,
-    transparent 80%,
-    var(--accent-glow) 100%
-  );
-  filter: blur(12px);
-  opacity: 0;
-  transition: opacity 0.5s var(--ease-out);
-  z-index: -1;
-}
-
-.cap-card:hover::before {
-  opacity: 1;
+  display: none !important;
 }
 
 .cap-card:hover {
-  animation-duration: 3s; /* Spin faster on hover */
+  border-color: var(--border-visible);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
 }
 
 /* --- Card Inner (The Dark Glass Surface) --- */
 .cap-card-inner {
   position: relative;
-  background: var(--bg-elevated);
+  background: transparent;
   border-radius: calc(var(--radius-lg, 12px) - 1px);
   padding: var(--space-7) var(--space-6);
   height: 100%;

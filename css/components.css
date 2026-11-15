@@ -913,6 +913,298 @@ a, button, .cap-card, .project-card {
   gap: var(--space-3);
 }
 
+/* ============================================================================
+   INTERACTIVE SERVICES PANEL (COMMAND DECK)
+   ============================================================================ */
+.services-interactive-deck {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg, 16px);
+  padding: var(--space-6);
+  margin-bottom: var(--space-8);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .services-interactive-deck {
+    padding: var(--space-8);
+  }
+}
+
+/* Service Nav Tabs */
+.services-nav-tabs {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  overflow-x: auto;
+  padding-bottom: var(--space-4);
+  margin-bottom: var(--space-7);
+  border-bottom: 1px solid var(--border-subtle);
+  scrollbar-width: none;
+}
+.services-nav-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.service-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  border-radius: 9999px;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.service-nav-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--border-visible);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.service-nav-btn.active {
+  background: var(--accent-subtle);
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+  box-shadow: 0 0 16px var(--accent-subtle);
+}
+
+.service-nav-btn .service-icon {
+  font-size: 1rem;
+}
+
+/* Service Panel Body */
+.service-pane {
+  display: none !important;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  animation: serviceFadeIn 0.35s var(--ease-out) forwards;
+}
+
+.service-pane.active {
+  display: grid !important;
+}
+
+@media (min-width: 1024px) {
+  .service-pane.active {
+    display: grid !important;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: var(--space-9);
+    align-items: center;
+  }
+}
+
+@keyframes serviceFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Service Detail Left Column */
+.service-detail-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.service-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  background: var(--accent-subtle);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.service-headline {
+  font-family: var(--font-headline);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.service-desc {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Deliverables Checklist */
+.service-deliverables-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+@media (min-width: 640px) {
+  .service-deliverables-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.service-deliverable-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.service-check-icon {
+  color: var(--accent);
+  font-weight: 700;
+  flex-shrink: 0;
+  font-size: 0.95rem;
+  margin-top: 1px;
+}
+
+/* Tech Stack Tags */
+.service-stack-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: var(--space-3);
+}
+
+.service-stack-pill {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  transition: all var(--duration-fast);
+}
+
+.service-stack-pill:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Service Right Column: Telemetry & Architecture Deck */
+.service-telemetry-deck {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md, 12px);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  position: relative;
+  overflow: hidden;
+}
+
+.telemetry-deck-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.telemetry-deck-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.telemetry-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--border-visible);
+}
+
+.telemetry-dot:first-child { background: #FF5F56; }
+.telemetry-dot:nth-child(2) { background: #FFBD2E; }
+.telemetry-dot:nth-child(3) { background: #27C93F; }
+
+.telemetry-deck-status {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* 4 KPI Grid */
+.telemetry-kpis {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.telemetry-kpi-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.kpi-val {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.kpi-label {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Architecture Code / Terminal Box */
+.telemetry-code-box {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  overflow-x: auto;
+}
+
+.telemetry-code-box .code-highlight {
+  color: var(--accent-hover);
+  font-weight: 600;
+}
+
+.telemetry-code-box .code-success {
+  color: #22C55E;
+}
+
 
 
 
