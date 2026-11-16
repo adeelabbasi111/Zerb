@@ -661,6 +661,25 @@
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-8);
   }
+
+  /* Bento Layout for 3-item showcase: First item spans full width */
+  .service-projects-grid:has(> :nth-child(3):last-child) > :first-child {
+    grid-column: span 2;
+    flex-direction: row;
+  }
+
+  .service-projects-grid:has(> :nth-child(3):last-child) > :first-child .service-project-media {
+    width: 52%;
+    height: auto;
+    min-height: 340px;
+    border-bottom: none;
+    border-right: 1px solid var(--glass-border);
+  }
+
+  .service-projects-grid:has(> :nth-child(3):last-child) > :first-child .service-project-body {
+    width: 48%;
+    padding: var(--space-8);
+  }
 }
 
 .service-project-card {

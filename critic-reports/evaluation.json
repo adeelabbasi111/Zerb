@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-16T12:34:46.882Z",
+  "timestamp": "2026-11-16T13:42:43.143Z",
   "overallScore": 10,
   "allPassed": true,
   "summary": {
@@ -14,12 +14,12 @@
       "slug": "index",
       "title": "Homepage / Capabilities",
       "path": "/index.html",
-      "url": "http://127.0.0.1:60061/index.html",
+      "url": "http://127.0.0.1:52478/index.html",
       "isServiceDetail": false,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 34934,
+      "loadDurationMs": 19543,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,
@@ -78,12 +78,12 @@
       "slug": "services",
       "title": "Services Index",
       "path": "/services.html",
-      "url": "http://127.0.0.1:60061/services.html",
+      "url": "http://127.0.0.1:52478/services.html",
       "isServiceDetail": false,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 6110,
+      "loadDurationMs": 6638,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,
@@ -116,7 +116,7 @@
           "max": 2.5,
           "notes": [
             "Single semantic h1 tag verified: \"What we build.\"",
-            "Semantic heading hierarchy structured (8 h2, 19 h3 tags)",
+            "Semantic heading hierarchy structured (3 h2, 13 h3 tags)",
             "Title tag populated: \"ZERB — Services\"",
             "SEO metadata & OpenGraph tags configured"
           ]
@@ -130,7 +130,7 @@
         "themeStudioDetected": 0,
         "horizontalOverflow": false,
         "h1Count": 1,
-        "h2Count": 8,
+        "h2Count": 3,
         "cardCount": 0,
         "tabsDetected": 0,
         "allTabsSwitchedSuccessfully": false
@@ -141,12 +141,12 @@
       "slug": "work",
       "title": "Work Portfolio",
       "path": "/work.html",
-      "url": "http://127.0.0.1:60061/work.html",
+      "url": "http://127.0.0.1:52478/work.html",
       "isServiceDetail": false,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 8364,
+      "loadDurationMs": 8458,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,
@@ -204,12 +204,12 @@
       "slug": "about",
       "title": "About Agency",
       "path": "/about.html",
-      "url": "http://127.0.0.1:60061/about.html",
+      "url": "http://127.0.0.1:52478/about.html",
       "isServiceDetail": false,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 5684,
+      "loadDurationMs": 5551,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,
@@ -267,12 +267,12 @@
       "slug": "contact",
       "title": "Contact & Inquiry",
       "path": "/contact.html",
-      "url": "http://127.0.0.1:60061/contact.html",
+      "url": "http://127.0.0.1:52478/contact.html",
       "isServiceDetail": false,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 4610,
+      "loadDurationMs": 5688,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,
@@ -305,7 +305,7 @@
           "max": 2.5,
           "notes": [
             "Single semantic h1 tag verified: \"Let's build something.\"",
-            "Semantic heading hierarchy structured (1 h2, 7 h3 tags)",
+            "Semantic heading hierarchy structured (3 h2, 10 h3 tags)",
             "Title tag populated: \"ZERB — Contact\"",
             "SEO metadata & OpenGraph tags configured"
           ]
@@ -319,7 +319,7 @@
         "themeStudioDetected": 0,
         "horizontalOverflow": false,
         "h1Count": 1,
-        "h2Count": 1,
+        "h2Count": 3,
         "cardCount": 0,
         "tabsDetected": 0,
         "allTabsSwitchedSuccessfully": false
@@ -330,12 +330,12 @@
       "slug": "service-web-development",
       "title": "Web Development Service",
       "path": "/services/web-development.html",
-      "url": "http://127.0.0.1:60061/services/web-development.html",
+      "url": "http://127.0.0.1:52478/services/web-development.html",
       "isServiceDetail": true,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 12323,
+      "loadDurationMs": 12200,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,
@@ -394,12 +394,12 @@
       "slug": "service-app-development",
       "title": "App Development Service",
       "path": "/services/app-development.html",
-      "url": "http://127.0.0.1:60061/services/app-development.html",
+      "url": "http://127.0.0.1:52478/services/app-development.html",
       "isServiceDetail": true,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 10980,
+      "loadDurationMs": 10367,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,
@@ -458,12 +458,12 @@
       "slug": "service-game-development",
       "title": "Game Development Service",
       "path": "/services/game-development.html",
-      "url": "http://127.0.0.1:60061/services/game-development.html",
+      "url": "http://127.0.0.1:52478/services/game-development.html",
       "isServiceDetail": true,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 10518,
+      "loadDurationMs": 12443,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,
@@ -522,12 +522,12 @@
       "slug": "service-graphic-design",
       "title": "Graphic Design Service",
       "path": "/services/graphic-design.html",
-      "url": "http://127.0.0.1:60061/services/graphic-design.html",
+      "url": "http://127.0.0.1:52478/services/graphic-design.html",
       "isServiceDetail": true,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 12581,
+      "loadDurationMs": 12082,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,
@@ -586,12 +586,12 @@
       "slug": "service-ui-ux-design",
       "title": "UI/UX Design Service",
       "path": "/services/ui-ux-design.html",
-      "url": "http://127.0.0.1:60061/services/ui-ux-design.html",
+      "url": "http://127.0.0.1:52478/services/ui-ux-design.html",
       "isServiceDetail": true,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 11827,
+      "loadDurationMs": 10176,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,
@@ -650,12 +650,12 @@
       "slug": "service-video-editing",
       "title": "Video Editing Service",
       "path": "/services/video-editing.html",
-      "url": "http://127.0.0.1:60061/services/video-editing.html",
+      "url": "http://127.0.0.1:52478/services/video-editing.html",
       "isServiceDetail": true,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 10532,
+      "loadDurationMs": 10671,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,

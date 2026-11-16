@@ -149,3 +149,198 @@
         grid-template-columns: 1fr 1fr;
     }
 }
+
+/* ============================================================================
+   TIER 2: PROJECT ENGAGEMENT MODELS
+   ============================================================================ */
+.engagement-models-section {
+    padding: var(--space-12) 0;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.engagement-models-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto var(--space-8);
+}
+
+.engagement-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+}
+
+@media (min-width: 992px) {
+    .engagement-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-6);
+    }
+}
+
+.engagement-card {
+    background: linear-gradient(135deg, rgba(29, 22, 17, 0.75) 0%, rgba(20, 15, 11, 0.9) 100%);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-top: 1px solid var(--glass-highlight);
+    border-radius: var(--radius-xl, 18px);
+    padding: var(--space-8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.4s var(--ease-framer);
+    position: relative;
+    overflow: hidden;
+}
+
+.engagement-card:hover {
+    border-color: var(--glass-border-hover);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-luxury-hover);
+}
+
+.engagement-card.featured {
+    border-color: rgba(200, 157, 108, 0.4);
+    box-shadow: 0 0 30px rgba(200, 157, 108, 0.12);
+}
+
+.engagement-card.featured::before {
+    content: "MOST REQUESTED";
+    position: absolute;
+    top: 14px;
+    right: -32px;
+    background: var(--accent);
+    color: #0A0806;
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    padding: 4px 36px;
+    transform: rotate(45deg);
+}
+
+.engagement-badge {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: var(--space-2);
+}
+
+.engagement-title {
+    font-family: var(--font-headline);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--space-3);
+}
+
+.engagement-desc {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--space-6);
+}
+
+.engagement-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-6) 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.engagement-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.625rem;
+    font-size: 0.84375rem;
+    color: var(--text-primary);
+    line-height: 1.45;
+}
+
+.engagement-feature-item span:first-child {
+    color: var(--accent);
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.engagement-meta {
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--border-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.engagement-timing {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+}
+
+/* ============================================================================
+   TIER 3: GUARANTEES & ENGAGEMENT SLA
+   ============================================================================ */
+.guarantees-section {
+    padding: var(--space-12) 0;
+    border-top: 1px solid var(--border-subtle);
+    background: rgba(14, 11, 8, 0.4);
+}
+
+.guarantees-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+}
+
+@media (min-width: 768px) {
+    .guarantees-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .guarantees-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.guarantee-card {
+    background: rgba(20, 15, 11, 0.7);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md, 8px);
+    padding: var(--space-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    transition: all 0.3s ease;
+}
+
+.guarantee-card:hover {
+    border-color: var(--accent-subtle);
+    background: rgba(29, 22, 17, 0.75);
+}
+
+.guarantee-icon {
+    font-size: 1.5rem;
+    color: var(--accent);
+    line-height: 1;
+}
+
+.guarantee-title {
+    font-family: var(--font-headline);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.guarantee-desc {
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+}

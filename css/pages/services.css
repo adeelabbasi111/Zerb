@@ -1,4 +1,148 @@
-/* services.css */
+/* ============================================================================
+   EDITORIAL 6-DISCIPLINE BENTO SHOWCASE (REPLACES ACCORDION)
+   ============================================================================ */
+.editorial-bento-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-7);
+    margin-top: var(--space-8);
+}
+
+@media (min-width: 900px) {
+    .editorial-bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-8);
+    }
+}
+
+.editorial-bento-card {
+    background: linear-gradient(135deg, rgba(29, 22, 17, 0.75) 0%, rgba(20, 15, 11, 0.9) 100%);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-top: 1px solid var(--glass-highlight);
+    border-radius: var(--radius-xl, 18px);
+    padding: var(--space-8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.4s var(--ease-framer);
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-luxury);
+}
+
+.editorial-bento-card:hover {
+    border-color: var(--glass-border-hover);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-luxury-hover);
+}
+
+.editorial-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-4);
+}
+
+.editorial-ghost-num {
+    font-family: var(--font-headline);
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgba(200, 157, 108, 0.25);
+    line-height: 1;
+}
+
+.editorial-category-pill {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-subtle);
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(200, 157, 108, 0.2);
+}
+
+.editorial-card-title {
+    font-family: var(--font-headline);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--space-3);
+    line-height: 1.25;
+}
+
+.editorial-card-desc {
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--space-6);
+}
+
+.editorial-features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+    margin-bottom: var(--space-6);
+}
+
+@media (min-width: 600px) {
+    .editorial-features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.editorial-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8125rem;
+    color: var(--text-primary);
+}
+
+.editorial-feature-item span:first-child {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.editorial-telemetry-badge {
+    background: rgba(10, 8, 6, 0.65);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    padding: var(--space-3) var(--space-4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-6);
+}
+
+.editorial-telemetry-label {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+}
+
+.editorial-telemetry-val {
+    font-family: var(--font-headline);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.editorial-card-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--border-subtle);
+}
 
 .services-hero {
     padding-top: 160px;

@@ -544,230 +544,236 @@
             </div>
         </section>
 
-        <section class="services-list section pt-0">
+        <section class="services-list section pt-0" id="all-capabilities">
             <div class="container">
-                <div class="services-accordion reveal-stagger">
+                <div class="section-header reveal text-center" style="margin-bottom: var(--space-6);">
+                    <span class="section-label t-label" style="color: var(--accent); margin-bottom: var(--space-2); display: block;">ENGINEERED CAPABILITIES CATALOG</span>
+                    <h2 class="t-h1">The Six Core Disciplines</h2>
+                    <p class="t-body-lg" style="max-width: 680px; margin: var(--space-2) auto 0; color: var(--text-secondary);">
+                        Each discipline is operated as an autonomous, high-craft engineering department. Explore our technical capabilities, deliverables, and production codebases.
+                    </p>
+                </div>
+
+                <div class="editorial-bento-grid reveal-stagger">
                     
-                    <!-- Web Development -->
-                    <div class="service-row">
-                        <button class="service-header" aria-expanded="false" aria-controls="service-web">
-                            <h2 class="t-h2 service-title">Web Development</h2>
-                            <span class="service-icon"></span>
-                        </button>
-                        <div class="service-body" id="service-web">
-                            <div class="service-content-inner">
-                                <p class="t-body-lg service-desc">We build modern websites, web applications, dashboards, e-commerce, and custom platforms that scale with your business and deliver seamless user experiences.</p>
-                                <div class="service-details grid-2">
-                                    <div class="service-deliverables">
-                                        <h3 class="t-h4">Deliverables</h3>
-                                        <ul>
-                                            <li>Custom Web Applications</li>
-                                            <li>E-Commerce Platforms</li>
-                                            <li>Marketing Websites</li>
-                                            <li>Admin Dashboards</li>
-                                        </ul>
-                                    </div>
-                                    <div class="service-tech">
-                                        <h3 class="t-h4">Technologies</h3>
-                                        <div class="tech-tags">
-                                            <span class="tech-tag">React</span>
-                                            <span class="tech-tag">Next.js</span>
-                                            <span class="tech-tag">Vue</span>
-                                            <span class="tech-tag">Node.js</span>
-                                            <span class="tech-tag">TypeScript</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="service-actions mt-4" style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
-                                    <a href="services/web-development.html" class="btn btn-primary service-cta">View Web Showcase <span class="arrow">→</span></a>
-                                    <a href="contact.html?type=web" class="btn btn-outline service-cta">Discuss a Web Project</a>
-                                </div>
+                    <!-- 01: Web Development -->
+                    <article class="editorial-bento-card">
+                        <div>
+                            <div class="editorial-card-header">
+                                <span class="editorial-ghost-num">01</span>
+                                <span class="editorial-category-pill">ARCHITECTURE &amp; SYSTEMS</span>
                             </div>
-                        </div>
-                    </div>
+                            <h3 class="editorial-card-title">Web Development &amp; Systems Architecture</h3>
+                            <p class="editorial-card-desc">Modern web systems, reactive dashboards, headless e-commerce, and high-throughput APIs built for zero-bloat scalability and instant sub-second response times.</p>
+                            
+                            <div class="editorial-features-grid">
+                                <div class="editorial-feature-item"><span>&check;</span> <span>Full-Stack React &amp; Next.js 15</span></div>
+                                <div class="editorial-feature-item"><span>&check;</span> <span>Role-Based Access Control (RBAC)</span></div>
+                                <div class="editorial-feature-item"><span>&check;</span> <span>Sub-Second Server-Side Rendering</span></div>
+                                <div class="editorial-feature-item"><span>&check;</span> <span>Dockerized CI/CD &amp; Redis Caching</span></div>
+                            </div>
 
-                    <!-- App Development -->
-                    <div class="service-row">
-                        <button class="service-header" aria-expanded="false" aria-controls="service-app">
-                            <h2 class="t-h2 service-title">App Development</h2>
-                            <span class="service-icon"></span>
-                        </button>
-                        <div class="service-body" id="service-app">
-                            <div class="service-content-inner">
-                                <p class="t-body-lg service-desc">We engineer native and cross-platform mobile applications that capture attention, drive engagement, and perform flawlessly on any device.</p>
-                                <div class="service-details grid-2">
-                                    <div class="service-deliverables">
-                                        <h3 class="t-h4">Deliverables</h3>
-                                        <ul>
-                                            <li>iOS & Android Apps</li>
-                                            <li>Cross-Platform Solutions</li>
-                                            <li>App Store Optimization</li>
-                                            <li>Maintenance & Support</li>
-                                        </ul>
-                                    </div>
-                                    <div class="service-tech">
-                                        <h3 class="t-h4">Technologies</h3>
-                                        <div class="tech-tags">
-                                            <span class="tech-tag">React Native</span>
-                                            <span class="tech-tag">Flutter</span>
-                                            <span class="tech-tag">Swift</span>
-                                            <span class="tech-tag">Kotlin</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="service-actions mt-4" style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
-                                    <a href="services/app-development.html" class="btn btn-primary service-cta">View App Showcase <span class="arrow">→</span></a>
-                                    <a href="contact.html?type=app" class="btn btn-outline service-cta">Discuss an App Project</a>
-                                </div>
+                            <div class="editorial-telemetry-badge">
+                                <span class="editorial-telemetry-label">Telemetry Guarantee</span>
+                                <span class="editorial-telemetry-val">SLA Uptime 99.99% // Median LCP &lt; 0.8s</span>
                             </div>
-                        </div>
-                    </div>
 
-                    <!-- Game Development -->
-                    <div class="service-row">
-                        <button class="service-header" aria-expanded="false" aria-controls="service-game">
-                            <h2 class="t-h2 service-title">Game Development</h2>
-                            <span class="service-icon"></span>
-                        </button>
-                        <div class="service-body" id="service-game">
-                            <div class="service-content-inner">
-                                <p class="t-body-lg service-desc">From initial game concepts to full development, we craft immersive worlds, addictive mechanics, and stunning assets for players to get lost in.</p>
-                                <div class="service-details grid-2">
-                                    <div class="service-deliverables">
-                                        <h3 class="t-h4">Deliverables</h3>
-                                        <ul>
-                                            <li>Game Design & Mechanics</li>
-                                            <li>2D/3D Asset Creation</li>
-                                            <li>UI/UX for Games</li>
-                                            <li>Multiplayer Integration</li>
-                                        </ul>
-                                    </div>
-                                    <div class="service-tech">
-                                        <h3 class="t-h4">Technologies</h3>
-                                        <div class="tech-tags">
-                                            <span class="tech-tag">Unity</span>
-                                            <span class="tech-tag">Unreal Engine</span>
-                                            <span class="tech-tag">Godot</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="service-actions mt-4" style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
-                                    <a href="services/game-development.html" class="btn btn-primary service-cta">View Game Showcase <span class="arrow">→</span></a>
-                                    <a href="contact.html?type=game" class="btn btn-outline service-cta">Discuss a Game Project</a>
-                                </div>
+                            <div class="service-stack-wrap" style="margin-bottom: var(--space-4);">
+                                <span class="service-stack-pill">Next.js 15</span>
+                                <span class="service-stack-pill">React 19</span>
+                                <span class="service-stack-pill">TypeScript</span>
+                                <span class="service-stack-pill">PostgreSQL</span>
+                                <span class="service-stack-pill">Docker</span>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Graphic Design -->
-                    <div class="service-row">
-                        <button class="service-header" aria-expanded="false" aria-controls="service-graphic">
-                            <h2 class="t-h2 service-title">Graphic Design</h2>
-                            <span class="service-icon"></span>
-                        </button>
-                        <div class="service-body" id="service-graphic">
-                            <div class="service-content-inner">
-                                <p class="t-body-lg service-desc">We forge distinct brand identities and visual systems that command attention. Our graphic design services elevate your brand across all marketing channels.</p>
-                                <div class="service-details grid-2">
-                                    <div class="service-deliverables">
-                                        <h3 class="t-h4">Deliverables</h3>
-                                        <ul>
-                                            <li>Brand Identity Systems</li>
-                                            <li>Marketing Assets</li>
-                                            <li>Social Media Graphics</li>
-                                            <li>Print & Packaging</li>
-                                        </ul>
-                                    </div>
-                                    <div class="service-tech">
-                                        <h3 class="t-h4">Tools</h3>
-                                        <div class="tech-tags">
-                                            <span class="tech-tag">Figma</span>
-                                            <span class="tech-tag">Illustrator</span>
-                                            <span class="tech-tag">Photoshop</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="service-actions mt-4" style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
-                                    <a href="services/graphic-design.html" class="btn btn-primary service-cta">View Graphic Design Showcase (Before/After) <span class="arrow">→</span></a>
-                                    <a href="contact.html?type=graphic" class="btn btn-outline service-cta">Discuss a Design Project</a>
-                                </div>
-                            </div>
+                        <div class="editorial-card-actions">
+                            <a href="services/web-development.html" class="btn btn-primary btn-sm">Explore Web Showcase <span class="arrow">&rarr;</span></a>
+                            <a href="contact.html?type=web" class="btn btn-outline btn-sm">Discuss Web Project</a>
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- Video Editing -->
-                    <div class="service-row">
-                        <button class="service-header" aria-expanded="false" aria-controls="service-video">
-                            <h2 class="t-h2 service-title">Video Editing</h2>
-                            <span class="service-icon"></span>
-                        </button>
-                        <div class="service-body" id="service-video">
-                            <div class="service-content-inner">
-                                <p class="t-body-lg service-desc">We tell compelling stories through motion. Our video editing services cover commercials, social content, and dynamic promotional videos that captivate audiences.</p>
-                                <div class="service-details grid-2">
-                                    <div class="service-deliverables">
-                                        <h3 class="t-h4">Deliverables</h3>
-                                        <ul>
-                                            <li>Commercials & Promos</li>
-                                            <li>Social Media Content</li>
-                                            <li>Motion Graphics</li>
-                                            <li>Color Grading</li>
-                                        </ul>
-                                    </div>
-                                    <div class="service-tech">
-                                        <h3 class="t-h4">Tools</h3>
-                                        <div class="tech-tags">
-                                            <span class="tech-tag">Premiere Pro</span>
-                                            <span class="tech-tag">After Effects</span>
-                                            <span class="tech-tag">DaVinci Resolve</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="service-actions mt-4" style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
-                                    <a href="services/video-editing.html" class="btn btn-primary service-cta">View Video Editing Showcase <span class="arrow">→</span></a>
-                                    <a href="contact.html?type=video" class="btn btn-outline service-cta">Discuss a Video Project</a>
-                                </div>
+                    <!-- 02: App Development -->
+                    <article class="editorial-bento-card">
+                        <div>
+                            <div class="editorial-card-header">
+                                <span class="editorial-ghost-num">02</span>
+                                <span class="editorial-category-pill">MOBILE PLATFORMS</span>
                             </div>
-                        </div>
-                    </div>
+                            <h3 class="editorial-card-title">Mobile App Development &amp; Native Systems</h3>
+                            <p class="editorial-card-desc">Native iOS/Android applications and high-velocity Flutter cross-platform ecosystems built for 60 FPS fluidity, biometrics, and offline-first reliability.</p>
+                            
+                            <div class="editorial-features-grid">
+                                <div class="editorial-feature-item"><span>&check;</span> <span>Cross-Platform iOS &amp; Android</span></div>
+                                <div class="editorial-feature-item"><span>&check;</span> <span>Native Swift &amp; Kotlin Engines</span></div>
+                                <div class="editorial-feature-item"><span>&check;</span> <span>Offline-First SQLite &amp; State Sync</span></div>
+                                <div class="editorial-feature-item"><span>&check;</span> <span>Push Notifications (APNs &amp; FCM)</span></div>
+                            </div>
 
-                    <!-- UI/UX Design -->
-                    <div class="service-row">
-                        <button class="service-header" aria-expanded="false" aria-controls="service-uiux">
-                            <h2 class="t-h2 service-title">UI/UX Design</h2>
-                            <span class="service-icon"></span>
-                        </button>
-                        <div class="service-body" id="service-uiux">
-                            <div class="service-content-inner">
-                                <p class="t-body-lg service-desc">We design intuitive, beautiful interfaces grounded in user research. We prototype and iterate to ensure every interaction feels effortless and impactful.</p>
-                                <div class="service-details grid-2">
-                                    <div class="service-deliverables">
-                                        <h3 class="t-h4">Deliverables</h3>
-                                        <ul>
-                                            <li>User Research & Strategy</li>
-                                            <li>Wireframes & Flowcharts</li>
-                                            <li>Interface Design</li>
-                                            <li>Interactive Prototypes</li>
-                                        </ul>
-                                    </div>
-                                    <div class="service-tech">
-                                        <h3 class="t-h4">Tools</h3>
-                                        <div class="tech-tags">
-                                            <span class="tech-tag">Figma</span>
-                                            <span class="tech-tag">Framer</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="service-actions mt-4" style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
-                                    <a href="services/ui-ux-design.html" class="btn btn-primary service-cta">View UI/UX Showcase <span class="arrow">→</span></a>
-                                    <a href="contact.html?type=uiux" class="btn btn-outline service-cta">Discuss a UI/UX Project</a>
-                                </div>
+                            <div class="editorial-telemetry-badge">
+                                <span class="editorial-telemetry-label">Telemetry Guarantee</span>
+                                <span class="editorial-telemetry-val">Bundle Size -42% // 60 FPS Fluidity</span>
+                            </div>
+
+                            <div class="service-stack-wrap" style="margin-bottom: var(--space-4);">
+                                <span class="service-stack-pill">Flutter</span>
+                                <span class="service-stack-pill">React Native</span>
+                                <span class="service-stack-pill">Swift</span>
+                                <span class="service-stack-pill">Kotlin</span>
+                                <span class="service-stack-pill">SQLite</span>
                             </div>
                         </div>
-                    </div>
+
+                        <div class="editorial-card-actions">
+                            <a href="services/app-development.html" class="btn btn-primary btn-sm">Explore App Showcase <span class="arrow">&rarr;</span></a>
+                            <a href="contact.html?type=app" class="btn btn-outline btn-sm">Discuss App Project</a>
+                        </div>
+                    </article>
+
+                    <!-- 03: Game Development -->
+                    <article class="editorial-bento-card">
+                        <div>
+                            <div class="editorial-card-header">
+                                <span class="editorial-ghost-num">03</span>
+                                <span class="editorial-category-pill">PHYSICS &amp; SIMULATION</span>
+                            </div>
+                            <h3 class="editorial-card-title">Game Development &amp; Physics Engines</h3>
+                            <p class="editorial-card-desc">Hardware-accelerated 2D/3D physics engines, procedural dungeon crawlers, and immersive WebGL interactive simulations built with precision mathematical models.</p>
+                            
+                            <div class="editorial-features-grid">
+                                <div class="editorial-feature-item"><span>&check;</span> <span>60 FPS Custom Physics Engines</span></div>
+                                <div class="editorial-feature-item"><span>&check;</span> <span>Procedural Roguelike Map Generation</span></div>
+                                <div class="editorial-feature-item"><span>&check;</span> <span>WebGL &amp; HTML5 Canvas Acceleration</span></div>
+                                <div class="editorial-feature-item"><span>&check;</span> <span>Zero-Latency Sound Synthesis</span></div>
+                            </div>
+
+                            <div class="editorial-telemetry-badge">
+                                <span class="editorial-telemetry-label">Telemetry Guarantee</span>
+                                <span class="editorial-telemetry-val">Locked 60 FPS // 0ms Audio Latency</span>
+                            </div>
+
+                            <div class="service-stack-wrap" style="margin-bottom: var(--space-4);">
+                                <span class="service-stack-pill">Pygame</span>
+                                <span class="service-stack-pill">Python</span>
+                                <span class="service-stack-pill">Canvas 2D</span>
+                                <span class="service-stack-pill">WebGL</span>
+                                <span class="service-stack-pill">Web Audio DSP</span>
                             </div>
                         </div>
-                    </div>
+
+                        <div class="editorial-card-actions">
+                            <a href="services/game-development.html" class="btn btn-primary btn-sm">Explore Game Showcase <span class="arrow">&rarr;</span></a>
+                            <a href="contact.html?type=game" class="btn btn-outline btn-sm">Discuss Game Project</a>
+                        </div>
+                    </article>
+
+                    <!-- 04: Graphic Design -->
+                    <article class="editorial-bento-card">
+                        <div>
+                            <div class="editorial-card-header">
+                                <span class="editorial-ghost-num">04</span>
+                                <span class="editorial-category-pill">BRAND &amp; VISUAL IDENTITY</span>
+                            </div>
+                            <h3 class="editorial-card-title">Graphic Design &amp; Brand Systems</h3>
+                            <p class="editorial-card-desc">Cohesive vector identity systems, creative digital compositing, historical archival photo restoration, and 3D marketing mockups crafted with Adobe Certified mastery.</p>
+                            
+                            <div class="editorial-features-grid">
+                                <div class="editorial-feature-item"><span>&check;</span> <span>Comprehensive Vector Brand Systems</span></div>
+                                <div class="editorial-feature-item"><span>&check;</span> <span>Archival Photo Reconstruction</span></div>
+                                <div class="editorial-feature-item"><span>&check;</span> <span>Commercial Retouching &amp; Grading</span></div>
+                                <div class="editorial-feature-item"><span>&check;</span> <span>Print, Packaging &amp; 3D Mockups</span></div>
+                            </div>
+
+                            <div class="editorial-telemetry-badge">
+                                <span class="editorial-telemetry-label">Telemetry Guarantee</span>
+                                <span class="editorial-telemetry-val">Adobe Certified // 100% Vector Scalability</span>
+                            </div>
+
+                            <div class="service-stack-wrap" style="margin-bottom: var(--space-4);">
+                                <span class="service-stack-pill">Photoshop</span>
+                                <span class="service-stack-pill">Illustrator</span>
+                                <span class="service-stack-pill">Adobe Certified</span>
+                                <span class="service-stack-pill">Figma</span>
+                            </div>
+                        </div>
+
+                        <div class="editorial-card-actions">
+                            <a href="services/graphic-design.html" class="btn btn-primary btn-sm">Explore Studio (Before/After) <span class="arrow">&rarr;</span></a>
+                            <a href="contact.html?type=graphic" class="btn btn-outline btn-sm">Discuss Design Project</a>
+                        </div>
+                    </article>
+
+                    <!-- 05: Video Editing -->
+                    <article class="editorial-bento-card">
+                        <div>
+                            <div class="editorial-card-header">
+                                <span class="editorial-ghost-num">05</span>
+                                <span class="editorial-category-pill">MOTION &amp; CINEMATIC</span>
+                            </div>
+                            <h3 class="editorial-card-title">Video Editing &amp; Motion Design</h3>
+                            <p class="editorial-card-desc">High-impact brand commercial promos, SaaS product UI walkthroughs, precision DaVinci color grading, and viral short-form retention architectures.</p>
+                            
+                            <div class="editorial-features-grid">
+                                <div class="editorial-feature-item"><span>&check;</span> <span>Commercial Promos &amp; Brand Launches</span></div>
+                                <div class="editorial-feature-item"><span>&check;</span> <span>Product UI &amp; Motion Graphics</span></div>
+                                <div class="editorial-feature-item"><span>&check;</span> <span>HDR Color Science &amp; DaVinci Resolve</span></div>
+                                <div class="editorial-feature-item"><span>&check;</span> <span>Sound Design, Foley &amp; Audio Mixing</span></div>
+                            </div>
+
+                            <div class="editorial-telemetry-badge">
+                                <span class="editorial-telemetry-label">Telemetry Guarantee</span>
+                                <span class="editorial-telemetry-val">4K ProRes Delivery // Frame-Accurate Cuts</span>
+                            </div>
+
+                            <div class="service-stack-wrap" style="margin-bottom: var(--space-4);">
+                                <span class="service-stack-pill">Premiere Pro</span>
+                                <span class="service-stack-pill">After Effects</span>
+                                <span class="service-stack-pill">DaVinci Resolve</span>
+                                <span class="service-stack-pill">Motion Design</span>
+                            </div>
+                        </div>
+
+                        <div class="editorial-card-actions">
+                            <a href="services/video-editing.html" class="btn btn-primary btn-sm">Explore Video Showcase <span class="arrow">&rarr;</span></a>
+                            <a href="contact.html?type=video" class="btn btn-outline btn-sm">Discuss Video Project</a>
+                        </div>
+                    </article>
+
+                    <!-- 06: UI/UX Architecture -->
+                    <article class="editorial-bento-card">
+                        <div>
+                            <div class="editorial-card-header">
+                                <span class="editorial-ghost-num">06</span>
+                                <span class="editorial-category-pill">PRODUCT ARCHITECTURE</span>
+                            </div>
+                            <h3 class="editorial-card-title">UI/UX Architecture &amp; Product Design</h3>
+                            <p class="editorial-card-desc">Mathematically proportioned design token architectures, dense SaaS workstation UX, interactive Figma prototypes, and conversion-optimized checkout funnels.</p>
+                            
+                            <div class="editorial-features-grid">
+                                <div class="editorial-feature-item"><span>&check;</span> <span>Multi-Theme Design Token Systems</span></div>
+                                <div class="editorial-feature-item"><span>&check;</span> <span>High-Density SaaS Dashboard UX</span></div>
+                                <div class="editorial-feature-item"><span>&check;</span> <span>Interactive Figma Flow Prototyping</span></div>
+                                <div class="editorial-feature-item"><span>&check;</span> <span>100% Production-Accurate Handoff</span></div>
+                            </div>
+
+                            <div class="editorial-telemetry-badge">
+                                <span class="editorial-telemetry-label">Telemetry Guarantee</span>
+                                <span class="editorial-telemetry-val">WCAG AA Compliant // Zero Handoff Drift</span>
+                            </div>
+
+                            <div class="service-stack-wrap" style="margin-bottom: var(--space-4);">
+                                <span class="service-stack-pill">Figma</span>
+                                <span class="service-stack-pill">Design Tokens</span>
+                                <span class="service-stack-pill">UX Research</span>
+                                <span class="service-stack-pill">Storybook</span>
+                            </div>
+                        </div>
+
+                        <div class="editorial-card-actions">
+                            <a href="services/ui-ux-design.html" class="btn btn-primary btn-sm">Explore UI/UX Showcase <span class="arrow">&rarr;</span></a>
+                            <a href="contact.html?type=uiux" class="btn btn-outline btn-sm">Discuss UI/UX Project</a>
+                        </div>
+                    </article>
 
                 </div>
             </div>
@@ -817,36 +823,7 @@
         </div>
     </footer>
 
-    <!-- Inline script for the service accordion behavior -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const serviceHeaders = document.querySelectorAll('.service-header');
-            
-            serviceHeaders.forEach(header => {
-                header.addEventListener('click', () => {
-                    const isExpanded = header.getAttribute('aria-expanded') === 'true';
-                    
-                    // Close all others
-                    serviceHeaders.forEach(h => {
-                        h.setAttribute('aria-expanded', 'false');
-                        h.parentElement.classList.remove('is-active');
-                    });
-                    
-                    // Toggle current
-                    if (!isExpanded) {
-                        header.setAttribute('aria-expanded', 'true');
-                        header.parentElement.classList.add('is-active');
-                    }
-                });
-            });
 
-            // Open the first one by default
-            if(serviceHeaders.length > 0) {
-                serviceHeaders[0].setAttribute('aria-expanded', 'true');
-                serviceHeaders[0].parentElement.classList.add('is-active');
-            }
-        });
-    </script>
 
     <!-- GSAP & Lenis -->
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
