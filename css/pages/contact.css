@@ -37,14 +37,17 @@
 
 .form-input, .form-select, .form-textarea {
     width: 100%;
-    background-color: var(--bg-surface);
-    border: 1px solid var(--border-subtle);
-    padding: 1rem;
+    background: linear-gradient(135deg, rgba(29, 22, 17, 0.6) 0%, rgba(20, 15, 11, 0.8) 100%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-top: 1px solid var(--glass-highlight);
+    padding: 1.1rem 1.25rem;
     color: var(--text-primary);
     font-family: var(--font-body);
     font-size: 1rem;
-    transition: border-color 0.3s ease;
-    border-radius: 4px;
+    transition: all 0.3s var(--ease-framer);
+    border-radius: var(--radius-md, 8px);
 }
 
 .form-textarea {
@@ -55,6 +58,8 @@
 .form-input:focus, .form-select:focus, .form-textarea:focus {
     outline: none;
     border-color: var(--accent);
+    box-shadow: 0 0 20px var(--accent-subtle);
+    background: rgba(29, 22, 17, 0.85);
 }
 
 .form-input.error, .form-select.error, .form-textarea.error {
@@ -72,10 +77,14 @@
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    padding: 2rem;
-    background-color: var(--bg-surface);
-    border: 1px solid var(--border-subtle);
-    border-radius: 8px;
+    padding: 2.5rem;
+    background: linear-gradient(135deg, rgba(29, 22, 17, 0.7) 0%, rgba(20, 15, 11, 0.85) 100%);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-top: 1px solid var(--glass-highlight);
+    border-radius: var(--radius-lg, 12px);
+    box-shadow: var(--shadow-luxury);
     height: fit-content;
 }
 

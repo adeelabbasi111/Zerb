@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-15T19:33:35.232Z",
+  "timestamp": "2026-11-16T11:09:55.249Z",
   "overallScore": 10,
   "allPassed": true,
   "summary": {
@@ -14,12 +14,12 @@
       "slug": "index",
       "title": "Homepage / Capabilities",
       "path": "/index.html",
-      "url": "http://127.0.0.1:54390/index.html",
+      "url": "http://127.0.0.1:53378/index.html",
       "isServiceDetail": false,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 23642,
+      "loadDurationMs": 35962,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,
@@ -78,12 +78,12 @@
       "slug": "services",
       "title": "Services Index",
       "path": "/services.html",
-      "url": "http://127.0.0.1:54390/services.html",
+      "url": "http://127.0.0.1:53378/services.html",
       "isServiceDetail": false,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 5128,
+      "loadDurationMs": 6269,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,
@@ -141,12 +141,12 @@
       "slug": "work",
       "title": "Work Portfolio",
       "path": "/work.html",
-      "url": "http://127.0.0.1:54390/work.html",
+      "url": "http://127.0.0.1:53378/work.html",
       "isServiceDetail": false,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 8476,
+      "loadDurationMs": 8327,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,
@@ -204,12 +204,12 @@
       "slug": "about",
       "title": "About Agency",
       "path": "/about.html",
-      "url": "http://127.0.0.1:54390/about.html",
+      "url": "http://127.0.0.1:53378/about.html",
       "isServiceDetail": false,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 5050,
+      "loadDurationMs": 5718,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,
@@ -267,12 +267,12 @@
       "slug": "contact",
       "title": "Contact & Inquiry",
       "path": "/contact.html",
-      "url": "http://127.0.0.1:54390/contact.html",
+      "url": "http://127.0.0.1:53378/contact.html",
       "isServiceDetail": false,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 3835,
+      "loadDurationMs": 4801,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,
@@ -330,12 +330,12 @@
       "slug": "service-web-development",
       "title": "Web Development Service",
       "path": "/services/web-development.html",
-      "url": "http://127.0.0.1:54390/services/web-development.html",
+      "url": "http://127.0.0.1:53378/services/web-development.html",
       "isServiceDetail": true,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 9597,
+      "loadDurationMs": 9660,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,
@@ -394,12 +394,12 @@
       "slug": "service-app-development",
       "title": "App Development Service",
       "path": "/services/app-development.html",
-      "url": "http://127.0.0.1:54390/services/app-development.html",
+      "url": "http://127.0.0.1:53378/services/app-development.html",
       "isServiceDetail": true,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 10361,
+      "loadDurationMs": 8047,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,
@@ -458,12 +458,12 @@
       "slug": "service-game-development",
       "title": "Game Development Service",
       "path": "/services/game-development.html",
-      "url": "http://127.0.0.1:54390/services/game-development.html",
+      "url": "http://127.0.0.1:53378/services/game-development.html",
       "isServiceDetail": true,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 10479,
+      "loadDurationMs": 8966,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,
@@ -522,12 +522,12 @@
       "slug": "service-graphic-design",
       "title": "Graphic Design Service",
       "path": "/services/graphic-design.html",
-      "url": "http://127.0.0.1:54390/services/graphic-design.html",
+      "url": "http://127.0.0.1:53378/services/graphic-design.html",
       "isServiceDetail": true,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 10418,
+      "loadDurationMs": 10356,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,
@@ -586,12 +586,12 @@
       "slug": "service-ui-ux-design",
       "title": "UI/UX Design Service",
       "path": "/services/ui-ux-design.html",
-      "url": "http://127.0.0.1:54390/services/ui-ux-design.html",
+      "url": "http://127.0.0.1:53378/services/ui-ux-design.html",
       "isServiceDetail": true,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 9389,
+      "loadDurationMs": 9509,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,
@@ -650,12 +650,12 @@
       "slug": "service-video-editing",
       "title": "Video Editing Service",
       "path": "/services/video-editing.html",
-      "url": "http://127.0.0.1:54390/services/video-editing.html",
+      "url": "http://127.0.0.1:53378/services/video-editing.html",
       "isServiceDetail": true,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 10514,
+      "loadDurationMs": 8929,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,

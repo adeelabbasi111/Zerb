@@ -232,27 +232,45 @@
   }
 }
 
-/* --- The Card Shell (Clean Refined Luxury Border — No Shiny Rotating Lines) --- */
+/* --- The Card Shell (Luxury Glass Bento Surface) --- */
 .cap-card {
   position: relative;
-  border-radius: var(--radius-lg, 12px);
+  border-radius: var(--radius-xl, 16px);
   padding: 0;
-  border: 1px solid var(--border-subtle);
-  background: var(--bg-surface);
+  border: 1px solid var(--glass-border);
+  border-top: 1px solid var(--glass-highlight);
+  background: linear-gradient(135deg, rgba(29, 22, 17, 0.75) 0%, rgba(20, 15, 11, 0.9) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--shadow-luxury);
   will-change: transform;
   opacity: 0; /* Hidden by default, GSAP reveals */
   transform: translateY(40px);
-  transition: border-color var(--duration-fast) var(--ease-out), transform var(--duration-fast) var(--ease-out), box-shadow var(--duration-fast) var(--ease-out);
+  transition: border-color 0.4s var(--ease-framer),
+              transform 0.4s var(--ease-framer),
+              box-shadow 0.4s var(--ease-framer);
+  overflow: hidden;
 }
 
 .cap-card::before {
-  display: none !important;
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(200, 157, 108, 0.12), transparent 60%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s var(--ease-framer);
+  z-index: 2;
+}
+
+.cap-card:hover::before {
+  opacity: 1;
 }
 
 .cap-card:hover {
-  border-color: var(--border-visible);
-  transform: translateY(-4px);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+  border-color: var(--glass-border-hover);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-luxury-hover);
 }
 
 /* --- Card Inner (The Dark Glass Surface) --- */
@@ -301,7 +319,7 @@
 
 .cap-card:hover .cap-card-inner {
   transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(196, 115, 74, 0.08);
+  box-shadow: 0 20px 50px var(--accent-subtle);
 }
 
 /* --- Ghost Number --- */
@@ -632,22 +650,24 @@
 }
 
 .hero-hud-card {
-  background: var(--bg-surface);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  padding: var(--space-4);
+  background: linear-gradient(135deg, rgba(29, 22, 17, 0.7) 0%, rgba(20, 15, 11, 0.85) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-top: 1px solid var(--glass-highlight);
+  border-radius: var(--radius-lg, 12px);
+  padding: var(--space-4) var(--space-5);
   text-align: left;
-  transition: all var(--duration-fast) var(--ease-out);
+  transition: all 0.35s var(--ease-framer);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
 }
 
 .hero-hud-card:hover {
-  border-color: var(--border-active);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px var(--accent-glow);
+  border-color: var(--glass-border-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.8), 0 0 25px rgba(200, 157, 108, 0.15);
 }
 
 .hud-card-label {

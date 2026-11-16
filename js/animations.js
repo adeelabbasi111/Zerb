@@ -332,44 +332,50 @@
 
 
   // ========================================================================
-  // 3D TILT EFFECT (Capabilities Cards)
+  // 3D TILT & MOUSE SPOTLIGHT EFFECT
   // ========================================================================
   function init3DTilt() {
-    const cards = document.querySelectorAll('.cap-card');
-    if (!cards.length || window.innerWidth <= 1024) return;
+    const cards = document.querySelectorAll('.cap-card, .card-glass, .hero-hud-card, .approach-step, .credential-card, .project-stack-card');
+    if (!cards.length) return;
 
     cards.forEach(card => {
-      const inner = card.querySelector('.cap-card-inner');
-      if(!inner) return;
+      const inner = card.querySelector('.cap-card-inner') || card;
 
       card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
         
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        
-        // Calculate tilt angles (max 8 degrees)
-        const tiltX = ((centerY - y) / centerY) * 8;
-        const tiltY = ((x - centerX) / centerX) * 8;
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
 
-        gsap.to(inner, {
-          duration: 0.5,
-          rotateX: tiltX,
-          rotateY: tiltY,
-          transformPerspective: 1000,
-          ease: 'power2.out'
-        });
+        if (window.innerWidth > 1024 && card.classList.contains('cap-card')) {
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          const tiltX = ((centerY - y) / centerY) * 6;
+          const tiltY = ((x - centerX) / centerX) * 6;
+
+          gsap.to(inner, {
+            duration: 0.4,
+            rotateX: tiltX,
+            rotateY: tiltY,
+            transformPerspective: 1000,
+            ease: 'power2.out',
+            overwrite: 'auto'
+          });
+        }
       });
 
       card.addEventListener('mouseleave', () => {
-        gsap.to(inner, {
-          duration: 0.8,
-          rotateX: 0,
-          rotateY: 0,
-          ease: 'power2.out'
-        });
+        if (window.innerWidth > 1024 && card.classList.contains('cap-card')) {
+          gsap.to(inner, {
+            duration: 0.6,
+            rotateX: 0,
+            rotateY: 0,
+            ease: 'power2.out',
+            overwrite: 'auto'
+          });
+        }
       });
     });
   }

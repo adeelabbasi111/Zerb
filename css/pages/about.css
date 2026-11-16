@@ -21,30 +21,69 @@
 }
 
 .philosophy-list {
-    margin-top: 4rem;
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+    .philosophy-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-6);
+    }
 }
 
 .philosophy-item {
-    padding: 3rem 0;
+    padding: var(--space-6) var(--space-7);
+    background: linear-gradient(135deg, rgba(29, 22, 17, 0.6) 0%, rgba(20, 15, 11, 0.8) 100%);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid var(--glass-border);
+    border-top: 1px solid var(--glass-highlight);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-luxury);
+    transition: all 0.4s var(--ease-framer);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.philosophy-item:hover {
+    border-color: var(--glass-border-hover);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-luxury-hover);
 }
 
 .philosophy-quote {
     color: var(--text-primary);
     font-style: italic;
-    max-width: 900px;
-    line-height: 1.2;
+    font-size: clamp(1.25rem, 2vw, 1.625rem);
+    line-height: 1.35;
+    margin: 0;
 }
 
 .philosophy-quote::before {
     content: "“";
     color: var(--accent);
-    margin-right: 0.5rem;
+    margin-right: 0.35rem;
+    font-family: var(--font-headline);
+    font-size: 1.4em;
+    vertical-align: -0.1em;
 }
 
 .philosophy-quote::after {
     content: "”";
     color: var(--accent);
-    margin-left: 0.5rem;
+    margin-left: 0.35rem;
+    font-family: var(--font-headline);
+    font-size: 1.4em;
+    vertical-align: -0.1em;
+}
+
+.philosophy-section .divider {
+    display: none;
 }
 
 /* How We Work Section */
@@ -208,39 +247,51 @@
 }
 
 .credential-card {
-    background: var(--bg-surface);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, rgba(29, 22, 17, 0.7) 0%, rgba(20, 15, 11, 0.9) 100%);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid var(--glass-border);
+    border-top: 1px solid var(--glass-highlight);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-luxury);
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: transform var(--duration-normal) var(--ease-out), border-color var(--duration-normal) var(--ease-out);
+    transition: transform 0.4s var(--ease-framer), border-color 0.4s var(--ease-framer), box-shadow 0.4s var(--ease-framer);
 }
 
 .credential-card:hover {
     transform: translateY(-4px);
-    border-color: rgba(196, 115, 74, 0.4);
+    border-color: var(--glass-border-hover);
+    box-shadow: var(--shadow-luxury-hover);
 }
 
 .credential-preview {
     width: 100%;
     height: 220px;
-    background: #000;
+    background: #0E0B08;
+    padding: 16px;
     overflow: hidden;
     position: relative;
-    border-bottom: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--glass-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .credential-preview img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    transition: transform var(--duration-normal) var(--ease-out);
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    filter: brightness(0.92) contrast(1.05);
+    transition: transform 0.4s var(--ease-framer), filter 0.4s ease;
 }
 
 .credential-card:hover .credential-preview img {
-    transform: scale(1.05);
+    transform: scale(1.03);
+    filter: brightness(1) contrast(1.05);
 }
 
 .credential-info {

@@ -813,36 +813,44 @@ a, button, .cap-card, .project-card {
 }
 
 .project-stack-card {
-  position: sticky;
-  top: 100px;
-  min-height: 460px;
-  background: rgba(23, 20, 18, 0.94);
+  position: relative;
+  min-height: 440px;
+  background: linear-gradient(135deg, rgba(29, 22, 17, 0.75) 0%, rgba(20, 15, 11, 0.9) 100%);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-xl);
+  border: 1px solid var(--glass-border);
+  border-top: 1px solid var(--glass-highlight);
+  border-radius: var(--radius-xl, 20px);
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-6);
   padding: clamp(1.5rem, 3.5vw, 2.75rem);
   margin-bottom: var(--space-8);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
-  transition: transform 0.4s var(--ease-out), border-color 0.3s ease, box-shadow 0.3s ease;
-  transform-origin: center top;
+  box-shadow: var(--shadow-luxury);
+  transition: transform 0.4s var(--ease-framer), border-color 0.4s var(--ease-framer), box-shadow 0.4s var(--ease-framer);
   overflow: hidden;
 }
 
 @media (min-width: 900px) {
   .project-stack-card {
     grid-template-columns: 1.25fr 1fr;
-    gap: var(--space-7);
+    gap: var(--space-8);
     align-items: center;
+  }
+
+  /* Alternating editorial rhythm */
+  .project-stack-card:nth-child(even) .project-stack-media {
+    order: 2;
+  }
+  .project-stack-card:nth-child(even) .project-stack-content {
+    order: 1;
   }
 }
 
 .project-stack-card:hover {
-  border-color: var(--accent);
-  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.7), 0 0 35px var(--accent-glow);
+  border-color: var(--glass-border-hover);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-luxury-hover);
 }
 
 .project-stack-media {
@@ -947,12 +955,15 @@ a, button, .cap-card, .project-card {
    INTERACTIVE SERVICES PANEL (COMMAND DECK)
    ============================================================================ */
 .services-interactive-deck {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg, 16px);
+  background: linear-gradient(135deg, rgba(29, 22, 17, 0.75) 0%, rgba(20, 15, 11, 0.9) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-top: 1px solid var(--glass-highlight);
+  border-radius: var(--radius-xl, 20px);
   padding: var(--space-6);
   margin-bottom: var(--space-8);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--shadow-luxury);
   position: relative;
   overflow: hidden;
 }
@@ -982,9 +993,9 @@ a, button, .cap-card, .project-card {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 18px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border-subtle);
+  padding: 8px 18px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
   border-radius: 9999px;
   color: var(--text-secondary);
   font-family: var(--font-body);
@@ -992,21 +1003,22 @@ a, button, .cap-card, .project-card {
   font-weight: 500;
   cursor: pointer;
   white-space: nowrap;
-  transition: all var(--duration-fast) var(--ease-out);
+  transition: all 0.3s var(--ease-framer);
 }
 
 .service-nav-btn:hover {
   color: var(--text-primary);
-  border-color: var(--border-visible);
-  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--glass-border-hover);
+  background: rgba(200, 157, 108, 0.08);
+  transform: translateY(-1px);
 }
 
 .service-nav-btn.active {
-  background: var(--accent-subtle);
-  border-color: var(--accent);
-  color: var(--accent);
+  background: linear-gradient(135deg, var(--accent) 0%, #A37C4D 100%);
+  color: var(--bg-primary);
   font-weight: 600;
-  box-shadow: 0 0 16px var(--accent-subtle);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 16px var(--accent-glow);
 }
 
 .service-nav-btn .service-icon {
