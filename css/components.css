@@ -454,12 +454,19 @@
 /* ============================================================================
    CUSTOM MAGNETIC CURSOR
    ============================================================================ */
-body {
-  cursor: none; /* Hide default cursor */
-}
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor: none; /* Hide default cursor only when fine pointer is active */
+  }
 
-a, button, .cap-card, .project-card {
-  cursor: none; /* Ensure no default cursor on interactive elements */
+  a, button, [role="button"], [role="tab"], .cap-card, .project-card, .service-nav-btn, .editorial-bento-card {
+    cursor: none;
+  }
+
+  /* Keep native text caret in form fields so typing is effortless */
+  input, textarea, select {
+    cursor: text !important;
+  }
 }
 
 .custom-cursor {
@@ -471,10 +478,25 @@ a, button, .cap-card, .project-card {
   background-color: var(--accent);
   border-radius: 50%;
   pointer-events: none;
-  z-index: 10000;
+  z-index: 999999;
   transform: translate(-50%, -50%);
-  transition: opacity 0.3s ease, transform 0.1s ease;
-  box-shadow: 0 0 10px var(--accent-glow);
+  opacity: 0; /* hidden until first mousemove */
+  transition: opacity 0.25s ease, transform 0.15s var(--ease-out), background-color 0.2s ease, width 0.2s ease, height 0.2s ease;
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+
+.custom-cursor.visible {
+  opacity: 1;
+}
+
+.custom-cursor.hovering {
+  transform: translate(-50%, -50%) scale(0.6);
+  background-color: #FFFFFF;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+.custom-cursor.text-mode {
+  opacity: 0.15;
 }
 
 .custom-cursor-follower {
@@ -483,32 +505,40 @@ a, button, .cap-card, .project-card {
   left: 0;
   width: 36px;
   height: 36px;
-  border: 1px solid var(--accent);
+  border: 1.5px solid var(--accent);
+  background: rgba(200, 157, 108, 0.08);
   border-radius: 50%;
   pointer-events: none;
-  z-index: 9999;
+  z-index: 999998;
   transform: translate(-50%, -50%);
-  transition: opacity 0.3s ease, width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+  opacity: 0; /* hidden until first mousemove */
+  transition: opacity 0.25s ease, width 0.3s var(--ease-framer), height 0.3s var(--ease-framer), border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.custom-cursor.hovering {
-  transform: translate(-50%, -50%) scale(0);
+.custom-cursor-follower.visible {
+  opacity: 1;
 }
 
 .custom-cursor-follower.hovering {
-  width: 56px;
-  height: 56px;
-  background-color: var(--accent-subtle);
-  border-color: var(--accent);
-  box-shadow: 0 0 20px var(--accent-glow);
+  width: 54px;
+  height: 54px;
+  background-color: rgba(200, 157, 108, 0.18);
+  border-color: var(--accent-hover);
+  box-shadow: 0 0 25px var(--accent-glow);
 }
 
-@media (max-width: 1024px) {
-  body, a, button, .cap-card, .project-card {
-    cursor: auto;
+.custom-cursor-follower.text-mode {
+  width: 20px;
+  height: 20px;
+  opacity: 0.2;
+}
+
+@media (max-width: 1024px), (pointer: coarse) {
+  body, a, button, .cap-card, .project-card, input, textarea, select {
+    cursor: auto !important;
   }
   .custom-cursor, .custom-cursor-follower {
-    display: none;
+    display: none !important;
   }
 }
 

@@ -285,48 +285,110 @@
 
 
   // ========================================================================
-  // CUSTOM MAGNETIC CURSOR
+  // CUSTOM MAGNETIC CURSOR (BULLETPROOF & PER-PAGE PERSISTENT)
   // ========================================================================
   function initCustomCursor() {
-    let cursorVisible = false;
-    const cursor = document.querySelector('.custom-cursor');
-    const follower = document.querySelector('.custom-cursor-follower');
+    // Only run on desktop devices with hover support
+    if (window.innerWidth <= 1024 || (window.matchMedia && window.matchMedia('(pointer: coarse)').matches)) {
+      return;
+    }
+
+    let cursor = document.querySelector('.custom-cursor');
+    let follower = document.querySelector('.custom-cursor-follower');
     
-    if (!cursor || !follower || window.innerWidth <= 1024) return;
+    // Automatically inject custom cursor DOM elements if not present in the HTML
+    if (!cursor) {
+      cursor = document.createElement('div');
+      cursor.className = 'custom-cursor';
+      cursor.setAttribute('aria-hidden', 'true');
+      document.body.appendChild(cursor);
+    }
+    if (!follower) {
+      follower = document.createElement('div');
+      follower.className = 'custom-cursor-follower';
+      follower.setAttribute('aria-hidden', 'true');
+      document.body.appendChild(follower);
+    }
 
-    let mouseX = 0;
-    let mouseY = 0;
-    let followerX = 0;
-    let followerY = 0;
+    let mouseX = -100;
+    let mouseY = -100;
+    let followerX = -100;
+    let followerY = -100;
+    let isVisible = false;
 
-    gsap.to({}, {
-      duration: 0.016,
-      repeat: -1,
-      onRepeat: () => {
-        followerX += (mouseX - followerX) * 0.15;
-        followerY += (mouseY - followerY) * 0.15;
-        
-        gsap.set(cursor, { x: mouseX, y: mouseY });
-        gsap.set(follower, { x: followerX, y: followerY });
-      }
-    });
+    // High-performance GSAP Ticker for smooth 120 FPS lerp interpolation
+    const updateCursor = () => {
+      if (!isVisible) return;
+      followerX += (mouseX - followerX) * 0.18;
+      followerY += (mouseY - followerY) * 0.18;
+      
+      gsap.set(cursor, { x: mouseX, y: mouseY });
+      gsap.set(follower, { x: followerX, y: followerY });
+    };
 
+    gsap.ticker.add(updateCursor);
+
+    // Track mouse coordinates
     window.addEventListener('mousemove', (e) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
+
+      if (!isVisible) {
+        isVisible = true;
+        cursor.classList.add('visible');
+        follower.classList.add('visible');
+        followerX = mouseX;
+        followerY = mouseY;
+        gsap.set(cursor, { x: mouseX, y: mouseY });
+        gsap.set(follower, { x: followerX, y: followerY });
+      }
+    }, { passive: true });
+
+    // Handle mouse leaving and entering viewport
+    document.addEventListener('mouseleave', () => {
+      isVisible = false;
+      cursor.classList.remove('visible');
+      follower.classList.remove('visible');
     });
 
-    const hoverElements = document.querySelectorAll('a, button, .cap-card, .project-card, .nav-toggle');
-    
-    hoverElements.forEach(el => {
-      el.addEventListener('mouseenter', () => {
+    document.addEventListener('mouseenter', () => {
+      isVisible = true;
+      cursor.classList.add('visible');
+      follower.classList.add('visible');
+    });
+
+    // Dynamic event delegation for interactive elements across all pages
+    document.addEventListener('mouseover', (e) => {
+      const target = e.target;
+      if (!target) return;
+
+      const interactive = target.closest('a, button, [role="button"], [role="tab"], .btn, .cap-card, .project-card, .service-nav-btn, .editorial-bento-card, .nav-toggle, .chip');
+      const textInput = target.closest('input, textarea, select');
+
+      if (textInput) {
+        cursor.classList.add('text-mode');
+        follower.classList.add('text-mode');
+      } else if (interactive) {
         cursor.classList.add('hovering');
         follower.classList.add('hovering');
-      });
-      el.addEventListener('mouseleave', () => {
+      }
+    });
+
+    document.addEventListener('mouseout', (e) => {
+      const target = e.target;
+      if (!target) return;
+
+      const interactive = target.closest('a, button, [role="button"], [role="tab"], .btn, .cap-card, .project-card, .service-nav-btn, .editorial-bento-card, .nav-toggle, .chip');
+      const textInput = target.closest('input, textarea, select');
+
+      if (textInput) {
+        cursor.classList.remove('text-mode');
+        follower.classList.remove('text-mode');
+      }
+      if (interactive) {
         cursor.classList.remove('hovering');
         follower.classList.remove('hovering');
-      });
+      }
     });
   }
 
