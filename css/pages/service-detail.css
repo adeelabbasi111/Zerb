@@ -597,6 +597,158 @@
   gap: var(--space-4);
 }
 
+/* Technical Specification Panel (Right Column of Tab) */
+.service-spec-panel {
+  background: rgba(14, 11, 8, 0.75);
+  border: 1px solid var(--glass-border);
+  border-top: 1px solid var(--glass-highlight);
+  border-radius: var(--radius-lg, 12px);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05);
+}
+
+.spec-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.spec-metric-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.spec-metric-value {
+  font-family: var(--font-headline);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1.1;
+}
+
+.spec-metric-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-top: 4px;
+}
+
+/* ============================================================================
+   DEDICATED SERVICE PROJECTS / CASE STUDIES SECTION
+   ============================================================================ */
+.service-projects-section {
+  padding: var(--space-10) 0;
+  border-top: 1px solid var(--border-subtle);
+  position: relative;
+}
+
+.service-projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-7);
+  margin-top: var(--space-8);
+}
+
+@media (min-width: 900px) {
+  .service-projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+  }
+}
+
+.service-project-card {
+  background: linear-gradient(135deg, rgba(29, 22, 17, 0.75) 0%, rgba(20, 15, 11, 0.9) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-top: 1px solid var(--glass-highlight);
+  border-radius: var(--radius-xl, 18px);
+  overflow: hidden;
+  box-shadow: var(--shadow-luxury);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s var(--ease-framer);
+}
+
+.service-project-card:hover {
+  border-color: var(--glass-border-hover);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-luxury-hover);
+}
+
+.service-project-media {
+  width: 100%;
+  height: 250px;
+  background: #0E0B08;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.service-project-media img,
+.service-project-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s var(--ease-framer);
+}
+
+.service-project-card:hover .service-project-media img,
+.service-project-card:hover .service-project-media video {
+  transform: scale(1.04);
+}
+
+.service-project-body {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.service-project-tag {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+.service-project-title {
+  font-family: var(--font-headline);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+  line-height: 1.25;
+}
+
+.service-project-desc {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+}
+
+.service-project-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
 /* Right Column: Project Showcase Card */
 .service-showcase-card {
   background: rgba(10, 8, 6, 0.85);

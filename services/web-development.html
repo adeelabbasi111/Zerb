@@ -119,165 +119,187 @@
         </div>
     </div>
 
-    <!-- INTERACTIVE SUB-SERVICES & SHOWCASE SECTION -->
-    <section class="section service-tabs-section" id="showcase">
+    <!-- INTERACTIVE SERVICES SUITE SECTION -->
+    <section class="section service-tabs-section" id="services-suite">
         <div class="container">
             <div class="section-header reveal text-center" style="margin-bottom: var(--space-7);">
-                <span class="t-label" style="color: var(--accent); margin-bottom: var(--space-2); display: block;">SPECIALIZED DISCIPLINES</span>
-                <h2 class="t-h1">Interactive Sub-Service Offerings</h2>
-                <p class="t-body-lg" style="max-width: 680px; margin: var(--space-2) auto 0;">
-                    Select an engineering discipline below to explore our technical specifications, deliverable checklists, production tech stack, and deployed client case studies.
+                <span class="t-label" style="color: var(--accent); margin-bottom: var(--space-2); display: block;">PRODUCTION ENGINEERING SERVICES</span>
+                <h2 class="t-h1">Web Development Services</h2>
+                <p class="t-body-lg" style="max-width: 720px; margin: var(--space-2) auto 0;">
+                    We engineer complete, production-grade web systems from first principles &mdash; from bespoke enterprise web applications and headless e-commerce storefronts to multi-tenant cloud SaaS and high-throughput APIs.
                 </p>
             </div>
 
             <!-- Tab Navigation (WAI-ARIA Compliant) -->
-            <div class="service-tabs-nav" role="tablist" aria-label="Web Development Specialized Disciplines">
-                <button type="button" class="service-tab-btn active" role="tab" id="tab-web-ecommerce" aria-selected="true" tabindex="0" aria-controls="panel-web-ecommerce">
-                    E-Commerce &amp; Headless Storefronts
+            <div class="service-tabs-nav" role="tablist" aria-label="Web Development Core Services">
+                <button type="button" class="service-tab-btn active" role="tab" id="tab-web-custom" aria-selected="true" tabindex="0" aria-controls="panel-web-custom">
+                    Custom Web Applications
+                </button>
+                <button type="button" class="service-tab-btn" role="tab" id="tab-web-ecommerce" aria-selected="false" tabindex="-1" aria-controls="panel-web-ecommerce">
+                    E-Commerce &amp; Headless
                 </button>
                 <button type="button" class="service-tab-btn" role="tab" id="tab-web-saas" aria-selected="false" tabindex="-1" aria-controls="panel-web-saas">
-                    SaaS Platforms &amp; Autonomous Data Pipelines
+                    Cloud SaaS &amp; Pipelines
                 </button>
-                <button type="button" class="service-tab-btn" role="tab" id="tab-web-webaudio" aria-selected="false" tabindex="-1" aria-controls="panel-web-webaudio">
-                    Web Audio DSP &amp; Real-Time Synthesis
+                <button type="button" class="service-tab-btn" role="tab" id="tab-web-apis" aria-selected="false" tabindex="-1" aria-controls="panel-web-apis">
+                    APIs &amp; Microservices
                 </button>
-                <button type="button" class="service-tab-btn" role="tab" id="tab-web-behavioral" aria-selected="false" tabindex="-1" aria-controls="panel-web-behavioral">
-                    Interactive Behavioral Science &amp; Canvas Labs
+                <button type="button" class="service-tab-btn" role="tab" id="tab-web-pwa" aria-selected="false" tabindex="-1" aria-controls="panel-web-pwa">
+                    PWA &amp; Performance
                 </button>
             </div>
 
             <!-- Tab Panels Container -->
             <div class="service-tab-panels">
                 
-                <!-- Panel 1: E-Commerce & Headless Storefronts -->
-                <div class="service-tab-panel active" role="tabpanel" id="panel-web-ecommerce" aria-labelledby="tab-web-ecommerce" tabindex="0">
+                <!-- Panel 1: Custom Web Applications -->
+                <div class="service-tab-panel active" role="tabpanel" id="panel-web-custom" aria-labelledby="tab-web-custom" tabindex="0">
                     <div class="service-tab-card">
                         <div class="service-tab-grid">
                             <div class="service-tab-info">
-                                <span class="service-badge-pill">&#9679; HIGH-CONVERSION ARCHITECTURE</span>
-                                <h3 class="service-tab-title">Scalable E-Commerce &amp; Headless Storefronts</h3>
+                                <span class="service-badge-pill">&#9679; ENTERPRISE PRODUCTION</span>
+                                <h3 class="service-tab-title">Custom Web Applications &amp; Enterprise Portals</h3>
                                 <p class="service-tab-desc">
-                                    We architect high-performance, conversion-engineered e-commerce ecosystems. By decoupling the presentation layer with headless Next.js Commerce and integrating custom checkout pipelines, we deliver sub-second product pages, international multi-currency billing, and real-time ERP inventory synchronization.
+                                    Bespoke web applications built from foundational requirements. We build reactive dashboards, client collaboration portals, internal operations software, and high-density SaaS workflows designed for 24/7 reliability and instant response times.
                                 </p>
                                 <h4 class="service-deliverables-title">&check; Deliverables &amp; Engineering Scope</h4>
                                 <div class="service-deliverables-grid">
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Headless Shopify Plus &amp; Next.js Commerce Storefronts</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Custom Stripe &amp; Global Multi-Currency Checkouts</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Real-Time Inventory Webhooks &amp; Order DSP Sync</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Sub-Second Page Loads (&lt; 0.9s Median LCP Across Devices)</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Automated Cart Recovery &amp; Retention Funnel Pipelines</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Conversion Rate Optimization (CRO) Infrastructure</span>
-                                    </div>
-                                </div>
-                                <span class="service-stack-title">Core Technology Stack:</span>
-                                <div class="service-stack-wrap">
-                                    <span class="service-stack-pill">Next.js Commerce</span>
-                                    <span class="service-stack-pill">Shopify Plus</span>
-                                    <span class="service-stack-pill">Stripe API</span>
-                                    <span class="service-stack-pill">TypeScript</span>
-                                    <span class="service-stack-pill">TailwindCSS</span>
-                                    <span class="service-stack-pill">PostgreSQL</span>
-                                    <span class="service-stack-pill">Redis Cache</span>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Full-Stack Next.js 15, React 19 &amp; TypeScript Development</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Role-Based Access Control (RBAC) &amp; Enterprise SSO</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Interactive Telemetry Dashboards &amp; Real-Time Tables</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Sub-Second Server-Side Rendering (SSR) &amp; Edge Streaming</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>PostgreSQL &amp; Redis Multi-Tenant Data Isolation</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Dockerized Containerization &amp; Automated CI/CD Pipelines</span></div>
                                 </div>
                                 <div class="service-pane-action">
-                                    <a href="../contact.html?service=ecommerce" class="btn btn-primary">
-                                        Discuss Storefront Project &rarr;
+                                    <a href="../contact.html?service=web-app" class="btn btn-primary">
+                                        Discuss Web Application Project &rarr;
                                     </a>
                                 </div>
                             </div>
-                            <div class="service-tab-showcase">
-                                <article class="service-showcase-card">
-                                    <div class="service-showcase-media">
-                                        <img src="../assets/images/projects/xlovebeatz-hero.jpg" alt="XLoveBeats Storefront and DRM Platform" loading="lazy">
-                                    </div>
-                                    <div class="service-showcase-body">
-                                        <span class="service-showcase-label">FEATURED PRODUCTION CASE STUDY</span>
-                                        <h4 class="service-showcase-title">XLoveBeats &mdash; Audio Storefront &amp; DRM</h4>
-                                        <p class="service-showcase-desc">
-                                            Full-stack e-commerce marketplace and digital rights management platform for music producers. Features dynamic ReportLab PDF license certificate generation, encrypted download tokens, Razorpay gateway integration, and interactive waveform audio streaming.
-                                        </p>
-                                        <div class="project-stack-tags">
-                                            <span class="project-stack-tag">Flask</span>
-                                            <span class="project-stack-tag">SQLAlchemy</span>
-                                            <span class="project-stack-tag">Razorpay</span>
-                                            <span class="project-stack-tag">ReportLab PDF</span>
-                                            <span class="project-stack-tag">PostgreSQL</span>
-                                        </div>
-                                        <div class="service-showcase-links">
-                                            <a href="https://github.com/adeelabbasi111/XloveBeatz" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                                                Inspect Repository &rarr;
-                                            </a>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
+                            
+    <div class="service-spec-panel">
+      <div class="spec-metrics-grid">
+        
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">< 0.8s</span>
+      <span class="spec-metric-label">Median LCP</span>
+    </div>
+  
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">100%</span>
+      <span class="spec-metric-label">Type Safety</span>
+    </div>
+  
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">99.99%</span>
+      <span class="spec-metric-label">SLA Uptime</span>
+    </div>
+  
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">Zero</span>
+      <span class="spec-metric-label">Template Bloat</span>
+    </div>
+  
+      </div>
+      <div>
+        <span class="service-stack-title">Core Technology Stack:</span>
+        <div class="service-stack-wrap">
+          <span class="service-stack-pill">Next.js 15</span><span class="service-stack-pill">React 19</span><span class="service-stack-pill">TypeScript</span><span class="service-stack-pill">TailwindCSS</span><span class="service-stack-pill">PostgreSQL</span><span class="service-stack-pill">Docker</span><span class="service-stack-pill">Redis</span>
+        </div>
+      </div>
+      <div style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.5; border-left: 2px solid var(--accent); padding-left: 12px;">
+        Clean code architecture with automated unit and integration tests. Guaranteed WCAG AA accessibility compliance and cross-device testing.
+      </div>
+    </div>
+  
                         </div>
                     </div>
                 </div>
 
-                <!-- Panel 2: SaaS Platforms & Autonomous Data Pipelines -->
+                <!-- Panel 2: E-Commerce & Headless Storefronts -->
+                <div class="service-tab-panel" role="tabpanel" id="panel-web-ecommerce" aria-labelledby="tab-web-ecommerce" tabindex="0" hidden>
+                    <div class="service-tab-card">
+                        <div class="service-tab-grid">
+                            <div class="service-tab-info">
+                                <span class="service-badge-pill">&#9679; HIGH-CONVERSION COMMERCE</span>
+                                <h3 class="service-tab-title">Scalable E-Commerce &amp; Headless Storefronts</h3>
+                                <p class="service-tab-desc">
+                                    High-performance, conversion-engineered e-commerce ecosystems. By decoupling the presentation layer with headless Next.js Commerce and integrating custom checkout pipelines, we deliver sub-second product pages, international multi-currency billing, and real-time inventory synchronization.
+                                </p>
+                                <h4 class="service-deliverables-title">&check; Deliverables &amp; Engineering Scope</h4>
+                                <div class="service-deliverables-grid">
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Headless Shopify Plus &amp; Next.js Commerce Storefronts</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Custom Stripe &amp; Global Multi-Currency Checkouts</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Real-Time Inventory Webhooks &amp; ERP Synchronization</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Instant Product Filter &amp; Faceted Search (&lt; 50ms)</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Automated Cart Recovery &amp; Retention Funnel Pipelines</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Conversion Rate Optimization (CRO) Infrastructure</span></div>
+                                </div>
+                                <div class="service-pane-action">
+                                    <a href="../contact.html?service=ecommerce" class="btn btn-primary">
+                                        Discuss E-Commerce Project &rarr;
+                                    </a>
+                                </div>
+                            </div>
+                            
+    <div class="service-spec-panel">
+      <div class="spec-metrics-grid">
+        
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">+38.4%</span>
+      <span class="spec-metric-label">Conversion Lift</span>
+    </div>
+  
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">< 0.9s</span>
+      <span class="spec-metric-label">Global LCP</span>
+    </div>
+  
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">120ms</span>
+      <span class="spec-metric-label">Checkout Latency</span>
+    </div>
+  
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">99.99%</span>
+      <span class="spec-metric-label">Payment Uptime</span>
+    </div>
+  
+      </div>
+      <div>
+        <span class="service-stack-title">Core Technology Stack:</span>
+        <div class="service-stack-wrap">
+          <span class="service-stack-pill">Shopify Plus</span><span class="service-stack-pill">Next.js Commerce</span><span class="service-stack-pill">Stripe API</span><span class="service-stack-pill">MedusaJS</span><span class="service-stack-pill">PostgreSQL</span><span class="service-stack-pill">Redis Cache</span>
+        </div>
+      </div>
+      <div style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.5; border-left: 2px solid var(--accent); padding-left: 12px;">
+        Enterprise payment compliance, PCI-DSS security, automated tax calculations, and localized currencies across 150+ countries.
+      </div>
+    </div>
+  
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 3: Cloud SaaS & Data Pipelines -->
                 <div class="service-tab-panel" role="tabpanel" id="panel-web-saas" aria-labelledby="tab-web-saas" tabindex="0" hidden>
                     <div class="service-tab-card">
                         <div class="service-tab-grid">
                             <div class="service-tab-info">
-                                <span class="service-badge-pill">&#9679; AUTONOMOUS DATA PIPELINES</span>
-                                <h3 class="service-tab-title">Complex SaaS Platforms &amp; Autonomous AI Pipelines</h3>
+                                <span class="service-badge-pill">&#9679; REACTIVE CLOUD SYSTEMS</span>
+                                <h3 class="service-tab-title">Cloud SaaS Platforms &amp; Autonomous Data Pipelines</h3>
                                 <p class="service-tab-desc">
-                                    We architect robust, data-dense cloud applications and autonomous LLM extraction engines capable of handling continuous high throughput. Engineered with asynchronous microservices, resilient background task queues, and transactional ledger accounting.
+                                    Architecting data-dense, multi-tenant cloud software and automated intelligence pipelines. Engineered with asynchronous microservices, resilient background queues, transactional billing ledgers, and real-time state persistence.
                                 </p>
                                 <h4 class="service-deliverables-title">&check; Deliverables &amp; Engineering Scope</h4>
                                 <div class="service-deliverables-grid">
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Reactive Single-Page &amp; Cloud SaaS Multi-Tenant Systems</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Autonomous AI Research Pipelines &amp; Agent Infrastructure</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Trafilatura HTML Sanitization (-65% Token Cost Reduction)</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Transactional Credit Ledger with Automated Failover Refunds</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Enterprise OAuth2, JWT &amp; Role-Based Access Control (RBAC)</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Automated Docker CI/CD &amp; Multi-Region Cloud Deployment</span>
-                                    </div>
-                                </div>
-                                <span class="service-stack-title">Core Technology Stack:</span>
-                                <div class="service-stack-wrap">
-                                    <span class="service-stack-pill">FastAPI</span>
-                                    <span class="service-stack-pill">Python 3.11</span>
-                                    <span class="service-stack-pill">Gemini 2.5 Flash</span>
-                                    <span class="service-stack-pill">Trafilatura</span>
-                                    <span class="service-stack-pill">Docker</span>
-                                    <span class="service-stack-pill">PostgreSQL</span>
-                                    <span class="service-stack-pill">Redis</span>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Multi-Tenant Cloud SaaS Infrastructure</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Autonomous AI Scraping &amp; LLM Ingestion Workflows</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Asynchronous Distributed Job Queues (Celery / BullMQ)</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Stripe Subscription Billing &amp; Usage-Based Pricing</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Automated Database Sharding &amp; Read Replicas</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>High-Concurrency Data Aggregation Engines</span></div>
                                 </div>
                                 <div class="service-pane-action">
                                     <a href="../contact.html?service=saas" class="btn btn-primary">
@@ -285,199 +307,283 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="service-tab-showcase">
-                                <article class="service-showcase-card">
-                                    <div class="service-showcase-media">
-                                        <img src="../assets/images/projects/ai-news-scraper.jpg" alt="AI News Research & Content Generator" loading="lazy">
-                                    </div>
-                                    <div class="service-showcase-body">
-                                        <span class="service-showcase-label">FEATURED PRODUCTION CASE STUDY</span>
-                                        <h4 class="service-showcase-title">AI News Research &amp; Autonomous Pipeline</h4>
-                                        <p class="service-showcase-desc">
-                                            High-throughput FastAPI research engine leveraging Gemini 2.5 Flash and Google Search API. Employs local Trafilatura HTML sanitization to strip boilerplate before LLM ingest, cutting token costs by 65%. Automated transactional credit ledger with auto-refunding on pipeline failure.
-                                        </p>
-                                        <div class="project-stack-tags">
-                                            <span class="project-stack-tag">FastAPI</span>
-                                            <span class="project-stack-tag">Gemini 2.5 Flash</span>
-                                            <span class="project-stack-tag">Trafilatura</span>
-                                            <span class="project-stack-tag">Token Optimization</span>
-                                            <span class="project-stack-tag">Python 3.11</span>
-                                        </div>
-                                        <div class="service-showcase-links">
-                                            <a href="https://github.com/adeelabbasi111/News-Scraper" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                                                Inspect Repository &rarr;
-                                            </a>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
+                            
+    <div class="service-spec-panel">
+      <div class="spec-metrics-grid">
+        
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">50k+</span>
+      <span class="spec-metric-label">Daily Events</span>
+    </div>
+  
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">< 65ms</span>
+      <span class="spec-metric-label">API Latency</span>
+    </div>
+  
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">65%</span>
+      <span class="spec-metric-label">LLM Cost Savings</span>
+    </div>
+  
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">Zero</span>
+      <span class="spec-metric-label">Lock Contention</span>
+    </div>
+  
+      </div>
+      <div>
+        <span class="service-stack-title">Core Technology Stack:</span>
+        <div class="service-stack-wrap">
+          <span class="service-stack-pill">FastAPI</span><span class="service-stack-pill">Python 3.12</span><span class="service-stack-pill">PostgreSQL</span><span class="service-stack-pill">Redis</span><span class="service-stack-pill">Celery</span><span class="service-stack-pill">Docker</span>
+        </div>
+      </div>
+      <div style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.5; border-left: 2px solid var(--accent); padding-left: 12px;">
+        Fault-tolerant event logging, transaction rollbacks, dead-letter queues, and automated operational health monitoring.
+      </div>
+    </div>
+  
                         </div>
                     </div>
                 </div>
 
-                <!-- Panel 3: Web Audio DSP & Real-Time Synthesis -->
-                <div class="service-tab-panel" role="tabpanel" id="panel-web-webaudio" aria-labelledby="tab-web-webaudio" tabindex="0" hidden>
+                <!-- Panel 4: APIs & Microservices -->
+                <div class="service-tab-panel" role="tabpanel" id="panel-web-apis" aria-labelledby="tab-web-apis" tabindex="0" hidden>
                     <div class="service-tab-card">
                         <div class="service-tab-grid">
                             <div class="service-tab-info">
-                                <span class="service-badge-pill">&#9679; SAMPLE-ACCURATE BROWSER DSP</span>
-                                <h3 class="service-tab-title">Web Audio DSP &amp; Real-Time Synthesis</h3>
+                                <span class="service-badge-pill">&#9679; HIGH-CONCURRENCY BACKENDS</span>
+                                <h3 class="service-tab-title">REST, GraphQL &amp; Real-Time WebSocket APIs</h3>
                                 <p class="service-tab-desc">
-                                    We push the modern web platform to its physical audio limits with low-latency Web Audio API graph engineering. From hardware-emulated polyphonic step sequencers to algorithmic audio synthesis, we achieve desktop-grade digital signal processing directly in browser sandboxes.
+                                    Resilient backend backbones engineered for instant throughput and absolute data integrity. Low-latency microservices, bidirectional event streams, robust rate limiting, and zero-downtime containerized deployments.
                                 </p>
                                 <h4 class="service-deliverables-title">&check; Deliverables &amp; Engineering Scope</h4>
                                 <div class="service-deliverables-grid">
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Sample-Accurate 16-Pad Drum Machine &amp; Looper Engines</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Chris Wilson Dual-Timer Lookahead Scheduler Integration</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Roger Linn Micro-Timing Shuffle &amp; Swing Logic</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>OfflineAudioContext Procedural Drum &amp; Tone Synthesis</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Zero-Latency Canvas Audio Visualizers &amp; Oscilloscopes</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Fully Accessible WCAG 2.1 AA Keyboard Drum Grid Matrix</span>
-                                    </div>
-                                </div>
-                                <span class="service-stack-title">Core Technology Stack:</span>
-                                <div class="service-stack-wrap">
-                                    <span class="service-stack-pill">Web Audio API</span>
-                                    <span class="service-stack-pill">OfflineAudioContext</span>
-                                    <span class="service-stack-pill">Lookahead Timing</span>
-                                    <span class="service-stack-pill">AudioWorklet</span>
-                                    <span class="service-stack-pill">Vanilla ES6+</span>
-                                    <span class="service-stack-pill">Canvas 2D</span>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Sub-50ms RESTful &amp; GraphQL Microservices</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Full-Duplex Bi-Directional WebSockets</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Automated Rate Limiting, CORS &amp; DDoS Shielding</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Strict Schema Validation &amp; Interactive OpenAPI Specs</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Zero-Downtime Rolling Deploys (Docker / NGINX)</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Database Migrations &amp; Automated Schema Tracking</span></div>
                                 </div>
                                 <div class="service-pane-action">
-                                    <a href="../contact.html?service=audio-dsp" class="btn btn-primary">
-                                        Build Audio Web App &rarr;
+                                    <a href="../contact.html?service=api" class="btn btn-primary">
+                                        Build High-Speed API &rarr;
                                     </a>
                                 </div>
                             </div>
-                            <div class="service-tab-showcase">
-                                <article class="service-showcase-card">
-                                    <div class="service-showcase-media">
-                                        <img src="../assets/images/projects/beatgrid-active.png" alt="BeatGrid Web Audio Sampler and 16-Step Looper" loading="lazy">
-                                    </div>
-                                    <div class="service-showcase-body">
-                                        <span class="service-showcase-label">FEATURED PRODUCTION CASE STUDY</span>
-                                        <h4 class="service-showcase-title">BeatGrid &mdash; Web Audio Sampler &amp; Looper</h4>
-                                        <p class="service-showcase-desc">
-                                            Sample-accurate 16-pad drum machine and polyphonic step sequencer built for the web. Implements Chris Wilson's dual-timer lookahead scheduler, Roger Linn shuffle/swing algorithms, and procedural drum synthesis via OfflineAudioContext with zero audio-visual latency.
-                                        </p>
-                                        <div class="project-stack-tags">
-                                            <span class="project-stack-tag">Web Audio API</span>
-                                            <span class="project-stack-tag">Lookahead Timing</span>
-                                            <span class="project-stack-tag">OfflineAudioContext</span>
-                                            <span class="project-stack-tag">Vanilla JS</span>
-                                            <span class="project-stack-tag">WCAG AA</span>
-                                        </div>
-                                        <div class="service-showcase-links">
-                                            <a href="https://github.com/adeelabbasi111/Beat-Grid" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                                                Inspect Repository &rarr;
-                                            </a>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
+                            
+    <div class="service-spec-panel">
+      <div class="spec-metrics-grid">
+        
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">10k+</span>
+      <span class="spec-metric-label">Concurrent Sockets</span>
+    </div>
+  
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">< 25ms</span>
+      <span class="spec-metric-label">Wire Latency</span>
+    </div>
+  
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">100%</span>
+      <span class="spec-metric-label">OpenAPI Specs</span>
+    </div>
+  
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">A+</span>
+      <span class="spec-metric-label">SSL/TLS Security</span>
+    </div>
+  
+      </div>
+      <div>
+        <span class="service-stack-title">Core Technology Stack:</span>
+        <div class="service-stack-wrap">
+          <span class="service-stack-pill">Node.js</span><span class="service-stack-pill">FastAPI</span><span class="service-stack-pill">WebSockets</span><span class="service-stack-pill">Redis Pub/Sub</span><span class="service-stack-pill">Docker</span><span class="service-stack-pill">NGINX</span>
+        </div>
+      </div>
+      <div style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.5; border-left: 2px solid var(--accent); padding-left: 12px;">
+        Stateless horizontal scaling with Redis session caching, token bucket throttling, and automated JWT security verification.
+      </div>
+    </div>
+  
                         </div>
                     </div>
                 </div>
 
-                <!-- Panel 4: Interactive Behavioral Science & Canvas Labs -->
-                <div class="service-tab-panel" role="tabpanel" id="panel-web-behavioral" aria-labelledby="tab-web-behavioral" tabindex="0" hidden>
+                <!-- Panel 5: PWA & Performance -->
+                <div class="service-tab-panel" role="tabpanel" id="panel-web-pwa" aria-labelledby="tab-web-pwa" tabindex="0" hidden>
                     <div class="service-tab-card">
                         <div class="service-tab-grid">
                             <div class="service-tab-info">
-                                <span class="service-badge-pill">&#9679; BEHAVIORAL SCIENCE &amp; GRAPHICS</span>
-                                <h3 class="service-tab-title">Interactive Behavioral Science &amp; Canvas Labs</h3>
+                                <span class="service-badge-pill">&#9679; CLIENT PERFORMANCE &amp; PWA</span>
+                                <h3 class="service-tab-title">Progressive Web Apps &amp; Performance Engineering</h3>
                                 <p class="service-tab-desc">
-                                    We engineer interactive digital platforms that translate cognitive behavioral psychology into sustained daily momentum. Combining habit-loop mechanics with hardware-accelerated HTML5 Canvas graphics, tactile audio feedback, and zero-loss client persistence.
+                                    Transforming browser websites into instant, app-grade platforms. Offline-first architectures, Service Worker intelligent asset caching, hardware-accelerated Canvas &amp; WebGL visualizers, and rigorous Core Web Vitals optimization.
                                 </p>
                                 <h4 class="service-deliverables-title">&check; Deliverables &amp; Engineering Scope</h4>
                                 <div class="service-deliverables-grid">
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Cognitive Behavioral Psychology Habit Loop Systems</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Hardware-Accelerated 2D Canvas Milestone Visualizations</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Procedural Synthesized Web Audio Clicks &amp; Micro-Tones</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>LocalStorage &amp; IndexedDB Zero-Loss State Persistence</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Fluid Physics-Based Micro-Interactions &amp; Particle Dynamics</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>High-Conversion Lead Capture Funnels (WhatsApp &amp; APIs)</span>
-                                    </div>
-                                </div>
-                                <span class="service-stack-title">Core Technology Stack:</span>
-                                <div class="service-stack-wrap">
-                                    <span class="service-stack-pill">Interactive Canvas</span>
-                                    <span class="service-stack-pill">Web Audio API</span>
-                                    <span class="service-stack-pill">Behavioral Science</span>
-                                    <span class="service-stack-pill">Local Persistence</span>
-                                    <span class="service-stack-pill">Vanilla JS</span>
-                                    <span class="service-stack-pill">Responsive Layouts</span>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Offline-First Architectures with Service Workers &amp; IndexedDB</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Installable PWA Manifests &amp; Native Push Notifications</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Sub-Second Core Web Vitals Optimization (100/100 Lighthouse)</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Hardware-Accelerated HTML5 Canvas &amp; WebGL Visualizers</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Native Browser Web Audio DSP Synthesis Engines</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Advanced Bundle Splitting, Tree-Shaking &amp; Image Compression</span></div>
                                 </div>
                                 <div class="service-pane-action">
-                                    <a href="../contact.html?service=behavioral" class="btn btn-primary">
-                                        Create Interactive Experience &rarr;
+                                    <a href="../contact.html?service=performance" class="btn btn-primary">
+                                        Optimize Web Performance &rarr;
                                     </a>
                                 </div>
                             </div>
-                            <div class="service-tab-showcase">
-                                <article class="service-showcase-card">
-                                    <div class="service-showcase-media">
-                                        <img src="../assets/images/project-game.jpg" alt="The Chain Reaction Interactive Web Application" loading="lazy">
-                                    </div>
-                                    <div class="service-showcase-body">
-                                        <span class="service-showcase-label">FEATURED PRODUCTION CASE STUDY</span>
-                                        <h4 class="service-showcase-title">The Chain Reaction &mdash; Habit Psychology Lab</h4>
-                                        <p class="service-showcase-desc">
-                                            Interactive behavioral web application applying cognitive psychology and habit loop mechanics. Features custom canvas milestone visualizations, synthesized audio click responses, persistent state storage, and micro-interactions designed to sustain daily momentum.
-                                        </p>
-                                        <div class="project-stack-tags">
-                                            <span class="project-stack-tag">Interactive Canvas</span>
-                                            <span class="project-stack-tag">Web Audio API</span>
-                                            <span class="project-stack-tag">Behavioral Science</span>
-                                            <span class="project-stack-tag">Local Persistence</span>
-                                        </div>
-                                        <div class="service-showcase-links">
-                                            <a href="https://github.com/adeelabbasi111/The-Chain-Reaction" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                                                Inspect Repository &rarr;
-                                            </a>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
+                            
+    <div class="service-spec-panel">
+      <div class="spec-metrics-grid">
+        
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">100/100</span>
+      <span class="spec-metric-label">Lighthouse Score</span>
+    </div>
+  
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">0ms</span>
+      <span class="spec-metric-label">Offline Read Latency</span>
+    </div>
+  
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">60 FPS</span>
+      <span class="spec-metric-label">Canvas Graphics</span>
+    </div>
+  
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">3x</span>
+      <span class="spec-metric-label">Speed Boost</span>
+    </div>
+  
+      </div>
+      <div>
+        <span class="service-stack-title">Core Technology Stack:</span>
+        <div class="service-stack-wrap">
+          <span class="service-stack-pill">Service Workers</span><span class="service-stack-pill">IndexedDB</span><span class="service-stack-pill">Web Audio API</span><span class="service-stack-pill">HTML5 Canvas</span><span class="service-stack-pill">Web Workers</span><span class="service-stack-pill">Vanilla JS</span>
+        </div>
+      </div>
+      <div style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.5; border-left: 2px solid var(--accent); padding-left: 12px;">
+        Zero-bloat performance engineering. We eliminate bulky third-party dependencies in favor of native web standards and hardware-accelerated APIs.
+      </div>
+    </div>
+  
                         </div>
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- DEDICATED FEATURED WEB PROJECTS SECTION (SEPARATE BELOW) -->
+    <section class="section service-projects-section" id="featured-projects">
+        <div class="container">
+            <div class="section-header reveal text-center" style="margin-bottom: var(--space-8);">
+                <span class="t-label" style="color: var(--accent); margin-bottom: var(--space-2); display: block;">PROVEN TRACK RECORD</span>
+                <h2 class="t-h1">Featured Web Development Projects</h2>
+                <p class="t-body-lg" style="max-width: 680px; margin: var(--space-2) auto 0;">
+                    A curated selection of production codebases, e-commerce storefronts, and cloud applications engineered by ZERB.
+                </p>
+            </div>
+            
+            <div class="service-projects-grid">
+                <!-- Project 1: BeatGrid -->
+                <article class="service-project-card">
+                    <div class="service-project-media">
+                        <img src="../assets/images/projects/beatgrid-active.png" alt="BeatGrid Web Audio Sampler" loading="lazy">
+                    </div>
+                    <div class="service-project-body">
+                        <div>
+                            <span class="service-project-tag">AUDIO DSP // BROWSER APPLICATION</span>
+                            <h3 class="service-project-title">BeatGrid &mdash; 16-Pad Sampler &amp; Looper</h3>
+                            <p class="service-project-desc">Sample-accurate 16-pad drum machine and polyphonic step sequencer built for the modern browser. Features dual-timer lookahead scheduler, Roger Linn swing algorithms, and procedural drum synthesis via OfflineAudioContext with zero audio-visual latency.</p>
+                            <div class="service-stack-wrap" style="margin-bottom: var(--space-4);">
+                                <span class="service-stack-pill">Web Audio API</span>
+                                <span class="service-stack-pill">Lookahead Scheduler</span>
+                                <span class="service-stack-pill">Canvas 2D</span>
+                                <span class="service-stack-pill">Vanilla JS</span>
+                            </div>
+                        </div>
+                        <div class="service-project-links">
+                            <a href="https://github.com/adeelabbasi111/BeatGrid" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Inspect Source Code &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: AI News Research & Content Engine -->
+                <article class="service-project-card">
+                    <div class="service-project-media">
+                        <img src="../assets/images/projects/ai-news-scraper.jpg" alt="AI News Research Engine" loading="lazy">
+                    </div>
+                    <div class="service-project-body">
+                        <div>
+                            <span class="service-project-tag">SAAS // AUTONOMOUS AI PIPELINE</span>
+                            <h3 class="service-project-title">AI News Research &amp; Content Engine</h3>
+                            <p class="service-project-desc">FastAPI cloud platform orchestrating autonomous market intelligence. Employs local Trafilatura HTML sanitization to strip boilerplate before LLM ingest, reducing token expenditure by 65%. Automated transactional credit ledger with auto-refunding.</p>
+                            <div class="service-stack-wrap" style="margin-bottom: var(--space-4);">
+                                <span class="service-stack-pill">FastAPI</span>
+                                <span class="service-stack-pill">Gemini 2.5 Flash</span>
+                                <span class="service-stack-pill">Trafilatura</span>
+                                <span class="service-stack-pill">Token Optimization</span>
+                            </div>
+                        </div>
+                        <div class="service-project-links">
+                            <a href="https://github.com/adeelabbasi111/ai-news-researcher" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Inspect Source Code &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: XLoveBeats -->
+                <article class="service-project-card">
+                    <div class="service-project-media">
+                        <img src="../assets/images/projects/xlovebeatz-hero.jpg" alt="XLoveBeats Storefront" loading="lazy">
+                    </div>
+                    <div class="service-project-body">
+                        <div>
+                            <span class="service-project-tag">E-COMMERCE // DRM MARKETPLACE</span>
+                            <h3 class="service-project-title">XLoveBeats &mdash; Audio Storefront &amp; DRM</h3>
+                            <p class="service-project-desc">Full-stack e-commerce marketplace and digital rights management licensing platform for music producers. Features dynamic ReportLab PDF license certificate generation, encrypted download tokens, Razorpay gateway integration, and interactive waveform audio streaming.</p>
+                            <div class="service-stack-wrap" style="margin-bottom: var(--space-4);">
+                                <span class="service-stack-pill">Flask</span>
+                                <span class="service-stack-pill">SQLAlchemy</span>
+                                <span class="service-stack-pill">Razorpay</span>
+                                <span class="service-stack-pill">ReportLab PDF</span>
+                            </div>
+                        </div>
+                        <div class="service-project-links">
+                            <a href="https://github.com/adeelabbasi111/XloveBeatz" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Inspect Source Code &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4: mosquitobusters.pk -->
+                <article class="service-project-card">
+                    <div class="service-project-media">
+                        <img src="../assets/images/project-dashboard.jpg" alt="mosquitobusters.pk platform" loading="lazy">
+                    </div>
+                    <div class="service-project-body">
+                        <div>
+                            <span class="service-project-tag">COMMERCIAL // CONVERSION PLATFORM</span>
+                            <h3 class="service-project-title">mosquitobusters.pk &mdash; Commercial Platform</h3>
+                            <p class="service-project-desc">High-performance commercial platform engineered for pest control operations. Implements interactive service pricing calculators, direct WhatsApp lead dispatch, and responsive layouts engineered for sub-second load times on 3G/4G networks.</p>
+                            <div class="service-stack-wrap" style="margin-bottom: var(--space-4);">
+                                <span class="service-stack-pill">Commercial Web</span>
+                                <span class="service-stack-pill">Lead Conversion</span>
+                                <span class="service-stack-pill">Performance SEO</span>
+                                <span class="service-stack-pill">WhatsApp API</span>
+                            </div>
+                        </div>
+                        <div class="service-project-links">
+                            <a href="https://mosquitobusters.pk" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Visit Live Platform ↗</a>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
     </section>

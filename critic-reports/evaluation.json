@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-16T11:09:55.249Z",
+  "timestamp": "2026-11-16T12:34:46.882Z",
   "overallScore": 10,
   "allPassed": true,
   "summary": {
@@ -14,12 +14,12 @@
       "slug": "index",
       "title": "Homepage / Capabilities",
       "path": "/index.html",
-      "url": "http://127.0.0.1:53378/index.html",
+      "url": "http://127.0.0.1:60061/index.html",
       "isServiceDetail": false,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 35962,
+      "loadDurationMs": 34934,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,
@@ -78,12 +78,12 @@
       "slug": "services",
       "title": "Services Index",
       "path": "/services.html",
-      "url": "http://127.0.0.1:53378/services.html",
+      "url": "http://127.0.0.1:60061/services.html",
       "isServiceDetail": false,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 6269,
+      "loadDurationMs": 6110,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,
@@ -141,12 +141,12 @@
       "slug": "work",
       "title": "Work Portfolio",
       "path": "/work.html",
-      "url": "http://127.0.0.1:53378/work.html",
+      "url": "http://127.0.0.1:60061/work.html",
       "isServiceDetail": false,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 8327,
+      "loadDurationMs": 8364,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,
@@ -204,12 +204,12 @@
       "slug": "about",
       "title": "About Agency",
       "path": "/about.html",
-      "url": "http://127.0.0.1:53378/about.html",
+      "url": "http://127.0.0.1:60061/about.html",
       "isServiceDetail": false,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 5718,
+      "loadDurationMs": 5684,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,
@@ -267,12 +267,12 @@
       "slug": "contact",
       "title": "Contact & Inquiry",
       "path": "/contact.html",
-      "url": "http://127.0.0.1:53378/contact.html",
+      "url": "http://127.0.0.1:60061/contact.html",
       "isServiceDetail": false,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 4801,
+      "loadDurationMs": 4610,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,
@@ -330,12 +330,12 @@
       "slug": "service-web-development",
       "title": "Web Development Service",
       "path": "/services/web-development.html",
-      "url": "http://127.0.0.1:53378/services/web-development.html",
+      "url": "http://127.0.0.1:60061/services/web-development.html",
       "isServiceDetail": true,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 9660,
+      "loadDurationMs": 12323,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,
@@ -359,7 +359,7 @@
           "score": 2.5,
           "max": 2.5,
           "notes": [
-            "4 domain-aligned sub-service tabs present (E-COMMERCE & HEADLESS STOREFRONTS, SAAS PLATFORMS & AUTONOMOUS DATA PIPELINES, WEB AUDIO DSP & REAL-TIME SYNTHESIS, INTERACTIVE BEHAVIORAL SCIENCE & CANVAS LABS)",
+            "4 domain-aligned sub-service tabs present (CUSTOM WEB APPLICATIONS, E-COMMERCE & HEADLESS, CLOUD SAAS & PIPELINES, APIS & MICROSERVICES, PWA & PERFORMANCE)",
             "Sequential tab switching functional; panels reveal/hide properly",
             "WAI-ARIA compliance verified ([role=\"tablist\"], [role=\"tab\"], [role=\"tabpanel\"])"
           ]
@@ -369,7 +369,7 @@
           "max": 2.5,
           "notes": [
             "Single semantic h1 tag verified: \"Web Development &\nSystems Architecture\"",
-            "Semantic heading hierarchy structured (3 h2, 10 h3 tags)",
+            "Semantic heading hierarchy structured (4 h2, 15 h3 tags)",
             "Title tag populated: \"ZERB — Web Development & Systems Architecture\"",
             "SEO metadata & OpenGraph tags configured"
           ]
@@ -383,9 +383,9 @@
         "themeStudioDetected": 0,
         "horizontalOverflow": false,
         "h1Count": 1,
-        "h2Count": 3,
+        "h2Count": 4,
         "cardCount": 0,
-        "tabsDetected": 4,
+        "tabsDetected": 5,
         "allTabsSwitchedSuccessfully": true
       },
       "screenshot": "critic-reports/screenshots/service-web-development.png"
@@ -394,12 +394,12 @@
       "slug": "service-app-development",
       "title": "App Development Service",
       "path": "/services/app-development.html",
-      "url": "http://127.0.0.1:53378/services/app-development.html",
+      "url": "http://127.0.0.1:60061/services/app-development.html",
       "isServiceDetail": true,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 8047,
+      "loadDurationMs": 10980,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,
@@ -423,7 +423,7 @@
           "score": 2.5,
           "max": 2.5,
           "notes": [
-            "4 domain-aligned sub-service tabs present (CROSS-PLATFORM MOBILE APPLICATIONS, KINEMATIC DESKTOP & OS-LEVEL AUTOMATION, REAL-TIME TELEMETRY & ATHLETIC ANALYTICS, DUPLEX WEBSOCKET ENCRYPTED MESSAGING)",
+            "4 domain-aligned sub-service tabs present (CROSS-PLATFORM MOBILE, NATIVE IOS, NATIVE ANDROID, DESKTOP & AUTOMATION, REAL-TIME SYNC & CHAT)",
             "Sequential tab switching functional; panels reveal/hide properly",
             "WAI-ARIA compliance verified ([role=\"tablist\"], [role=\"tab\"], [role=\"tabpanel\"])"
           ]
@@ -433,7 +433,7 @@
           "max": 2.5,
           "notes": [
             "Single semantic h1 tag verified: \"Mobile App\nDevelopment\"",
-            "Semantic heading hierarchy structured (3 h2, 10 h3 tags)",
+            "Semantic heading hierarchy structured (4 h2, 14 h3 tags)",
             "Title tag populated: \"ZERB — Mobile App Development & Native Systems\"",
             "SEO metadata & OpenGraph tags configured"
           ]
@@ -447,9 +447,9 @@
         "themeStudioDetected": 0,
         "horizontalOverflow": false,
         "h1Count": 1,
-        "h2Count": 3,
+        "h2Count": 4,
         "cardCount": 0,
-        "tabsDetected": 4,
+        "tabsDetected": 5,
         "allTabsSwitchedSuccessfully": true
       },
       "screenshot": "critic-reports/screenshots/service-app-development.png"
@@ -458,12 +458,12 @@
       "slug": "service-game-development",
       "title": "Game Development Service",
       "path": "/services/game-development.html",
-      "url": "http://127.0.0.1:53378/services/game-development.html",
+      "url": "http://127.0.0.1:60061/services/game-development.html",
       "isServiceDetail": true,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 8966,
+      "loadDurationMs": 10518,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,
@@ -487,7 +487,7 @@
           "score": 2.5,
           "max": 2.5,
           "notes": [
-            "4 domain-aligned sub-service tabs present (ARCADE DYNAMICS & 2D PHYSICS SIMULATIONS, PC & CONSOLE PROCEDURAL DUNGEON CRAWLERS, VIRTUAL REALITY & SPATIAL HAPTICS, GAMIFICATION & BEHAVIORAL LABS)",
+            "4 domain-aligned sub-service tabs present (MOBILE GAMES, PC & STEAM GAMES, PHYSICS & DYNAMICS, PROCEDURAL GENERATION, WEBGL & BROWSER GAMES)",
             "Sequential tab switching functional; panels reveal/hide properly",
             "WAI-ARIA compliance verified ([role=\"tablist\"], [role=\"tab\"], [role=\"tabpanel\"])"
           ]
@@ -497,7 +497,7 @@
           "max": 2.5,
           "notes": [
             "Single semantic h1 tag verified: \"Game Development &\nPhysics Engines\"",
-            "Semantic heading hierarchy structured (3 h2, 10 h3 tags)",
+            "Semantic heading hierarchy structured (4 h2, 14 h3 tags)",
             "Title tag populated: \"ZERB — Game Development & Interactive Simulations\"",
             "SEO metadata & OpenGraph tags configured"
           ]
@@ -511,9 +511,9 @@
         "themeStudioDetected": 0,
         "horizontalOverflow": false,
         "h1Count": 1,
-        "h2Count": 3,
+        "h2Count": 4,
         "cardCount": 0,
-        "tabsDetected": 4,
+        "tabsDetected": 5,
         "allTabsSwitchedSuccessfully": true
       },
       "screenshot": "critic-reports/screenshots/service-game-development.png"
@@ -522,12 +522,12 @@
       "slug": "service-graphic-design",
       "title": "Graphic Design Service",
       "path": "/services/graphic-design.html",
-      "url": "http://127.0.0.1:53378/services/graphic-design.html",
+      "url": "http://127.0.0.1:60061/services/graphic-design.html",
       "isServiceDetail": true,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 10356,
+      "loadDurationMs": 12581,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,
@@ -551,7 +551,7 @@
           "score": 2.5,
           "max": 2.5,
           "notes": [
-            "4 domain-aligned sub-service tabs present (CREATIVE PHOTO MANIPULATION, ARCHIVAL PHOTO RESTORATION, EDITORIAL RETOUCHING & COLOR SCIENCE, BRAND IDENTITY & COMMERCIAL SYSTEMS)",
+            "4 domain-aligned sub-service tabs present (BRAND IDENTITY & SYSTEMS, CREATIVE MANIPULATION, ARCHIVAL RESTORATION, COMMERCIAL RETOUCHING, MARKETING & 3D MOCKUPS, CREATIVE PHOTO MANIPULATION, ARCHIVAL PHOTO RESTORATION, EDITORIAL RETOUCHING & COLOR SCIENCE, BRAND IDENTITY & COMMERCIAL SYSTEMS)",
             "Sequential tab switching functional; panels reveal/hide properly",
             "WAI-ARIA compliance verified ([role=\"tablist\"], [role=\"tab\"], [role=\"tabpanel\"])"
           ]
@@ -561,7 +561,7 @@
           "max": 2.5,
           "notes": [
             "Single semantic h1 tag verified: \"Graphic Design &\nBrand Systems\"",
-            "Semantic heading hierarchy structured (3 h2, 19 h3 tags)",
+            "Semantic heading hierarchy structured (4 h2, 24 h3 tags)",
             "Title tag populated: \"ZERB — Graphic Design & Brand Systems\"",
             "SEO metadata & OpenGraph tags configured"
           ]
@@ -575,9 +575,9 @@
         "themeStudioDetected": 0,
         "horizontalOverflow": false,
         "h1Count": 1,
-        "h2Count": 3,
+        "h2Count": 4,
         "cardCount": 0,
-        "tabsDetected": 4,
+        "tabsDetected": 9,
         "allTabsSwitchedSuccessfully": true
       },
       "screenshot": "critic-reports/screenshots/service-graphic-design.png"
@@ -586,12 +586,12 @@
       "slug": "service-ui-ux-design",
       "title": "UI/UX Design Service",
       "path": "/services/ui-ux-design.html",
-      "url": "http://127.0.0.1:53378/services/ui-ux-design.html",
+      "url": "http://127.0.0.1:60061/services/ui-ux-design.html",
       "isServiceDetail": true,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 9509,
+      "loadDurationMs": 11827,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,
@@ -615,7 +615,7 @@
           "score": 2.5,
           "max": 2.5,
           "notes": [
-            "4 domain-aligned sub-service tabs present (WORKSTATION & ERGONOMIC INTERFACE DESIGN, ENTERPRISE INFORMATION ARCHITECTURE & DASHBOARDS, E-COMMERCE CONVERSION & CHECKOUT FLOWS, SCALABLE DESIGN SYSTEMS & TOKEN ARCHITECTURE)",
+            "4 domain-aligned sub-service tabs present (DESIGN SYSTEMS & TOKENS, SAAS DASHBOARDS & WORKSTATIONS, PROTOTYPING & RESEARCH, E-COMMERCE CRO & CHECKOUT, MOBILE APP UX & MICRO-MOTION)",
             "Sequential tab switching functional; panels reveal/hide properly",
             "WAI-ARIA compliance verified ([role=\"tablist\"], [role=\"tab\"], [role=\"tabpanel\"])"
           ]
@@ -625,7 +625,7 @@
           "max": 2.5,
           "notes": [
             "Single semantic h1 tag verified: \"UI/UX Architecture &\nProduct Design\"",
-            "Semantic heading hierarchy structured (3 h2, 10 h3 tags)",
+            "Semantic heading hierarchy structured (4 h2, 14 h3 tags)",
             "Title tag populated: \"ZERB — UI/UX Architecture & Product Design\"",
             "SEO metadata & OpenGraph tags configured"
           ]
@@ -639,9 +639,9 @@
         "themeStudioDetected": 0,
         "horizontalOverflow": false,
         "h1Count": 1,
-        "h2Count": 3,
+        "h2Count": 4,
         "cardCount": 0,
-        "tabsDetected": 4,
+        "tabsDetected": 5,
         "allTabsSwitchedSuccessfully": true
       },
       "screenshot": "critic-reports/screenshots/service-ui-ux-design.png"
@@ -650,12 +650,12 @@
       "slug": "service-video-editing",
       "title": "Video Editing Service",
       "path": "/services/video-editing.html",
-      "url": "http://127.0.0.1:53378/services/video-editing.html",
+      "url": "http://127.0.0.1:60061/services/video-editing.html",
       "isServiceDetail": true,
       "totalScore": 10,
       "grade": "Great / Pass",
       "passed": true,
-      "loadDurationMs": 8929,
+      "loadDurationMs": 10532,
       "pillars": {
         "runtimeAndConsoleHygiene": {
           "score": 2.5,
@@ -679,7 +679,7 @@
           "score": 2.5,
           "max": 2.5,
           "notes": [
-            "4 domain-aligned sub-service tabs present (CORPORATE BRAND STORIES & TECH COMMERCIALS, CINEMATIC COLOR GRADING & WIDE-GAMUT FINISHING, MUSIC VIDEO RHYTHM EDITS & VISUAL FX, PRODUCT UI & KINETIC TYPOGRAPHY REELS)",
+            "4 domain-aligned sub-service tabs present (COMMERCIAL PROMOS & BRAND, MOTION GRAPHICS & UI, COLOR GRADING & HDR, VIRAL SHORT-FORM CONTENT, SOUND DESIGN & MIXING)",
             "Sequential tab switching functional; panels reveal/hide properly",
             "WAI-ARIA compliance verified ([role=\"tablist\"], [role=\"tab\"], [role=\"tabpanel\"])"
           ]
@@ -689,7 +689,7 @@
           "max": 2.5,
           "notes": [
             "Single semantic h1 tag verified: \"Video &\nMotion Design\"",
-            "Semantic heading hierarchy structured (3 h2, 10 h3 tags)",
+            "Semantic heading hierarchy structured (4 h2, 14 h3 tags)",
             "Title tag populated: \"ZERB — Video Editing & Motion Design\"",
             "SEO metadata & OpenGraph tags configured"
           ]
@@ -703,9 +703,9 @@
         "themeStudioDetected": 0,
         "horizontalOverflow": false,
         "h1Count": 1,
-        "h2Count": 3,
+        "h2Count": 4,
         "cardCount": 0,
-        "tabsDetected": 4,
+        "tabsDetected": 5,
         "allTabsSwitchedSuccessfully": true
       },
       "screenshot": "critic-reports/screenshots/service-video-editing.png"

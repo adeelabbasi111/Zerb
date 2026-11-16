@@ -116,362 +116,448 @@
         </div>
     </div>
 
-    <!-- INTERACTIVE SUB-SERVICES & SHOWCASE SECTION -->
-    <section class="section service-tabs-section" id="showcase">
+    <!-- INTERACTIVE SERVICES SUITE SECTION -->
+    <section class="section service-tabs-section" id="services-suite">
         <div class="container">
             <div class="section-header reveal text-center" style="margin-bottom: var(--space-7);">
-                <span class="t-label" style="color: var(--accent); margin-bottom: var(--space-2); display: block;">SPECIALIZED DISCIPLINES</span>
-                <h2 class="t-h1">Interactive Sub-Service Offerings</h2>
-                <p class="t-body-lg" style="max-width: 660px; margin: var(--space-2) auto 0;">
-                    Explore our arcade physics simulations, procedural level generators, immersive VR haptics, and interactive gamification systems.
+                <span class="t-label" style="color: var(--accent); margin-bottom: var(--space-2); display: block;">ENGINEERING &amp; SIMULATION</span>
+                <h2 class="t-h1">Game Development Services</h2>
+                <p class="t-body-lg" style="max-width: 720px; margin: var(--space-2) auto 0;">
+                    We engineer interactive 2D and 3D games, real-time physics dynamics, procedural simulation algorithms, and browser-native WebGL virtual worlds.
                 </p>
             </div>
 
             <!-- Tab Navigation (WAI-ARIA Compliant) -->
-            <div class="service-tabs-nav" role="tablist" aria-label="Game Development Specialized Disciplines">
-                <button type="button" class="service-tab-btn active" role="tab" id="tab-game-arcade" aria-selected="true" tabindex="0" aria-controls="panel-game-arcade">
-                    Arcade Dynamics &amp; 2D Physics Simulations
+            <div class="service-tabs-nav" role="tablist" aria-label="Game Development Core Services">
+                <button type="button" class="service-tab-btn active" role="tab" id="tab-game-mobile" aria-selected="true" tabindex="0" aria-controls="panel-game-mobile">
+                    Mobile Games
                 </button>
-                <button type="button" class="service-tab-btn" role="tab" id="tab-game-dungeon" aria-selected="false" tabindex="-1" aria-controls="panel-game-dungeon">
-                    PC &amp; Console Procedural Dungeon Crawlers
+                <button type="button" class="service-tab-btn" role="tab" id="tab-game-pc" aria-selected="false" tabindex="-1" aria-controls="panel-game-pc">
+                    PC &amp; Steam Games
                 </button>
-                <button type="button" class="service-tab-btn" role="tab" id="tab-game-vr" aria-selected="false" tabindex="-1" aria-controls="panel-game-vr">
-                    Virtual Reality &amp; Spatial Haptics
+                <button type="button" class="service-tab-btn" role="tab" id="tab-game-physics" aria-selected="false" tabindex="-1" aria-controls="panel-game-physics">
+                    Physics &amp; Dynamics
                 </button>
-                <button type="button" class="service-tab-btn" role="tab" id="tab-game-gamification" aria-selected="false" tabindex="-1" aria-controls="panel-game-gamification">
-                    Gamification &amp; Behavioral Labs
+                <button type="button" class="service-tab-btn" role="tab" id="tab-game-procedural" aria-selected="false" tabindex="-1" aria-controls="panel-game-procedural">
+                    Procedural Generation
+                </button>
+                <button type="button" class="service-tab-btn" role="tab" id="tab-game-webgl" aria-selected="false" tabindex="-1" aria-controls="panel-game-webgl">
+                    WebGL &amp; Browser Games
                 </button>
             </div>
 
             <!-- Tab Panels Container -->
             <div class="service-tab-panels">
-
-                <!-- Panel 1: Arcade Dynamics & 2D Physics Simulations -->
-                <div class="service-tab-panel active" role="tabpanel" id="panel-game-arcade" aria-labelledby="tab-game-arcade" tabindex="0">
+                
+                <!-- Panel 1: Mobile Games -->
+                <div class="service-tab-panel active" role="tabpanel" id="panel-game-mobile" aria-labelledby="tab-game-mobile" tabindex="0">
                     <div class="service-tab-card">
                         <div class="service-tab-grid">
                             <div class="service-tab-info">
-                                <span class="service-badge-pill">&#9679; 2D PHYSICS SIMULATION</span>
-                                <h3 class="service-tab-title">Arcade Dynamics &amp; 2D Physics Simulations</h3>
+                                <span class="service-badge-pill">&#9679; IOS &amp; ANDROID GAMING</span>
+                                <h3 class="service-tab-title">Mobile Game Engineering (iOS &amp; Android)</h3>
                                 <p class="service-tab-desc">
-                                    Fast-paced neon arcade games and deterministic physics engines built from foundational mechanics. Continuous ball-paddle reflection physics, glowing particle explosions, procedural sound synthesis, persistent high-score serialization, and 60 FPS fixed-timestep game loops.
+                                    Full-cycle 2D and 3D mobile game development. Touch joystick mechanics, particle effects, in-app monetization, reward ad mediation, cloud leaderboards, and rigorous framerate optimization for low-end hardware.
                                 </p>
                                 <h4 class="service-deliverables-title">&check; Deliverables &amp; Engineering Scope</h4>
                                 <div class="service-deliverables-grid">
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Continuous 2D Ball-Paddle Reflection Physics Engines</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Glowing Particle Explosions &amp; Shrapnel Particle Systems</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Procedural Sound Waveform Synthesis &amp; Retro Audio Cues</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>High-Precision 60 FPS Fixed-Time-Step Game Loops</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Persistent High-Score Binary &amp; JSON Serialization</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Responsive Keyboard, Gamepad &amp; Touch Controls</span>
-                                    </div>
-                                </div>
-                                <span class="service-stack-title">Core Technology Stack:</span>
-                                <div class="service-stack-wrap">
-                                    <span class="service-stack-pill">Python</span>
-                                    <span class="service-stack-pill">Pygame</span>
-                                    <span class="service-stack-pill">2D Physics</span>
-                                    <span class="service-stack-pill">Particle Systems</span>
-                                    <span class="service-stack-pill">Arcade Dynamics</span>
-                                    <span class="service-stack-pill">Sound Synthesis</span>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Unity (C#) &amp; Godot Mobile Game Architecture</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Fluid Multi-Touch Gestures &amp; Virtual Joystick Controls</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Google Play Games &amp; Apple Game Center Integration</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Ad Mediation (AdMob / Unity Ads) &amp; In-App Purchases</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Low-Memory Asset Streaming &amp; Texture Compression</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Stable 60 FPS Target on Budget Devices</span></div>
                                 </div>
                                 <div class="service-pane-action">
-                                    <a href="../contact.html?service=arcade-game" class="btn btn-primary">
-                                        Engineer Arcade Game &rarr;
+                                    <a href="../contact.html?service=mobile-game" class="btn btn-primary">
+                                        Discuss Mobile Game &rarr;
                                     </a>
                                 </div>
                             </div>
-                            <div class="service-tab-showcase">
-                                <article class="service-showcase-card">
-                                    <div class="service-showcase-media">
-                                        <img src="../assets/images/projects/breakout.gif" alt="Neon Breakout arcade game running with particle effects" loading="lazy">
-                                    </div>
-                                    <div class="service-showcase-body">
-                                        <span class="service-showcase-label">FEATURED PRODUCTION CASE STUDY</span>
-                                        <h4 class="service-showcase-title">Neon Breakout &mdash; Arcade Physics Engine</h4>
-                                        <p class="service-showcase-desc">
-                                            Compact, fast-paced neon arcade Breakout clone built in Python with Pygame. Features continuous 2D ball-paddle reflection physics, glowing particle explosions, procedural sound synthesis, persistent high-score serialization, and 60fps game loops.
-                                        </p>
-                                        <div class="project-stack-tags">
-                                            <span class="project-stack-tag">Python</span>
-                                            <span class="project-stack-tag">Pygame</span>
-                                            <span class="project-stack-tag">2D Physics</span>
-                                            <span class="project-stack-tag">Particle Systems</span>
-                                            <span class="project-stack-tag">Arcade Dynamics</span>
-                                        </div>
-                                        <div class="service-showcase-links">
-                                            <a href="https://github.com/adeelabbasi111/Break-out-Game" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                                                Inspect Repository &rarr;
-                                            </a>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
+                            
+    <div class="service-spec-panel">
+      <div class="spec-metrics-grid">
+        
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">60 FPS</span>
+      <span class="spec-metric-label">Solid Framerate</span>
+    </div>
+  
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">ASTC</span>
+      <span class="spec-metric-label">GPU Texture Format</span>
+    </div>
+  
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">< 60MB</span>
+      <span class="spec-metric-label">Initial Download</span>
+    </div>
+  
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">Universal</span>
+      <span class="spec-metric-label">Phone & Tablet</span>
+    </div>
+  
+      </div>
+      <div>
+        <span class="service-stack-title">Core Technology Stack:</span>
+        <div class="service-stack-wrap">
+          <span class="service-stack-pill">Unity</span><span class="service-stack-pill">C#</span><span class="service-stack-pill">Godot</span><span class="service-stack-pill">Blender</span><span class="service-stack-pill">Google Play Games</span><span class="service-stack-pill">Game Center</span><span class="service-stack-pill">AdMob</span>
+        </div>
+      </div>
+      <div style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.5; border-left: 2px solid var(--accent); padding-left: 12px;">
+        Engineered with object pooling, optimized draw calls, and profiling pipelines to guarantee zero thermal throttling.
+      </div>
+    </div>
+  
                         </div>
                     </div>
                 </div>
 
-                <!-- Panel 2: PC & Console Procedural Dungeon Crawlers -->
-                <div class="service-tab-panel" role="tabpanel" id="panel-game-dungeon" aria-labelledby="tab-game-dungeon" tabindex="0" hidden>
+                <!-- Panel 2: PC & Steam Games -->
+                <div class="service-tab-panel" role="tabpanel" id="panel-game-pc" aria-labelledby="tab-game-pc" tabindex="0" hidden>
                     <div class="service-tab-card">
                         <div class="service-tab-grid">
                             <div class="service-tab-info">
-                                <span class="service-badge-pill">&#9679; PROCEDURAL ROGUE-LITE SYSTEMS</span>
-                                <h3 class="service-tab-title">PC &amp; Console Procedural Dungeon Crawlers</h3>
+                                <span class="service-badge-pill">&#9679; STEAMWORKS &amp; DESKTOP</span>
+                                <h3 class="service-tab-title">PC &amp; Steam Commercial Game Development</h3>
                                 <p class="service-tab-desc">
-                                    Fast-paced rogue-lite dungeon crawlers featuring procedural room generation, modular tilemap assembly, and enemy combat AI powered by A* grid pathfinding and finite state machines.
+                                    Commercial indie and desktop game production for Steam, Epic Games Store, and itch.io. Gameplay programming, controller haptics, save-state serialization, Steamworks SDK integration, and high-fidelity visual rendering.
                                 </p>
                                 <h4 class="service-deliverables-title">&check; Deliverables &amp; Engineering Scope</h4>
                                 <div class="service-deliverables-grid">
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Procedural Cellular Automata &amp; BSP Dungeon Generation</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Modular Tilemap Assembly with Dynamic Biome Rulesets</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>A* Grid Pathfinding with Dynamic Obstacle Avoidance</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Finite State Machine (FSM) Enemy Combat AI Systems</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Modular Weapon &amp; Spell Casting Modifier Architecture</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Frame-Locked 60/120 FPS Performance Optimization</span>
-                                    </div>
-                                </div>
-                                <span class="service-stack-title">Core Technology Stack:</span>
-                                <div class="service-stack-wrap">
-                                    <span class="service-stack-pill">Unity</span>
-                                    <span class="service-stack-pill">C#</span>
-                                    <span class="service-stack-pill">Procedural Gen</span>
-                                    <span class="service-stack-pill">A* Pathfinding</span>
-                                    <span class="service-stack-pill">Combat AI</span>
-                                    <span class="service-stack-pill">Tilemaps</span>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Steamworks SDK Integration (Achievements, Cloud Saves, DLC)</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Custom Game Mechanics, Combat Logic &amp; Stat Systems</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Xbox / PlayStation Controller Gamepad Mapping</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Unreal Engine (C++) &amp; Unity Architecture</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>FMOD &amp; Wwise Spatial Audio Integration</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Cross-Platform Builds for Windows, macOS &amp; Linux (Steam Deck)</span></div>
                                 </div>
                                 <div class="service-pane-action">
-                                    <a href="../contact.html?service=roguelite" class="btn btn-primary">
-                                        Discuss Crawler Project &rarr;
+                                    <a href="../contact.html?service=pc-game" class="btn btn-primary">
+                                        Architect Steam Game &rarr;
                                     </a>
                                 </div>
                             </div>
-                            <div class="service-tab-showcase">
-                                <article class="service-showcase-card">
-                                    <div class="service-showcase-media">
-                                        <img src="../assets/images/project-game.jpg" alt="Project Rogue Lite 2D Dungeon Crawler" loading="lazy">
-                                    </div>
-                                    <div class="service-showcase-body">
-                                        <span class="service-showcase-label">FEATURED PRODUCTION CASE STUDY</span>
-                                        <h4 class="service-showcase-title">Project: Rogue Lite &mdash; Procedural Crawler</h4>
-                                        <p class="service-showcase-desc">
-                                            A fast-paced 2D rogue-lite dungeon crawler featuring procedural room generation, modular tilemap assembly, and enemy combat AI powered by A* grid pathfinding and finite state machines.
-                                        </p>
-                                        <div class="project-stack-tags">
-                                            <span class="project-stack-tag">Unity</span>
-                                            <span class="project-stack-tag">C#</span>
-                                            <span class="project-stack-tag">Procedural Gen</span>
-                                            <span class="project-stack-tag">A* Pathfinding</span>
-                                            <span class="project-stack-tag">Combat AI</span>
-                                        </div>
-                                        <div class="service-showcase-links">
-                                            <a href="../contact.html" class="btn btn-primary">
-                                                Discuss Game Project &rarr;
-                                            </a>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
+                            
+    <div class="service-spec-panel">
+      <div class="spec-metrics-grid">
+        
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">Steam Deck</span>
+      <span class="spec-metric-label">Verified Ready</span>
+    </div>
+  
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">144+ FPS</span>
+      <span class="spec-metric-label">High Refresh Rate</span>
+    </div>
+  
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">4K Ready</span>
+      <span class="spec-metric-label">Display Support</span>
+    </div>
+  
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">100%</span>
+      <span class="spec-metric-label">Controller Mapped</span>
+    </div>
+  
+      </div>
+      <div>
+        <span class="service-stack-title">Core Technology Stack:</span>
+        <div class="service-stack-wrap">
+          <span class="service-stack-pill">Unreal Engine</span><span class="service-stack-pill">Unity</span><span class="service-stack-pill">C++</span><span class="service-stack-pill">C#</span><span class="service-stack-pill">Steamworks SDK</span><span class="service-stack-pill">FMOD Audio</span><span class="service-stack-pill">Blender</span>
+        </div>
+      </div>
+      <div style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.5; border-left: 2px solid var(--accent); padding-left: 12px;">
+        Fully certified Steam builds featuring Steam Cloud saves, dynamic trading cards, and seamless game controller detection.
+      </div>
+    </div>
+  
                         </div>
                     </div>
                 </div>
 
-                <!-- Panel 3: Virtual Reality & Spatial Haptics -->
-                <div class="service-tab-panel" role="tabpanel" id="panel-game-vr" aria-labelledby="tab-game-vr" tabindex="0" hidden>
+                <!-- Panel 3: Physics & Dynamics -->
+                <div class="service-tab-panel" role="tabpanel" id="panel-game-physics" aria-labelledby="tab-game-physics" tabindex="0" hidden>
                     <div class="service-tab-card">
                         <div class="service-tab-grid">
                             <div class="service-tab-info">
-                                <span class="service-badge-pill">&#9679; IMMERSIVE VR &amp; SPATIAL HAPTICS</span>
-                                <h3 class="service-tab-title">Virtual Reality &amp; Spatial Haptics</h3>
+                                <span class="service-badge-pill">&#9679; DETERMINISTIC SIMULATION</span>
+                                <h3 class="service-tab-title">Custom 2D/3D Game Physics &amp; Dynamics Engines</h3>
                                 <p class="service-tab-desc">
-                                    Virtual reality simulations engineered for standalone and PCVR headsets. Implements dual-controller parabolic tension mechanics, realistic ballistic arrow drop, target impact physics, and custom haptic feedback vibrations.
+                                    Writing deterministic physics algorithms from scratch. Continuous collision detection (CCD), rigid-body kinematics, glowing particle explosions, and custom ray-casting solvers that ensure sample-accurate simulation.
                                 </p>
                                 <h4 class="service-deliverables-title">&check; Deliverables &amp; Engineering Scope</h4>
                                 <div class="service-deliverables-grid">
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Dual-Controller Parabolic String Tension Mechanics</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Realistic Ballistic Arrow Arc &amp; Wind Resistance Physics</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Kinetic Target Penetration &amp; Splinter Rigidbodies</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Multi-Channel Frequency-Calibrated Haptic Vibrations</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>90 FPS Low-Latency Stereoscopic VR Optimization</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Oculus Quest &amp; OpenXR Hardware Compatibility</span>
-                                    </div>
-                                </div>
-                                <span class="service-stack-title">Core Technology Stack:</span>
-                                <div class="service-stack-wrap">
-                                    <span class="service-stack-pill">Unity VR</span>
-                                    <span class="service-stack-pill">Oculus SDK</span>
-                                    <span class="service-stack-pill">OpenXR</span>
-                                    <span class="service-stack-pill">Ballistic Physics</span>
-                                    <span class="service-stack-pill">Spatial Haptics</span>
-                                    <span class="service-stack-pill">C#</span>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Continuous Collision Detection (No Tunneling)</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Procedural Particle Systems with Emission Physics</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Rigid-Body Kinematics &amp; Elastic Momentum Transfer</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Custom Pygame, C++ &amp; WebGL Math Solvers</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Procedural Sound Synthesis on Physical Impacts</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Deterministic Replay Logging &amp; High-Score Verification</span></div>
                                 </div>
                                 <div class="service-pane-action">
-                                    <a href="../contact.html?service=vr" class="btn btn-primary">
-                                        Discuss VR Project &rarr;
+                                    <a href="../contact.html?service=physics-engine" class="btn btn-primary">
+                                        Build Physics Engine &rarr;
                                     </a>
                                 </div>
                             </div>
-                            <div class="service-tab-showcase">
-                                <article class="service-showcase-card">
-                                    <div class="service-showcase-media">
-                                        <img src="../assets/images/capabilities/cap-game-dev.jpg" alt="VR Archery Physics Simulation" loading="lazy">
-                                    </div>
-                                    <div class="service-showcase-body">
-                                        <span class="service-showcase-label">FEATURED PRODUCTION CASE STUDY</span>
-                                        <h4 class="service-showcase-title">Project: VR Archery &mdash; Tension Simulation</h4>
-                                        <p class="service-showcase-desc">
-                                            Virtual reality simulation engineered for the Oculus Quest. Implements dual-controller parabolic tension mechanics, realistic ballistic arrow drop, target impact physics, and custom haptic feedback vibrations.
-                                        </p>
-                                        <div class="project-stack-tags">
-                                            <span class="project-stack-tag">Unity VR</span>
-                                            <span class="project-stack-tag">Oculus SDK</span>
-                                            <span class="project-stack-tag">Ballistic Physics</span>
-                                            <span class="project-stack-tag">Haptic Feedback</span>
-                                        </div>
-                                        <div class="service-showcase-links">
-                                            <a href="../contact.html" class="btn btn-primary">
-                                                Discuss VR Project &rarr;
-                                            </a>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
+                            
+    <div class="service-spec-panel">
+      <div class="spec-metrics-grid">
+        
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">0px</span>
+      <span class="spec-metric-label">Tunneling Artifacts</span>
+    </div>
+  
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">10,000+</span>
+      <span class="spec-metric-label">Active Particles</span>
+    </div>
+  
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">Deterministic</span>
+      <span class="spec-metric-label">Math Pipeline</span>
+    </div>
+  
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">Zero</span>
+      <span class="spec-metric-label">Lag Spikes</span>
+    </div>
+  
+      </div>
+      <div>
+        <span class="service-stack-title">Core Technology Stack:</span>
+        <div class="service-stack-wrap">
+          <span class="service-stack-pill">Python</span><span class="service-stack-pill">Pygame</span><span class="service-stack-pill">C++</span><span class="service-stack-pill">OpenGL</span><span class="service-stack-pill">Box2D</span><span class="service-stack-pill">GLSL Shaders</span><span class="service-stack-pill">NumPy</span>
+        </div>
+      </div>
+      <div style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.5; border-left: 2px solid var(--accent); padding-left: 12px;">
+        Pure mathematical precision with custom spatial partitioning (quadtrees/octrees) for peak collision performance.
+      </div>
+    </div>
+  
                         </div>
                     </div>
                 </div>
 
-                <!-- Panel 4: Gamification & Behavioral Labs -->
-                <div class="service-tab-panel" role="tabpanel" id="panel-game-gamification" aria-labelledby="tab-game-gamification" tabindex="0" hidden>
+                <!-- Panel 4: Procedural Generation -->
+                <div class="service-tab-panel" role="tabpanel" id="panel-game-procedural" aria-labelledby="tab-game-procedural" tabindex="0" hidden>
                     <div class="service-tab-card">
                         <div class="service-tab-grid">
                             <div class="service-tab-info">
-                                <span class="service-badge-pill">&#9679; GAMIFICATION &amp; REWARD LOOPS</span>
-                                <h3 class="service-tab-title">Gamification &amp; Behavioral Labs</h3>
+                                <span class="service-badge-pill">&#9679; INFINITE WORLD DESIGN</span>
+                                <h3 class="service-tab-title">Procedural Generation &amp; Enemy Gameplay AI</h3>
                                 <p class="service-tab-desc">
-                                    Interactive gamified behavior platform turning daily disciplines into unlockable milestones. Features real-time Canvas particle bursts, sound effect synthesis, and reward mechanics that incentivize consistent user engagement.
+                                    Engineering infinite replayability through procedural logic. Algorithmic dungeon layouts, Perlin noise terrain synthesis, intelligent enemy state machines, A* pathfinding, and dynamic loot balancing systems.
                                 </p>
                                 <h4 class="service-deliverables-title">&check; Deliverables &amp; Engineering Scope</h4>
                                 <div class="service-deliverables-grid">
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Variable Reward Schedules &amp; Dopamine Progression Loops</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Hardware-Accelerated Canvas Particle Milestone Bursts</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Procedural Web Audio Milestones &amp; Completion Chimes</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>LocalStorage &amp; Cloud Streak Serialization</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Habit Psychology Friction-Reduction Workflows</span>
-                                    </div>
-                                    <div class="service-deliverable-item">
-                                        <span class="service-check-icon">&check;</span>
-                                        <span>Real-Time Behavioral Heatmaps &amp; Engagement Dashboards</span>
-                                    </div>
-                                </div>
-                                <span class="service-stack-title">Core Technology Stack:</span>
-                                <div class="service-stack-wrap">
-                                    <span class="service-stack-pill">Interactive Canvas</span>
-                                    <span class="service-stack-pill">Web Audio API</span>
-                                    <span class="service-stack-pill">Reward Loops</span>
-                                    <span class="service-stack-pill">Gamification</span>
-                                    <span class="service-stack-pill">Behavioral Psychology</span>
-                                    <span class="service-stack-pill">Vanilla JS</span>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Rogue-Like Procedural Dungeon &amp; Room Layout Generators</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Coherent Noise Terrain &amp; Biome Generation (Simplex/Perlin)</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Intelligent Enemy State Machines &amp; Behavior Trees</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Optimized A* Pathfinding across Dynamic Grid NavMeshes</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Algorithmic Loot Tables &amp; Difficulty Curve Scaling</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Seed-Based World Generation for Reproducible Runs</span></div>
                                 </div>
                                 <div class="service-pane-action">
-                                    <a href="../contact.html?service=gamification" class="btn btn-primary">
-                                        Build Gamified Product &rarr;
+                                    <a href="../contact.html?service=procedural-game" class="btn btn-primary">
+                                        Design Procedural Game &rarr;
                                     </a>
                                 </div>
                             </div>
-                            <div class="service-tab-showcase">
-                                <article class="service-showcase-card">
-                                    <div class="service-showcase-media">
-                                        <img src="../assets/images/project-dashboard.jpg" alt="The Chain Reaction Gamified Habit Lab" loading="lazy">
-                                    </div>
-                                    <div class="service-showcase-body">
-                                        <span class="service-showcase-label">FEATURED PRODUCTION CASE STUDY</span>
-                                        <h4 class="service-showcase-title">The Chain Reaction &mdash; Gamified Habit Lab</h4>
-                                        <p class="service-showcase-desc">
-                                            Interactive gamified behavior platform turning daily disciplines into unlockable milestones. Features real-time Canvas particle bursts, sound effect synthesis, and reward mechanics that incentivize consistent user engagement.
-                                        </p>
-                                        <div class="project-stack-tags">
-                                            <span class="project-stack-tag">Interactive Canvas</span>
-                                            <span class="project-stack-tag">Web Audio API</span>
-                                            <span class="project-stack-tag">Reward Loops</span>
-                                            <span class="project-stack-tag">Gamification</span>
-                                        </div>
-                                        <div class="service-showcase-links">
-                                            <a href="https://github.com/adeelabbasi111/The-Chain-Reaction" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                                                Inspect Repository &rarr;
-                                            </a>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
+                            
+    <div class="service-spec-panel">
+      <div class="spec-metrics-grid">
+        
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">Infinite</span>
+      <span class="spec-metric-label">Unique Layouts</span>
+    </div>
+  
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">< 100ms</span>
+      <span class="spec-metric-label">Map Generation</span>
+    </div>
+  
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">A* Grid</span>
+      <span class="spec-metric-label">Real-Time Pathfinding</span>
+    </div>
+  
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">Seed-Based</span>
+      <span class="spec-metric-label">Level Sharing</span>
+    </div>
+  
+      </div>
+      <div>
+        <span class="service-stack-title">Core Technology Stack:</span>
+        <div class="service-stack-wrap">
+          <span class="service-stack-pill">C#</span><span class="service-stack-pill">Python</span><span class="service-stack-pill">C++</span><span class="service-stack-pill">Noise Functions</span><span class="service-stack-pill">NavMesh</span><span class="service-stack-pill">Behavior Trees</span><span class="service-stack-pill">Algorithms</span>
+        </div>
+      </div>
+      <div style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.5; border-left: 2px solid var(--accent); padding-left: 12px;">
+        Guaranteed solvable procedural mazes and levels using automated graph connectivity validation algorithms.
+      </div>
+    </div>
+  
                         </div>
                     </div>
                 </div>
 
+                <!-- Panel 5: WebGL & Browser Games -->
+                <div class="service-tab-panel" role="tabpanel" id="panel-game-webgl" aria-labelledby="tab-game-webgl" tabindex="0" hidden>
+                    <div class="service-tab-card">
+                        <div class="service-tab-grid">
+                            <div class="service-tab-info">
+                                <span class="service-badge-pill">&#9679; BROWSER-NATIVE GRAPHICS</span>
+                                <h3 class="service-tab-title">Browser-Native WebGL Interactive 3D Games</h3>
+                                <p class="service-tab-desc">
+                                    Zero-installation browser gaming utilizing WebGL and HTML5 Canvas. Hardware-accelerated 3D shaders, real-time multiplayer WebSocket rooms, responsive canvas viewports, and low-latency audio synthesis.
+                                </p>
+                                <h4 class="service-deliverables-title">&check; Deliverables &amp; Engineering Scope</h4>
+                                <div class="service-deliverables-grid">
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Hardware-Accelerated WebGL 3D Shaders (Three.js / GLSL)</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Zero-Install Instant Web Playback Across Desktop &amp; Mobile</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Multiplayer Synchronization via Low-Latency WebSockets</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Procedural Audio Synthesis via Web Audio API</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Interactive 3D Product Gamification &amp; Virtual Showrooms</span></div>
+                                    <div class="service-deliverable-item"><span class="service-check-icon">&check;</span><span>Responsive High-DPI Canvas Scaling (Retina Ready)</span></div>
+                                </div>
+                                <div class="service-pane-action">
+                                    <a href="../contact.html?service=webgl-game" class="btn btn-primary">
+                                        Build WebGL Experience &rarr;
+                                    </a>
+                                </div>
+                            </div>
+                            
+    <div class="service-spec-panel">
+      <div class="spec-metrics-grid">
+        
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">Zero</span>
+      <span class="spec-metric-label">Install Required</span>
+    </div>
+  
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">60 FPS</span>
+      <span class="spec-metric-label">Hardware Accelerated</span>
+    </div>
+  
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">Multiplayer</span>
+      <span class="spec-metric-label">WebSocket Ready</span>
+    </div>
+  
+    <div class="spec-metric-item">
+      <span class="spec-metric-value">Universal</span>
+      <span class="spec-metric-label">All Modern Browsers</span>
+    </div>
+  
+      </div>
+      <div>
+        <span class="service-stack-title">Core Technology Stack:</span>
+        <div class="service-stack-wrap">
+          <span class="service-stack-pill">Three.js</span><span class="service-stack-pill">WebGL</span><span class="service-stack-pill">GLSL</span><span class="service-stack-pill">PixiJS</span><span class="service-stack-pill">HTML5 Canvas</span><span class="service-stack-pill">Web Audio API</span><span class="service-stack-pill">WebSockets</span>
+        </div>
+      </div>
+      <div style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.5; border-left: 2px solid var(--accent); padding-left: 12px;">
+        Desktop-grade 3D graphics in standard web browsers with automated fallback rendering for low-powered mobile chipsets.
+      </div>
+    </div>
+  
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- DEDICATED FEATURED GAME PROJECTS SECTION -->
+    <section class="section service-projects-section" id="featured-projects">
+        <div class="container">
+            <div class="section-header reveal text-center" style="margin-bottom: var(--space-8);">
+                <span class="t-label" style="color: var(--accent); margin-bottom: var(--space-2); display: block;">PROVEN TRACK RECORD</span>
+                <h2 class="t-h1">Featured Game Development Projects</h2>
+                <p class="t-body-lg" style="max-width: 680px; margin: var(--space-2) auto 0;">
+                    Interactive games and real-time physics engines engineered and shipped by ZERB.
+                </p>
+            </div>
+            
+            <div class="service-projects-grid">
+                <!-- Project 1: Neon Breakout -->
+                <article class="service-project-card">
+                    <div class="service-project-media">
+                        <img src="../assets/images/projects/breakout.gif" alt="Neon Breakout Arcade Engine" loading="lazy">
+                    </div>
+                    <div class="service-project-body">
+                        <div>
+                            <span class="service-project-tag">PHYSICS ENGINE // ARCADE ACTION</span>
+                            <h3 class="service-project-title">Neon Breakout &mdash; Arcade Physics Engine</h3>
+                            <p class="service-project-desc">Compact, fast-paced neon arcade Breakout clone built in Python with Pygame. Features continuous 2D ball-paddle reflection physics, glowing particle explosions, procedural sound synthesis, persistent high-score serialization, and 60 FPS gameplay loops.</p>
+                            <div class="service-stack-wrap" style="margin-bottom: var(--space-4);">
+                                <span class="service-stack-pill">Python</span>
+                                <span class="service-stack-pill">Pygame</span>
+                                <span class="service-stack-pill">2D Physics</span>
+                                <span class="service-stack-pill">Particle Systems</span>
+                            </div>
+                        </div>
+                        <div class="service-project-links">
+                            <a href="https://github.com/adeelabbasi111/neon-breakout" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Inspect Source Code &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: Procedural Dungeon Crawler -->
+                <article class="service-project-card">
+                    <div class="service-project-media">
+                        <img src="../assets/images/project-game.jpg" alt="Procedural Dungeon Crawler" loading="lazy">
+                    </div>
+                    <div class="service-project-body">
+                        <div>
+                            <span class="service-project-tag">ALGORITHMIC // PROCEDURAL DUNGEON</span>
+                            <h3 class="service-project-title">Procedural Dungeon Crawler</h3>
+                            <p class="service-project-desc">Rogue-like dungeon simulation featuring dynamic room and corridor generation, A* enemy navigation, seed sharing, and procedural loot balancing with automated graph connectivity verification.</p>
+                            <div class="service-stack-wrap" style="margin-bottom: var(--space-4);">
+                                <span class="service-stack-pill">C#</span>
+                                <span class="service-stack-pill">Unity</span>
+                                <span class="service-stack-pill">Procedural AI</span>
+                                <span class="service-stack-pill">A* Navigation</span>
+                            </div>
+                        </div>
+                        <div class="service-project-links">
+                            <a href="../contact.html?service=game" class="btn btn-outline btn-sm">Inquire About Game &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: The Chain Reaction -->
+                <article class="service-project-card">
+                    <div class="service-project-media">
+                        <img src="../assets/images/project-game.jpg" alt="The Chain Reaction Interactive Web Game" loading="lazy">
+                    </div>
+                    <div class="service-project-body">
+                        <div>
+                            <span class="service-project-tag">CANVAS 2D // BEHAVIORAL PUZZLE</span>
+                            <h3 class="service-project-title">The Chain Reaction &mdash; Habit Mechanics</h3>
+                            <p class="service-project-desc">Interactive browser puzzle and behavioral application combining cognitive psychology with hardware-accelerated 2D canvas milestone visualizers, procedural tone feedback, and persistent local state storage.</p>
+                            <div class="service-stack-wrap" style="margin-bottom: var(--space-4);">
+                                <span class="service-stack-pill">Canvas 2D</span>
+                                <span class="service-stack-pill">Web Audio API</span>
+                                <span class="service-stack-pill">Behavioral Science</span>
+                                <span class="service-stack-pill">Local Persistence</span>
+                            </div>
+                        </div>
+                        <div class="service-project-links">
+                            <a href="https://github.com/adeelabbasi111/The-Chain-Reaction" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Inspect Source Code &rarr;</a>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
